@@ -464,7 +464,7 @@ p {
 }
 
 .restore-pair {
-  --restore-progress: 55%;
+  --restore-progress: 100%;
   min-width: 0;
   padding: 12px;
   border: 1px solid rgba(126, 94, 50, 0.22);
