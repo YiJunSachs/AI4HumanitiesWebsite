@@ -397,6 +397,25 @@ p {
   align-items: start;
 }
 
+.restore-widget-gallery-simple {
+  display: block;
+}
+
+.restore-gallery-title {
+  margin-bottom: 18px;
+  text-align: center;
+}
+
+.restore-gallery-title h2 {
+  font-size: clamp(34px, 4.2vw, 54px);
+}
+
+.restore-widget-gallery-simple .restore-pair-grid {
+  width: min(100%, 920px);
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .restore-copy {
   min-width: 0;
 }

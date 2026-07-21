@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EpiAgent Project Page</title>
     <link rel="icon" href="../assets/rendered/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="stylesheet" href="../assets/styles.css?v=gallery-title">
   </head>
   <body>
     <header class="topbar">
@@ -41,22 +41,9 @@
             <a class="button" href="https://github.com/blackprotoss/EpiAgent">Code</a>
             <a class="button secondary" href="../index.html#papers">Back to Paper List</a>
           </div>
-          <div class="project-visual restore-widget restore-widget-hero restore-widget-gallery" id="demo">
-            <div class="restore-copy">
-              <div class="eyebrow">Interactive Restoration</div>
-              <h2>Agentic Repair in Motion</h2>
-              <p>
-                Real corrupted inscription examples from the project display folder are revealed against EpiAgent's restored outputs in a 2x2 repair grid.
-              </p>
-              <div class="restore-stage-track" aria-label="EpiAgent restoration stages">
-                <span>Observe</span>
-                <span>Conceive</span>
-                <span>Execute</span>
-                <span>Reevaluate</span>
-              </div>
-              <div class="restore-controls restore-gallery-controls">
-                <button class="button secondary restore-play" type="button" data-restore-play-all>Play All</button>
-              </div>
+          <div class="project-visual restore-widget restore-widget-hero restore-widget-gallery-simple" id="demo">
+            <div class="restore-gallery-title">
+              <h2>Restoration Examples</h2>
             </div>
             <div class="restore-pair-grid" aria-label="EpiAgent corrupted and restored examples">
               <article class="restore-pair" data-restore-pair data-autoplay="true">
@@ -67,11 +54,7 @@
                   </div>
                   <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
                 </div>
-                <div class="restore-pair-labels" aria-hidden="true">
-                  <span>Example 1</span>
-                  <span>Corrupted / Restored</span>
-                </div>
-                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="56" aria-label="Reveal restored EpiAgent example 1">
+                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="100" aria-label="Reveal restored EpiAgent example 1">
               </article>
               <article class="restore-pair" data-restore-pair data-autoplay="true">
                 <div class="restore-frame restore-frame-epiagent-grid">
@@ -81,11 +64,7 @@
                   </div>
                   <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
                 </div>
-                <div class="restore-pair-labels" aria-hidden="true">
-                  <span>Example 2</span>
-                  <span>Corrupted / Restored</span>
-                </div>
-                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="50" aria-label="Reveal restored EpiAgent example 2">
+                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="100" aria-label="Reveal restored EpiAgent example 2">
               </article>
               <article class="restore-pair" data-restore-pair data-autoplay="true">
                 <div class="restore-frame restore-frame-epiagent-grid">
@@ -95,11 +74,7 @@
                   </div>
                   <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
                 </div>
-                <div class="restore-pair-labels" aria-hidden="true">
-                  <span>Example 3</span>
-                  <span>Corrupted / Restored</span>
-                </div>
-                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="50" aria-label="Reveal restored EpiAgent example 3">
+                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="100" aria-label="Reveal restored EpiAgent example 3">
               </article>
               <article class="restore-pair" data-restore-pair data-autoplay="true">
                 <div class="restore-frame restore-frame-epiagent-grid">
@@ -109,11 +84,7 @@
                   </div>
                   <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
                 </div>
-                <div class="restore-pair-labels" aria-hidden="true">
-                  <span>Example 4</span>
-                  <span>Corrupted / Restored</span>
-                </div>
-                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="50" aria-label="Reveal restored EpiAgent example 4">
+                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="100" aria-label="Reveal restored EpiAgent example 4">
               </article>
             </div>
           </div>
@@ -582,6 +553,6 @@
         </div>
       </section>
     </main>
-    <script src="../assets/js/restoration-demo.js?v=grid2x2b"></script>
+    <script src="../assets/js/restoration-demo.js?v=grid2x2c"></script>
   </body>
 </html>
