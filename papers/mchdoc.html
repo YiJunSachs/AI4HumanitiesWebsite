@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MCHDoc Project Page</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="site-shell nav" aria-label="Main navigation">
+        <a class="brand" href="../index.html">
+          <span class="seal image-seal"><img src="../assets/rendered/favicon.ico" alt=""></span>
+          <span>Digital Humanities Lab</span>
+        </a>
+        <div class="nav-links">
+          <a href="../index.html#papers">Paper List</a>
+          <a href="#benchmark">Benchmark</a>
+          <a href="#results">Results</a>
+          <a href="#analysis">Analysis</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="site-shell">
+          <div class="eyebrow">CVPR 2026 · Benchmark · Digital Humanities</div>
+          <h1 class="title-line">MCHDoc: A Comprehensive Benchmark for Reading Multi-Carrier Chinese Historical Documents</h1>
+          <p class="authors">
+            Yijun Sheng, Shipeng Zhu, Ruijia Zuo, Na Nie, Hui Xue
+          </p>
+          <div class="actions">
+            <a class="button" href="https://github.com/blackprotoss/MCHDoc">Code &amp; Data</a>
+            <a class="button secondary" href="../assets/mchdoc-poster.pdf">Poster PDF</a>
+          </div>
+          <div class="project-visual">
+            <img src="../assets/rendered/process_v7.png" alt="Historical document carriers and expert reading process">
+          </div>
+
+          <div class="metrics" aria-label="MCHDoc dataset statistics">
+            <div class="metric">
+              <strong>15,724</strong>
+              <span>annotated images</span>
+            </div>
+            <div class="metric">
+              <strong>6</strong>
+              <span>historical carriers</span>
+            </div>
+            <div class="metric">
+              <strong>3,000+</strong>
+              <span>years of history</span>
+            </div>
+            <div class="metric">
+              <strong>4</strong>
+              <span>evaluation tasks</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="benchmark">
+        <div class="site-shell single-stack">
+          <article class="panel">
+            <h2>Abstract</h2>
+            <p>
+              Reading Chinese historical documents across diverse carriers is central to understanding the evolution of Chinese civilization, yet remains labor-intensive and dependent on scarce expert knowledge. MCHDoc is a comprehensive benchmark for reading multi-carrier Chinese historical documents, spanning over 3,000 years and containing 15,724 high-resolution documents from six major carriers.
+            </p>
+            <p>
+              The benchmark mimics expert workflows through page-level recognition, character-level recognition, and LLM-based post-correction with or without external knowledge. Evaluations show that even top-tier models still struggle with heterogeneous carriers, degraded glyphs, and historically grounded correction.
+            </p>
+          </article>
+
+          <article class="panel">
+            <h3>Carriers</h3>
+            <ul class="compact-list">
+              <li>AncientBook: long-context printed pages on hemp paper.</li>
+              <li>JianDu: narrow bamboo slips with fragmented text.</li>
+              <li>Calligraphy: expressive writing on Xuan paper.</li>
+              <li>Inscription: stone and metal rubbings from museum holdings.</li>
+              <li>Silk and Oracle Bone: character-level materials with strong shape variation.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="site-shell section slim-section">
+          <div class="figure-card pdf-figure">
+            <img src="../assets/rendered/overview_v9.png" alt="MCHDoc overview">
+            <p class="caption">MCHDoc integrates heterogeneous historical carriers and supports recognition plus post-correction evaluation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="site-shell single-stack">
+          <article class="panel">
+            <h2>Benchmark Tasks</h2>
+            <img src="../assets/rendered/task_v17.png" alt="Four benchmark tasks">
+            <ul class="compact-list">
+              <li><strong>Page-level recognition:</strong> end-to-end transcription for complete historical pages.</li>
+              <li><strong>Character-level recognition:</strong> fine-grained decoding for cropped character images.</li>
+              <li><strong>LLM post-correction:</strong> revise OCR output using only internal model knowledge.</li>
+              <li><strong>Knowledge-based post-correction:</strong> retrieve ancient Chinese references for grounded correction.</li>
+            </ul>
+          </article>
+
+          <article class="panel">
+            <h3>Why It Matters</h3>
+            <p>
+              Expert reading is not only OCR. It also requires identifying uncertain characters, consulting historical sources, and making careful corrections. MCHDoc turns that workflow into measurable model tasks.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="results">
+        <div class="site-shell">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Quantitative Results</div>
+              <h2>Model performance across carriers</h2>
+            </div>
+            <p>Representative results from the poster, with best scores highlighted in cinnabar.</p>
+          </div>
+
+          <div class="single-stack">
+            <article class="panel">
+              <h3>Page-level Recognition (1-NED %)</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>AncientBook</th>
+                      <th>JianDu</th>
+                      <th>Calligraphy</th>
+                      <th>Inscription</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Doubao-Seed-1.6-VL</td>
+                      <td class="best">56.52</td>
+                      <td class="best">18.82</td>
+                      <td>49.81</td>
+                      <td class="best">65.90</td>
+                    </tr>
+                    <tr>
+                      <td>GLM-4.5V-106B</td>
+                      <td>47.59</td>
+                      <td>17.68</td>
+                      <td>45.55</td>
+                      <td>53.71</td>
+                    </tr>
+                    <tr>
+                      <td>Qwen2.5-VL-3B(SFT)</td>
+                      <td>52.53</td>
+                      <td>17.09</td>
+                      <td class="best">54.26</td>
+                      <td>48.44</td>
+                    </tr>
+                    <tr>
+                      <td>InternVL3.5-38B</td>
+                      <td>54.03</td>
+                      <td>8.57</td>
+                      <td>42.65</td>
+                      <td>53.79</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="panel">
+              <h3>Character-level Recognition (ACC %)</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>AncientBook</th>
+                      <th>JianDu</th>
+                      <th>Calligraphy</th>
+                      <th>Inscription</th>
+                      <th>Silk</th>
+                      <th>Oracle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Qwen-VL-Max</td>
+                      <td class="best">67.6</td>
+                      <td>13.0</td>
+                      <td class="best">54.8</td>
+                      <td class="best">28.2</td>
+                      <td>4.9</td>
+                      <td>4.0</td>
+                    </tr>
+                    <tr>
+                      <td>GLM-4.5V-106B</td>
+                      <td>66.2</td>
+                      <td>11.6</td>
+                      <td>49.0</td>
+                      <td>16.6</td>
+                      <td>3.8</td>
+                      <td>4.4</td>
+                    </tr>
+                    <tr>
+                      <td>MiniCPM-V-4.5</td>
+                      <td>39.0</td>
+                      <td>7.6</td>
+                      <td>32.0</td>
+                      <td>11.4</td>
+                      <td class="best">12.4</td>
+                      <td class="best">6.0</td>
+                    </tr>
+                    <tr>
+                      <td>InternVL3.5-1B(LoRA)</td>
+                      <td>62.6</td>
+                      <td class="best">17.6</td>
+                      <td>40.8</td>
+                      <td>18.6</td>
+                      <td>5.5</td>
+                      <td>5.6</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="panel">
+              <h3>LLM Post-Correction based on Doubao OCR (1-NED %)</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>AncientBook</th>
+                      <th>JianDu</th>
+                      <th>Calligraphy</th>
+                      <th>Inscription</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Gemini-Flash</td>
+                      <td class="best">55.49</td>
+                      <td>15.83</td>
+                      <td>44.75</td>
+                      <td>58.00</td>
+                    </tr>
+                    <tr>
+                      <td>Kimi-K2</td>
+                      <td>55.39</td>
+                      <td>16.24</td>
+                      <td>47.25</td>
+                      <td>59.46</td>
+                    </tr>
+                    <tr>
+                      <td>Deepseek-V3</td>
+                      <td>55.39</td>
+                      <td class="best">17.89</td>
+                      <td class="best">48.93</td>
+                      <td>62.83</td>
+                    </tr>
+                    <tr>
+                      <td>Deepseek-V3.1</td>
+                      <td>55.11</td>
+                      <td>15.46</td>
+                      <td>44.15</td>
+                      <td class="best">63.80</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="panel">
+              <h3>Knowledge-based Post-Correction based on Doubao OCR (1-NED %)</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Model</th>
+                      <th>AncientBook</th>
+                      <th>JianDu</th>
+                      <th>Calligraphy</th>
+                      <th>Inscription</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Gemini-Flash-Think</td>
+                      <td class="best">65.64</td>
+                      <td>15.87</td>
+                      <td>62.16</td>
+                      <td>42.51</td>
+                    </tr>
+                    <tr>
+                      <td>Kimi-K2</td>
+                      <td>48.56</td>
+                      <td>17.70</td>
+                      <td>58.95</td>
+                      <td class="best">55.82</td>
+                    </tr>
+                    <tr>
+                      <td>Deepseek-V3</td>
+                      <td>59.33</td>
+                      <td>16.38</td>
+                      <td>63.12</td>
+                      <td>46.26</td>
+                    </tr>
+                    <tr>
+                      <td>Deepseek-V3.1-Think</td>
+                      <td>61.95</td>
+                      <td class="best">17.91</td>
+                      <td class="best">72.92</td>
+                      <td>39.40</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <article class="panel">
+              <h3>Result Summary</h3>
+              <img src="../assets/rendered/radar_out_v9.png" alt="Radar result summary">
+              <ul class="compact-list">
+                <li>Historical-domain training or fine-tuning consistently improves recognition.</li>
+                <li>LLM-only correction is fragile when OCR input is noisy.</li>
+                <li>External knowledge helps selectively, but retrieval mismatch can amplify errors.</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="analysis">
+        <div class="site-shell">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Qualitative Analysis</div>
+              <h2>Where models fail</h2>
+            </div>
+            <p>The case studies show that style, degradation, and retrieval quality jointly shape historical document reading performance.</p>
+          </div>
+
+          <div class="single-stack">
+            <div class="figure-card pdf-figure">
+              <img src="../assets/rendered/case1_v2.png" alt="Hard script style case">
+              <p class="caption">Hard scripts: Oracle Bone, Seal, semi-cursive, and cursive writing introduce irregular structures.</p>
+            </div>
+            <div class="figure-card pdf-figure">
+              <img src="../assets/rendered/case2_v2.png" alt="Degradation artifacts case">
+              <p class="caption">Degradation: blur, occlusion, and background noise remove fine radical-level cues.</p>
+            </div>
+            <div class="figure-card pdf-figure">
+              <img src="../assets/rendered/case5.png" alt="Post-correction failure case">
+              <p class="caption">Post-correction failures: LLMs may over-correct originally valid OCR output or follow mismatched references.</p>
+            </div>
+            <div class="panel">
+              <h3>Takeaway</h3>
+              <p>
+                MCHDoc exposes a clear gap between general MLLMs and expert-level historical document reading. Robust progress requires carrier-aware visual modeling and carefully grounded post-correction.
+              </p>
+              <div class="actions">
+                <a class="button" href="../index.html#papers">Back to Paper List</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

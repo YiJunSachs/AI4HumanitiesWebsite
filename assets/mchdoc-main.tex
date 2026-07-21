@@ -1,0 +1,98 @@
+% CVPR 2026 Paper Template; see https://github.com/cvpr-org/author-kit
+
+\documentclass[10pt,twocolumn,letterpaper]{article}
+
+%%%%%%%%% PAPER TYPE  - PLEASE UPDATE FOR FINAL VERSION
+\usepackage{cvpr}              % To produce the CAMERA-READY version
+%  \usepackage[review]{cvpr}      % To produce the REVIEW version
+% \usepackage[pagenumbers]{cvpr} % To force page numbers, e.g. for an arXiv version
+
+\usepackage{multirow}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{float}
+\usepackage{url}
+% Import additional packages in the preamble file, before hyperref
+
+
+\input{preamble}
+
+% It is strongly recommended to use hyperref, especially for the review version.
+% hyperref with option pagebackref eases the reviewers' job.
+% Please disable hyperref *only* if you encounter grave issues, 
+% e.g. with the file validation for the camera-ready version.
+%
+% If you comment hyperref and then uncomment it, you should delete *.aux before re-running LaTeX.
+% (Or just hit 'q' on the first LaTeX run, let it finish, and you should be clear).
+\definecolor{darkgreen}{RGB}{0,128,0}
+\definecolor{darkred}{RGB}{139,0,0}
+\definecolor{cvprblue}{rgb}{0.21,0.49,0.74}
+\definecolor{lightgreen}{RGB}{200,255,200}
+\usepackage[pagebackref,breaklinks,colorlinks,allcolors=cvprblue]{hyperref}
+%%%%%%%%% PAPER ID  - PLEASE UPDATE
+% \def\paperID{54509x} % *** Enter the Paper ID here
+\def\confName{CVPR}
+\def\confYear{2026}
+%%%%%%%%% TITLE - PLEASE UPDATE
+% \title{CHDoc: A Comprehensive Benchmark for Reading and Collation \\ in Chinese Historical Documents}
+\newcommand{\blue}[1]{\textbf{\textcolor{blue}{#1}}}
+\newcommand{\Red}[1]{\textbf{\textcolor{red}{#1}}}
+\newcommand{\cg}[1]{\cellcolor{lightgreen}{#1}}
+\title{MCHDoc: A Comprehensive Benchmark for Reading Multi-Carrier \\ Chinese Historical Documents}
+
+%%%%%%%%% AUTHORS - PLEASE UPDATE
+% \author{First Author\\
+% Institution1\\
+% Institution1 address\\
+% {\tt\small firstauthor@i1.org}
+% % For a paper whose authors are all at the same institution,
+% % omit the following lines up until the closing ``}''.
+% % Additional authors and addresses can be added with ``\and'',
+% % just like the second author.
+% % To save space, use either the email address or home page, not both
+% \and
+% Second Author\\
+% Institution2\\
+% First line of institution2 address\\
+% {\tt\small secondauthor@i2.org}
+% }
+
+
+\author{
+Yijun Sheng$^{1,2,\dagger}$,
+    Shipeng Zhu$^{1,2,\dagger}$, 
+    Ruijia Zuo$^{1,2}$, 
+    Na Nie$^{3,4}$, 
+    Hui Xue$^{1,2,*}$ \\
+    $^{1}$School of Computer Science and Engineering, Southeast University \\
+    $^{2}$Key Laboratory of New Generation Artificial Intelligence Technology and \\ Its Interdisciplinary Applications  (Southeast University), Ministry of Education \\
+    $^{3}$Nanjing University Museum, Nanjing University \\
+    $^{4}$The China Centre for Linguistic and Strategic Studies, Nanjing University \\
+    {\tt\small \{220246417,shipengzhu,220252286\}@seu.edu.cn} {\tt\small,} {\tt\small niena@nju.edu.cn} {\tt\small,}  {\tt\small \{hxue\}@seu.edu.cn}
+}
+
+\begin{document}
+
+
+\maketitle
+{\let\thefootnote\relax\footnotetext{$^\dagger$Equal contribution, *Corresponding author.}}
+  
+\input{sec/0_abstract}    
+\input{sec/1_intro}
+\input{sec/2_RelatedWork}
+\input{sec/3_MCHDoc}
+\input{sec/4_experiment}
+% \input{sec/5_analysis}
+\input{sec/6_Conclusion}
+
+\section*{Acknowledgments}
+This work was supported by the National Natural Science Foundation of China (Nos. 62476056, T24B2005), the National Social Science Fund of China (No. 25BTQ023), and the Fundamental Research Funds for the Central Universities (2242025K30024). Furthermore, the work was also supported by the Big Data Computing Center of Southeast University.
+{
+    \small
+    \bibliographystyle{ieeenat_fullname}
+    \bibliography{main}
+}
+
+% \input{sec/X_suppl}
+% WARNING: do not forget to delete the supplementary pages from your submission 
+
+\end{document}

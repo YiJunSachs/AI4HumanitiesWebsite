@@ -1,0 +1,26 @@
+[
+  {
+    "title": "MCHDoc: A Comprehensive Benchmark for Reading Multi-Carrier Chinese Historical Documents",
+    "href": "papers/mchdoc.html",
+    "thumbnail": "assets/rendered/process_v7.png",
+    "thumbnailAlt": "MCHDoc historical document carriers and expert reading workflow",
+    "tags": ["CVPR 2026", "Benchmark", "Chinese Historical Documents"],
+    "description": "15,724 high-resolution documents across six carriers, with page recognition, character recognition, and post-correction tasks."
+  },
+  {
+    "title": "EpiAgent: An Agent-Centric System for Ancient Inscription Restoration",
+    "href": "papers/epiagent.html",
+    "thumbnail": "assets/rendered/epiagent-teaser.png",
+    "thumbnailAlt": "Qualitative comparison of restored ancient inscription samples",
+    "tags": ["CVPR 2026", "Agentic AI", "Ancient Inscription Restoration"],
+    "description": "An agent-centric restoration system that coordinates multimodal analysis, experience-guided planning, specialized tools, and self-refinement."
+  },
+  {
+    "title": "Reproducing the Past: A Dataset for Benchmarking Inscription Restoration",
+    "href": "papers/mm24.html",
+    "thumbnail": "assets/rendered/mm24-results.png",
+    "thumbnailAlt": "CIRI restoration comparison results",
+    "tags": ["MM 2024", "CIRI Dataset", "Inscription Restoration"],
+    "description": "A benchmark for Chinese inscription rubbing restoration, combining real degraded rubbings, paired synthetic data, and a global-local diffusion baseline."
+  }
+]

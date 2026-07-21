@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EpiAgent Project Page</title>
+    <link rel="icon" href="../assets/rendered/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="site-shell nav" aria-label="Main navigation">
+        <a class="brand" href="../index.html">
+          <span class="seal image-seal"><img src="../assets/rendered/favicon.ico" alt=""></span>
+          <span>Digital Humanities Lab</span>
+        </a>
+        <div class="nav-links">
+          <a href="../index.html#papers">Paper List</a>
+          <a href="#framework">Framework</a>
+          <a href="#tools">Tools</a>
+          <a href="#results">Results</a>
+          <a href="#analysis">Analysis</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero epiagent-hero">
+        <div class="site-shell">
+          <div class="eyebrow">CVPR 2026 | Agentic AI | Ancient Inscription Restoration</div>
+          <h1 class="title-line">EpiAgent: An Agent-Centric System for Ancient Inscription Restoration</h1>
+          <p class="authors">
+            Shipeng Zhu, Ang Chen, Na Nie, Pengfei Fang, Min-Ling Zhang, Hui Xue
+          </p>
+          <p class="hero-copy">
+            EpiAgent restores degraded ancient inscription images by coordinating multimodal analysis,
+            experience-guided planning, specialized restoration tools, and iterative reevaluation.
+          </p>
+          <div class="actions">
+            <a class="button" href="https://github.com/blackprotoss/EpiAgent">Code</a>
+            <a class="button secondary" href="../index.html#papers">Back to Paper List</a>
+          </div>
+          <div class="project-visual framed-visual">
+            <img src="../assets/rendered/epiagent-framework.png" alt="EpiAgent framework for ancient inscription restoration">
+          </div>
+
+          <div class="metrics" aria-label="EpiAgent highlights">
+            <div class="metric">
+              <strong>4</strong>
+              <span>closed-loop stages</span>
+            </div>
+            <div class="metric">
+              <strong>22.14</strong>
+              <span>PSNR on Testing Set S</span>
+            </div>
+            <div class="metric">
+              <strong>0.9069</strong>
+              <span>1-NED on Testing Set S</span>
+            </div>
+            <div class="metric">
+              <strong>84.18%</strong>
+              <span>Top-3 expert preference</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="site-shell content-grid">
+          <article class="panel">
+            <h2>Abstract</h2>
+            <p>
+              Ancient inscriptions preserve cultural memory but often suffer from coupled visual and textual degradation caused by weathering, damage, and human intervention. Existing AI restoration pipelines are usually rigid and struggle to generalize across complex real-world inscriptions.
+            </p>
+            <p>
+              EpiAgent formulates inscription restoration as a hierarchical planning problem. An LLM-based central planner follows an Observe-Conceive-Execute-Reevaluate loop, coordinating multimodal perception, historical experience, specialized tools, and self-refinement to recover both textual authenticity and visual fidelity.
+            </p>
+          </article>
+
+          <aside class="panel">
+            <h3>Core Contributions</h3>
+            <ul class="compact-list">
+              <li>Models the workflow of human epigraphers as an agent-centric restoration loop.</li>
+              <li>Decomposes restoration into atomic multimodal operations and composable tools.</li>
+              <li>Uses multimodal evaluation and optional expert feedback for closed-loop refinement.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="framework">
+        <div class="site-shell">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Observe | Conceive | Execute | Reevaluate</div>
+              <h2>Agent-Centric Restoration Loop</h2>
+            </div>
+            <p>The central planner adapts restoration actions to each inscription instead of running a fixed one-pass pipeline.</p>
+          </div>
+
+          <div class="stage-grid">
+            <article class="stage-card observe-stage">
+              <strong>Observe</strong>
+              <span>Build a degradation assessment record from inscription layout, damaged regions, character hypotheses, and corpus-backed text correction.</span>
+            </article>
+            <article class="stage-card conceive-stage">
+              <strong>Conceive</strong>
+              <span>Mine previous execution logs and convert the current assessment into per-character restoration plans.</span>
+            </article>
+            <article class="stage-card execute-stage">
+              <strong>Execute</strong>
+              <span>Invoke denoising, stroke completion, font imitation, and retrieval tools in an adaptive sequence.</span>
+            </article>
+            <article class="stage-card reevaluate-stage">
+              <strong>Reevaluate</strong>
+              <span>Score text authenticity, style consistency, and optional human feedback before stopping or replanning.</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="site-shell section slim-section">
+          <div class="figure-card pdf-figure">
+            <img src="../assets/rendered/epiagent-loop.png" alt="EpiAgent Observe Conceive Execute Reevaluate loop">
+            <p class="caption">The four-stage loop mirrors how epigraphers combine visual inspection, historical reasoning, restoration practice, and verification.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="tools">
+        <div class="site-shell content-grid">
+          <article class="panel">
+            <h2>Specialized Restoration Toolkit</h2>
+            <p>
+              EpiAgent avoids a monolithic image-to-image restorer. It schedules modular tools at character level, allowing different degradation patterns to receive different restoration sequences.
+            </p>
+            <ul class="compact-list">
+              <li><strong>Background denoising:</strong> removes surface noise while preserving visible stroke structure.</li>
+              <li><strong>Stroke completion:</strong> inpaints missing or severely damaged stroke regions.</li>
+              <li><strong>Font imitation:</strong> synthesizes stylistically consistent glyphs from high-quality exemplars.</li>
+              <li><strong>Character retrieval:</strong> searches matching characters in the same inscription as a fallback for irreparable cases.</li>
+            </ul>
+          </article>
+
+          <div class="figure-card pdf-figure">
+            <img src="../assets/rendered/epiagent-tools.png" alt="Specialized restoration tools and multi-perspective evaluation">
+            <p class="caption">Tool execution is paired with multi-perspective evaluation so that the planner can refine the restoration trajectory.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="results">
+        <div class="site-shell">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Experiments on CIRI</div>
+              <h2>Restoration Quality and Expert Preference</h2>
+            </div>
+            <p>EpiAgent is evaluated on synthetic and real Chinese Inscription Rubbing Images with both objective metrics and expert studies.</p>
+          </div>
+
+          <div class="single-stack">
+            <article class="panel">
+              <h3>Main Quantitative Comparison</h3>
+              <div class="table-wrap">
+                <table class="metric-table ablation-summary-table">
+                  <thead>
+                    <tr>
+                      <th>Test Split</th>
+                      <th>Method</th>
+                      <th>PSNR</th>
+                      <th>SSIM</th>
+                      <th>LPIPS</th>
+                      <th>CLIP-IQA</th>
+                      <th>MUSIQ</th>
+                      <th>MANIQA</th>
+                      <th>NIMA</th>
+                      <th>1-NED</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Testing Set S</td>
+                      <td>IR3</td>
+                      <td>21.15</td>
+                      <td>0.9540</td>
+                      <td>0.0388</td>
+                      <td>0.8987</td>
+                      <td>53.35</td>
+                      <td>0.4429</td>
+                      <td>0.5547</td>
+                      <td>0.8855</td>
+                    </tr>
+                    <tr class="highlight-row">
+                      <td>Testing Set S</td>
+                      <td class="best">EpiAgent</td>
+                      <td class="best">22.14</td>
+                      <td class="best">0.9684</td>
+                      <td class="best">0.0254</td>
+                      <td class="best">0.9004</td>
+                      <td class="best">53.98</td>
+                      <td class="best">0.4553</td>
+                      <td class="best">0.5576</td>
+                      <td class="best">0.9069</td>
+                    </tr>
+                    <tr>
+                      <td>Real Set R-I</td>
+                      <td>IR3</td>
+                      <td>&mdash;</td>
+                      <td>&mdash;</td>
+                      <td>&mdash;</td>
+                      <td>0.9370</td>
+                      <td>49.77</td>
+                      <td>0.4090</td>
+                      <td>0.5334</td>
+                      <td>0.5539</td>
+                    </tr>
+                    <tr class="highlight-row">
+                      <td>Real Set R-I</td>
+                      <td class="best">EpiAgent</td>
+                      <td>&mdash;</td>
+                      <td>&mdash;</td>
+                      <td>&mdash;</td>
+                      <td class="best">0.9393</td>
+                      <td class="best">50.29</td>
+                      <td class="best">0.4179</td>
+                      <td class="best">0.5414</td>
+                      <td class="best">0.5766</td>
+                    </tr>
+                    <tr>
+                      <td>Real Set R-II</td>
+                      <td>IR3</td>
+                      <td>&mdash;</td>
+                      <td>&mdash;</td>
+                      <td>&mdash;</td>
+                      <td>0.9346</td>
+                      <td>49.58</td>
+                      <td>0.4082</td>
+                      <td>0.5298</td>
+                      <td>0.5374</td>
+                    </tr>
+                    <tr class="highlight-row">
+                      <td>Real Set R-II</td>
+                      <td class="best">EpiAgent</td>
+                      <td>&mdash;</td>
+                      <td>&mdash;</td>
+                      <td>&mdash;</td>
+                      <td class="best">0.9388</td>
+                      <td class="best">49.94</td>
+                      <td class="best">0.4157</td>
+                      <td class="best">0.5381</td>
+                      <td class="best">0.5546</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="table-note">PSNR and SSIM are higher better; LPIPS is lower better. Real Set R-I and R-II report no-reference quality metrics plus end-to-end 1-NED.</p>
+            </article>
+
+            <article class="panel">
+              <h3>Expert User Study</h3>
+              <div class="table-wrap">
+                <table class="metric-table compact-table">
+                  <thead>
+                    <tr>
+                      <th>Method</th>
+                      <th>Top-1 Ranking (%)</th>
+                      <th>Top-3 Ranking (%)</th>
+                      <th>Mean Ranking</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>CharFormer</td>
+                      <td>3.72</td>
+                      <td>26.57</td>
+                      <td>52.39</td>
+                    </tr>
+                    <tr>
+                      <td>DocDiff</td>
+                      <td>8.38</td>
+                      <td>46.63</td>
+                      <td>63.46</td>
+                    </tr>
+                    <tr>
+                      <td>GSDM</td>
+                      <td>5.75</td>
+                      <td>39.55</td>
+                      <td>60.70</td>
+                    </tr>
+                    <tr>
+                      <td>Restormer</td>
+                      <td>0.89</td>
+                      <td>9.20</td>
+                      <td>28.10</td>
+                    </tr>
+                    <tr>
+                      <td>MambaIR</td>
+                      <td>3.88</td>
+                      <td>32.74</td>
+                      <td>57.55</td>
+                    </tr>
+                    <tr>
+                      <td>PromptIR</td>
+                      <td>0.63</td>
+                      <td>7.75</td>
+                      <td>20.96</td>
+                    </tr>
+                    <tr>
+                      <td>MoCE-IR</td>
+                      <td>1.52</td>
+                      <td>11.33</td>
+                      <td>36.62</td>
+                    </tr>
+                    <tr>
+                      <td>IR3</td>
+                      <td>15.60</td>
+                      <td>51.14</td>
+                      <td>67.41</td>
+                    </tr>
+                    <tr class="highlight-row">
+                      <td class="best">EpiAgent</td>
+                      <td class="best">59.66</td>
+                      <td class="best">84.18</td>
+                      <td class="best">82.11</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+
+            <div class="figure-card pdf-figure">
+              <img src="../assets/rendered/epiagent-qualitative.png" alt="Qualitative comparison of EpiAgent and baselines">
+              <p class="caption">Qualitative results show EpiAgent recovering damaged glyphs while preserving calligraphic consistency.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="analysis">
+        <div class="site-shell single-stack">
+          <article class="panel">
+            <h2>Ablation Insights</h2>
+            <div class="table-wrap">
+              <table class="metric-table">
+                <thead>
+                  <tr>
+                    <th>Ablation Group</th>
+                    <th>Variant</th>
+                    <th>Metric</th>
+                    <th>Set S</th>
+                    <th>Set R-I</th>
+                    <th>Set R-II</th>
+                    <th>Takeaway</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Observation</td>
+                    <td>MLLM</td>
+                    <td>1-NED</td>
+                    <td>0.6481</td>
+                    <td>0.5509</td>
+                    <td>0.4336</td>
+                    <td>General perception alone struggles with coupled visual-textual degradation.</td>
+                  </tr>
+                  <tr>
+                    <td>Observation</td>
+                    <td>MLLM + CLM</td>
+                    <td>1-NED</td>
+                    <td>0.9211</td>
+                    <td>0.8759</td>
+                    <td>0.8486</td>
+                    <td>Specialized text correction gives a large gain.</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td>Observation</td>
+                    <td class="best">MLLM + CLM + RAG</td>
+                    <td>1-NED</td>
+                    <td class="best">0.9742</td>
+                    <td class="best">0.9694</td>
+                    <td class="best">0.9606</td>
+                    <td>Corpus retrieval provides the strongest textual grounding.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h3>Planning Strategy Ablation</h3>
+            <div class="table-wrap">
+              <table class="metric-table compact-table">
+                <thead>
+                  <tr>
+                    <th>Strategy</th>
+                    <th>PSNR</th>
+                    <th>SSIM</th>
+                    <th>LPIPS</th>
+                    <th>1-NED</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Random</td>
+                    <td>18.53</td>
+                    <td>0.9078</td>
+                    <td>0.0869</td>
+                    <td>0.7702</td>
+                  </tr>
+                  <tr>
+                    <td>Fixed Scheme A</td>
+                    <td>21.19</td>
+                    <td>0.9605</td>
+                    <td>0.0371</td>
+                    <td>0.8814</td>
+                  </tr>
+                  <tr>
+                    <td>Fixed Scheme B</td>
+                    <td>20.78</td>
+                    <td>0.9526</td>
+                    <td>0.0401</td>
+                    <td>0.8935</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td class="best">Experience-guided</td>
+                    <td class="best">22.14</td>
+                    <td class="best">0.9684</td>
+                    <td class="best">0.0254</td>
+                    <td class="best">0.9069</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h3>Evaluation and Refinement Ablation</h3>
+            <div class="table-wrap">
+              <table class="metric-table compact-table">
+                <thead>
+                  <tr>
+                    <th>Text Authenticity</th>
+                    <th>Style Consistency</th>
+                    <th>Expert Feedback</th>
+                    <th>PSNR</th>
+                    <th>SSIM</th>
+                    <th>LPIPS</th>
+                    <th>1-NED</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>21.48</td>
+                    <td>0.9593</td>
+                    <td>0.0305</td>
+                    <td>0.8969</td>
+                  </tr>
+                  <tr>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>No</td>
+                    <td>21.59</td>
+                    <td>0.9616</td>
+                    <td>0.0292</td>
+                    <td>0.9026</td>
+                  </tr>
+                  <tr>
+                    <td>No</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>21.73</td>
+                    <td>0.9632</td>
+                    <td>0.0284</td>
+                    <td>0.8994</td>
+                  </tr>
+                  <tr>
+                    <td>Yes</td>
+                    <td>Yes</td>
+                    <td>No</td>
+                    <td>22.02</td>
+                    <td>0.9668</td>
+                    <td>0.0279</td>
+                    <td>0.9041</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td class="best">Yes</td>
+                    <td class="best">Yes</td>
+                    <td class="best">Yes</td>
+                    <td class="best">22.14</td>
+                    <td class="best">0.9684</td>
+                    <td class="best">0.0254</td>
+                    <td class="best">0.9069</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <h3>Takeaway</h3>
+            <p>
+              The main result is not just a stronger restorer, but a restoration process: EpiAgent turns preservation into a deliberative loop where visual evidence, textual knowledge, tool selection, and expert judgment can reinforce each other.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

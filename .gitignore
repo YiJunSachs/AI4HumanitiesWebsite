@@ -1,0 +1,12 @@
+.agents/
+.codex_render/
+paper_list/
+
+# Local-only helpers and retired draft assets.
+tools/
+assets/dive3d.pdf
+assets/rendered/dive3d_cover.png
+
+# OS/editor noise.
+Thumbs.db
+.DS_Store

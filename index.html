@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Digital Humanities Group Paper List</title>
+    <link rel="icon" href="assets/rendered/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="site-shell nav" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <span class="seal image-seal"><img src="assets/rendered/favicon.ico" alt=""></span>
+          <span>Digital Humanities Group</span>
+        </a>
+        <div class="nav-links">
+          <a href="#papers">Paper List</a>
+          <a href="papers/mchdoc.html">MCHDoc</a>
+          <a href="papers/epiagent.html">EpiAgent</a>
+          <a href="papers/mm24.html">Reproducing the Past: A Dataset for Benchmarking Inscription Restoration</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="site-shell hero-grid">
+          <div>
+            <div class="eyebrow">东南大学 · PALM实验室 · 数字人文小组</div>
+            <h1>卷帙之间，见论文脉络</h1>
+            <p class="hero-copy">
+              A curated paper list for our lab, designed as an archive-style entrance. Each paper opens into a dedicated project page with method, benchmark, results, and visual materials.
+            </p>
+            <div class="actions">
+              <a class="button" href="#papers">Browse Papers</a>
+            </div>
+          </div>
+          <div class="scroll-panel" aria-label="MCHDoc visual preview">
+            <img src="assets/rendered/calligraphy_hero.png" alt="Chinese calligraphy scroll on warm xuan paper">
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="papers">
+        <div class="site-shell">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">Paper List</div>
+              <h2>研究卷目</h2>
+            </div>
+          </div>
+
+          <div class="paper-list" data-paper-list>
+            <p class="load-error">Loading papers...</p>
+          </div>
+
+          <template id="paper-card-template">
+            <a class="paper-card" href="#">
+              <div>
+                <div class="paper-meta" data-paper-tags></div>
+                <h3 data-paper-title></h3>
+                <p data-paper-description></p>
+              </div>
+              <span class="arrow" aria-hidden="true">›</span>
+            </a>
+          </template>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="site-shell">© Southeast University Palm Lab and Digital Humanities Group</div>
+    </footer>
+    <script src="assets/js/paper-list.js"></script>
+  </body>
+</html>
