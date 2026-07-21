@@ -392,6 +392,11 @@ p {
   margin-top: 34px;
 }
 
+.restore-widget-gallery {
+  grid-template-columns: minmax(250px, 0.34fr) minmax(0, 1fr);
+  align-items: start;
+}
+
 .restore-copy {
   min-width: 0;
 }
@@ -432,6 +437,21 @@ p {
   min-width: 0;
 }
 
+.restore-pair-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  min-width: 0;
+}
+
+.restore-pair {
+  --restore-progress: 55%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid rgba(126, 94, 50, 0.22);
+  background: rgba(255, 248, 236, 0.46);
+}
+
 .restore-frame {
   position: relative;
   overflow: hidden;
@@ -461,6 +481,11 @@ p {
   margin-left: auto;
 }
 
+.restore-frame-epiagent-grid {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
 .restore-frame-rubbing {
   width: min(100%, 360px);
   aspect-ratio: 180 / 260;
@@ -487,6 +512,8 @@ p {
 .restore-frame-character .restore-after-wrap img,
 .restore-frame-epiagent .restore-layer,
 .restore-frame-epiagent .restore-after-wrap img,
+.restore-frame-epiagent-grid .restore-layer,
+.restore-frame-epiagent-grid .restore-after-wrap img,
 .restore-frame-rubbing .restore-layer,
 .restore-frame-rubbing .restore-after-wrap img {
   image-rendering: crisp-edges;
@@ -552,6 +579,10 @@ p {
   animation: restore-pulse 900ms ease-in-out infinite alternate;
 }
 
+.restore-pair.is-playing .restore-divider::before {
+  animation: restore-pulse 900ms ease-in-out infinite alternate;
+}
+
 @keyframes restore-pulse {
   from {
     box-shadow: 0 8px 18px rgba(9, 8, 6, 0.26), 0 0 0 rgba(255, 248, 236, 0);
@@ -569,6 +600,21 @@ p {
   color: var(--muted);
   font-size: 13px;
   font-weight: 800;
+}
+
+.restore-pair-labels {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin: 8px 0 7px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.restore-pair-labels span:last-child {
+  text-align: right;
 }
 
 .restore-example-tabs {
@@ -637,8 +683,17 @@ p {
   margin-top: 14px;
 }
 
+.restore-gallery-controls {
+  justify-content: flex-start;
+  margin-top: 18px;
+}
+
 .restore-play {
   min-width: 132px;
+}
+
+.restore-pair-slider {
+  display: block;
 }
 
 .metrics {
@@ -966,5 +1021,11 @@ th {
 
   .restore-example-tabs {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .restore-pair-grid {
+    grid-template-columns: 1fr;
   }
 }

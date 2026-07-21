@@ -1,5 +1,5 @@
 (() => {
-  const widgets = document.querySelectorAll("[data-restore-widget]");
+  const widgets = document.querySelectorAll("[data-restore-widget], [data-restore-pair]");
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   widgets.forEach((widget) => {
@@ -67,6 +67,8 @@
     };
 
     setProgress(slider ? slider.value : 55);
+    widget.restorePlayRepair = playRepair;
+    widget.restoreSetProgress = setProgress;
 
     slider?.addEventListener("input", () => {
       stopAnimation();
@@ -150,5 +152,18 @@
     } else {
       window.setTimeout(() => playRepair(8, 88, 1800), 420);
     }
+  });
+
+  document.querySelectorAll("[data-restore-play-all]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const root = button.closest(".restore-widget") || document;
+      const targets = root.querySelectorAll("[data-restore-pair]");
+
+      targets.forEach((target, index) => {
+        window.setTimeout(() => {
+          target.restorePlayRepair?.(0, 100, 1500);
+        }, index * 90);
+      });
+    });
   });
 })();
