@@ -44,7 +44,7 @@
               <div class="eyebrow">Interactive Restoration</div>
               <h2>CIRI Pair Restoration</h2>
               <p>
-                A noisy rubbing sample is revealed against its clean target, reflecting the benchmark's paired intact-degraded construction for inscription restoration.
+                Larger cropped examples reveal noisy rubbing regions against restored outputs from the paper's comparison figure.
               </p>
               <div class="restore-stage-track" aria-label="CIRI baseline stages">
                 <span>Degraded</span>
@@ -54,16 +54,22 @@
               </div>
             </div>
             <div class="restore-showcase">
-              <div class="restore-frame restore-frame-character">
-                <img class="restore-layer restore-before" src="../assets/rendered/mm24-demo-before.png" alt="Degraded CIRI rubbing sample">
+              <div class="restore-frame restore-frame-rubbing">
+                <img class="restore-layer restore-before" src="../assets/rendered/mm24-restore-example-1-before.png" alt="Degraded CIRI rubbing example 1">
                 <div class="restore-layer restore-after-wrap" aria-hidden="true">
-                  <img src="../assets/rendered/mm24-demo-after.png" alt="">
+                  <img src="../assets/rendered/mm24-restore-example-1-after.png" alt="">
                 </div>
                 <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
               </div>
               <div class="restore-labels" aria-hidden="true">
                 <span>Degraded</span>
                 <span>Restored</span>
+              </div>
+              <div class="restore-example-tabs" aria-label="Choose CIRI restoration example">
+                <button class="restore-example-tab is-active" type="button" data-restore-example data-before="../assets/rendered/mm24-restore-example-1-before.png" data-after="../assets/rendered/mm24-restore-example-1-after.png" data-before-alt="Degraded CIRI rubbing example 1" aria-pressed="true">Example 1</button>
+                <button class="restore-example-tab" type="button" data-restore-example data-before="../assets/rendered/mm24-restore-example-2-before.png" data-after="../assets/rendered/mm24-restore-example-2-after.png" data-before-alt="Degraded CIRI rubbing example 2" aria-pressed="false">Example 2</button>
+                <button class="restore-example-tab" type="button" data-restore-example data-before="../assets/rendered/mm24-restore-example-3-before.png" data-after="../assets/rendered/mm24-restore-example-3-after.png" data-before-alt="Degraded CIRI rubbing example 3" aria-pressed="false">Example 3</button>
+                <button class="restore-example-tab" type="button" data-restore-example data-before="../assets/rendered/mm24-restore-example-4-before.png" data-after="../assets/rendered/mm24-restore-example-4-after.png" data-before-alt="Degraded CIRI rubbing example 4" aria-pressed="false">Example 4</button>
               </div>
               <input class="restore-slider" data-restore-slider type="range" min="0" max="100" value="54" aria-label="Reveal restored CIRI sample">
               <div class="restore-controls">

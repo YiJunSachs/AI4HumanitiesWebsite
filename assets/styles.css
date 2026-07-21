@@ -454,6 +454,13 @@ p {
   margin-left: auto;
 }
 
+.restore-frame-rubbing {
+  width: min(100%, 360px);
+  aspect-ratio: 180 / 260;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .restore-layer,
 .restore-after-wrap img {
   position: absolute;
@@ -467,6 +474,14 @@ p {
 .restore-frame-character .restore-after-wrap img {
   padding: clamp(18px, 4vw, 46px);
   object-fit: contain;
+}
+
+.restore-frame-character .restore-layer,
+.restore-frame-character .restore-after-wrap img,
+.restore-frame-rubbing .restore-layer,
+.restore-frame-rubbing .restore-after-wrap img {
+  image-rendering: crisp-edges;
+  image-rendering: pixelated;
 }
 
 .restore-before {
@@ -545,6 +560,34 @@ p {
   color: var(--muted);
   font-size: 13px;
   font-weight: 800;
+}
+
+.restore-example-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin: 10px 0 14px;
+}
+
+.restore-example-tab {
+  min-width: 0;
+  min-height: 34px;
+  padding: 7px 8px;
+  border: 1px solid rgba(161, 61, 45, 0.24);
+  color: var(--muted);
+  background: rgba(255, 248, 236, 0.48);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.restore-example-tab:hover,
+.restore-example-tab.is-active {
+  color: #fff8ec;
+  background: var(--cinnabar);
+  border-color: var(--cinnabar);
 }
 
 .restore-slider {
@@ -902,5 +945,13 @@ th {
 
   .restore-frame-character {
     max-width: 100%;
+  }
+
+  .restore-frame-rubbing {
+    width: min(100%, 320px);
+  }
+
+  .restore-example-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

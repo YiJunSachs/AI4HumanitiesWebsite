@@ -6,6 +6,9 @@
     const frame = widget.querySelector(".restore-frame");
     const slider = widget.querySelector("[data-restore-slider]");
     const playButton = widget.querySelector("[data-restore-play]");
+    const beforeImage = frame?.querySelector(".restore-before");
+    const afterImage = frame?.querySelector(".restore-after-wrap img");
+    const exampleButtons = widget.querySelectorAll("[data-restore-example]");
     let animationFrame = 0;
     let hasAutoplayed = false;
 
@@ -76,6 +79,33 @@
 
     playButton?.addEventListener("click", () => {
       playRepair(0, 100);
+    });
+
+    exampleButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        stopAnimation();
+
+        if (beforeImage && button.dataset.before) {
+          beforeImage.src = button.dataset.before;
+          beforeImage.alt = button.dataset.beforeAlt || beforeImage.alt;
+        }
+
+        if (afterImage && button.dataset.after) {
+          afterImage.src = button.dataset.after;
+        }
+
+        exampleButtons.forEach((item) => {
+          const isActive = item === button;
+          item.classList.toggle("is-active", isActive);
+          item.setAttribute("aria-pressed", String(isActive));
+        });
+
+        setProgress(50);
+
+        if (playButton) {
+          playButton.textContent = "Play Repair";
+        }
+      });
     });
 
     frame?.addEventListener("pointerdown", (event) => {
