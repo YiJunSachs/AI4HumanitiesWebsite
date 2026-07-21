@@ -454,6 +454,13 @@ p {
   margin-left: auto;
 }
 
+.restore-frame-epiagent {
+  width: min(100%, 560px);
+  aspect-ratio: 1 / 1;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .restore-frame-rubbing {
   width: min(100%, 360px);
   aspect-ratio: 180 / 260;
@@ -478,6 +485,8 @@ p {
 
 .restore-frame-character .restore-layer,
 .restore-frame-character .restore-after-wrap img,
+.restore-frame-epiagent .restore-layer,
+.restore-frame-epiagent .restore-after-wrap img,
 .restore-frame-rubbing .restore-layer,
 .restore-frame-rubbing .restore-after-wrap img {
   image-rendering: crisp-edges;
@@ -945,6 +954,10 @@ th {
 
   .restore-frame-character {
     max-width: 100%;
+  }
+
+  .restore-frame-epiagent {
+    width: min(100%, 420px);
   }
 
   .restore-frame-rubbing {

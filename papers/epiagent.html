@@ -46,7 +46,7 @@
               <div class="eyebrow">Interactive Restoration</div>
               <h2>Agentic Repair in Motion</h2>
               <p>
-                A degraded viewing layer gives way to the paper's qualitative restoration result, echoing EpiAgent's Observe-Conceive-Execute-Reevaluate loop.
+                Real corrupted inscription examples from the project display folder are revealed against EpiAgent's restored outputs.
               </p>
               <div class="restore-stage-track" aria-label="EpiAgent restoration stages">
                 <span>Observe</span>
@@ -56,16 +56,22 @@
               </div>
             </div>
             <div class="restore-showcase">
-              <div class="restore-frame restore-frame-wide">
-                <img class="restore-layer restore-before restore-before-simulated" src="../assets/rendered/epiagent-qualitative.png" alt="Degraded view of EpiAgent qualitative restoration examples">
+              <div class="restore-frame restore-frame-epiagent">
+                <img class="restore-layer restore-before" src="../assets/rendered/epiagent-restore-example-1-before.png" alt="Corrupted EpiAgent restoration example 1">
                 <div class="restore-layer restore-after-wrap" aria-hidden="true">
-                  <img src="../assets/rendered/epiagent-qualitative.png" alt="">
+                  <img src="../assets/rendered/epiagent-restore-example-1-after.png" alt="">
                 </div>
                 <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
               </div>
               <div class="restore-labels" aria-hidden="true">
-                <span>Degraded</span>
+                <span>Corrupted</span>
                 <span>Restored</span>
+              </div>
+              <div class="restore-example-tabs" aria-label="Choose EpiAgent restoration example">
+                <button class="restore-example-tab is-active" type="button" data-restore-example data-before="../assets/rendered/epiagent-restore-example-1-before.png" data-after="../assets/rendered/epiagent-restore-example-1-after.png" data-before-alt="Corrupted EpiAgent restoration example 1" aria-pressed="true">Example 1</button>
+                <button class="restore-example-tab" type="button" data-restore-example data-before="../assets/rendered/epiagent-restore-example-2-before.png" data-after="../assets/rendered/epiagent-restore-example-2-after.png" data-before-alt="Corrupted EpiAgent restoration example 2" aria-pressed="false">Example 2</button>
+                <button class="restore-example-tab" type="button" data-restore-example data-before="../assets/rendered/epiagent-restore-example-3-before.png" data-after="../assets/rendered/epiagent-restore-example-3-after.png" data-before-alt="Corrupted EpiAgent restoration example 3" aria-pressed="false">Example 3</button>
+                <button class="restore-example-tab" type="button" data-restore-example data-before="../assets/rendered/epiagent-restore-example-4-before.png" data-after="../assets/rendered/epiagent-restore-example-4-after.png" data-before-alt="Corrupted EpiAgent restoration example 4" aria-pressed="false">Example 4</button>
               </div>
               <input class="restore-slider" data-restore-slider type="range" min="0" max="100" value="56" aria-label="Reveal restored EpiAgent result">
               <div class="restore-controls">
