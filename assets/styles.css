@@ -364,6 +364,10 @@ p {
   box-shadow: none;
 }
 
+.project-visual[id] {
+  scroll-margin-top: 96px;
+}
+
 .framed-visual {
   overflow: hidden;
   border: 1px solid rgba(126, 94, 50, 0.24);

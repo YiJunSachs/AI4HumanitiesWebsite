@@ -9,6 +9,10 @@
     const beforeImage = frame?.querySelector(".restore-before");
     const afterImage = frame?.querySelector(".restore-after-wrap img");
     const exampleButtons = widget.querySelectorAll("[data-restore-example]");
+    const forceAutoplay = widget.dataset.autoplayForce === "true";
+    const autoplayStart = Number(widget.dataset.autoplayStart ?? 8);
+    const autoplayEnd = Number(widget.dataset.autoplayEnd ?? 88);
+    const autoplayDuration = Number(widget.dataset.autoplayDuration ?? 1800);
     let animationFrame = 0;
     let hasAutoplayed = false;
 
@@ -128,7 +132,18 @@
       }
     });
 
-    if (reduceMotion || widget.dataset.autoplay !== "true") {
+    if (widget.dataset.autoplay !== "true") {
+      return;
+    }
+
+    if (forceAutoplay) {
+      hasAutoplayed = true;
+      setProgress(autoplayStart);
+      window.setTimeout(() => playRepair(autoplayStart, autoplayEnd, autoplayDuration), 180);
+      return;
+    }
+
+    if (reduceMotion) {
       return;
     }
 
@@ -141,7 +156,7 @@
             }
 
             hasAutoplayed = true;
-            window.setTimeout(() => playRepair(8, 88, 1800), 220);
+            window.setTimeout(() => playRepair(autoplayStart, autoplayEnd, autoplayDuration), 220);
             observer.disconnect();
           });
         },
@@ -150,7 +165,7 @@
 
       observer.observe(widget);
     } else {
-      window.setTimeout(() => playRepair(8, 88, 1800), 420);
+      window.setTimeout(() => playRepair(autoplayStart, autoplayEnd, autoplayDuration), 420);
     }
   });
 
