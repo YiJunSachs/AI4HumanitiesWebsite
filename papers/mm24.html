@@ -16,6 +16,7 @@
         </a>
         <div class="nav-links">
           <a href="../index.html#papers">Paper List</a>
+          <a href="#demo">Demo</a>
           <a href="#dataset">Dataset</a>
           <a href="#pipeline">Pipeline</a>
           <a href="#results">Results</a>
@@ -38,8 +39,37 @@
             <a class="button" href="https://github.com/blackprotoss/CIRI">Code &amp; Dataset</a>
             <a class="button secondary" href="../index.html#papers">Back to Paper List</a>
           </div>
-          <div class="project-visual framed-visual">
-            <img src="../assets/rendered/mm24-results.png" alt="Restoration comparison results for CIRI">
+          <div class="project-visual restore-widget restore-widget-hero" id="demo" data-restore-widget data-autoplay="true">
+            <div class="restore-copy">
+              <div class="eyebrow">Interactive Restoration</div>
+              <h2>CIRI Pair Restoration</h2>
+              <p>
+                A noisy rubbing sample is revealed against its clean target, reflecting the benchmark's paired intact-degraded construction for inscription restoration.
+              </p>
+              <div class="restore-stage-track" aria-label="CIRI baseline stages">
+                <span>Degraded</span>
+                <span>Global</span>
+                <span>Text</span>
+                <span>Local</span>
+              </div>
+            </div>
+            <div class="restore-showcase">
+              <div class="restore-frame restore-frame-character">
+                <img class="restore-layer restore-before" src="../assets/rendered/mm24-demo-before.png" alt="Degraded CIRI rubbing sample">
+                <div class="restore-layer restore-after-wrap" aria-hidden="true">
+                  <img src="../assets/rendered/mm24-demo-after.png" alt="">
+                </div>
+                <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
+              </div>
+              <div class="restore-labels" aria-hidden="true">
+                <span>Degraded</span>
+                <span>Restored</span>
+              </div>
+              <input class="restore-slider" data-restore-slider type="range" min="0" max="100" value="54" aria-label="Reveal restored CIRI sample">
+              <div class="restore-controls">
+                <button class="button secondary restore-play" type="button" data-restore-play>Play Repair</button>
+              </div>
+            </div>
           </div>
 
           <div class="metrics" aria-label="CIRI dataset highlights">
@@ -396,5 +426,6 @@
         </div>
       </section>
     </main>
+    <script src="../assets/js/restoration-demo.js"></script>
   </body>
 </html>

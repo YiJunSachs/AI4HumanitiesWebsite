@@ -16,6 +16,7 @@
         </a>
         <div class="nav-links">
           <a href="../index.html#papers">Paper List</a>
+          <a href="#demo">Demo</a>
           <a href="#framework">Framework</a>
           <a href="#tools">Tools</a>
           <a href="#results">Results</a>
@@ -40,8 +41,37 @@
             <a class="button" href="https://github.com/blackprotoss/EpiAgent">Code</a>
             <a class="button secondary" href="../index.html#papers">Back to Paper List</a>
           </div>
-          <div class="project-visual framed-visual">
-            <img src="../assets/rendered/epiagent-framework.png" alt="EpiAgent framework for ancient inscription restoration">
+          <div class="project-visual restore-widget restore-widget-hero" id="demo" data-restore-widget data-autoplay="true">
+            <div class="restore-copy">
+              <div class="eyebrow">Interactive Restoration</div>
+              <h2>Agentic Repair in Motion</h2>
+              <p>
+                A degraded viewing layer gives way to the paper's qualitative restoration result, echoing EpiAgent's Observe-Conceive-Execute-Reevaluate loop.
+              </p>
+              <div class="restore-stage-track" aria-label="EpiAgent restoration stages">
+                <span>Observe</span>
+                <span>Conceive</span>
+                <span>Execute</span>
+                <span>Reevaluate</span>
+              </div>
+            </div>
+            <div class="restore-showcase">
+              <div class="restore-frame restore-frame-wide">
+                <img class="restore-layer restore-before restore-before-simulated" src="../assets/rendered/epiagent-qualitative.png" alt="Degraded view of EpiAgent qualitative restoration examples">
+                <div class="restore-layer restore-after-wrap" aria-hidden="true">
+                  <img src="../assets/rendered/epiagent-qualitative.png" alt="">
+                </div>
+                <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
+              </div>
+              <div class="restore-labels" aria-hidden="true">
+                <span>Degraded</span>
+                <span>Restored</span>
+              </div>
+              <input class="restore-slider" data-restore-slider type="range" min="0" max="100" value="56" aria-label="Reveal restored EpiAgent result">
+              <div class="restore-controls">
+                <button class="button secondary restore-play" type="button" data-restore-play>Play Repair</button>
+              </div>
+            </div>
           </div>
 
           <div class="metrics" aria-label="EpiAgent highlights">
@@ -508,5 +538,6 @@
         </div>
       </section>
     </main>
+    <script src="../assets/js/restoration-demo.js"></script>
   </body>
 </html>
