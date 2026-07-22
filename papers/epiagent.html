@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EpiAgent Project Page</title>
     <link rel="icon" href="../assets/rendered/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="../assets/styles.css?v=progress-sweep2">
+    <link rel="stylesheet" href="../assets/styles.css?v=manual-restore">
   </head>
   <body>
     <header class="topbar">
@@ -44,9 +44,10 @@
           <div class="project-visual restore-widget restore-widget-hero restore-widget-gallery-simple" id="demo">
             <div class="restore-gallery-title">
               <h2>Restoration Examples</h2>
+              <p class="restore-gallery-hint">Drag each slider from Damaged to Restored.</p>
             </div>
             <div class="restore-pair-grid" aria-label="EpiAgent corrupted and restored examples">
-              <article class="restore-pair" data-restore-pair data-autoplay="true" data-autoplay-force="true" data-autoplay-start="0" data-autoplay-end="100" data-autoplay-duration="1100" style="--restore-progress: 100%;">
+              <article class="restore-pair" data-restore-pair style="--restore-progress: 0%;">
                 <div class="restore-frame restore-frame-epiagent-grid">
                   <img class="restore-layer restore-before" src="../assets/rendered/epiagent-restore-example-1-before.png" alt="Corrupted EpiAgent restoration example 1">
                   <div class="restore-layer restore-after-wrap" aria-hidden="true">
@@ -54,9 +55,13 @@
                   </div>
                   <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
                 </div>
-                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="100" aria-label="Reveal restored EpiAgent example 1">
+                <div class="restore-pair-labels" aria-hidden="true">
+                  <span>Damaged</span>
+                  <span>Restored</span>
+                </div>
+                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="0" aria-label="Reveal restored EpiAgent example 1">
               </article>
-              <article class="restore-pair" data-restore-pair data-autoplay="true" data-autoplay-force="true" data-autoplay-start="0" data-autoplay-end="100" data-autoplay-duration="1100" style="--restore-progress: 100%;">
+              <article class="restore-pair" data-restore-pair style="--restore-progress: 0%;">
                 <div class="restore-frame restore-frame-epiagent-grid">
                   <img class="restore-layer restore-before" src="../assets/rendered/epiagent-restore-example-2-before.png" alt="Corrupted EpiAgent restoration example 2">
                   <div class="restore-layer restore-after-wrap" aria-hidden="true">
@@ -64,9 +69,13 @@
                   </div>
                   <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
                 </div>
-                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="100" aria-label="Reveal restored EpiAgent example 2">
+                <div class="restore-pair-labels" aria-hidden="true">
+                  <span>Damaged</span>
+                  <span>Restored</span>
+                </div>
+                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="0" aria-label="Reveal restored EpiAgent example 2">
               </article>
-              <article class="restore-pair" data-restore-pair data-autoplay="true" data-autoplay-force="true" data-autoplay-start="0" data-autoplay-end="100" data-autoplay-duration="1100" style="--restore-progress: 100%;">
+              <article class="restore-pair" data-restore-pair style="--restore-progress: 0%;">
                 <div class="restore-frame restore-frame-epiagent-grid">
                   <img class="restore-layer restore-before" src="../assets/rendered/epiagent-restore-example-3-before.png" alt="Corrupted EpiAgent restoration example 3">
                   <div class="restore-layer restore-after-wrap" aria-hidden="true">
@@ -74,9 +83,13 @@
                   </div>
                   <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
                 </div>
-                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="100" aria-label="Reveal restored EpiAgent example 3">
+                <div class="restore-pair-labels" aria-hidden="true">
+                  <span>Damaged</span>
+                  <span>Restored</span>
+                </div>
+                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="0" aria-label="Reveal restored EpiAgent example 3">
               </article>
-              <article class="restore-pair" data-restore-pair data-autoplay="true" data-autoplay-force="true" data-autoplay-start="0" data-autoplay-end="100" data-autoplay-duration="1100" style="--restore-progress: 100%;">
+              <article class="restore-pair" data-restore-pair style="--restore-progress: 0%;">
                 <div class="restore-frame restore-frame-epiagent-grid">
                   <img class="restore-layer restore-before" src="../assets/rendered/epiagent-restore-example-4-before.png" alt="Corrupted EpiAgent restoration example 4">
                   <div class="restore-layer restore-after-wrap" aria-hidden="true">
@@ -84,7 +97,11 @@
                   </div>
                   <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
                 </div>
-                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="100" aria-label="Reveal restored EpiAgent example 4">
+                <div class="restore-pair-labels" aria-hidden="true">
+                  <span>Damaged</span>
+                  <span>Restored</span>
+                </div>
+                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="0" aria-label="Reveal restored EpiAgent example 4">
               </article>
             </div>
           </div>
@@ -553,6 +570,6 @@
         </div>
       </section>
     </main>
-    <script src="../assets/js/restoration-demo.js?v=progress-sweep2"></script>
+    <script src="../assets/js/restoration-demo.js?v=manual-restore"></script>
   </body>
 </html>
