@@ -643,6 +643,11 @@ p {
   line-height: 1.25;
 }
 
+.restore-widget-gallery-simple .restore-pair-labels {
+  margin-top: 16px;
+  margin-bottom: 10px;
+}
+
 .restore-pair-labels span:last-child {
   text-align: right;
 }
