@@ -387,6 +387,10 @@ p {
 }
 
 .carrier-card:nth-child(5) {
+  --carrier-accent: #765f49;
+}
+
+.carrier-card:nth-child(6) {
   --carrier-accent: #433832;
 }
 
