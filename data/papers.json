@@ -4,7 +4,7 @@
     "href": "papers/mchdoc.html",
     "thumbnail": "assets/rendered/process_v7.png",
     "thumbnailAlt": "MCHDoc historical document carriers and expert reading workflow",
-    "tags": ["CVPR 2026", "Benchmark", "Chinese Historical Documents"],
+    "tags": ["CVPR 2026", "MCHDoc Benchmark", "Chinese Historical Documents"],
     "description": "15,724 high-resolution documents across six carriers, with page recognition, character recognition, and post-correction tasks."
   },
   {
@@ -20,7 +20,7 @@
     "href": "papers/mm24.html",
     "thumbnail": "assets/rendered/mm24-results.png",
     "thumbnailAlt": "CIRI restoration comparison results",
-    "tags": ["MM 2024", "CIRI Dataset", "Inscription Restoration"],
+    "tags": ["MM 2024", "CIRI Dataset", "Ancient Inscription Restoration"],
     "description": "A benchmark for Chinese inscription rubbing restoration, combining real degraded rubbings, paired synthetic data, and a global-local diffusion baseline."
   }
 ]
