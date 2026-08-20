@@ -469,6 +469,76 @@ p {
   border-top: 4px solid var(--area-accent);
 }
 
+.character-thesis-demo {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  border-top: 4px solid var(--area-accent);
+}
+
+.character-thesis-grid {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.36fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: stretch;
+}
+
+.character-thesis-cover,
+.character-thesis-strip {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(126, 94, 50, 0.22);
+  background: rgba(255, 248, 236, 0.52);
+}
+
+.character-thesis-cover img,
+.character-thesis-strip img {
+  width: 100%;
+  background: #fff;
+}
+
+.character-thesis-cover img {
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.character-thesis-showcase {
+  display: grid;
+  gap: 12px;
+}
+
+.character-thesis-strip img {
+  height: 178px;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.character-thesis-strip.is-results img {
+  height: 260px;
+}
+
+.character-thesis-cover figcaption,
+.character-thesis-strip figcaption {
+  padding: 9px 10px 11px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.character-thesis-copy {
+  margin: 0;
+  color: var(--muted);
+}
+
+.character-thesis-link {
+  width: max-content;
+  max-width: 100%;
+}
+
 .glyph-lab {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
@@ -1491,6 +1561,16 @@ th {
 
   .carrier-sample-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .character-thesis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .character-thesis-cover img {
+    height: 380px;
+    min-height: 0;
+    object-fit: contain;
   }
 
   .arrow {

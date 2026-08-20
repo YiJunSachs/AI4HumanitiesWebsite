@@ -25,5 +25,14 @@
     "thumbnailAlt": "CIRI 碑拓修复对比结果",
     "tags": ["MM 2024", "CIRI 数据集", "古代碑刻修复"],
     "description": "面向中国碑拓图像修复的基准，结合真实残损拓片、合成配对数据与全局-局部扩散修复基线。"
+  },
+  {
+    "title": "基于扩散模型的古汉字修复方法研究",
+    "href": "assets/papers/ancient-character-restoration-thesis.pdf",
+    "area": "ancient-character-restoration",
+    "thumbnail": "assets/rendered/ancient-character-thesis-cover.jpg",
+    "thumbnailAlt": "基于扩散模型的古汉字修复方法研究毕设封面",
+    "tags": ["本科毕设", "扩散模型", "古汉字修复"],
+    "description": "面向真实古籍退化场景，围绕样本构建、退化噪声处理、书法风格保持和扩散生成修复展开方法研究。"
   }
 ]

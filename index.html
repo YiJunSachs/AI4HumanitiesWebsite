@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>数字人文研究</title>
     <link rel="icon" href="assets/rendered/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/styles.css?v=zh-home">
+    <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
     <header class="topbar">
@@ -50,7 +50,7 @@
             <a class="area-chip" href="#ancient-character-restoration">
               <span>03</span>
               <strong>古汉字修复研究</strong>
-              <em>框架预留</em>
+              <em>扩散模型毕设</em>
             </a>
             <a class="area-chip" href="#historical-phonology">
               <span>04</span>
@@ -101,9 +101,9 @@
                 <article class="restore-pair" data-restore-pair style="--restore-progress: 0%;">
                   <h3 class="demo-card-title">EpiAgent</h3>
                   <div class="restore-frame restore-frame-epiagent-grid">
-                    <img class="restore-layer restore-before" src="assets/rendered/epiagent-restore-example-1-before.png?v=home-area" alt="EpiAgent 残损修复样例">
+                    <img class="restore-layer restore-before" src="assets/rendered/epiagent-restore-example-1-before.png" alt="EpiAgent 残损修复样例">
                     <div class="restore-layer restore-after-wrap" aria-hidden="true">
-                      <img src="assets/rendered/epiagent-restore-example-1-after.png?v=home-area" alt="">
+                      <img src="assets/rendered/epiagent-restore-example-1-after.png" alt="">
                     </div>
                     <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
                   </div>
@@ -221,7 +221,7 @@
               <h2>古汉字修复研究</h2>
             </div>
             <p>
-              聚焦甲骨、金文、简帛、篆隶等古文字形态，预留面向单字级形体补全、异体字对齐与风格一致性恢复的研究框架。
+              聚焦甲骨、金文、简帛、篆隶等古文字形态，结合扩散生成、退化模拟与书法风格约束，探索缺损字形的结构恢复与风格一致生成。
             </p>
           </div>
 
@@ -230,7 +230,7 @@
               <article class="research-panel">
                 <h3>背景</h3>
                 <p>
-                  古汉字材料常以残片、拓印、摹本或局部字形图像出现。与碑拓整幅修复不同，古汉字修复更强调单字结构、部件组合、字族关系与文字演化线索。
+                  古汉字材料常以残片、拓印、摹本或局部字形图像出现。该方向目前接入本科毕设《基于扩散模型的古汉字修复方法研究》，围绕真实古籍退化、风格保持和字形结构恢复展开。
                 </p>
               </article>
               <article class="research-panel">
@@ -238,26 +238,35 @@
                 <ul class="compact-list">
                   <li>残缺部件可能影响字形判读，修复需要历史文字学约束。</li>
                   <li>同一字符跨时期、跨载体存在显著形体差异。</li>
-                  <li>缺少规模化、标准化的残缺字形修复评测基准。</li>
+                  <li>真实修复场景缺少完备配对数据，需要退化模拟、风格迁移与评价指标共同支撑。</li>
                 </ul>
               </article>
             </div>
 
-            <div class="research-demo placeholder-demo">
+            <div class="research-demo character-thesis-demo">
               <div class="restore-gallery-title">
                 <h3>展示实例</h3>
               </div>
-              <div class="glyph-lab" aria-label="古汉字修复框架占位展示">
-                <span class="glyph-tile is-fragmented">甲</span>
-                <span class="glyph-arrow">→</span>
-                <span class="glyph-tile">甲</span>
-                <span class="glyph-tile is-fragmented">鼎</span>
-                <span class="glyph-arrow">→</span>
-                <span class="glyph-tile">鼎</span>
+              <div class="character-thesis-grid" aria-label="古汉字修复毕设展示">
+                <figure class="character-thesis-cover">
+                  <img src="assets/rendered/ancient-character-thesis-cover.jpg" alt="基于扩散模型的古汉字修复方法研究毕设封面">
+                  <figcaption>本科毕设 · 基于扩散模型的古汉字修复方法研究</figcaption>
+                </figure>
+                <div class="character-thesis-showcase">
+                  <figure class="character-thesis-strip">
+                    <img src="assets/rendered/ancient-character-thesis-samples.jpg" alt="古汉字真实书法样本与标准化处理流程">
+                    <figcaption>真实书法样本与统一标准化流程</figcaption>
+                  </figure>
+                  <figure class="character-thesis-strip is-results">
+                    <img src="assets/rendered/ancient-character-thesis-results.jpg" alt="古汉字修复结果对比">
+                    <figcaption>不同退化场景下的修复结果对比</figcaption>
+                  </figure>
+                </div>
               </div>
-              <p class="placeholder-copy">
-                该方向暂未挂载论文，后续可接入字符级数据集、字形补全可视化与专家校验流程。
+              <p class="character-thesis-copy">
+                展示内容来自一位同学的本科毕业设计，覆盖古汉字样本构建、退化噪声处理、扩散修复框架与结果可视化，可作为该方向后续研究的起点。
               </p>
+              <a class="button secondary character-thesis-link" href="assets/papers/ancient-character-restoration-thesis.pdf">查看毕设 PDF</a>
             </div>
           </div>
 
@@ -348,7 +357,7 @@
     <footer class="footer">
       <div class="site-shell">© 东南大学 PALM 实验室数字人文小组</div>
     </footer>
-    <script src="assets/js/paper-list.js?v=zh-home"></script>
-    <script src="assets/js/restoration-demo.js?v=zh-home"></script>
+    <script src="assets/js/paper-list.js"></script>
+    <script src="assets/js/restoration-demo.js"></script>
   </body>
 </html>
