@@ -53,7 +53,7 @@
     const response = await fetch("data/papers.json", { cache: "no-store" });
 
     if (!response.ok) {
-      throw new Error(`Failed to load papers.json: ${response.status}`);
+      throw new Error(`papers.json 加载失败：${response.status}`);
     }
 
     const papers = await response.json();
@@ -74,7 +74,7 @@
     });
   } catch (error) {
     lists.forEach((list) => {
-      list.innerHTML = '<p class="load-error">Paper list failed to load. Please open this site through a local server.</p>';
+      list.innerHTML = '<p class="load-error">论文列表加载失败。请通过本地服务器打开该网站。</p>';
     });
     console.error(error);
   }

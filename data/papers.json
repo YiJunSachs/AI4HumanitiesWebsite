@@ -1,29 +1,29 @@
 [
   {
-    "title": "MCHDoc: A Comprehensive Benchmark for Reading Multi-Carrier Chinese Historical Documents",
+    "title": "MCHDoc：多载体中国历史文献阅读综合基准",
     "href": "papers/mchdoc.html",
     "area": "multi-carrier-reading",
     "thumbnail": "assets/rendered/process_v7.png",
-    "thumbnailAlt": "MCHDoc historical document carriers and expert reading workflow",
-    "tags": ["CVPR 2026", "MCHDoc Benchmark", "Chinese Historical Documents"],
-    "description": "15,724 high-resolution documents across six carriers, with page recognition, character recognition, and post-correction tasks."
+    "thumbnailAlt": "MCHDoc 多载体历史文献阅读流程",
+    "tags": ["CVPR 2026", "MCHDoc 基准", "中国历史文献"],
+    "description": "覆盖六类历史载体的 15,724 张高分辨率文献图像，支持页面识别、字符识别与后校正评测。"
   },
   {
-    "title": "EpiAgent: An Agent-Centric System for Ancient Inscription Restoration",
+    "title": "EpiAgent：面向古代碑刻修复的智能体系统",
     "href": "papers/epiagent.html",
     "area": "rubbing-restoration",
     "thumbnail": "assets/rendered/epiagent-teaser.png",
-    "thumbnailAlt": "Qualitative comparison of restored ancient inscription samples",
-    "tags": ["CVPR 2026", "Agentic AI", "Ancient Inscription Restoration"],
-    "description": "An agent-centric restoration system that coordinates multimodal analysis, experience-guided planning, specialized tools, and self-refinement."
+    "thumbnailAlt": "EpiAgent 古代碑刻修复效果对比",
+    "tags": ["CVPR 2026", "智能体修复", "古代碑刻修复"],
+    "description": "通过多模态感知、经验引导规划、专用修复工具与自我反思协同完成残损碑拓修复。"
   },
   {
-    "title": "Reproducing the Past: A Dataset for Benchmarking Inscription Restoration",
+    "title": "CIRI：碑刻修复基准数据集",
     "href": "papers/mm24.html",
     "area": "rubbing-restoration",
     "thumbnail": "assets/rendered/mm24-results.png",
-    "thumbnailAlt": "CIRI restoration comparison results",
-    "tags": ["MM 2024", "CIRI Dataset", "Ancient Inscription Restoration"],
-    "description": "A benchmark for Chinese inscription rubbing restoration, combining real degraded rubbings, paired synthetic data, and a global-local diffusion baseline."
+    "thumbnailAlt": "CIRI 碑拓修复对比结果",
+    "tags": ["MM 2024", "CIRI 数据集", "古代碑刻修复"],
+    "description": "面向中国碑拓图像修复的基准，结合真实残损拓片、合成配对数据与全局-局部扩散修复基线。"
   }
 ]
