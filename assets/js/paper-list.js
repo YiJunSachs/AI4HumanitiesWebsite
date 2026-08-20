@@ -1,10 +1,53 @@
 (async function renderPaperList() {
-  const list = document.querySelector("[data-paper-list]");
+  const lists = document.querySelectorAll("[data-paper-list]");
   const template = document.querySelector("#paper-card-template");
 
-  if (!list || !template) {
+  if (!lists.length || !template) {
     return;
   }
+
+  const createEmptyState = (list) => {
+    const empty = document.createElement("article");
+    empty.className = "paper-empty";
+
+    const title = document.createElement("h3");
+    title.textContent = list.dataset.emptyTitle || "暂无论文";
+
+    const description = document.createElement("p");
+    description.textContent = list.dataset.emptyDescription || "该方向的论文入口已预留。";
+
+    empty.append(title, description);
+    return empty;
+  };
+
+  const createPaperCard = (paper) => {
+    const card = template.content.firstElementChild.cloneNode(true);
+    const image = card.querySelector("[data-paper-thumbnail]");
+    const title = card.querySelector("[data-paper-title]");
+    const description = card.querySelector("[data-paper-description]");
+    const tags = card.querySelector("[data-paper-tags]");
+
+    card.href = paper.href;
+    card.dataset.paperArea = paper.area || "";
+
+    if (image) {
+      image.src = paper.thumbnail;
+      image.alt = paper.thumbnailAlt || paper.title;
+    }
+
+    title.textContent = paper.title;
+    description.textContent = paper.description;
+
+    tags.textContent = "";
+    for (const tag of paper.tags || []) {
+      const tagElement = document.createElement("span");
+      tagElement.className = "tag";
+      tagElement.textContent = tag;
+      tags.appendChild(tagElement);
+    }
+
+    return card;
+  };
 
   try {
     const response = await fetch("data/papers.json", { cache: "no-store" });
@@ -14,35 +57,25 @@
     }
 
     const papers = await response.json();
-    list.textContent = "";
 
-    for (const paper of papers) {
-      const card = template.content.firstElementChild.cloneNode(true);
-      const image = card.querySelector("[data-paper-thumbnail]");
-      const title = card.querySelector("[data-paper-title]");
-      const description = card.querySelector("[data-paper-description]");
-      const tags = card.querySelector("[data-paper-tags]");
+    lists.forEach((list) => {
+      const area = list.dataset.paperArea;
+      const filteredPapers = area ? papers.filter((paper) => paper.area === area) : papers;
+      list.textContent = "";
 
-      card.href = paper.href;
-      if (image) {
-        image.src = paper.thumbnail;
-        image.alt = paper.thumbnailAlt || paper.title;
-      }
-      title.textContent = paper.title;
-      description.textContent = paper.description;
-
-      tags.textContent = "";
-      for (const tag of paper.tags || []) {
-        const tagElement = document.createElement("span");
-        tagElement.className = "tag";
-        tagElement.textContent = tag;
-        tags.appendChild(tagElement);
+      if (!filteredPapers.length) {
+        list.appendChild(createEmptyState(list));
+        return;
       }
 
-      list.appendChild(card);
-    }
+      for (const paper of filteredPapers) {
+        list.appendChild(createPaperCard(paper));
+      }
+    });
   } catch (error) {
-    list.innerHTML = '<p class="load-error">Paper list failed to load. Please open this site through a local server.</p>';
+    lists.forEach((list) => {
+      list.innerHTML = '<p class="load-error">Paper list failed to load. Please open this site through a local server.</p>';
+    });
     console.error(error);
   }
 })();

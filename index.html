@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Digital Humanities Group Paper List</title>
+    <title>Digital Humanities Research Areas</title>
     <link rel="icon" href="assets/rendered/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="assets/styles.css?v=mchdoc-carriers">
+    <link rel="stylesheet" href="assets/styles.css?v=research-sections">
   </head>
   <body>
     <header class="topbar">
@@ -15,179 +15,340 @@
           <span>Digital Humanities Group</span>
         </a>
         <div class="nav-links">
-          <a href="#papers">Paper List</a>
-          <a href="papers/mchdoc.html">MCHDoc Benchmark</a>
-          <a href="papers/epiagent.html">EpiAgent Restoration</a>
-          <a href="papers/mm24.html">CIRI Restoration</a>
+          <a href="#rubbing-restoration">碑拓修复</a>
+          <a href="#multi-carrier-reading">多载体阅读</a>
+          <a href="#ancient-character-restoration">古汉字修复</a>
+          <a href="#historical-phonology">古代音韵</a>
         </div>
       </nav>
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero research-hero">
         <div class="site-shell hero-grid">
           <div>
             <div class="eyebrow">东南大学 · PALM实验室 · 数字人文小组</div>
-            <h1>卷帙之间，见论文脉络</h1>
+            <h1>数字人文研究图谱</h1>
             <p class="hero-copy">
-              A curated paper list for our lab, designed as an archive-style entrance. Each paper opens into a dedicated project page with method, benchmark, results, and visual materials.
+              We organize our work around four connected directions: damaged inscription restoration, multi-carrier historical document reading, ancient character restoration, and historical phonology.
             </p>
             <div class="actions">
-              <a class="button" href="#papers">Browse Papers</a>
+              <a class="button" href="#rubbing-restoration">Explore Research Areas</a>
             </div>
           </div>
-          <div class="scroll-panel" aria-label="MCHDoc visual preview">
-            <img src="assets/rendered/calligraphy_hero.png" alt="Chinese calligraphy scroll on warm xuan paper">
+          <div class="area-map" aria-label="Research areas overview">
+            <a class="area-chip" href="#rubbing-restoration">
+              <span>01</span>
+              <strong>残损碑拓修复研究</strong>
+              <em>EpiAgent · CIRI</em>
+            </a>
+            <a class="area-chip" href="#multi-carrier-reading">
+              <span>02</span>
+              <strong>多载体古籍阅读研究</strong>
+              <em>MCHDoc</em>
+            </a>
+            <a class="area-chip" href="#ancient-character-restoration">
+              <span>03</span>
+              <strong>古汉字修复研究</strong>
+              <em>Framework reserved</em>
+            </a>
+            <a class="area-chip" href="#historical-phonology">
+              <span>04</span>
+              <strong>中国古代音韵研究</strong>
+              <em>Framework reserved</em>
+            </a>
           </div>
         </div>
       </section>
 
-      <section class="section carrier-section" id="carriers" hidden>
-        <div class="site-shell">
-          <div class="section-head">
+      <div id="papers" class="anchor-target" aria-hidden="true"></div>
+
+      <section class="section research-section research-section-rubbing" id="rubbing-restoration">
+        <div class="site-shell research-stack">
+          <div class="section-head research-head">
             <div>
-              <div class="eyebrow">Multi-Carrier Hall</div>
-              <h2>多载体展厅</h2>
+              <div class="eyebrow">Research Area 01</div>
+              <h2>残损碑拓修复研究</h2>
             </div>
             <p>
-              Five historical document carriers from the Dataset collection, staged as a compact museum-style gallery.
+              面向碑刻、拓片、摩崖等残损材料，研究如何在尊重原始书写结构与拓印质感的前提下恢复缺失笔画、噪声区域与断裂字形。
             </p>
           </div>
 
-          <div class="carrier-hall" aria-label="Dataset carrier examples">
-            <article class="carrier-card" tabindex="0">
-              <div class="carrier-card-body">
-                <span class="carrier-index">01</span>
-                <h3>古籍</h3>
-                <p>Printed and manuscript pages with dense vertical text, seals, aging paper, and page-layout cues.</p>
-                <span class="carrier-source">AncientBook</span>
-              </div>
-              <div class="carrier-preview" aria-label="AncientBook examples">
-                <figure>
-                  <img src="assets/rendered/carriers/ancient-book-1.jpg" alt="AncientBook dataset example 1">
-                </figure>
-                <figure>
-                  <img src="assets/rendered/carriers/ancient-book-2.jpg" alt="AncientBook dataset example 2">
-                </figure>
-                <figure>
-                  <img src="assets/rendered/carriers/ancient-book-3.jpg" alt="AncientBook dataset example 3">
-                </figure>
-              </div>
-            </article>
+          <div class="research-layout">
+            <div class="research-brief">
+              <article class="research-panel">
+                <h3>背景</h3>
+                <p>
+                  碑拓材料记录了大量历史文献、书法形态和地方文化信息，但真实拓片常伴随风化、剥蚀、墨迹不均、局部缺失与扫描噪声。AI 修复需要同时维护可读性、字形真实性与拓片视觉风格。
+                </p>
+              </article>
+              <article class="research-panel">
+                <h3>挑战</h3>
+                <ul class="compact-list">
+                  <li>缺损区域往往覆盖关键笔画，单纯图像补全容易产生不可信字形。</li>
+                  <li>碑拓具有黑底白字、噪声颗粒、纸面纹理等特殊视觉分布。</li>
+                  <li>修复结果需要兼顾字符结构、上下文语义与专家可解释性。</li>
+                </ul>
+              </article>
+            </div>
 
-            <article class="carrier-card" tabindex="0">
-              <div class="carrier-card-body">
-                <span class="carrier-index">02</span>
-                <h3>书法</h3>
-                <p>Calligraphy leaves with sparse ink, brush texture, varying stroke density, and open white space.</p>
-                <span class="carrier-source">CalliBench</span>
+            <div class="research-demo restore-widget restore-widget-gallery-simple area-demo-widget">
+              <div class="restore-gallery-title">
+                <h3>展示实例</h3>
               </div>
-              <div class="carrier-preview" aria-label="CalliBench examples">
-                <figure>
-                  <img src="assets/rendered/carriers/calligraphy-1.jpg" alt="CalliBench dataset example 1">
-                </figure>
-                <figure>
-                  <img src="assets/rendered/carriers/calligraphy-2.jpg" alt="CalliBench dataset example 2">
-                </figure>
-                <figure>
-                  <img src="assets/rendered/carriers/calligraphy-3.jpg" alt="CalliBench dataset example 3">
-                </figure>
+              <div class="restore-pair-grid home-restore-grid" aria-label="Inscription restoration examples">
+                <article class="restore-pair" data-restore-pair style="--restore-progress: 0%;">
+                  <h3 class="demo-card-title">EpiAgent</h3>
+                  <div class="restore-frame restore-frame-epiagent-grid">
+                    <img class="restore-layer restore-before" src="assets/rendered/epiagent-restore-example-1-before.png?v=home-area" alt="Corrupted EpiAgent restoration example">
+                    <div class="restore-layer restore-after-wrap" aria-hidden="true">
+                      <img src="assets/rendered/epiagent-restore-example-1-after.png?v=home-area" alt="">
+                    </div>
+                    <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
+                  </div>
+                  <div class="restore-pair-labels" aria-hidden="true">
+                    <span>Damaged</span>
+                    <span>Restored</span>
+                  </div>
+                  <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="0" aria-label="Reveal restored EpiAgent homepage example">
+                </article>
+                <article class="restore-pair" data-restore-pair style="--restore-progress: 0%;">
+                  <h3 class="demo-card-title">CIRI</h3>
+                  <div class="restore-frame restore-frame-ciri">
+                    <img class="restore-layer restore-before" src="assets/rendered/mm24-corrupted-03400-before.png" alt="Corrupted CIRI rubbing sample 03400">
+                    <div class="restore-layer restore-after-wrap" aria-hidden="true">
+                      <img src="assets/rendered/mm24-corrupted-03400-after.png" alt="">
+                    </div>
+                    <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
+                  </div>
+                  <div class="restore-pair-labels" aria-hidden="true">
+                    <span>Corrupted</span>
+                    <span>Restored</span>
+                  </div>
+                  <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="0" aria-label="Reveal restored CIRI homepage example">
+                </article>
               </div>
-            </article>
-
-            <article class="carrier-card" tabindex="0">
-              <div class="carrier-card-body">
-                <span class="carrier-index">03</span>
-                <h3>碑刻</h3>
-                <p>Stone inscription rubbings and epitaph texts with fragmented surfaces and high-contrast strokes.</p>
-                <span class="carrier-source">Inscription</span>
-              </div>
-              <div class="carrier-preview" aria-label="Inscription examples">
-                <figure>
-                  <img src="assets/rendered/carriers/inscription-1.jpg" alt="Inscription dataset example 1">
-                </figure>
-                <figure>
-                  <img src="assets/rendered/carriers/inscription-2.jpg" alt="Inscription dataset example 2">
-                </figure>
-                <figure>
-                  <img src="assets/rendered/carriers/inscription-3.jpg" alt="Inscription dataset example 3">
-                </figure>
-              </div>
-            </article>
-
-            <article class="carrier-card" tabindex="0">
-              <div class="carrier-card-body">
-                <span class="carrier-index">04</span>
-                <h3>简牍</h3>
-                <p>Narrow bamboo and wooden slip fragments with long vertical proportions and uneven preservation.</p>
-                <span class="carrier-source">JianDu</span>
-              </div>
-              <div class="carrier-preview" aria-label="JianDu examples">
-                <figure>
-                  <img src="assets/rendered/carriers/jiandu-1.jpg" alt="JianDu dataset example 1">
-                </figure>
-                <figure>
-                  <img src="assets/rendered/carriers/jiandu-2.jpg" alt="JianDu dataset example 2">
-                </figure>
-                <figure>
-                  <img src="assets/rendered/carriers/jiandu-3.jpg" alt="JianDu dataset example 3">
-                </figure>
-              </div>
-            </article>
-
-            <article class="carrier-card" tabindex="0">
-              <div class="carrier-card-body">
-                <span class="carrier-index">05</span>
-                <h3>甲骨</h3>
-                <p>Oracle-bone fragments with carved signs, broken edges, dark material texture, and sparse symbols.</p>
-                <span class="carrier-source">Oracle</span>
-              </div>
-              <div class="carrier-preview" aria-label="Oracle examples">
-                <figure>
-                  <img src="assets/rendered/carriers/oracle-1.jpg" alt="Oracle dataset example 1">
-                </figure>
-                <figure>
-                  <img src="assets/rendered/carriers/oracle-2.jpg" alt="Oracle dataset example 2">
-                </figure>
-                <figure>
-                  <img src="assets/rendered/carriers/oracle-3.jpg" alt="Oracle dataset example 3">
-                </figure>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="papers">
-        <div class="site-shell">
-          <div class="section-head">
-            <div>
-              <div class="eyebrow">Paper List</div>
-              <h2>研究卷目</h2>
             </div>
           </div>
 
-          <div class="paper-list" data-paper-list>
-            <p class="load-error">Loading papers...</p>
+          <div class="research-paper-block">
+            <h3>Paper List</h3>
+            <div class="paper-list" data-paper-list data-paper-area="rubbing-restoration">
+              <p class="load-error">Loading papers...</p>
+            </div>
           </div>
-
-          <template id="paper-card-template">
-            <a class="paper-card" href="#">
-              <div>
-                <div class="paper-meta" data-paper-tags></div>
-                <h3 data-paper-title></h3>
-                <p data-paper-description></p>
-              </div>
-              <span class="arrow" aria-hidden="true">›</span>
-            </a>
-          </template>
         </div>
       </section>
+
+      <section class="section research-section research-section-carriers" id="multi-carrier-reading">
+        <div class="site-shell research-stack">
+          <div class="section-head research-head">
+            <div>
+              <div class="eyebrow">Research Area 02</div>
+              <h2>多载体古籍阅读研究</h2>
+            </div>
+            <p>
+              面向古籍、简牍、书法、碑刻、帛书、甲骨等多载体历史文献，研究跨材料、跨时代、跨书写形态的视觉识别与文本校勘。
+            </p>
+          </div>
+
+          <div class="research-layout">
+            <div class="research-brief">
+              <article class="research-panel">
+                <h3>背景</h3>
+                <p>
+                  历史文献并不只存在于纸本古籍中。不同载体拥有不同版式、材质、破损方式和字形演化特征，阅读任务需要从图像感知延伸到字符识别、上下文推理与知识校正。
+                </p>
+              </article>
+              <article class="research-panel">
+                <h3>挑战</h3>
+                <ul class="compact-list">
+                  <li>不同载体的视觉域差异显著，单一 OCR 模型难以稳定迁移。</li>
+                  <li>历史字形、异体字和低频字符会放大识别与校勘误差。</li>
+                  <li>完整阅读流程需要把页面级识别、字符级识别和后校正统一评估。</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="research-demo carrier-sample-demo">
+              <div class="restore-gallery-title">
+                <h3>展示实例</h3>
+              </div>
+              <div class="carrier-sample-grid" aria-label="MCHDoc carrier examples">
+                <figure class="carrier-sample">
+                  <img src="assets/rendered/carriers/ancient-book-1.jpg" alt="AncientBook example">
+                  <figcaption>AncientBook</figcaption>
+                </figure>
+                <figure class="carrier-sample">
+                  <img src="assets/rendered/carriers/jiandu-1.jpg" alt="JianDu example">
+                  <figcaption>JianDu</figcaption>
+                </figure>
+                <figure class="carrier-sample">
+                  <img src="assets/rendered/carriers/calligraphy-1.jpg" alt="CalliBench example">
+                  <figcaption>CalliBench</figcaption>
+                </figure>
+                <figure class="carrier-sample">
+                  <img src="assets/rendered/carriers/inscription-1.jpg" alt="Inscription example">
+                  <figcaption>Inscription</figcaption>
+                </figure>
+                <figure class="carrier-sample">
+                  <img src="assets/rendered/carriers/silk-1.jpg" alt="Silk example">
+                  <figcaption>Silk</figcaption>
+                </figure>
+                <figure class="carrier-sample">
+                  <img src="assets/rendered/carriers/oracle-char-1.jpg" alt="Oracle example">
+                  <figcaption>Oracle</figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+
+          <div class="research-paper-block">
+            <h3>Paper List</h3>
+            <div class="paper-list" data-paper-list data-paper-area="multi-carrier-reading">
+              <p class="load-error">Loading papers...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section research-section research-section-characters" id="ancient-character-restoration">
+        <div class="site-shell research-stack">
+          <div class="section-head research-head">
+            <div>
+              <div class="eyebrow">Research Area 03</div>
+              <h2>古汉字修复研究</h2>
+            </div>
+            <p>
+              聚焦甲骨、金文、简帛、篆隶等古文字形态，预留面向单字级形体补全、异体字对齐与风格一致性恢复的研究框架。
+            </p>
+          </div>
+
+          <div class="research-layout">
+            <div class="research-brief">
+              <article class="research-panel">
+                <h3>背景</h3>
+                <p>
+                  古汉字材料常以残片、拓印、摹本或局部字形图像出现。与碑拓整幅修复不同，古汉字修复更强调单字结构、部件组合、字族关系与文字演化线索。
+                </p>
+              </article>
+              <article class="research-panel">
+                <h3>挑战</h3>
+                <ul class="compact-list">
+                  <li>残缺部件可能影响字形判读，修复需要历史文字学约束。</li>
+                  <li>同一字符跨时期、跨载体存在显著形体差异。</li>
+                  <li>缺少规模化、标准化的残缺字形修复 benchmark。</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="research-demo placeholder-demo">
+              <div class="restore-gallery-title">
+                <h3>展示实例</h3>
+              </div>
+              <div class="glyph-lab" aria-label="Ancient character restoration framework placeholder">
+                <span class="glyph-tile is-fragmented">甲</span>
+                <span class="glyph-arrow">→</span>
+                <span class="glyph-tile">甲</span>
+                <span class="glyph-tile is-fragmented">鼎</span>
+                <span class="glyph-arrow">→</span>
+                <span class="glyph-tile">鼎</span>
+              </div>
+              <p class="placeholder-copy">
+                该方向暂未挂载论文，后续可接入字符级数据集、字形补全可视化与专家校验流程。
+              </p>
+            </div>
+          </div>
+
+          <div class="research-paper-block">
+            <h3>Paper List</h3>
+            <div class="paper-list" data-paper-list data-paper-area="ancient-character-restoration" data-empty-title="暂无论文" data-empty-description="古汉字修复方向已预留，后续论文可以直接归入该 section。">
+              <p class="load-error">Loading papers...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section research-section research-section-phonology" id="historical-phonology">
+        <div class="site-shell research-stack">
+          <div class="section-head research-head">
+            <div>
+              <div class="eyebrow">Research Area 04</div>
+              <h2>中国古代音韵研究</h2>
+            </div>
+            <p>
+              预留面向韵书、反切、诗词押韵、方音演化与历史语音重建的研究方向，将文本证据与可计算音系建模连接起来。
+            </p>
+          </div>
+
+          <div class="research-layout">
+            <div class="research-brief">
+              <article class="research-panel">
+                <h3>背景</h3>
+                <p>
+                  中国古代音韵研究依赖韵书、等韵图、反切材料、诗文押韵与方言比较。数字化后，可以把离散文献证据组织成可检索、可推理、可视化的音韵知识网络。
+                </p>
+              </article>
+              <article class="research-panel">
+                <h3>挑战</h3>
+                <ul class="compact-list">
+                  <li>历史音值不可直接观测，需要综合多源证据进行重建。</li>
+                  <li>古今音、方言音、韵部和声调系统之间存在复杂对应关系。</li>
+                  <li>研究需要把文献训诂、统计建模和可解释推理结合起来。</li>
+                </ul>
+              </article>
+            </div>
+
+            <div class="research-demo placeholder-demo phonology-demo">
+              <div class="restore-gallery-title">
+                <h3>展示实例</h3>
+              </div>
+              <div class="sound-lanes" aria-label="Historical phonology framework placeholder">
+                <div class="sound-lane">
+                  <span>韵书材料</span>
+                  <strong>反切 · 韵部 · 声调</strong>
+                </div>
+                <div class="sound-lane">
+                  <span>文本证据</span>
+                  <strong>诗韵 · 通假 · 异文</strong>
+                </div>
+                <div class="sound-lane">
+                  <span>音系建模</span>
+                  <strong>中古音 · 方言音 · 演化链</strong>
+                </div>
+              </div>
+              <p class="placeholder-copy">
+                该方向暂未挂载论文，后续可接入音韵数据库、押韵检索和历史音系可视化。
+              </p>
+            </div>
+          </div>
+
+          <div class="research-paper-block">
+            <h3>Paper List</h3>
+            <div class="paper-list" data-paper-list data-paper-area="historical-phonology" data-empty-title="暂无论文" data-empty-description="中国古代音韵研究方向已预留，后续论文可以直接归入该 section。">
+              <p class="load-error">Loading papers...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <template id="paper-card-template">
+        <a class="paper-card" href="#">
+          <div>
+            <div class="paper-meta" data-paper-tags></div>
+            <h3 data-paper-title></h3>
+            <p data-paper-description></p>
+          </div>
+          <span class="arrow" aria-hidden="true">›</span>
+        </a>
+      </template>
     </main>
 
     <footer class="footer">
       <div class="site-shell">© Southeast University Palm Lab and Digital Humanities Group</div>
     </footer>
-    <script src="assets/js/paper-list.js"></script>
+    <script src="assets/js/paper-list.js?v=research-sections"></script>
+    <script src="assets/js/restoration-demo.js?v=research-sections"></script>
   </body>
 </html>
