@@ -30,8 +30,8 @@
     "title": "基于扩散模型的古汉字修复方法研究",
     "href": "assets/papers/ancient-character-restoration-thesis.pdf",
     "area": "ancient-character-restoration",
-    "thumbnail": "assets/rendered/ancient-character-thesis-cover.jpg",
-    "thumbnailAlt": "基于扩散模型的古汉字修复方法研究毕设封面",
+    "thumbnail": "assets/rendered/ancient-character-thesis-samples.jpg",
+    "thumbnailAlt": "古汉字真实书法样本",
     "tags": ["本科毕设", "扩散模型", "古汉字修复"],
     "description": "面向真实古籍退化场景，围绕样本构建、退化噪声处理、书法风格保持和扩散生成修复展开方法研究。"
   }

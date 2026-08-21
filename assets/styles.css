@@ -478,12 +478,10 @@ p {
 
 .character-thesis-grid {
   display: grid;
-  grid-template-columns: minmax(180px, 0.36fr) minmax(0, 1fr);
-  gap: 14px;
-  align-items: stretch;
+  grid-template-columns: 1fr;
+  gap: 12px;
 }
 
-.character-thesis-cover,
 .character-thesis-strip {
   min-width: 0;
   margin: 0;
@@ -492,35 +490,20 @@ p {
   background: rgba(255, 248, 236, 0.52);
 }
 
-.character-thesis-cover img,
 .character-thesis-strip img {
   width: 100%;
   background: #fff;
 }
 
-.character-thesis-cover img {
-  height: 100%;
-  min-height: 420px;
-  object-fit: cover;
-  object-position: top center;
-}
-
-.character-thesis-showcase {
-  display: grid;
-  gap: 12px;
-}
-
 .character-thesis-strip img {
-  height: 178px;
-  object-fit: cover;
-  object-position: top center;
+  height: auto;
+  object-fit: contain;
 }
 
 .character-thesis-strip.is-results img {
-  height: 260px;
+  height: auto;
 }
 
-.character-thesis-cover figcaption,
 .character-thesis-strip figcaption {
   padding: 9px 10px 11px;
   color: var(--muted);
@@ -1565,12 +1548,6 @@ th {
 
   .character-thesis-grid {
     grid-template-columns: 1fr;
-  }
-
-  .character-thesis-cover img {
-    height: 380px;
-    min-height: 0;
-    object-fit: contain;
   }
 
   .arrow {
