@@ -27,21 +27,12 @@
     "description": "面向中国碑拓图像修复的基准，结合真实残损拓片、合成配对数据与全局-局部扩散修复基线。"
   },
   {
-    "title": "基于扩散模型的古汉字修复方法研究",
-    "href": "assets/papers/ancient-character-restoration-thesis.pdf",
-    "area": "ancient-character-restoration",
-    "thumbnail": "assets/rendered/ancient-character-thesis-samples.jpg",
-    "thumbnailAlt": "古汉字真实书法样本",
-    "tags": ["本科毕设", "扩散模型", "古汉字修复"],
-    "description": "面向真实古籍退化场景，围绕样本构建、退化噪声处理、书法风格保持和扩散生成修复展开方法研究。"
-  },
-  {
-    "title": "QYSPD：宋代语料证据下的切韵系多音反切消歧",
+    "title": "Resolving Inherited Ambiguity in Chinese Historical Phonology: A Song-Dynasty Case Study with Large Language Model",
     "href": "papers/qyspd.html",
     "area": "historical-phonology",
     "thumbnail": "assets/rendered/qyspd/primary-paths.png",
     "thumbnailAlt": "QYSPD 反切 primary path 示例",
-    "tags": ["QYSPD", "历史音韵", "广韵反切"],
-    "description": "利用宋代多体裁语料、广韵内部结构和大语言模型推理，系统消解切韵系多音反切带来的继承性歧义。"
+    "tags": ["npj Heritage Science", "In press 2026", "历史音韵"],
+    "description": "Haiyue Liu, Hui Xue*, Na Nie, Shipeng Zhu. 面向宋代语料案例，利用大语言模型消解中国历史音韵中的继承性歧义。"
   }
 ]
