@@ -88,16 +88,16 @@ img {
 
 .image-seal {
   overflow: hidden;
-  padding: 5px;
+  padding: 3px;
   color: var(--ink);
-  background: rgba(255, 250, 239, 0.72);
+  background: rgba(255, 250, 239, 0.92);
   border: 1px solid rgba(126, 94, 50, 0.34);
   box-shadow: none;
 }
 
 .image-seal img {
-  width: 26px;
-  height: 26px;
+  width: 30px;
+  height: 30px;
   object-fit: contain;
 }
 
@@ -1861,9 +1861,9 @@ th {
   z-index: 50;
   border-bottom: 0;
   color: #fff;
-  background: transparent;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0));
   backdrop-filter: none;
-  mix-blend-mode: difference;
+  mix-blend-mode: normal;
 }
 
 .home-redesign .topbar .site-shell {
@@ -1879,10 +1879,10 @@ th {
 }
 
 .home-redesign .image-seal {
-  border-color: currentColor;
+  border-color: rgba(255, 255, 255, 0.62);
   border-radius: 50%;
-  background: transparent;
-  filter: grayscale(1) contrast(1.5);
+  background: rgba(255, 255, 255, 0.94);
+  filter: none;
 }
 
 .home-redesign .nav-links {
