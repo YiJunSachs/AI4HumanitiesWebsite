@@ -2107,7 +2107,10 @@ th {
 
 .home-redesign .research-head {
   max-width: 720px;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 18px;
+  text-align: left;
 }
 
 .home-redesign .research-head h2 {
