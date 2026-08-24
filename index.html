@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="home-redesign-root">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
     <link rel="icon" href="assets/rendered/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/styles.css">
   </head>
-  <body>
+  <body class="home-redesign">
     <header class="topbar">
       <nav class="site-shell nav" aria-label="主导航">
         <a class="brand" href="index.html">
@@ -68,7 +68,7 @@
           <div class="section-head research-head">
             <div>
               <div class="eyebrow">研究方向 01</div>
-              <h2>残损碑拓修复研究</h2>
+              <h2>残损碑拓<br>修复研究</h2>
             </div>
             <p>
               面向碑刻、拓片、摩崖等残损材料，研究如何在尊重原始书写结构与拓印质感的前提下恢复缺失笔画、噪声区域与断裂字形。
@@ -146,7 +146,7 @@
           <div class="section-head research-head">
             <div>
               <div class="eyebrow">研究方向 02</div>
-              <h2>多载体古籍阅读研究</h2>
+              <h2>多载体古籍<br>阅读研究</h2>
             </div>
             <p>
               面向古籍、简牍、书法、碑刻、帛书、甲骨等多载体历史文献，研究跨材料、跨时代、跨书写形态的视觉识别与文本校勘。
@@ -218,7 +218,7 @@
           <div class="section-head research-head">
             <div>
               <div class="eyebrow">研究方向 03</div>
-              <h2>古汉字修复研究</h2>
+              <h2>古汉字修复<br>研究</h2>
             </div>
             <p>
               聚焦甲骨、金文、简帛、篆隶等古文字形态，结合扩散生成、退化模拟与书法风格约束，探索缺损字形的结构恢复与风格一致生成。
@@ -282,10 +282,10 @@
           <div class="section-head research-head">
             <div>
               <div class="eyebrow">研究方向 04</div>
-              <h2>中国古代音韵研究</h2>
+              <h2>中国古代音韵<br>研究</h2>
             </div>
             <p>
-              预留面向韵书、反切、诗词押韵、方音演化与历史语音重建的研究方向，将文本证据与可计算音系建模连接起来。
+              面向《广韵》、反切、韵书、诗文押韵与历史语音证据，研究如何把传统音韵学问题转化为可检索、可推理、可复现的计算框架。
             </p>
           </div>
 
@@ -294,15 +294,15 @@
               <article class="research-panel">
                 <h3>背景</h3>
                 <p>
-                  中国古代音韵研究依赖韵书、等韵图、反切材料、诗文押韵与方言比较。数字化后，可以把离散文献证据组织成可检索、可推理、可视化的音韵知识网络。
+                  中国古代音韵研究依赖韵书、等韵图、反切材料、诗文押韵与方言比较。QYSPD 已接入该方向，围绕《广韵》多音反切字的继承性歧义消解展开。
                 </p>
               </article>
               <article class="research-panel">
                 <h3>挑战</h3>
                 <ul class="compact-list">
-                  <li>历史音值不可直接观测，需要综合多源证据进行重建。</li>
-                  <li>古今音、方言音、韵部和声调系统之间存在复杂对应关系。</li>
-                  <li>研究需要把文献训诂、统计建模和可解释推理结合起来。</li>
+                  <li>多音反切字会把自身歧义传递给后续反切链条。</li>
+                  <li>古代语料存在体裁差异，主读音判断需要跨语域证据支撑。</li>
+                  <li>研究需要把字书内部结构、语料检索和模型推理统一起来。</li>
                 </ul>
               </article>
             </div>
@@ -311,29 +311,25 @@
               <div class="restore-gallery-title">
                 <h3>展示实例</h3>
               </div>
-              <div class="sound-lanes" aria-label="中国古代音韵研究框架占位展示">
-                <div class="sound-lane">
-                  <span>韵书材料</span>
-                  <strong>反切 · 韵部 · 声调</strong>
-                </div>
-                <div class="sound-lane">
-                  <span>文本证据</span>
-                  <strong>诗韵 · 通假 · 异文</strong>
-                </div>
-                <div class="sound-lane">
-                  <span>音系建模</span>
-                  <strong>中古音 · 方言音 · 演化链</strong>
-                </div>
+              <div class="phonology-figure-grid" aria-label="QYSPD 音韵研究展示">
+                <figure class="phonology-figure">
+                  <img src="assets/rendered/qyspd/fanqie-example.png" alt="《广韵》反切与多音反切示例">
+                  <figcaption>反切歧义</figcaption>
+                </figure>
+                <figure class="phonology-figure is-featured">
+                  <img src="assets/rendered/qyspd/primary-paths.png" alt="QYSPD primary paths 示例">
+                  <figcaption>Primary paths</figcaption>
+                </figure>
               </div>
               <p class="placeholder-copy">
-                该方向暂未挂载论文，后续可接入音韵数据库、押韵检索和历史音系可视化。
+                QYSPD 将多音反切字的继承性歧义转化为可追踪路径，为中古音重建和历时音变建模提供可复现的语料证据。
               </p>
             </div>
           </div>
 
           <div class="research-paper-block">
             <h3>相关论文</h3>
-            <div class="paper-list" data-paper-list data-paper-area="historical-phonology" data-empty-title="暂无论文" data-empty-description="中国古代音韵研究方向已预留，后续论文可以直接归入该版块。">
+            <div class="paper-list" data-paper-list data-paper-area="historical-phonology">
               <p class="load-error">论文加载中...</p>
             </div>
           </div>

@@ -1845,3 +1845,628 @@ th {
     grid-template-columns: 1fr;
   }
 }
+
+.home-redesign {
+  color: #f8efe3;
+  background: #11100e;
+}
+
+.home-redesign-root {
+  scroll-padding-top: 0;
+}
+
+.home-redesign .topbar {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 50;
+  border-bottom: 0;
+  color: #fff;
+  background: transparent;
+  backdrop-filter: none;
+  mix-blend-mode: difference;
+}
+
+.home-redesign .topbar .site-shell {
+  width: min(1320px, calc(100% - 56px));
+}
+
+.home-redesign .brand {
+  color: inherit;
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-redesign .image-seal {
+  border-color: currentColor;
+  border-radius: 50%;
+  background: transparent;
+  filter: grayscale(1) contrast(1.5);
+}
+
+.home-redesign .nav-links {
+  gap: 28px;
+  color: rgba(255, 255, 255, 0.74);
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.09em;
+}
+
+.home-redesign .nav-links a {
+  border-bottom: 0;
+}
+
+.home-redesign .nav-links a:hover {
+  color: #fff;
+}
+
+.home-redesign main {
+  background: #11100e;
+}
+
+.home-redesign .research-hero,
+.home-redesign .research-section {
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
+
+.home-redesign .research-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  color: #f7f0e4;
+  background: #15130f;
+  isolation: isolate;
+}
+
+.home-redesign .research-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("rendered/calligraphy_hero.png") center / cover no-repeat;
+  filter: saturate(0.52) contrast(1.08);
+  transform: scale(1.02);
+}
+
+.home-redesign .research-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(15, 13, 10, 0.88), rgba(15, 13, 10, 0.52) 44%, rgba(15, 13, 10, 0.12) 76%),
+    linear-gradient(0deg, rgba(10, 9, 7, 0.68), transparent 48%);
+}
+
+.home-redesign .research-hero .site-shell,
+.home-redesign .research-stack {
+  width: min(1320px, calc(100% - 56px));
+}
+
+.home-redesign .research-hero .hero-grid {
+  min-height: 100vh;
+  grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.68fr);
+  align-items: end;
+  padding: clamp(96px, 12vh, 150px) 0 clamp(46px, 7vh, 80px);
+}
+
+.home-redesign .research-hero h1 {
+  max-width: 9ch;
+  color: #fff8ec;
+  font-size: clamp(58px, 8.2vw, 128px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.home-redesign .hero-copy {
+  max-width: 720px;
+  color: rgba(255, 248, 238, 0.82);
+  font-size: clamp(18px, 1.7vw, 27px);
+  line-height: 1.68;
+}
+
+.home-redesign .research-hero .eyebrow,
+.home-redesign .research-section .eyebrow {
+  color: rgba(255, 255, 255, 0.64);
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+}
+
+.home-redesign .area-map {
+  align-self: end;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin-bottom: 2vh;
+}
+
+.home-redesign .area-chip {
+  min-height: 0;
+  padding: 16px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  color: rgba(255, 255, 255, 0.82);
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-redesign .area-chip:hover {
+  transform: translateX(4px);
+  box-shadow: none;
+}
+
+.home-redesign .area-chip span {
+  color: rgba(255, 255, 255, 0.46);
+}
+
+.home-redesign .area-chip strong {
+  margin-top: 8px;
+  color: #fff8ec;
+  font-size: 23px;
+}
+
+.home-redesign .area-chip em {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.home-redesign .button {
+  border-color: rgba(255, 255, 255, 0.46);
+  color: #fff8ec;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-redesign .button:hover {
+  color: #15130f;
+  background: #fff8ec;
+}
+
+.home-redesign .research-section {
+  padding: 0;
+  border-top: 0;
+  color: #fff8ec;
+  background: #111;
+}
+
+.home-redesign .research-section::before {
+  top: 9vh;
+  right: 4vw;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.055);
+  font-size: clamp(128px, 23vw, 340px);
+}
+
+.home-redesign .research-section::after {
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(10, 10, 10, 0.91), rgba(10, 10, 10, 0.58) 44%, rgba(10, 10, 10, 0.1) 79%),
+    linear-gradient(0deg, rgba(8, 8, 8, 0.7), transparent 48%);
+}
+
+.home-redesign .research-section-rubbing {
+  background: #060606;
+}
+
+.home-redesign .research-section-carriers {
+  background: #8b7b61;
+}
+
+.home-redesign .research-section-carriers::after {
+  background:
+    radial-gradient(circle at 72% 40%, rgba(255, 255, 255, 0.22), transparent 26%),
+    linear-gradient(90deg, rgba(32, 25, 18, 0.88), rgba(55, 43, 31, 0.48) 44%, rgba(55, 43, 31, 0.12) 79%),
+    linear-gradient(135deg, rgba(106, 92, 69, 0.8), rgba(190, 169, 132, 0.9));
+}
+
+.home-redesign .research-section-characters {
+  background: #16130f;
+}
+
+.home-redesign .research-section-characters::after {
+  background:
+    radial-gradient(circle at 72% 36%, rgba(198, 220, 178, 0.18), transparent 28%),
+    linear-gradient(90deg, rgba(10, 10, 10, 0.9), rgba(16, 19, 14, 0.56) 46%, rgba(16, 19, 14, 0.12) 80%);
+}
+
+.home-redesign .research-section-phonology {
+  background: #11100e;
+}
+
+.home-redesign .research-section-phonology::after {
+  background:
+    radial-gradient(circle at 76% 48%, rgba(156, 47, 36, 0.2), transparent 27%),
+    linear-gradient(90deg, rgba(8, 8, 8, 0.9), rgba(20, 15, 12, 0.58) 44%, rgba(20, 15, 12, 0.12) 78%);
+}
+
+.home-redesign .research-stack {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: minmax(320px, 0.56fr) minmax(460px, 0.86fr);
+  grid-template-areas:
+    "head demo"
+    "brief demo"
+    "papers demo";
+  grid-template-rows: auto auto auto;
+  align-content: end;
+  align-items: end;
+  column-gap: clamp(40px, 7vw, 120px);
+  row-gap: 16px;
+  padding: clamp(88px, 10vh, 126px) 0 clamp(36px, 5vh, 58px);
+}
+
+.home-redesign .research-head {
+  max-width: 720px;
+  gap: 18px;
+}
+
+.home-redesign .research-head h2 {
+  max-width: 11ch;
+  color: #fff8ec;
+  font-size: clamp(46px, 5.8vw, 86px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.home-redesign .research-head p {
+  max-width: 650px;
+  color: rgba(255, 248, 238, 0.78);
+  font-size: clamp(16px, 1.25vw, 21px);
+  line-height: 1.62;
+}
+
+.home-redesign .research-brief {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 700px;
+  gap: 14px;
+}
+
+.home-redesign .research-panel,
+.home-redesign .research-demo,
+.home-redesign .research-paper-block,
+.home-redesign .paper-empty {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-redesign .research-panel {
+  padding: 0 18px 0 0;
+  border-left: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.28);
+  color: rgba(255, 248, 238, 0.76);
+}
+
+.home-redesign .research-panel h3 {
+  margin-top: 14px;
+  color: #fff8ec;
+  font-size: 18px;
+}
+
+.home-redesign .research-panel p,
+.home-redesign .compact-list li,
+.home-redesign .placeholder-copy {
+  color: rgba(255, 248, 238, 0.72);
+  font-size: 13px;
+  line-height: 1.42;
+}
+
+.home-redesign .research-panel p {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.home-redesign .compact-list {
+  margin-top: 8px;
+  padding-left: 16px;
+}
+
+.home-redesign .compact-list li {
+  margin: 4px 0;
+}
+
+.home-redesign .research-demo {
+  width: min(54vw, 850px);
+  justify-self: end;
+  align-self: center;
+  padding: 0;
+}
+
+.home-redesign .research-demo > .restore-gallery-title {
+  display: none;
+}
+
+.home-redesign .restore-widget {
+  background: transparent;
+}
+
+.home-redesign .area-demo-widget {
+  box-shadow: none;
+}
+
+.home-redesign .home-restore-grid {
+  width: 100%;
+  gap: clamp(14px, 1.8vw, 24px);
+}
+
+.home-redesign .research-section-rubbing .restore-pair {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  filter: drop-shadow(0 28px 55px rgba(0, 0, 0, 0.4));
+}
+
+.home-redesign .research-section-rubbing .demo-card-title {
+  color: rgba(255, 248, 236, 0.78);
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-redesign .research-section-rubbing .restore-frame-epiagent-grid,
+.home-redesign .research-section-rubbing .restore-frame-ciri {
+  width: min(100%, 390px);
+  border-color: rgba(255, 255, 255, 0.16);
+  background: #050505;
+}
+
+.home-redesign .restore-pair-labels {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.home-redesign .restore-slider {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.78), #9c2f24);
+}
+
+.home-redesign .carrier-sample-demo,
+.home-redesign .character-thesis-demo,
+.home-redesign .placeholder-demo {
+  border-top: 0;
+}
+
+.home-redesign .carrier-sample-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.home-redesign .carrier-sample {
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(244, 239, 229, 0.9);
+  box-shadow: 0 28px 70px rgba(30, 22, 10, 0.24);
+}
+
+.home-redesign .carrier-sample img {
+  width: 100%;
+  height: clamp(126px, 17vh, 180px);
+  object-fit: contain;
+  background: rgba(250, 247, 238, 0.92);
+}
+
+.home-redesign .carrier-sample figcaption {
+  color: #42372c;
+  background: rgba(244, 239, 229, 0.92);
+}
+
+.home-redesign .character-thesis-demo {
+  width: min(50vw, 800px);
+}
+
+.home-redesign .character-thesis-grid {
+  grid-template-columns: 1.2fr 0.9fr;
+}
+
+.home-redesign .character-thesis-strip {
+  overflow: hidden;
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(244, 239, 229, 0.94);
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.24);
+}
+
+.home-redesign .character-thesis-strip img,
+.home-redesign .research-section .character-thesis-strip img,
+.home-redesign .research-section .character-thesis-strip:first-child img {
+  height: clamp(126px, 18vh, 190px);
+  object-fit: contain;
+}
+
+.home-redesign .character-thesis-strip figcaption,
+.home-redesign .character-thesis-copy {
+  color: #50473f;
+}
+
+.home-redesign .character-thesis-copy {
+  color: rgba(255, 248, 238, 0.72);
+}
+
+.home-redesign .phonology-figure-grid {
+  display: grid;
+  grid-template-columns: 0.72fr 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.home-redesign .phonology-figure {
+  display: grid;
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(244, 239, 229, 0.95);
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.25);
+}
+
+.home-redesign .phonology-figure img {
+  width: 100%;
+  height: clamp(330px, 58vh, 560px);
+  object-fit: contain;
+  background: #fff;
+}
+
+.home-redesign .phonology-figure:not(.is-featured) img {
+  height: clamp(240px, 40vh, 420px);
+}
+
+.home-redesign .phonology-figure figcaption {
+  padding: 8px 10px 10px;
+  color: #42372c;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.home-redesign .research-paper-block {
+  max-width: 720px;
+  padding: 6px 0 0;
+}
+
+.home-redesign .research-paper-block > h3 {
+  margin-bottom: 10px;
+  color: rgba(255, 248, 238, 0.62);
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.home-redesign .paper-list {
+  grid-template-columns: 1fr;
+  gap: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.home-redesign .paper-card,
+.home-redesign .paper-empty {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px;
+  padding: 13px 0;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff8ec;
+  background: transparent;
+  box-shadow: none;
+}
+
+.home-redesign .paper-card:hover {
+  transform: translateX(4px);
+  border-color: rgba(255, 255, 255, 0.42);
+  box-shadow: none;
+}
+
+.home-redesign .research-section .paper-card h3 {
+  color: #fff8ec;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.home-redesign .research-section .tag {
+  border-color: rgba(255, 255, 255, 0.24);
+  color: rgba(255, 255, 255, 0.64);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.home-redesign .research-section .arrow {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.home-redesign .footer {
+  display: none;
+}
+
+.qyspd-visual {
+  max-width: min(980px, 100%);
+}
+
+.phonology-paper-hero .project-visual img,
+.qyspd-visual img {
+  background: #fff;
+}
+
+@media (max-width: 980px) {
+  .home-redesign html,
+  html:has(.home-redesign) {
+    scroll-snap-type: none;
+  }
+
+  .home-redesign .topbar {
+    position: sticky;
+    color: var(--ink);
+    background: rgba(247, 240, 223, 0.9);
+    mix-blend-mode: normal;
+    backdrop-filter: blur(12px);
+  }
+
+  .home-redesign .nav {
+    min-height: 72px;
+  }
+
+  .home-redesign .nav-links {
+    color: var(--muted);
+  }
+
+  .home-redesign .research-hero,
+  .home-redesign .research-section {
+    min-height: auto;
+  }
+
+  .home-redesign .research-hero .hero-grid,
+  .home-redesign .research-stack {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "brief"
+      "demo"
+      "papers";
+    padding: 72px 0 44px;
+  }
+
+  .home-redesign .research-hero .hero-grid {
+    padding-top: 72px;
+  }
+
+  .home-redesign .research-demo,
+  .home-redesign .character-thesis-demo {
+    width: 100%;
+    justify-self: stretch;
+  }
+
+  .home-redesign .research-head h2 {
+    max-width: none;
+    font-size: clamp(42px, 13vw, 70px);
+  }
+
+  .home-redesign .research-brief,
+  .home-redesign .phonology-figure-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-redesign .carrier-sample-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-redesign .home-restore-grid,
+  .home-redesign .character-thesis-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-redesign .carrier-sample img,
+  .home-redesign .phonology-figure img,
+  .home-redesign .phonology-figure:not(.is-featured) img {
+    height: auto;
+    max-height: 62vh;
+  }
+}
+
+@media (max-width: 360px) {
+  .home-redesign .carrier-sample-grid {
+    grid-template-columns: 1fr;
+  }
+}

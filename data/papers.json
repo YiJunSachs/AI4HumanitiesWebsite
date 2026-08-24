@@ -34,5 +34,14 @@
     "thumbnailAlt": "古汉字真实书法样本",
     "tags": ["本科毕设", "扩散模型", "古汉字修复"],
     "description": "面向真实古籍退化场景，围绕样本构建、退化噪声处理、书法风格保持和扩散生成修复展开方法研究。"
+  },
+  {
+    "title": "QYSPD：宋代语料证据下的切韵系多音反切消歧",
+    "href": "papers/qyspd.html",
+    "area": "historical-phonology",
+    "thumbnail": "assets/rendered/qyspd/primary-paths.png",
+    "thumbnailAlt": "QYSPD 反切 primary path 示例",
+    "tags": ["QYSPD", "历史音韵", "广韵反切"],
+    "description": "利用宋代多体裁语料、广韵内部结构和大语言模型推理，系统消解切韵系多音反切带来的继承性歧义。"
   }
 ]

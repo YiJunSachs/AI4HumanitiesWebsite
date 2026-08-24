@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>QYSPD Project Page</title>
+    <link rel="icon" href="../assets/rendered/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <nav class="site-shell nav" aria-label="主导航">
+        <a class="brand" href="../index.html">
+          <span class="seal image-seal"><img src="../assets/rendered/favicon.ico" alt=""></span>
+          <span>Digital Humanities Lab</span>
+        </a>
+        <div class="nav-links">
+          <a href="../index.html#historical-phonology">Phonology</a>
+          <a href="#pipeline">Pipeline</a>
+          <a href="#paths">Primary Paths</a>
+          <a href="#results">Results</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero phonology-paper-hero">
+        <div class="site-shell">
+          <div class="eyebrow">Historical Phonology · Qieyun System · LLM-Assisted Philology</div>
+          <h1 class="title-line">Resolving Inherited Ambiguity in Chinese Historical Phonology with Song Dynasty Corpus Evidence</h1>
+          <p class="authors">
+            Haiyue Liu, Hui Xue, Na Nie, Shipeng Zhu
+          </p>
+          <p class="hero-copy">
+            QYSPD 面向《广韵》体系中的多音反切字，结合字书内部证据、宋代多体裁语料检索与上下文定义推理，将分叉的反切歧义转化为可追踪的 primary paths。
+          </p>
+          <div class="actions">
+            <a class="button" href="https://github.com/HexagonForce6/QYSPD">Code</a>
+            <a class="button secondary" href="../index.html#historical-phonology">Back to Homepage</a>
+          </div>
+          <div class="project-visual qyspd-visual">
+            <img src="../assets/rendered/qyspd/fanqie-example.png" alt="QYSPD fanqie example from Guangyun">
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="pipeline">
+        <div class="site-shell content-grid">
+          <div class="panel">
+            <div class="eyebrow">Method</div>
+            <h2>从字书证据到语境推理</h2>
+            <p>
+              QYSPD 由变体过滤、句子检索和语境推理三个环节组成。系统先在《广韵》内部限定可信变体，再从宋代多体裁语料中提取包含多音字的上下文，最后让模型在候选释义之间进行受约束判断。
+            </p>
+          </div>
+          <div class="framed-visual">
+            <img src="../assets/rendered/qyspd/pipeline.png" alt="QYSPD pipeline">
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="paths">
+        <div class="site-shell content-grid">
+          <div class="panel">
+            <div class="eyebrow">Primary Paths</div>
+            <h2>把继承性歧义收束成显式路径</h2>
+            <p>
+              当多音字作为反切上字或下字继续参与注音时，歧义会沿反切关系传递。QYSPD 为角色有效的 primary fanqie 建立红色路径，使后续音系重建可以沿着稳定、可解释的链条展开。
+            </p>
+          </div>
+          <div class="framed-visual">
+            <img src="../assets/rendered/qyspd/primary-paths.png" alt="QYSPD primary paths">
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="results">
+        <div class="site-shell content-grid">
+          <div class="panel">
+            <div class="eyebrow">Results</div>
+            <h2>宋代语料中的主读音优势</h2>
+            <p>
+              论文通过 posterior dominance analysis 检验 primary assignments 的稳定性。多数多音反切字在跨体裁语料中呈现清晰主导读音，体裁差异更多体现为专门语域的词义偏好，而不是推理结果的不稳定。
+            </p>
+          </div>
+          <div class="framed-visual">
+            <img src="../assets/rendered/qyspd/dominance.png" alt="QYSPD dominance diagnostics">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="site-shell">© 东南大学 PALM 实验室数字人文小组</div>
+    </footer>
+  </body>
+</html>
