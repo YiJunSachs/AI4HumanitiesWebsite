@@ -10,11 +10,16 @@
     const afterImage = frame?.querySelector(".restore-after-wrap img");
     const exampleButtons = widget.querySelectorAll("[data-restore-example]");
     const forceAutoplay = widget.dataset.autoplayForce === "true";
+    const loopAutoplay = widget.dataset.autoplayLoop === "true";
     const autoplayStart = Number(widget.dataset.autoplayStart ?? 8);
     const autoplayEnd = Number(widget.dataset.autoplayEnd ?? 88);
     const autoplayDuration = Number(widget.dataset.autoplayDuration ?? 1800);
+    const autoplayDelay = Number(widget.dataset.autoplayDelay ?? 900);
+    const autoplayResumeDelay = Number(widget.dataset.autoplayResumeDelay ?? 1600);
     let animationFrame = 0;
+    let autoplayTimer = 0;
     let hasAutoplayed = false;
+    let isInView = false;
 
     const setProgress = (value) => {
       const next = Math.max(0, Math.min(100, Number(value) || 0));
@@ -25,17 +30,28 @@
       }
     };
 
-    const stopAnimation = () => {
+    const clearAutoplayTimer = () => {
+      if (autoplayTimer) {
+        window.clearTimeout(autoplayTimer);
+        autoplayTimer = 0;
+      }
+    };
+
+    const stopAnimation = ({ keepAutoplay = false } = {}) => {
       if (animationFrame) {
         window.cancelAnimationFrame(animationFrame);
         animationFrame = 0;
       }
 
+      if (!keepAutoplay) {
+        clearAutoplayTimer();
+      }
+
       widget.classList.remove("is-playing");
     };
 
-    const playRepair = (startValue = 0, endValue = 100, duration = 1700) => {
-      stopAnimation();
+    const playRepair = (startValue = 0, endValue = 100, duration = 1700, onComplete, options = {}) => {
+      stopAnimation({ keepAutoplay: options.keepAutoplay === true });
       widget.classList.add("is-playing");
 
       const startedAt = performance.now();
@@ -55,9 +71,38 @@
         if (playButton) {
           playButton.textContent = "Replay Repair";
         }
+
+        onComplete?.();
       };
 
       animationFrame = window.requestAnimationFrame(step);
+    };
+
+    const scheduleAutoplayLoop = (delay = autoplayDelay) => {
+      if (!loopAutoplay || reduceMotion || !isInView) {
+        return;
+      }
+
+      clearAutoplayTimer();
+      autoplayTimer = window.setTimeout(() => {
+        setProgress(autoplayStart);
+        playRepair(
+          autoplayStart,
+          autoplayEnd,
+          autoplayDuration,
+          () => {
+            if (!loopAutoplay || reduceMotion || !isInView) {
+              return;
+            }
+
+            autoplayTimer = window.setTimeout(() => {
+              setProgress(autoplayStart);
+              scheduleAutoplayLoop();
+            }, autoplayDelay);
+          },
+          { keepAutoplay: true },
+        );
+      }, delay);
     };
 
     const updateFromPointer = (event) => {
@@ -81,6 +126,8 @@
       if (playButton) {
         playButton.textContent = "Play Repair";
       }
+
+      scheduleAutoplayLoop(autoplayResumeDelay);
     });
 
     playButton?.addEventListener("click", () => {
@@ -130,6 +177,8 @@
       if (frame.hasPointerCapture(event.pointerId)) {
         frame.releasePointerCapture(event.pointerId);
       }
+
+      scheduleAutoplayLoop(autoplayResumeDelay);
     });
 
     if (widget.dataset.autoplay !== "true") {
@@ -138,8 +187,13 @@
 
     if (forceAutoplay) {
       hasAutoplayed = true;
+      isInView = true;
       setProgress(autoplayStart);
-      window.setTimeout(() => playRepair(autoplayStart, autoplayEnd, autoplayDuration), 180);
+      if (loopAutoplay) {
+        scheduleAutoplayLoop(180);
+      } else {
+        window.setTimeout(() => playRepair(autoplayStart, autoplayEnd, autoplayDuration), 180);
+      }
       return;
     }
 
@@ -151,6 +205,20 @@
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
+            if (loopAutoplay) {
+              isInView = entry.isIntersecting;
+
+              if (entry.isIntersecting) {
+                const delay = hasAutoplayed ? autoplayResumeDelay : 220;
+                hasAutoplayed = true;
+                scheduleAutoplayLoop(delay);
+                return;
+              }
+
+              stopAnimation();
+              return;
+            }
+
             if (!entry.isIntersecting || hasAutoplayed) {
               return;
             }
@@ -165,7 +233,12 @@
 
       observer.observe(widget);
     } else {
-      window.setTimeout(() => playRepair(autoplayStart, autoplayEnd, autoplayDuration), 420);
+      isInView = true;
+      if (loopAutoplay) {
+        scheduleAutoplayLoop(420);
+      } else {
+        window.setTimeout(() => playRepair(autoplayStart, autoplayEnd, autoplayDuration), 420);
+      }
     }
   });
 
