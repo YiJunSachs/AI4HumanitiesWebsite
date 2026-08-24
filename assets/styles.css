@@ -2084,7 +2084,7 @@ th {
 .home-redesign .research-stack {
   display: grid;
   min-height: 100vh;
-  grid-template-columns: minmax(360px, 0.62fr) minmax(420px, 0.78fr);
+  grid-template-columns: minmax(340px, 0.48fr) minmax(360px, 0.5fr);
   grid-template-areas:
     "head demo"
     "brief demo"
@@ -2092,7 +2092,7 @@ th {
   grid-template-rows: auto auto auto;
   align-content: end;
   align-items: end;
-  column-gap: clamp(64px, 8.5vw, 150px);
+  column-gap: clamp(112px, 11vw, 190px);
   row-gap: clamp(22px, 3vh, 36px);
   padding: clamp(104px, 12vh, 138px) 0 clamp(56px, 8vh, 84px);
 }
@@ -2179,7 +2179,7 @@ th {
 }
 
 .home-redesign .research-demo {
-  width: min(50vw, 780px);
+  width: min(100%, 660px);
   justify-self: end;
   align-self: center;
   padding: 0;
