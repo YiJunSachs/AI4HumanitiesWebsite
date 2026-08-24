@@ -68,9 +68,15 @@ img {
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  min-width: 0;
   font-weight: 800;
   letter-spacing: 0;
+}
+
+.brand-text {
+  min-width: 0;
+  line-height: 1.25;
 }
 
 .seal {
@@ -99,6 +105,11 @@ img {
   width: 30px;
   height: 30px;
   object-fit: contain;
+}
+
+.cs-seal img {
+  width: 32px;
+  height: 32px;
 }
 
 .nav-links {
@@ -1777,6 +1788,14 @@ th {
     padding: 14px 0;
   }
 
+  .brand {
+    max-width: 100%;
+  }
+
+  .brand-text {
+    font-size: 13px;
+  }
+
   .nav-links {
     width: 100%;
     overflow-x: auto;
@@ -1873,9 +1892,9 @@ th {
 .home-redesign .brand {
   color: inherit;
   font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: none;
 }
 
 .home-redesign .image-seal {
