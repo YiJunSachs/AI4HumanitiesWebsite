@@ -1219,6 +1219,11 @@ article.carrier-card.is-previewing > .carrier-preview {
   aspect-ratio: 1 / 1;
 }
 
+.restore-frame-epiagent-document {
+  aspect-ratio: 9 / 14;
+  background: #050505;
+}
+
 .restore-frame-rubbing {
   width: min(100%, 360px);
   aspect-ratio: 180 / 260;
@@ -1248,6 +1253,11 @@ article.carrier-card.is-previewing > .carrier-preview {
   object-fit: contain;
 }
 
+.restore-frame-epiagent-document .restore-layer,
+.restore-frame-epiagent-document .restore-after-wrap img {
+  object-fit: contain;
+}
+
 .restore-frame-character .restore-layer,
 .restore-frame-character .restore-after-wrap img,
 .restore-frame-epiagent .restore-layer,
@@ -1260,6 +1270,11 @@ article.carrier-card.is-previewing > .carrier-preview {
 .restore-frame-ciri .restore-after-wrap img {
   image-rendering: crisp-edges;
   image-rendering: pixelated;
+}
+
+.restore-frame-epiagent-document .restore-layer,
+.restore-frame-epiagent-document .restore-after-wrap img {
+  image-rendering: auto;
 }
 
 .restore-before {
