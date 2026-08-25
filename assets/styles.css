@@ -2681,11 +2681,14 @@ th {
 
 .research-details-page .details-hero .site-shell {
   width: min(1320px, calc(100% - 56px));
-  padding: clamp(116px, 15vh, 164px) 0 clamp(56px, 8vh, 86px);
+  min-height: 100vh;
+  grid-template-columns: minmax(0, 0.92fr) minmax(300px, 0.68fr);
+  align-items: end;
+  padding: clamp(96px, 12vh, 150px) 0 clamp(46px, 7vh, 80px);
 }
 
 .research-details-page .details-hero h1 {
-  max-width: 8ch;
+  max-width: 10ch;
   margin-top: 12px;
   color: #fff8ec;
   font-size: clamp(58px, 8.2vw, 128px);
@@ -2754,10 +2757,15 @@ th {
   display: grid;
   width: min(1320px, calc(100% - 56px));
   min-height: 100vh;
-  grid-template-columns: minmax(340px, 0.48fr) minmax(440px, 0.58fr);
-  gap: clamp(92px, 10vw, 170px);
-  align-content: center;
-  align-items: center;
+  grid-template-columns: minmax(340px, 0.48fr) minmax(360px, 0.5fr);
+  grid-template-areas:
+    "head detail"
+    "papers detail";
+  grid-template-rows: auto auto;
+  align-content: end;
+  align-items: end;
+  column-gap: clamp(112px, 11vw, 190px);
+  row-gap: clamp(22px, 3vh, 36px);
   padding: clamp(104px, 12vh, 138px) 0 clamp(56px, 8vh, 84px);
 }
 
@@ -2805,6 +2813,7 @@ th {
 
 .research-details-page .detail-head {
   display: flex;
+  grid-area: head;
   align-items: flex-start;
   flex-direction: column;
   justify-content: flex-start;
@@ -2832,9 +2841,11 @@ th {
 
 .research-details-page .detail-grid {
   display: grid;
+  grid-area: detail;
   min-width: 0;
   gap: clamp(24px, 3.6vh, 38px);
   align-items: start;
+  align-self: center;
 }
 
 .research-details-page .detail-info-grid {
@@ -2844,10 +2855,16 @@ th {
 }
 
 .research-details-page .detail-paper-panel {
+  grid-area: papers;
   padding: 0;
   border: 0;
   background: transparent;
   box-shadow: none;
+}
+
+.research-details-page .research-paper-block.detail-paper-panel {
+  max-width: 680px;
+  padding: 10px 0 0;
 }
 
 .research-details-page .detail-paper-panel > h3 {
@@ -2987,6 +3004,19 @@ th {
 
   .research-details-page .details-hero .site-shell {
     padding-top: 120px;
+  }
+
+  .research-details-page .detail-section > .site-shell {
+    grid-template-areas:
+      "head"
+      "detail"
+      "papers";
+    align-content: start;
+    align-items: start;
+  }
+
+  .research-details-page .detail-grid {
+    align-self: stretch;
   }
 
   .research-details-page .detail-head h2 {
