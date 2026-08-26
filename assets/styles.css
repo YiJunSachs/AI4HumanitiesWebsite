@@ -2636,6 +2636,10 @@ th {
   scroll-snap-type: y mandatory;
 }
 
+.details-root.is-anchor-jumping {
+  scroll-snap-type: none;
+}
+
 .research-details-page {
   min-height: 100vh;
   color: #fff8ec;
