@@ -1,226 +1,122 @@
-# Digital Humanities Group Website
+# AI4Humanities Website
 
-This folder contains a static paper-list website for the PALM Lab Digital Humanities Group.
+这是一个可直接部署到 GitHub Pages 的静态数字人文研究网站模板。网站不需要后端，也不需要安装复杂依赖；复制仓库、替换内容、推送到自己的 GitHub 仓库后即可上线。
 
-## Folder Structure
+当前站点入口：
 
-```text
-Website/
-  index.html                 # Homepage and paper list entrance
-  README.md                  # This guide
-  data/
-    papers.json              # Paper-list data used by the homepage
-  papers/
-    mchdoc.html              # MCHDoc project page
-    epiagent.html            # EpiAgent project page
-    mm24.html                # MM 2024 CIRI project page
-    dive3d.html              # Redirects old Dive3D link to EpiAgent
-  assets/
-    styles.css               # Global CSS
-    js/
-      paper-list.js          # Loads data/papers.json and renders homepage cards
-    rendered/                # Web-ready images, icons, thumbnails
-    figures/                 # Original PDF figures
-```
+- 首页：`index.html`
+- 研究详情页：`research-*.html`
+- 论文项目页：`papers/*.html`
+- 论文列表数据：`data/papers.json`
+- 样式与交互：`assets/styles.css`、`assets/js/*.js`
 
-## Local Preview
+## 最推荐的复用方式
 
-Because the homepage loads `data/papers.json` with `fetch`, preview it through a local server instead of opening `index.html` directly with `file://`.
+如果你希望别人基于这个网站制作自己的版本，推荐把 GitHub 仓库设成 Template：
 
-From the `Website/` folder:
+1. 打开 GitHub 仓库页面。
+2. 进入 `Settings -> General`。
+3. 勾选 `Template repository`。
+4. 其他人点击仓库首页的 `Use this template`。
+5. 他们会得到一个属于自己的新仓库，之后改内容并推送自己的代码即可。
+
+这样别人不会误把内容推回你的仓库，也不需要拥有你仓库的写权限。
+
+## 也可以下载后自己推送
+
+别人也可以直接下载 ZIP 或 clone 这个仓库，然后推送到自己的仓库：
 
 ```bash
-python3 -m http.server 5500
+git clone https://github.com/YiJunSachs/AI4HumanitiesWebsite.git
+cd AI4HumanitiesWebsite
+git remote set-url origin https://github.com/自己的用户名/自己的仓库名.git
+git push -u origin main
 ```
 
-Then open:
+注意：如果没有你仓库的协作者权限，别人不能直接 push 到 `YiJunSachs/AI4HumanitiesWebsite`。他们应该 push 到自己的仓库。
+
+## 本地预览
+
+因为页面会读取 `data/papers.json`，不要直接双击打开 `index.html`。请在项目根目录启动一个本地服务器：
+
+```bash
+python -m http.server 5500
+```
+
+然后打开：
 
 ```text
 http://127.0.0.1:5500/
 ```
 
-MCHDoc page:
+## 修改自己的站点
+
+常见修改位置：
+
+- 网站标题、导航栏、首页四个研究方向：改 `index.html`
+- 研究方向详情内容：改 `research-rubbing-restoration.html` 等详情页
+- 首页和详情页里的论文列表：改 `data/papers.json`
+- 单篇论文展示页：改或复制 `papers/*.html`
+- 图片、logo、展示实例：放到 `assets/` 下面并更新对应 HTML 路径
+- 全站视觉风格：改 `assets/styles.css`
+
+更具体的替换清单见 [TEMPLATE_GUIDE.md](TEMPLATE_GUIDE.md)。
+
+## 新增一篇论文
+
+1. 在 `papers/` 下复制一个现有论文页面，例如：
 
 ```text
-http://127.0.0.1:5500/papers/mchdoc.html
+papers/mchdoc.html -> papers/new-paper.html
 ```
 
-EpiAgent page:
+2. 把论文图片放入 `assets/rendered/` 或新的子文件夹中。
 
-```text
-http://127.0.0.1:5500/papers/epiagent.html
-```
-
-MM 2024 CIRI page:
-
-```text
-http://127.0.0.1:5500/papers/mm24.html
-```
-
-In VS Code, you can also use:
-
-1. `Cmd + Shift + P`
-2. `Simple Browser: Show`
-3. Enter `http://127.0.0.1:5500/`
-
-## Add a New Paper
-
-### 1. Add Assets
-
-Put the paper thumbnail or rendered figure in:
-
-```text
-Website/assets/rendered/
-```
-
-Recommended formats:
-
-- `png` for rendered figures or PDF screenshots
-- `jpg` for photographic/banner images
-- `ico` only for favicon-style icons
-
-If the original figure is a PDF and it appears with padding when embedded, render it into a high-resolution PNG first. The current MCHDoc figures were generated from cropped PDFs at high DPI to avoid browser PDF-viewer padding.
-
-### 2. Add a Project Page
-
-Create a new HTML page under:
-
-```text
-Website/papers/
-```
-
-Example:
-
-```text
-Website/papers/new-paper.html
-```
-
-You can copy `papers/mchdoc.html` or `papers/epiagent.html` for a complete project-page style.
-
-### 3. Register the Paper in `papers.json`
-
-Open:
-
-```text
-Website/data/papers.json
-```
-
-Add a new object:
+3. 在 `data/papers.json` 中新增一条记录：
 
 ```json
 {
-  "title": "New Paper Title",
+  "title": "论文标题",
   "href": "papers/new-paper.html",
+  "area": "multi-carrier-reading",
   "thumbnail": "assets/rendered/new-paper-thumbnail.png",
-  "thumbnailAlt": "Short description of the thumbnail",
-  "tags": ["CVPR 2027", "Benchmark"],
-  "description": "One sentence summary shown on the homepage."
+  "thumbnailAlt": "论文缩略图说明",
+  "tags": ["会议或期刊", "研究方向"],
+  "description": "首页或详情页中展示的一句话简介。"
 }
 ```
 
-After saving, refresh the homepage. The new paper card will appear automatically.
+`area` 用来决定论文属于哪个研究方向：
 
-## Update Homepage Hero
+- `rubbing-restoration`：残损碑拓修复研究
+- `multi-carrier-reading`：多载体古籍阅读研究
+- `ancient-character-restoration`：古汉字修复研究
+- `historical-phonology`：中国古代音韵研究
 
-The homepage hero image is in `index.html`:
+## 部署到 GitHub Pages
 
-```html
-<img src="assets/rendered/calligraphy_hero.png" alt="Chinese calligraphy scroll on warm xuan paper">
-```
+1. 把网站代码推送到 GitHub 仓库。
+2. 打开仓库的 `Settings -> Pages`。
+3. Source 选择 `Deploy from a branch`。
+4. Branch 选择 `main`，目录选择 `/root`。
+5. 保存后等待 GitHub 构建完成。
 
-To replace it:
-
-1. Add a new image under `assets/rendered/`
-2. Update the `src`
-3. Refresh the browser
-
-## Update Logo or Favicon
-
-Current favicon and navigation logo:
+生成的网址通常是：
 
 ```text
-Website/assets/rendered/favicon.ico
+https://用户名.github.io/仓库名/
 ```
 
-Homepage favicon reference:
-
-```html
-<link rel="icon" href="assets/rendered/favicon.ico" type="image/x-icon">
-```
-
-Navigation logo reference:
-
-```html
-<span class="seal image-seal"><img src="assets/rendered/favicon.ico" alt=""></span>
-```
-
-For pages inside `papers/`, use:
-
-```html
-<span class="seal image-seal"><img src="../assets/rendered/favicon.ico" alt=""></span>
-```
-
-## Deploy to a Server
-
-This is a pure static website. Upload the entire contents of `Website/` to your web root.
-
-Example using `scp`:
-
-```bash
-scp -r /Users/shengyijun/CVPR2026/Website/* username@server_ip:/var/www/digital-humanities/
-```
-
-Example Nginx config:
-
-```nginx
-server {
-    listen 80;
-    server_name your-domain.com;
-
-    root /var/www/digital-humanities;
-    index index.html;
-
-    location / {
-        try_files $uri $uri/ =404;
-    }
-}
-```
-
-Reload Nginx:
-
-```bash
-sudo nginx -t
-sudo systemctl reload nginx
-```
-
-Then visit:
+如果仓库名是 `用户名.github.io`，网址通常是：
 
 ```text
-http://your-domain.com/
+https://用户名.github.io/
 ```
 
-## Deploy with GitHub Pages
+## 常见问题
 
-1. Create a GitHub repository.
-2. Put the contents of `Website/` at the repository root.
-3. Push to GitHub.
-4. Open `Settings -> Pages`.
-5. Select `Deploy from a branch`.
-6. Select the `main` branch and `/root`.
+- 首页一直转圈：请确认是通过 `http://127.0.0.1:5500/` 这类本地服务器打开，而不是直接双击 HTML。
+- 线上图片不显示：检查文件名大小写、空格、中文路径和 HTML 中的路径是否完全一致。
+- 论文列表加载失败：检查 `data/papers.json` 是否是合法 JSON。
+- 旧内容还没更新：GitHub Pages 有缓存，通常等几十秒到几分钟后刷新即可。
 
-GitHub Pages will provide a URL like:
-
-```text
-https://username.github.io/repo-name/
-```
-
-## Notes
-
-- Keep relative paths unchanged when deploying.
-- Do not upload only `index.html`; upload `assets/`, `data/`, and `papers/` together.
-- If the homepage shows `Paper list failed to load`, make sure the site is opened through a server and that `data/papers.json` is valid JSON.
-- Validate JSON with:
-
-```bash
-python3 -m json.tool Website/data/papers.json
-```
