@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN" class="home-redesign-root details-root">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>多载体古籍阅读研究 | 研究详情</title>
+    <link rel="icon" href="assets/figures/彩色校标.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/styles.css?v=single-topic">
+  </head>
+  <body class="home-redesign research-details-page">
+    <header class="topbar">
+      <nav class="site-shell nav" aria-label="主导航">
+        <a class="brand" href="index.html">
+          <span class="seal image-seal"><img src="assets/figures/彩色校标.svg" alt="东南大学校标"></span>
+          <span class="seal image-seal cs-seal"><img src="assets/figures/微信图片_20260824155001_1244_2.png" alt="东南大学计算机科学与工程学院标志"></span>
+          <span class="brand-text">东南大学  计算机科学与工程学院  数字人文小组</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">首页</a>
+          <a href="research-rubbing-restoration.html">碑拓修复</a>
+          <a href="research-multi-carrier-reading.html">多载体阅读</a>
+          <a href="research-ancient-character-restoration.html">古汉字修复</a>
+          <a href="research-historical-phonology.html">古代音韵</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="detail-section detail-section-carriers" id="detail-multi-carrier-reading">
+        <div class="site-shell">
+          <div class="section-head detail-head">
+            <div>
+              <div class="eyebrow">研究方向 02</div>
+              <h1>多载体古籍<br>阅读研究</h1>
+            </div>
+            <p>
+              面向古籍、简牍、书法、碑刻、帛书、甲骨等多载体历史文献，研究跨材料、跨时代、跨书写形态的视觉识别与文本校勘。
+            </p>
+            <div class="actions compact-actions">
+              <a class="more-link" href="index.html#multi-carrier-reading">返回首页栏目</a>
+            </div>
+          </div>
+
+          <div class="research-paper-block detail-paper-panel">
+            <h2>相关论文</h2>
+            <div class="paper-list" data-paper-list data-paper-area="multi-carrier-reading">
+              <p class="load-error">论文加载中...</p>
+            </div>
+          </div>
+
+          <div class="detail-grid">
+            <div class="detail-info-grid">
+              <article class="research-panel">
+                <h2>背景</h2>
+                <p>
+                  历史文献并不只存在于纸本古籍中。不同载体拥有不同版式、材质、破损方式和字形演化特征，阅读任务需要从图像感知延伸到字符识别、上下文推理与知识校正。
+                </p>
+              </article>
+              <article class="research-panel">
+                <h2>挑战</h2>
+                <ul class="compact-list">
+                  <li>不同载体的视觉域差异显著，单一文字识别模型难以稳定迁移。</li>
+                  <li>历史字形、异体字和低频字符会放大识别与校勘误差。</li>
+                  <li>完整阅读流程需要把页面级识别、字符级识别和后校正统一评估。</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <template id="paper-card-template">
+        <a class="paper-card" href="#">
+          <div>
+            <div class="paper-meta" data-paper-tags></div>
+            <h3 data-paper-title></h3>
+            <p data-paper-description></p>
+          </div>
+          <span class="arrow" aria-hidden="true">›</span>
+        </a>
+      </template>
+    </main>
+
+    <footer class="footer">
+      <div class="site-shell">© 东南大学 计算机科学与工程学院 数字人文小组</div>
+    </footer>
+    <script src="assets/js/paper-list.js"></script>
+  </body>
+</html>

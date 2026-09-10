@@ -2636,10 +2636,6 @@ th {
   scroll-snap-type: y mandatory;
 }
 
-.details-root.is-anchor-jumping {
-  scroll-snap-type: none;
-}
-
 .research-details-page {
   min-height: 100vh;
   color: #fff8ec;
@@ -2826,6 +2822,7 @@ th {
   text-align: left;
 }
 
+.research-details-page .detail-head h1,
 .research-details-page .detail-head h2 {
   max-width: none;
   color: #fff8ec;
@@ -2871,6 +2868,7 @@ th {
   padding: 10px 0 0;
 }
 
+.research-details-page .detail-paper-panel > h2,
 .research-details-page .detail-paper-panel > h3 {
   margin-bottom: 10px;
   color: rgba(255, 248, 238, 0.62);
@@ -2889,6 +2887,7 @@ th {
   box-shadow: none;
 }
 
+.research-details-page .research-panel h2,
 .research-details-page .research-panel h3 {
   margin-top: 14px;
   color: #fff8ec;
@@ -3023,6 +3022,7 @@ th {
     align-self: stretch;
   }
 
+  .research-details-page .detail-head h1,
   .research-details-page .detail-head h2 {
     font-size: clamp(42px, 13vw, 70px);
   }
