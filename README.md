@@ -88,9 +88,9 @@ papers/mchdoc.html -> papers/new-paper.html
 
 `area` 用来决定论文属于哪个研究方向：
 
-- `rubbing-restoration`：残损碑拓修复研究
+- `rubbing-restoration`：残损古籍修复研究
 - `multi-carrier-reading`：多载体古籍阅读研究
-- `ancient-character-restoration`：古汉字修复研究
+- `ancient-character-restoration`：字体风格迁移生成研究
 - `historical-phonology`：中国古代音韵研究
 
 ## 部署到 GitHub Pages
@@ -119,4 +119,3 @@ https://用户名.github.io/
 - 线上图片不显示：检查文件名大小写、空格、中文路径和 HTML 中的路径是否完全一致。
 - 论文列表加载失败：检查 `data/papers.json` 是否是合法 JSON。
 - 旧内容还没更新：GitHub Pages 有缓存，通常等几十秒到几分钟后刷新即可。
-

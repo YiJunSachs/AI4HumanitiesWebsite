@@ -52,9 +52,9 @@
 
 当前模板预留了四类研究方向：
 
-- 残损碑拓修复研究：`research-rubbing-restoration.html`
+- 残损古籍修复研究：`research-rubbing-restoration.html`
 - 多载体古籍阅读研究：`research-multi-carrier-reading.html`
-- 古汉字修复研究：`research-ancient-character-restoration.html`
+- 字体风格迁移生成研究：`research-ancient-character-restoration.html`
 - 中国古代音韵研究：`research-historical-phonology.html`
 
 如果你的站点只有两个方向，可以删除首页多余 section，也可以先保留为“建设中”。如果你需要更多方向，可以复制一个已有 section 和一个已有详情页，再修改链接。
@@ -69,4 +69,3 @@
 4. 使用者在自己的仓库中开启 GitHub Pages。
 
 这样每个人都有自己的独立网站，不会影响原仓库。
-
