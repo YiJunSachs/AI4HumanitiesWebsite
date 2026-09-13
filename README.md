@@ -89,7 +89,7 @@ papers/mchdoc.html -> papers/new-paper.html
 `area` 用来决定论文属于哪个研究方向：
 
 - `rubbing-restoration`：残损古籍修复研究
-- `multi-carrier-reading`：多载体古籍阅读研究
+- `multi-carrier-reading`：多载体古籍研究
 - `ancient-character-restoration`：字体风格迁移生成研究
 - `historical-phonology`：中国古代音韵研究
 
