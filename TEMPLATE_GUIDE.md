@@ -53,7 +53,7 @@
 当前模板预留了四类研究方向：
 
 - 残损古籍修复研究：`research-rubbing-restoration.html`
-- 多载体古籍研究：`research-multi-carrier-reading.html`
+- 多载体古籍转录研究：`research-multi-carrier-reading.html`
 - 字体风格迁移生成研究：`research-ancient-character-restoration.html`
 - 中国古代音韵研究：`research-historical-phonology.html`
 
