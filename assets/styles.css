@@ -3361,7 +3361,8 @@ th {
   font-weight: 700;
 }
 
-.home-redesign .research-section-carriers .research-head h2 {
+.home-redesign .research-section-carriers .research-head h2,
+.research-details-page .detail-section-carriers .detail-head h1 {
   font-size: 64px;
 }
 
@@ -3375,6 +3376,11 @@ th {
 }
 
 @media (min-width: 981px) {
+  .home-redesign .research-section-rubbing .restore-frame-epiagent-grid,
+  .home-redesign .research-section-rubbing .restore-frame-ciri {
+    width: min(100%, 420px);
+  }
+
   .home-redesign .research-section-carriers .research-stack {
     grid-template-columns: minmax(440px, 0.43fr) minmax(0, 0.57fr);
     column-gap: clamp(52px, 5vw, 72px);
@@ -3385,7 +3391,44 @@ th {
   }
 }
 
+@media (min-width: 1181px) {
+  .home-redesign .research-section-rubbing .research-stack {
+    grid-template-columns: minmax(400px, 0.36fr) minmax(0, 0.64fr);
+    column-gap: clamp(52px, 5vw, 72px);
+  }
+
+  .home-redesign .research-section-rubbing .research-demo {
+    width: min(100%, 820px);
+  }
+}
+
 @media (min-width: 981px) and (max-width: 1180px) {
+  .home-redesign .research-section-rubbing .research-stack {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "demo";
+    grid-template-rows: auto auto;
+    align-content: center;
+    row-gap: 28px;
+    padding-top: 104px;
+    padding-bottom: 52px;
+  }
+
+  .home-redesign .research-section-rubbing .research-head {
+    max-width: 760px;
+  }
+
+  .home-redesign .research-section-rubbing .research-demo {
+    width: 100%;
+  }
+
+  .home-redesign .research-section-rubbing .home-restore-grid {
+    width: min(100%, 900px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .home-redesign .research-section-carriers .research-stack {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -3402,7 +3445,8 @@ th {
     max-width: 760px;
   }
 
-  .home-redesign .research-section-carriers .research-head h2 {
+  .home-redesign .research-section-carriers .research-head h2,
+  .research-details-page .detail-section-carriers .detail-head h1 {
     font-size: 56px;
   }
 
@@ -3420,19 +3464,22 @@ th {
     scroll-padding-top: 138px;
   }
 
-  .home-redesign .research-section-carriers .research-head h2 {
+  .home-redesign .research-section-carriers .research-head h2,
+  .research-details-page .detail-section-carriers .detail-head h1 {
     font-size: 48px;
   }
 }
 
 @media (max-width: 600px) {
-  .home-redesign .research-section-carriers .research-head h2 {
+  .home-redesign .research-section-carriers .research-head h2,
+  .research-details-page .detail-section-carriers .detail-head h1 {
     font-size: 40px;
   }
 }
 
 @media (max-width: 360px) {
-  .home-redesign .research-section-carriers .research-head h2 {
+  .home-redesign .research-section-carriers .research-head h2,
+  .research-details-page .detail-section-carriers .detail-head h1 {
     font-size: 32px;
   }
 }
