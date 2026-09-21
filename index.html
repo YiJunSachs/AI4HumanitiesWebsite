@@ -6,6 +6,7 @@
     <title>文脉智算</title>
     <link rel="icon" href="assets/figures/彩色校标.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/styles.css?v=restoration-large-20260915">
+    <link rel="stylesheet" href="assets/phonology.css">
   </head>
   <body class="home-redesign">
     <header class="topbar">
@@ -224,29 +225,22 @@
               <h2>中国古代音韵<br>研究</h2>
             </div>
             <p>
-              面向《广韵》、反切、韵书、诗文押韵与历史语音证据，研究如何把传统音韵学问题转化为可检索、可推理、可复现的计算框架。
+              面向xxx，研究如何xxx
             </p>
             <div class="actions compact-actions">
               <a class="more-link" href="research-historical-phonology.html">更多信息</a>
             </div>
           </div>
 
-          <div class="research-layout">
-            <div class="research-demo placeholder-demo phonology-demo">
-              <div class="restore-gallery-title">
-                <h3>展示实例</h3>
-              </div>
-              <div class="phonology-figure-grid" aria-label="QYSPD 音韵研究展示">
-                <figure class="phonology-figure">
-                  <img src="assets/rendered/qyspd/fanqie-example.png" alt="《广韵》反切与多音反切示例">
-                  <figcaption>反切歧义</figcaption>
-                </figure>
-                <figure class="phonology-figure is-featured">
-                  <img src="assets/rendered/qyspd/primary-paths.png" alt="QYSPD primary paths 示例">
-                  <figcaption>Primary paths</figcaption>
-                </figure>
-              </div>
-            </div>
+          <div class="ph-demo-grid" aria-label="音韵研究互动展示">
+            <article class="ph-card">
+              <div class="ph-card-head"><h3>反切上字常读音，以“房”为例</h3></div>
+              <div data-phonology-demo="fang-upper"><noscript>请启用 JavaScript</noscript></div>
+            </article>
+            <article class="ph-card">
+              <div class="ph-card-head"><h3>反切下字常读音，以“句”为例</h3></div>
+              <div data-phonology-demo="ju-lower"><noscript>请启用 JavaScript</noscript></div>
+            </article>
           </div>
         </div>
       </section>
@@ -256,5 +250,6 @@
       <div class="site-shell">© 东南大学 计算机科学与工程学院 文脉智算团队</div>
     </footer>
     <script src="assets/js/restoration-demo.js"></script>
+    <script src="assets/js/phonology-demo.js"></script>
   </body>
 </html>

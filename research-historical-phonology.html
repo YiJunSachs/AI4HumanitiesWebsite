@@ -1,18 +1,24 @@
 <!doctype html>
-<html lang="zh-CN" class="home-redesign-root details-root">
+<html lang="zh-CN" class="ph-page-root">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>中国古代音韵研究 | 研究详情</title>
+    <meta name="description" content="从《广韵》反切关系到可追踪的主路径：探索多音反切字的继承性歧义与 QYSPD 的语境证据。">
+    <title>中国古代音韵研究 | 从反切证据到主路径</title>
     <link rel="icon" href="assets/figures/彩色校标.svg" type="image/svg+xml">
     <link rel="stylesheet" href="assets/styles.css?v=bright-20260913">
+    <link rel="stylesheet" href="assets/phonology.css">
   </head>
-  <body class="home-redesign research-details-page">
+  <body class="ph-page">
     <header class="topbar">
       <nav class="site-shell nav" aria-label="主导航">
         <a class="brand" href="index.html">
-          <span class="seal image-seal"><img src="assets/figures/彩色校标.svg" alt="东南大学校标"></span>
-          <span class="seal image-seal cs-seal"><img src="assets/figures/微信图片_20260824155001_1244_2.png" alt="东南大学计算机科学与工程学院标志"></span>
+          <span class="seal image-seal">
+            <img src="assets/figures/彩色校标.svg" alt="东南大学校标">
+          </span>
+          <span class="seal image-seal cs-seal">
+            <img src="assets/figures/微信图片_20260824155001_1244_2.png" alt="东南大学计算机科学与工程学院标志">
+          </span>
           <span class="brand-text">东南大学  计算机科学与工程学院  文脉智算团队</span>
         </a>
         <div class="nav-links">
@@ -24,66 +30,203 @@
         </div>
       </nav>
     </header>
-
     <main>
-      <section class="detail-section detail-section-phonology" id="detail-historical-phonology">
+      <section class="ph-hero">
         <div class="site-shell">
-          <div class="section-head detail-head">
+          <a class="ph-breadcrumb" href="index.html#historical-phonology">← 返回首页 · 研究方向 04</a>
+          <div class="ph-eyebrow">Historical Chinese phonology</div>
+          <h1>循字寻音，<br>让反切关系可追踪。</h1>
+          <p class="ph-intro">古人用两个字为一个字注音。如果注音用的字本身有多个读音，歧义就可能沿着字与字的关系继续传递。我们从《广韵》的反切网络出发，结合语境证据，探索这些分叉如何被解释与消解。</p>
+          <div class="ph-actions">
+            <a class="ph-link" href="#explore">试一试路径推演 ↓</a>
+            <a class="ph-link ph-secondary" href="#publications">相关论文 ↗</a>
+          </div>
+          <ul class="ph-stage-list">
+            <li>研究材料 / 《广韵》反切</li>
+            <li>核心问题 / 继承性歧义</li>
+            <li>当前案例 / 宋代语料</li>
+          </ul>
+        </div>
+      </section>
+      <section class="ph-section" id="question">
+        <div class="site-shell">
+          <div class="ph-section-head">
             <div>
-              <div class="eyebrow">研究方向 04</div>
-              <h1>中国古代音韵<br>研究</h1>
-            </div>
-            <p>
-              面向《广韵》、反切、韵书、诗文押韵与历史语音证据，研究如何把传统音韵学问题转化为可检索、可推理、可复现的计算框架。
-            </p>
-            <div class="actions compact-actions">
-              <a class="more-link" href="index.html#historical-phonology">返回首页栏目</a>
+              <div class="ph-eyebrow">01 / The research question</div>
+              <h2>当注音的字，也不止一个音。</h2>
             </div>
           </div>
-
-          <div class="research-paper-block detail-paper-panel">
-            <h2>相关论文</h2>
-            <div class="paper-list" data-paper-list data-paper-area="historical-phonology">
-              <p class="load-error">论文加载中...</p>
-            </div>
-          </div>
-
-          <div class="detail-grid">
-            <div class="detail-info-grid">
-              <article class="research-panel">
-                <h2>背景</h2>
-                <p>
-                  中国古代音韵研究依赖韵书、等韵图、反切材料、诗文押韵与方言比较。该方向目前收录 npj Heritage Science 2026 in press 论文，围绕宋代案例中的继承性歧义消解展开。
-                </p>
-              </article>
-              <article class="research-panel">
-                <h2>挑战</h2>
-                <ul class="compact-list">
-                  <li>多音反切字会把自身歧义传递给后续反切链条。</li>
-                  <li>古代语料存在体裁差异，主读音判断需要跨语域证据支撑。</li>
-                  <li>研究需要把字书内部结构、语料检索和模型推理统一起来。</li>
-                </ul>
-              </article>
-            </div>
+          <div class="ph-three">
+            <article class="ph-text-card">
+              <span class="ph-number">01</span>
+              <h3>反切：以字注音</h3>
+              <p>反切由上字和下字配合注音。上字提示声母，下字提示韵母与声调。它记录的是古代语音关系，不能直接按今天的普通话拼读。</p>
+            </article>
+            <article class="ph-text-card">
+              <span class="ph-number">02</span>
+              <h3>多音：选择从哪里开始？</h3>
+              <p>若某个反切字有多个读音，仅看到字形，并不能确定这里使用了哪一个。需要回到它的反切、释义与具体用例中寻找证据。</p>
+            </article>
+            <article class="ph-text-card">
+              <span class="ph-number">03</span>
+              <h3>继承：歧义会继续传递</h3>
+              <p>当这个多音字又被用来给其他字注音，未解决的选择会影响后续关系。我们希望让判断过程和依赖路径都能被追溯。</p>
+            </article>
           </div>
         </div>
       </section>
-
-      <template id="paper-card-template">
-        <a class="paper-card" href="#">
-          <div>
-            <div class="paper-meta" data-paper-tags></div>
-            <h3 data-paper-title></h3>
-            <p data-paper-description></p>
+      <section class="ph-section ph-tinted" id="explore">
+        <div class="site-shell">
+          <div class="ph-section-head">
+            <div>
+              <div class="ph-eyebrow">02 / Explore the relationships</div>
+              <h2>从一张小图，读懂主路径。</h2>
+            </div>
+            <p>拖动进度条查看反切关系。</p>
           </div>
-          <span class="arrow" aria-hidden="true">›</span>
-        </a>
-      </template>
+          <div class="ph-demo-grid">
+            <article class="ph-card">
+              <div class="ph-card-head"><h3>反切上字常读音，以“房”为例</h3></div>
+              <div data-phonology-demo="fang-upper"><noscript>请启用 JavaScript</noscript></div>
+            </article>
+            <article class="ph-card">
+              <div class="ph-card-head">
+                <div>
+                  <div class="ph-eyebrow">02 / Contextual evidence</div>
+                  <h3>从语境回到读音</h3>
+                  <p>第二互动展示位</p>
+                </div>
+                <span class="ph-tag">规划中</span>
+              </div>
+              <div class="ph-placeholder">
+                <span class="ph-placeholder-mark" aria-hidden="true">文 → 音</span>
+                <span class="ph-eyebrow">内容待补充</span>
+                <strong>让每一次选择，都有据可查</strong>
+                <p>计划展示同一多音字在不同语境中的用法，将原句、候选释义与主读音判断并排呈现。待补充经过核验的语料实例。</p>
+              </div>
+              <div class="ph-card-foot">建议交互：选择字例 → 对照语境 → 查看证据。此处为功能预留。</div>
+            </article>
+          </div>
+          <p class="ph-note">这是一段依据已提供标注播放的可视化演示，不在浏览器中执行读音推断。红线说明主路径；黑线保留原标注，并不自动等同于“舍弃”。</p>
+        </div>
+      </section>
+      <section class="ph-section" id="method">
+        <div class="site-shell">
+          <div class="ph-section-head">
+            <div>
+              <div class="ph-eyebrow">03 / From evidence to paths</div>
+              <h2>把材料、判断与路径连起来。</h2>
+            </div>
+          </div>
+          <div class="ph-three">
+            <article class="ph-text-card">
+              <span class="ph-number">01 / 字书内部</span>
+              <h3>限定候选</h3>
+              <p>从《广韵》的反切和释义出发，对候选变体进行过滤，明确需要判断的读音范围。</p>
+            </article>
+            <article class="ph-text-card">
+              <span class="ph-number">02 / 多体裁语料</span>
+              <h3>寻找上下文</h3>
+              <p>检索宋代语料中的用例，让孤立的多音字回到具体句子与语义环境中。</p>
+            </article>
+            <article class="ph-text-card">
+              <span class="ph-number">03 / 受约束推理</span>
+              <h3>组织可追踪的判断</h3>
+              <p>在候选范围内结合语境进行判断，再以主路径组织反切关系，便于后续分析与复核。</p>
+            </article>
+          </div>
+          <p class="ph-callout">研究的重点是解释“为什么选择这条反切关系”。模型判断需要和字书材料、语境证据一起阅读；主路径也不等于对古代实际语音的直接录音式还原。</p>
+        </div>
+      </section>
+      <section class="ph-section ph-tinted" id="publications">
+        <div class="site-shell">
+          <div class="ph-section-head">
+            <div>
+              <div class="ph-eyebrow">04 / Publication</div>
+              <h2>相关论文。</h2>
+            </div>
+          </div>
+          <div class="ph-paper-list" data-paper-list data-paper-area="historical-phonology">
+            <a class="ph-paper-card" href="papers/qyspd.html">
+              <span class="ph-tag">npj Heritage Science · In press 2026</span>
+              <h3>Resolving Inherited Ambiguity in Chinese Historical Phonology: A Song-Dynasty Case Study with Large Language Model</h3>
+              <p>Haiyue Liu · Hui Xue* · Na Nie · Shipeng Zhu</p>
+              <p>从宋代语料案例出发，结合字书内部证据、语料检索与大语言模型语境推理，研究多音反切字的继承性歧义。</p>
+              <span class="ph-eyebrow">阅读论文项目页 ↗</span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="ph-section" id="next">
+        <div class="site-shell">
+          <div class="ph-section-head">
+            <div>
+              <div class="ph-eyebrow">05 / Planned explorations</div>
+              <h2>下一步，让证据也能被探索。</h2>
+            </div>
+          </div>
+          <div class="ph-three">
+            <article class="ph-text-card">
+              <span class="ph-number">规划 / 01</span>
+              <h3>字例证据档案</h3>
+              <p>建议为每个字展示候选反切、原始语句、出处与人工复核说明，让读者从路径直接进入证据。</p>
+            </article>
+            <article class="ph-text-card">
+              <span class="ph-number">规划 / 02</span>
+              <h3>跨体裁对照</h3>
+              <p>建议并排查看不同体裁的用例和读音分布，理解判断是否依赖某类语境。待补充真实统计数据。</p>
+            </article>
+            <article class="ph-text-card">
+              <span class="ph-number">规划 / 03</span>
+              <h3>完整网络漫游</h3>
+              <p>建议支持搜索字形、展开上下游关系、切换反切上字与下字网络。当前演示房字上字子图。</p>
+            </article>
+          </div>
+          <p class="ph-note">以上是拟议功能，尚未接入数据。素材清单与明确的预留路径见 <a href="data/phonology/README.md">音韵栏目维护说明 ↗</a>。</p>
+        </div>
+      </section>
+      <section class="ph-section" id="glossary">
+        <div class="site-shell">
+          <div class="ph-section-head">
+            <div>
+              <div class="ph-eyebrow">06 / Quick glossary</div>
+              <h2>几个关键词。</h2>
+            </div>
+          </div>
+          <div class="ph-reading">
+            <details class="ph-term">
+              <summary>主路径（primary path）是什么？</summary>
+              <p>当多音字参与反切时，主路径标明它所采用的主反切关系。在演示中用红色实线表示；它是对具体读音选择的表达，不是普通的图论最短路径。</p>
+            </details>
+            <details class="ph-term">
+              <summary>为什么有单圈和双圈？</summary>
+              <p>单圈表示单音字，双圈表示多音字。这个区别来自样例标注，并不会随着动画阶段改变。</p>
+            </details>
+            <details class="ph-term">
+              <summary>点线和菱形分别表示什么？</summary>
+              <p>黑色点线表示非常读音；空心菱形表示又切。</p>
+            </details>
+          </div>
+        </div>
+      </section>
     </main>
-
+    <template id="paper-card-template">
+      <a class="ph-paper-card" href="#">
+        <div class="paper-meta" data-paper-tags>
+        </div>
+        <h3 data-paper-title>
+        </h3>
+        <p data-paper-description>
+        </p>
+        <span class="ph-eyebrow">阅读论文项目页 ↗</span>
+      </a>
+    </template>
     <footer class="footer">
       <div class="site-shell">© 东南大学 计算机科学与工程学院 文脉智算团队</div>
     </footer>
-    <script src="assets/js/paper-list.js"></script>
+    <script src="assets/js/paper-list.js">
+    </script>
+    <script src="assets/js/phonology-demo.js">
+    </script>
   </body>
 </html>
