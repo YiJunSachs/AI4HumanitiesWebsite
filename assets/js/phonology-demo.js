@@ -112,7 +112,7 @@
     }
     function tick(time) {
       if (!running) return;
-      if (previousTime !== null) render(progress + (time - previousTime) / 500);
+      if (previousTime !== null) render(progress + (time - previousTime) / 750);
       previousTime = time;
       if (progress >= totalStages) stop(); else frame = requestAnimationFrame(tick);
     }
