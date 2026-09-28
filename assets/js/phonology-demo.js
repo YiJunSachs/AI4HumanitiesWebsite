@@ -76,11 +76,42 @@
     let progress = 0, frame = 0, running = false, previousTime = null;
     let started = false, visible = false, resumeOnEntry = false;
 
+    function isEnglish() {
+      return document.documentElement.lang === 'en';
+    }
+
     function updatePlay() {
-      const label = running ? '暂停' : '播放';
+      const label = isEnglish() ? (running ? 'Pause' : 'Play') : (running ? '暂停' : '播放');
       play.innerHTML = running ? icons.pause : icons.play;
       play.setAttribute('aria-label', label);
       play.title = label;
+    }
+
+    function updateLanguage() {
+      const en = isEnglish();
+      const labels = en
+        ? ['Monophonic', 'Polyphonic', 'Fanqie', 'Primary reading', 'Non-primary reading', 'Alternative fanqie']
+        : ['单音字', '多音字', '反切', '常读音', '非常读音', '又切'];
+      host.querySelectorAll('.ph-legend span').forEach((item, itemIndex) => {
+        item.lastChild.textContent = labels[itemIndex];
+      });
+      const zoomOutLabel = en ? 'Zoom out' : '缩小';
+      const zoomInLabel = en ? 'Zoom in' : '放大';
+      const resetLabel = en ? 'Reset' : '重置';
+      const graphLabel = en ? 'Fanqie graph' : '反切图';
+      const legendLabel = en ? 'Legend' : '图例';
+      const progressLabel = en ? 'Playback progress' : '播放进度';
+      const zoomOutButton = host.querySelector('[data-action="zoom-out"]');
+      const zoomInButton = host.querySelector('[data-action="zoom-in"]');
+      const resetButton = host.querySelector('[data-action="reset"]');
+      [[zoomOutButton, zoomOutLabel], [zoomInButton, zoomInLabel], [resetButton, resetLabel]].forEach(([button, label]) => {
+        button.setAttribute('aria-label', label);
+        button.title = label;
+      });
+      host.querySelector('.ph-graph-scroll').setAttribute('aria-label', graphLabel);
+      host.querySelector('.ph-legend').setAttribute('aria-label', legendLabel);
+      slider.setAttribute('aria-label', progressLabel);
+      updatePlay();
     }
     function render(value) {
       progress = Math.max(0, Math.min(totalStages, value));
@@ -176,6 +207,8 @@
     reducedMotion.addEventListener('change', () => {
       if (reducedMotion.matches) { resumeOnEntry = false; stop(); }
     });
+    window.addEventListener('site:languagechange', updateLanguage);
+    updateLanguage();
     render(0);
     resize();
   }
@@ -187,7 +220,7 @@
       if (!response.ok) throw new Error('Demo unavailable');
       return response.json();
     }).then(data => mount(host, data, index)).catch(() => {
-      host.textContent = '图示加载失败';
+      host.textContent = document.documentElement.lang === 'en' ? 'Unable to load visualization' : '图示加载失败';
     });
   });
 })();

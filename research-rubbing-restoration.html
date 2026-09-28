@@ -9,19 +9,20 @@
   </head>
   <body class="home-redesign research-details-page">
     <header class="topbar">
-      <nav class="site-shell nav" aria-label="主导航">
+      <nav class="site-shell nav" aria-label="主导航" data-i18n-aria-label="navLabel">
         <a class="brand" href="index.html">
           <span class="seal image-seal"><img src="assets/figures/彩色校标.svg" alt="东南大学校标"></span>
           <span class="seal image-seal cs-seal"><img src="assets/figures/微信图片_20260824155001_1244_2.png" alt="东南大学计算机科学与工程学院标志"></span>
-          <span class="brand-text">东南大学  计算机科学与工程学院  文脉智算团队</span>
+          <span class="brand-text" data-i18n="brand">东南大学  计算机科学与工程学院  文脉智算团队</span>
         </a>
         <div class="nav-links">
-          <a href="index.html">首页</a>
-          <a href="research-rubbing-restoration.html">残损古籍修复</a>
-          <a href="research-multi-carrier-reading.html">多载体古籍转录</a>
-          <a href="research-ancient-character-restoration.html">字体风格迁移</a>
-          <a href="research-historical-phonology.html">中国古代音韵</a>
+          <a href="index.html" data-i18n="home">首页</a>
+          <a href="research-rubbing-restoration.html" data-i18n="navRestoration">残损古籍修复</a>
+          <a href="research-multi-carrier-reading.html" data-i18n="navTranscription">多载体古籍转录</a>
+          <a href="research-ancient-character-restoration.html" data-i18n="navStyleTransfer">字体风格迁移</a>
+          <a href="research-historical-phonology.html" data-i18n="navPhonology">中国古代音韵</a>
         </div>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English" title="Switch to English"><span class="language-option" data-language-option="zh">中</span><span class="language-option" data-language-option="en">EN</span></button>
       </nav>
     </header>
 
@@ -30,38 +31,38 @@
         <div class="site-shell">
           <div class="section-head detail-head">
             <div>
-              <div class="eyebrow">研究方向 01</div>
-              <h1>残损古籍<br>修复研究</h1>
+              <div class="eyebrow" data-i18n="direction01">研究方向 01</div>
+              <h1 data-i18n="restorationTitleBreak">残损古籍<br>修复研究</h1>
             </div>
-            <p>
+            <p data-i18n="restorationSummary">
               面向古籍、碑刻、拓片、摩崖等残损文献材料，研究如何在尊重原始书写结构与材料质感的前提下恢复缺失笔画、噪声区域与断裂字形。
             </p>
             <div class="actions compact-actions">
-              <a class="more-link" href="index.html#rubbing-restoration">返回首页栏目</a>
+              <a class="more-link" href="index.html#rubbing-restoration" data-i18n="backHomeSection">返回首页栏目</a>
             </div>
           </div>
 
           <div class="research-paper-block detail-paper-panel">
-            <h2>相关论文</h2>
+            <h2 data-i18n="relatedPapers">相关论文</h2>
             <div class="paper-list" data-paper-list data-paper-area="rubbing-restoration">
-              <p class="load-error">论文加载中...</p>
+              <p class="load-error" data-i18n="papersLoading">论文加载中...</p>
             </div>
           </div>
 
           <div class="detail-grid">
             <div class="detail-info-grid">
               <article class="research-panel">
-                <h2>背景</h2>
-                <p>
+                <h2 data-i18n="background">背景</h2>
+                <p data-i18n="restorationBackground">
                   残损古籍材料记录了大量历史文献、书法形态和地方文化信息，但真实图像常伴随风化、剥蚀、墨迹不均、局部缺失与扫描噪声。智能修复需要同时维护可读性、字形真实性与材料视觉风格。
                 </p>
               </article>
               <article class="research-panel">
-                <h2>挑战</h2>
+                <h2 data-i18n="challenges">挑战</h2>
                 <ul class="compact-list">
-                  <li>缺损区域往往覆盖关键笔画，单纯图像补全容易产生不可信字形。</li>
-                  <li>古籍、碑刻与拓片具有黑底白字、噪声颗粒、纸面纹理等差异化视觉分布。</li>
-                  <li>修复结果需要兼顾字符结构、上下文语义与专家可解释性。</li>
+                  <li data-i18n="restorationChallenge1">缺损区域往往覆盖关键笔画，单纯图像补全容易产生不可信字形。</li>
+                  <li data-i18n="restorationChallenge2">古籍、碑刻与拓片具有黑底白字、噪声颗粒、纸面纹理等差异化视觉分布。</li>
+                  <li data-i18n="restorationChallenge3">修复结果需要兼顾字符结构、上下文语义与专家可解释性。</li>
                 </ul>
               </article>
             </div>
@@ -82,8 +83,9 @@
     </main>
 
     <footer class="footer">
-      <div class="site-shell">© 东南大学 计算机科学与工程学院 文脉智算团队</div>
+      <div class="site-shell" data-i18n="footer">© 东南大学 计算机科学与工程学院 文脉智算团队</div>
     </footer>
     <script src="assets/js/paper-list.js"></script>
+    <script src="assets/js/i18n.js"></script>
   </body>
 </html>
