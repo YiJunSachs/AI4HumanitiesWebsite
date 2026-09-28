@@ -7,13 +7,13 @@
     <link rel="icon" href="../assets/figures/彩色校标.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../assets/styles.css?v=bright-20260913">
   </head>
-  <body>
+  <body class="paper-project-page">
     <header class="topbar">
-      <nav class="site-shell nav" aria-label="Main navigation">
+      <nav class="site-shell nav" aria-label="Main navigation" data-i18n-aria-label="navLabel">
         <a class="brand" href="../index.html">
           <span class="seal image-seal"><img src="../assets/figures/彩色校标.svg" alt="东南大学校标"></span>
           <span class="seal image-seal cs-seal"><img src="../assets/figures/微信图片_20260824155001_1244_2.png" alt="东南大学计算机科学与工程学院标志"></span>
-          <span class="brand-text">东南大学  计算机科学与工程学院  文脉智算团队</span>
+          <span class="brand-text" data-i18n="brand">东南大学  计算机科学与工程学院  文脉智算团队</span>
         </a>
         <div class="nav-links">
           <a href="../research-multi-carrier-reading.html">Research Details</a>
@@ -22,6 +22,7 @@
           <a href="#results">Results</a>
           <a href="#analysis">Analysis</a>
         </div>
+        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English" title="Switch to English"><span class="language-option" data-language-option="zh">中</span><span class="language-option" data-language-option="en">EN</span></button>
       </nav>
     </header>
 
@@ -67,7 +68,7 @@
           <div class="section-head">
             <div>
               <div class="eyebrow">Multi-Carrier Hall</div>
-              <h2>多载体展厅</h2>
+              <h2 data-i18n="carrierHall">多载体展厅</h2>
             </div>
             <p>
               Six historical document carriers from the Dataset collection, staged as a compact museum-style gallery.
@@ -77,7 +78,7 @@
           <div class="carrier-hall" aria-label="MCHDoc carrier examples">
             <article class="carrier-card" tabindex="0">
               <div class="carrier-card-body">
-                <h3>古籍</h3>
+                <h3 data-i18n="carrierBook">古籍</h3>
                 <p>Printed and manuscript pages with dense vertical text, seals, aging paper, and page-layout cues.</p>
                 <span class="carrier-source">AncientBook</span>
               </div>
@@ -96,7 +97,7 @@
 
             <article class="carrier-card" tabindex="0">
               <div class="carrier-card-body">
-                <h3>书法</h3>
+                <h3 data-i18n="carrierCalligraphy">书法</h3>
                 <p>Calligraphy leaves with sparse ink, brush texture, varying stroke density, and open white space.</p>
                 <span class="carrier-source">CalliBench</span>
               </div>
@@ -115,7 +116,7 @@
 
             <article class="carrier-card" tabindex="0">
               <div class="carrier-card-body">
-                <h3>碑刻</h3>
+                <h3 data-i18n="carrierInscription">碑刻</h3>
                 <p>Stone inscription rubbings and epitaph texts with fragmented surfaces and high-contrast strokes.</p>
                 <span class="carrier-source">Inscription</span>
               </div>
@@ -134,7 +135,7 @@
 
             <article class="carrier-card" tabindex="0">
               <div class="carrier-card-body">
-                <h3>简牍</h3>
+                <h3 data-i18n="carrierBamboo">简牍</h3>
                 <p>Narrow bamboo and wooden slip fragments with long vertical proportions and uneven preservation.</p>
                 <span class="carrier-source">JianDu</span>
               </div>
@@ -153,7 +154,7 @@
 
             <article class="carrier-card" tabindex="0">
               <div class="carrier-card-body">
-                <h3>帛书</h3>
+                <h3 data-i18n="carrierSilk">帛书</h3>
                 <p>Silk manuscript character crops with fibrous texture, soft ink diffusion, and strong glyph variation.</p>
                 <span class="carrier-source">Silk</span>
               </div>
@@ -172,7 +173,7 @@
 
             <article class="carrier-card" tabindex="0">
               <div class="carrier-card-body">
-                <h3>甲骨</h3>
+                <h3 data-i18n="carrierOracle">甲骨</h3>
                 <p>Oracle-bone fragments with carved signs, broken edges, dark material texture, and sparse symbols.</p>
                 <span class="carrier-source">Oracle</span>
               </div>
@@ -505,5 +506,6 @@
       </section>
     </main>
     <script src="../assets/js/carrier-hall.js?v=mchdoc-char-carriers"></script>
+    <script src="../assets/js/i18n.js"></script>
   </body>
 </html>

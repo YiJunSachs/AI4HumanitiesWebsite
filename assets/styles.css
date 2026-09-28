@@ -1880,6 +1880,37 @@ th {
   }
 }
 
+.paper-project-page .topbar .site-shell {
+  width: min(1320px, calc(100% - 40px));
+}
+
+html[data-language="en"] .paper-project-page .brand-text {
+  display: none;
+}
+
+html[data-language="en"] .paper-project-page .nav-links {
+  gap: 18px;
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 13px;
+}
+
+@media (max-width: 860px) {
+  .paper-project-page .nav {
+    position: relative;
+    padding-right: 82px;
+  }
+
+  .paper-project-page .language-toggle {
+    position: absolute;
+    top: 16px;
+    right: 0;
+  }
+
+  .paper-project-page .nav-links {
+    padding-right: 0;
+  }
+}
+
 .home-redesign {
   color: #f8efe3;
   background: #11100e;
