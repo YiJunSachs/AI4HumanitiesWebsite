@@ -3538,3 +3538,113 @@ th {
 .research-details-page .arrow {
   color: var(--cinnabar-dark);
 }
+
+/* Shared language switch for the homepage and research detail pages. */
+.language-toggle {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 0 0 auto;
+  width: 70px;
+  height: 32px;
+  padding: 3px;
+  border: 1px solid rgba(64, 91, 76, 0.24);
+  border-radius: 6px;
+  color: rgba(31, 42, 35, 0.62);
+  background: rgba(255, 255, 255, 0.66);
+  cursor: pointer;
+  font: 700 11px/1 Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+}
+
+.language-option {
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  border-radius: 3px;
+  transition: color 160ms ease, background-color 160ms ease, box-shadow 160ms ease;
+}
+
+.language-option.is-active {
+  color: #fff;
+  background: var(--cinnabar-dark);
+  box-shadow: 0 2px 7px rgba(125, 45, 34, 0.2);
+}
+
+.language-toggle:focus-visible {
+  outline: 2px solid var(--cinnabar);
+  outline-offset: 3px;
+}
+
+html[data-language="en"] .home-redesign .brand-text {
+  max-width: 270px;
+  font-size: 11px;
+}
+
+html[data-language="en"] .home-redesign .nav-links {
+  gap: 16px;
+  font-size: 11px;
+  letter-spacing: 0;
+}
+
+html[data-language="en"] .home-redesign .research-hero h1 {
+  width: max-content;
+  max-width: 100%;
+  white-space: nowrap;
+}
+
+html[data-language="en"] .home-redesign .research-head h2,
+html[data-language="en"] .research-details-page .detail-head h1 {
+  font-size: 52px;
+  line-height: 1.04;
+}
+
+@media (max-width: 1180px) and (min-width: 981px) {
+  .home-redesign .brand-text {
+    display: none;
+  }
+
+  .home-redesign .nav-links {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 980px) {
+  .home-redesign .nav {
+    position: relative;
+    padding-right: 82px;
+  }
+
+  .home-redesign .language-toggle {
+    position: absolute;
+    top: 16px;
+    right: 0;
+  }
+
+  html[data-language="en"] .home-redesign .brand-text {
+    max-width: min(52vw, 270px);
+  }
+
+  html[data-language="en"] .home-redesign .nav-links {
+    gap: 20px;
+    font-size: 12px;
+  }
+
+  html[data-language="en"] .home-redesign .research-head h2,
+  html[data-language="en"] .research-details-page .detail-head h1 {
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-redesign .topbar .site-shell {
+    width: min(100% - 28px, 1320px);
+  }
+
+  .home-redesign .brand-text {
+    display: none;
+  }
+
+  html[data-language="en"] .home-redesign .research-head h2,
+  html[data-language="en"] .research-details-page .detail-head h1 {
+    font-size: 36px;
+  }
+}

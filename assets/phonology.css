@@ -1,0 +1,119 @@
+/* All selectors are scoped to the historical phonology pages or widgets. */
+html.ph-page-root { scroll-snap-type: none; scroll-padding-top: 100px; }
+.ph-page { background: #f7f6f1; color: #252c27; }
+.ph-page main { overflow: clip; }
+.ph-page .site-shell { width: min(1240px, calc(100% - 64px)); }
+.ph-page .topbar { background: rgba(249,249,245,.95); border-color: #dce1d8; }
+.ph-page .nav-links { flex-wrap: wrap; }
+.ph-page .footer { margin: 0; background: #eef1e9; color: #586451; }
+.ph-page h1, .ph-page h2, .ph-page h3, .ph-card h3 { color: #253329; }
+.ph-page h2 { font-size: clamp(26px, 3vw, 38px); line-height: 1.35; margin: 10px 0 20px; }
+.ph-page h3 { font-size: 21px; line-height: 1.5; margin: 0 0 12px; }
+.ph-page p { line-height: 1.9; }
+.ph-eyebrow { color: #67755a; font: 600 11px/1.5 system-ui, sans-serif; letter-spacing: .17em; text-transform: uppercase; }
+.ph-hero { padding: 70px 0 54px; border-bottom: 1px solid #dce1d8; background: radial-gradient(ellipse at 85% 35%, #e8eddf, transparent 60%); }
+.ph-breadcrumb { display: inline-block; color: #627257; font-size: 13px; margin-bottom: 30px; }
+.ph-hero h1 { max-width: 960px; font-size: clamp(38px, 5vw, 68px); font-weight: 600; line-height: 1.25; letter-spacing: -.035em; margin: 14px 0 22px; }
+.ph-hero .ph-intro { max-width: 740px; font-size: 18px; color: #606b5e; }
+.ph-hero .ph-authors { font: 14px/1.9 system-ui, sans-serif; color: #69725f; }
+.ph-paper-title { max-width: 1060px !important; font-size: clamp(32px, 4.1vw, 54px) !important; letter-spacing: -.025em !important; }
+.ph-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+.ph-link { display: inline-flex; align-items: center; justify-content: center; gap: 20px; padding: 12px 20px; border: 1px solid #53664b; background: #53664b; color: white; border-radius: 4px; font: 600 13px/1.5 system-ui, sans-serif; }
+.ph-link.ph-secondary { color: #43563c; background: transparent; }
+.ph-section { padding: 62px 0; border-bottom: 1px solid #dde2d7; scroll-margin-top: 100px; }
+.ph-section.ph-tinted { background: #eef1e8; }
+.ph-section-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 26px; }
+.ph-section-head p { max-width: 530px; color: #65715e; margin: 0 0 20px; }
+.ph-two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.ph-three { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.ph-text-card { padding: 28px; background: #fffefa; border: 1px solid #dce1d5; border-radius: 8px; }
+.ph-text-card p { margin-bottom: 0; color: #606b5e; font-size: 15px; }
+.ph-number { display: block; color: #859578; font: 13px/1 system-ui, sans-serif; margin-bottom: 24px; }
+.ph-reading { max-width: 790px; }
+.ph-note { color: #707969; font-size: 13px; line-height: 1.8; }
+.ph-callout { padding: 20px 24px; border-left: 3px solid #a74635; background: #f5ede4; line-height: 1.9; }
+.ph-term { padding: 22px 0; border-bottom: 1px solid #dce1d5; }
+.ph-term summary { cursor: pointer; color: #34472d; font-size: 18px; }
+.ph-term p { color: #65715e; margin-bottom: 0; }
+.ph-paper-card { display: block; padding: 30px; background: #fffefa; border: 1px solid #dce1d5; border-radius: 8px; }
+.ph-paper-card h3 { max-width: 980px; font-size: 25px; margin-top: 18px; }
+.ph-paper-card:hover { border-color: #748767; }
+.ph-paper-card p { color: #64705d; }
+.ph-tag { display: inline-block; padding: 5px 10px; background: #edf1e5; border: 1px solid #d7dfcd; font: 12px/1.5 system-ui, sans-serif; color: #5d6d50; border-radius: 3px; }
+.ph-placeholder { min-height: 250px; display: grid; align-content: center; justify-items: center; gap: 14px; padding: 30px; border: 1px dashed #b7c2ac; background: repeating-linear-gradient(135deg, #f5f7ef, #f5f7ef 10px, #f1f4eb 10px, #f1f4eb 11px); text-align: center; border-radius: 7px; }
+.ph-placeholder strong { font-size: 24px; font-weight: 500; color: #6d7c5f; }
+.ph-placeholder p { max-width: 400px; margin: 0; color: #78816d; font-size: 14px; line-height: 1.85; }
+.ph-placeholder .ph-placeholder-mark { font-size: 50px; line-height: 1; color: #a1ae94; }
+.ph-table-wrap { overflow-x: auto; }
+.ph-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+.ph-table th, .ph-table td { padding: 17px; border-bottom: 1px solid #dce1d5; line-height: 1.8; }
+.ph-table th { background: #eaf0e2; color: #516247; }
+.ph-page :focus-visible, .ph-card :focus-visible { outline: 3px solid #b35639; outline-offset: 4px; }
+/* Two full-size panels, independent of the other homepage research layouts. */
+.home-redesign #historical-phonology .research-stack { display: block; min-height: auto; padding-top: 100px; padding-bottom: 64px; }
+.home-redesign #historical-phonology::before { z-index: 0; pointer-events: none; }
+.home-redesign #historical-phonology .research-head { display: grid; grid-template-columns: 1fr 1.2fr auto; align-items: end; gap: 35px; max-width: none; margin-bottom: 32px; }
+.home-redesign #historical-phonology .research-head h2 { font-size: clamp(34px, 3.5vw, 52px); }
+.home-redesign #historical-phonology .research-head p { max-width: 560px; }
+.home-redesign #historical-phonology .research-head .compact-actions { margin: 0; }
+.ph-demo-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; align-items: stretch; }
+.ph-card { min-width: 0; display: flex; flex-direction: column; overflow: hidden; margin: 0; color: #283026; border: 1px solid #d2dcc7; border-radius: 10px; background: #fffefa; box-shadow: 0 12px 30px #36472708; }
+.ph-card-head { padding: 22px 26px 15px; display: flex; align-items: start; justify-content: space-between; gap: 16px; border-bottom: 1px solid #e6eade; }
+.ph-card-head h3 { margin: 0; font-size: 20px; line-height: 1.5; }
+.ph-card .ph-card-head p { color: #74806a; margin: 6px 0 0; font-size: 12px; }
+.ph-card .ph-tag { white-space: nowrap; }
+.ph-card .ph-placeholder { flex: 1; min-height: 460px; margin: 20px; }
+.ph-card-foot { border-top: 1px solid #e6eade; padding: 16px 24px; color: #737d6b; font-size: 12px; line-height: 1.8; }
+.ph-card-foot a { text-decoration: underline; text-underline-offset: 3px; }
+.ph-card [data-phonology-demo] { display: flex; flex-direction: column; flex: 1; min-width: 0; }
+.ph-graph { display: block; flex-shrink: 0; max-width: none; margin: 0; }
+.ph-graph-scroll { height: clamp(400px, 36vw, 520px); overflow: auto; overscroll-behavior: contain; }
+.ph-graph-canvas { width: max-content; min-width: 100%; min-height: 100%; display: flex; align-items: center; justify-content: center; padding: 10px; }
+.ph-graph-tools { display: flex; justify-content: flex-end; gap: 6px; padding: 10px 18px; }
+.ph-graph-tools button, .ph-controls button { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; padding: 7px; cursor: pointer; border: 1px solid #cbd5c1; border-radius: 5px; background: #f7f9f1; color: #405435; }
+.ph-graph-tools button:disabled { opacity: .35; cursor: default; }
+.ph-graph-tools svg, .ph-controls button svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ph-edge { fill: none; stroke: #262626; stroke-width: 1.8; }
+.ph-edge-final { stroke-width: 2.7; }
+.ph-edge-label { fill: #262626; font-size: 15px; paint-order: stroke; stroke: #fffefa; stroke-width: 4px; stroke-linejoin: round; }
+.ph-node circle { fill: #fffefa; stroke: #262626; stroke-width: 1.6; }
+.ph-node .ph-inner { fill: none; }
+.ph-node text { fill: #262626; font: 24px "Songti SC", "STSong", "Noto Serif CJK SC", "BabelStone Han", "HanaMinB", "SimSun-ExtB", "MingLiU-ExtB", serif; text-anchor: middle; dominant-baseline: central; }
+.ph-node.ph-primary circle { stroke: #b4312c; }
+.ph-node.ph-primary text { fill: #b4312c; }
+.ph-col-label { fill: #8b937f; font: 11px system-ui, sans-serif; letter-spacing: .08em; }
+.ph-legend { display: flex; flex-wrap: wrap; gap: 9px 17px; padding: 14px 20px; font: 11px/1.5 system-ui, sans-serif; color: #69735f; }
+.ph-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.ph-ring { width: 13px; height: 13px; border: 1px solid #262626; border-radius: 50%; }
+.ph-ring.ph-double { outline: 1px solid #262626; outline-offset: 2px; margin: 0 2px; }
+.ph-line { width: 22px; border-top: 2px solid #262626; }
+.ph-line.ph-red { border-color: #b4312c; }
+.ph-line.ph-dotted { border-top-style: dotted; }
+.ph-diamond { width: 9px; height: 9px; border: 1px solid #262626; transform: rotate(45deg); margin: 0 3px; }
+.ph-controls { display: flex; align-items: center; gap: 10px; padding: 12px 20px; margin-top: auto; border-top: 1px solid #e6eade; }
+.ph-controls button:first-child { color: #fff; background: #53664b; border-color: #53664b; }
+.ph-controls input { flex: 1; width: 0; min-width: 0; accent-color: #647a51; cursor: pointer; }
+.ph-page .ph-paper-card .tag { color: #5d6d50; background: #edf1e5; border-color: #d7dfcd; }
+.ph-stage-list { display: flex; gap: 10px; margin-top: 32px; padding: 0; list-style: none; color: #657459; font: 12px/1.8 system-ui, sans-serif; flex-wrap: wrap; }
+.ph-stage-list li { border: 1px solid #cbd5c0; padding: 8px 14px; border-radius: 30px; }
+@media (max-width: 1000px) {
+  .home-redesign #historical-phonology .research-head { grid-template-columns: 1fr 1fr; }
+  .home-redesign #historical-phonology .research-head .actions { grid-column: 1 / -1; }
+  .ph-three { grid-template-columns: 1fr; }
+  .ph-section-head { display: block; }
+}
+@media (max-width: 700px) {
+  .ph-page .site-shell { width: calc(100% - 36px); }
+  .ph-hero { padding: 40px 0; }
+  .ph-section { padding: 40px 0; }
+  .ph-demo-grid, .ph-two { grid-template-columns: 1fr; }
+  .home-redesign #historical-phonology .research-head { display: block; }
+  .home-redesign #historical-phonology .research-head .actions { margin-top: 20px; }
+  .ph-card-head { padding: 18px; }
+  .ph-card .ph-placeholder { min-height: 330px; }
+  .ph-page .nav { padding: 12px 0; flex-wrap: wrap; gap: 12px; }
+  .ph-page .brand-text { font-size: 11px; }
+  .ph-page .nav-links { gap: 12px; font-size: 12px; }
+  .ph-text-card { padding: 22px; }
+}
+@media (prefers-reduced-motion: reduce) { html.ph-page-root { scroll-behavior: auto; } }

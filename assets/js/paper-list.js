@@ -6,15 +6,19 @@
     return;
   }
 
+  let papers = [];
+
+  const isEnglish = () => document.documentElement.lang === "en";
+
   const createEmptyState = (list) => {
     const empty = document.createElement("article");
     empty.className = "paper-empty";
 
     const title = document.createElement("h3");
-    title.textContent = list.dataset.emptyTitle || "暂无论文";
+    title.textContent = isEnglish() ? "Publications forthcoming" : (list.dataset.emptyTitle || "暂无论文");
 
     const description = document.createElement("p");
-    description.textContent = list.dataset.emptyDescription || "该方向的论文入口已预留。";
+    description.textContent = isEnglish() ? "This research area is established; publications and examples will be added as the work develops." : (list.dataset.emptyDescription || "该方向的论文入口已预留。");
 
     empty.append(title, description);
     return empty;
@@ -35,11 +39,12 @@
       image.alt = paper.thumbnailAlt || paper.title;
     }
 
-    title.textContent = paper.title;
-    description.textContent = paper.description;
+    title.textContent = isEnglish() ? (paper.titleEn || paper.title) : paper.title;
+    description.textContent = isEnglish() ? (paper.descriptionEn || paper.description) : paper.description;
 
     tags.textContent = "";
-    for (const tag of paper.tags || []) {
+    const paperTags = isEnglish() ? (paper.tagsEn || paper.tags) : paper.tags;
+    for (const tag of paperTags || []) {
       const tagElement = document.createElement("span");
       tagElement.className = "tag";
       tagElement.textContent = tag;
@@ -49,15 +54,7 @@
     return card;
   };
 
-  try {
-    const response = await fetch("data/papers.json", { cache: "no-store" });
-
-    if (!response.ok) {
-      throw new Error(`papers.json 加载失败：${response.status}`);
-    }
-
-    const papers = await response.json();
-
+  const renderLists = () => {
     lists.forEach((list) => {
       const area = list.dataset.paperArea;
       const filteredPapers = area ? papers.filter((paper) => paper.area === area) : papers;
@@ -72,9 +69,26 @@
         list.appendChild(createPaperCard(paper));
       }
     });
+  };
+
+  window.addEventListener("site:languagechange", () => {
+    if (papers.length) renderLists();
+  });
+
+  try {
+    const response = await fetch("data/papers.json", { cache: "no-store" });
+
+    if (!response.ok) {
+      throw new Error(`papers.json 加载失败：${response.status}`);
+    }
+
+    papers = await response.json();
+    renderLists();
   } catch (error) {
     lists.forEach((list) => {
-      list.innerHTML = '<p class="load-error">论文列表加载失败。请通过本地服务器打开该网站。</p>';
+      list.innerHTML = isEnglish()
+        ? '<p class="load-error">Unable to load publications. Please open the site through a local server.</p>'
+        : '<p class="load-error">论文列表加载失败。请通过本地服务器打开该网站。</p>';
     });
     console.error(error);
   }

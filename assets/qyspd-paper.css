@@ -1,0 +1,32 @@
+#detail-historical-phonology .research-panel p {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+.qyspd-paper .title-line {
+  font-size: clamp(2rem, 4.2vw, 3.7rem);
+  line-height: 1.13;
+}
+
+.qyspd-paper figure {
+  margin: 0;
+}
+
+.qyspd-paper .pdf-figure img {
+  display: block;
+  max-width: 980px;
+  height: auto;
+  margin-inline: auto;
+}
+
+.qyspd-paper .metric-table tbody th {
+  color: inherit;
+  background: transparent;
+  font-weight: 500;
+}
+
+.qyspd-paper .table-wrap:focus-visible {
+  outline: 2px solid var(--cinnabar-dark);
+  outline-offset: 4px;
+}

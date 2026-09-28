@@ -1,38 +1,49 @@
 [
   {
     "title": "MCHDoc：多载体中国历史文献阅读综合基准",
+    "titleEn": "MCHDoc: A Comprehensive Benchmark for Multi-Carrier Chinese Historical Document Reading",
     "href": "papers/mchdoc.html",
     "area": "multi-carrier-reading",
     "thumbnail": "assets/rendered/process_v7.png",
     "thumbnailAlt": "MCHDoc 多载体历史文献阅读流程",
     "tags": ["CVPR 2026", "MCHDoc 基准", "中国历史文献"],
-    "description": "覆盖六类历史载体的 15,724 张高分辨率文献图像，支持页面识别、字符识别与后校正评测。"
+    "tagsEn": ["CVPR 2026", "MCHDoc Benchmark", "Chinese Historical Documents"],
+    "description": "覆盖六类历史载体的 15,724 张高分辨率文献图像，支持页面识别、字符识别与后校正评测。",
+    "descriptionEn": "A collection of 15,724 high-resolution images across six historical media, supporting page recognition, character recognition, and post-correction evaluation."
   },
   {
     "title": "EpiAgent：面向古代碑刻修复的智能体系统",
+    "titleEn": "EpiAgent: An Agentic System for Ancient Inscription Restoration",
     "href": "papers/epiagent.html",
     "area": "rubbing-restoration",
     "thumbnail": "assets/rendered/epiagent-teaser.png",
     "thumbnailAlt": "EpiAgent 古代碑刻修复效果对比",
     "tags": ["CVPR 2026", "智能体修复", "古代碑刻修复"],
-    "description": "通过多模态感知、经验引导规划、专用修复工具与自我反思协同完成残损古籍修复。"
+    "tagsEn": ["CVPR 2026", "Agentic Restoration", "Ancient Inscriptions"],
+    "description": "通过多模态感知、经验引导规划、专用修复工具与自我反思协同完成残损古籍修复。",
+    "descriptionEn": "Coordinates multimodal perception, experience-guided planning, specialized restoration tools, and self-reflection to restore damaged historical documents."
   },
   {
     "title": "CIRI：碑刻修复基准数据集",
+    "titleEn": "CIRI: A Benchmark Dataset for Inscription Restoration",
     "href": "papers/mm24.html",
     "area": "rubbing-restoration",
     "thumbnail": "assets/rendered/mm24-results.png",
     "thumbnailAlt": "CIRI 残损古籍修复对比结果",
     "tags": ["MM 2024", "CIRI 数据集", "古代碑刻修复"],
-    "description": "面向中国碑拓图像修复的基准，结合真实残损拓片、合成配对数据与全局-局部扩散修复基线。"
+    "tagsEn": ["MM 2024", "CIRI Dataset", "Ancient Inscriptions"],
+    "description": "面向中国碑拓图像修复的基准，结合真实残损拓片、合成配对数据与全局-局部扩散修复基线。",
+    "descriptionEn": "A benchmark for restoring Chinese inscription rubbings, combining authentic damaged rubbings, synthetic paired data, and a global-local diffusion baseline."
   },
   {
-    "title": "Resolving Inherited Ambiguity in Chinese Historical Phonology: A Song-Dynasty Case Study with Large Language Model",
+    "title": "Resolving Inherited Ambiguity in Chinese Historical Phonology with Song Dynasty Corpus Evidence",
     "href": "papers/qyspd.html",
     "area": "historical-phonology",
-    "thumbnail": "assets/rendered/qyspd/primary-paths.png",
-    "thumbnailAlt": "QYSPD 反切 primary path 示例",
-    "tags": ["npj Heritage Science", "In press 2026", "历史音韵"],
-    "description": "Haiyue Liu, Hui Xue*, Na Nie, Shipeng Zhu. 面向宋代语料案例，利用大语言模型消解中国历史音韵中的继承性歧义。"
+    "thumbnail": "assets/rendered/qyspd/paper-primary-paths.png",
+    "thumbnailAlt": "QYSPD 论文图 6：扩展反切主路径",
+    "tags": ["QYSPD", "《广韵》", "宋代语料"],
+    "tagsEn": ["QYSPD", "Guangyun", "Song-Dynasty Corpus"],
+    "description": "Haiyue Liu, Hui Xue*, Na Nie, Shipeng Zhu. 结合《广韵》内部证据与宋代多体裁语境，推断多音反切字的主反切并构建主路径。",
+    "descriptionEn": "Haiyue Liu, Hui Xue*, Na Nie, Shipeng Zhu. Infers primary readings for polyphonic fanqie spellers and constructs primary paths from Guangyun evidence and multi-genre Song-dynasty contexts."
   }
 ]
