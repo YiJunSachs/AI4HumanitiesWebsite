@@ -1907,7 +1907,12 @@ html[data-language="en"] .paper-project-page .nav-links {
   }
 
   .paper-project-page .nav-links {
+    flex-wrap: wrap;
     padding-right: 0;
+  }
+
+  .paper-project-page .nav-links a {
+    white-space: nowrap;
   }
 }
 
