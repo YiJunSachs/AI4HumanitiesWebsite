@@ -41,8 +41,8 @@
     "area": "historical-phonology",
     "thumbnail": "assets/rendered/qyspd/paper-primary-paths.png",
     "thumbnailAlt": "QYSPD 论文图 6：扩展反切主路径",
-    "tags": ["QYSPD", "《广韵》", "宋代语料"],
-    "tagsEn": ["QYSPD", "Guangyun", "Song-Dynasty Corpus"],
+    "tags": ["npj Heritage Science 2026", "历史音韵", "反切常读音"],
+    "tagsEn": ["npj Heritage Science 2026", "Historical Phonology", "Common Readings of Fanqie"],
     "description": "Haiyue Liu, Hui Xue*, Na Nie, Shipeng Zhu. 结合《广韵》内部证据与宋代多体裁语境，推断多音反切字的主反切并构建主路径。",
     "descriptionEn": "Haiyue Liu, Hui Xue*, Na Nie, Shipeng Zhu. Infers primary readings for polyphonic fanqie spellers and constructs primary paths from Guangyun evidence and multi-genre Song-dynasty contexts."
   }
