@@ -1885,11 +1885,15 @@ th {
 }
 
 html[data-language="en"] .paper-project-page .brand-text {
-  display: none;
+  max-width: 260px;
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
 }
 
 html[data-language="en"] .paper-project-page .nav-links {
-  gap: 18px;
+  flex-wrap: wrap;
+  gap: 8px 18px;
   font-family: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
   font-size: 13px;
 }
