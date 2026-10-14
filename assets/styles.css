@@ -3688,3 +3688,32 @@ html[data-language="en"] .research-details-page .detail-head h1 {
     font-size: 36px;
   }
 }
+
+/* Compact team roster within the homepage introduction. */
+.home-redesign .hero-team {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  max-width: 100%;
+  margin: 24px 0;
+  padding: 12px 0;
+  border-top: 1px solid rgba(64, 91, 76, 0.18);
+  color: #536157;
+  font-size: 14px;
+  line-height: 1.7;
+  scroll-margin-top: 120px;
+}
+.home-redesign .hero-team-label {
+  flex: 0 0 auto;
+  color: var(--cinnabar-dark);
+  font-weight: 600;
+}
+.home-redesign .hero-team-names {
+  min-width: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+html[data-language="en"] .home-redesign .hero-team { font-size: 12px; }
+@media (max-width: 480px) {
+  .home-redesign .hero-team { gap: 10px; font-size: 13px; }
+}

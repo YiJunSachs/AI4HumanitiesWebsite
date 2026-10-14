@@ -4,6 +4,9 @@
   const storageKey = "wenmai-language";
   const english = {
     navLabel: "Primary navigation",
+    teamTitle: "Team Members",
+    teamRosterLabel: "Team members, listed alphabetically by surname in Pinyin",
+    teamNames: "Yaohan Ba · Ang Chen · Haiyue Liu · Na Nie · Yijun Sheng · Hui Xue · Shipeng Zhu",
     brand: "Southeast University  School of Computer Science and Engineering  Wenmai AI Team",
     home: "Home",
     navRestoration: "Damaged Document Restoration",
