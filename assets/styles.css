@@ -394,12 +394,12 @@ p {
 
 .research-section-characters {
   --area-accent: var(--jade);
-  --area-number: "03";
+  --area-number: "04";
 }
 
 .research-section-phonology {
   --area-accent: #6b4a7b;
-  --area-number: "04";
+  --area-number: "03";
   background:
     linear-gradient(180deg, rgba(107, 74, 123, 0.06), rgba(161, 61, 45, 0.035)),
     rgba(255, 248, 236, 0.12);
@@ -2829,7 +2829,7 @@ html[data-language="en"] .paper-project-page .nav-links {
 
 .research-details-page .detail-section-characters {
   --area-accent: var(--jade);
-  --detail-number: "03";
+  --detail-number: "04";
   background: #16130f;
 }
 
@@ -2841,7 +2841,7 @@ html[data-language="en"] .paper-project-page .nav-links {
 
 .research-details-page .detail-section-phonology {
   --area-accent: #6b4a7b;
-  --detail-number: "04";
+  --detail-number: "03";
   background: #11100e;
 }
 
