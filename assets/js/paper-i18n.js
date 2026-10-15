@@ -271,7 +271,7 @@
     "古籍": "Ancient Books", "书法": "Calligraphy", "碑刻": "Inscriptions",
     "简牍": "Bamboo and Wooden Slips", "帛书": "Silk Manuscripts", "甲骨": "Oracle Bones",
     "东南大学校标": "Southeast University logo",
-    "东南大学计算机科学与工程学院标志": "School of Computer Science and Engineering logo"
+    "东南大学计算机科学、软件工程、人工智能学院标志": "School of Computer Science, Software Engineering and Artificial Intelligence logo"
   };
   const normalize = (text) => text.replace(/\s+/g, " ").trim();
   const translations = [];
