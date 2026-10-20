@@ -1,14 +1,18 @@
 # 文脉 · v2
 
-静态网站，无构建依赖。
+静态数字人文研究网站，无构建依赖。
 
-- 原仓库源码分支：`YiJunSachs/AI4HumanitiesWebsite` 的 `main-v2`
-- 独立发布仓库：`YiJunSachs/AI4HumanitiesWebsite-v2` 的 `main`
-- GitHub Pages：`main` 分支仓库根目录
+- 原网址：https://yijunsachs.github.io/AI4HumanitiesWebsite/
+- v2 源码分支：`main-v2`
+- GitHub Pages 发布源：`main` 分支仓库根目录
+
+`main-v2` 的网站内容合入 `main` 后，GitHub Pages 自动构建并更新原网址。无需独立 v2 仓库。
 
 ## 页面
 
-首页 `index.html`；四个研究专题为 `research1-*.html` 至 `research4-*.html`。专题按研究脉络展开，论文原文链接集中在文末。`assets/research-story.css` 控制专题样式；`assets/js/story-i18n.js` 与 `i18n.js` 提供中英文切换。
+首页为 `index.html`。四个专题为 `research1-*.html` 至 `research4-*.html`，按研究脉络展开，论文原文链接集中在文末。首页展示顺序为残损古籍修复、多载体转录、历史音韵、字体风格迁移生成；文件名保持兼容。
+
+专题样式位于 `assets/research-story.css`；`assets/js/story-i18n.js` 与 `i18n.js` 提供中英文切换。
 
 ## 本地预览
 
@@ -18,11 +22,6 @@ python3 -m http.server 5501 --bind 127.0.0.1
 
 ## 发布
 
-在 `main-v2` 提交并推送到原仓库后，将相同提交推送到独立发布仓库的 `main`。GitHub Pages 自动构建。不要将 v2 覆盖到原仓库的 `main`。
+在 `main-v2` 完成修改和检查后提交并推送，再将该分支合入 `main`。等待 GitHub Pages 构建成功后验证原网址。部署可能有短暂缓存。
 
-```sh
-git push origin main-v2
-git push v2 main-v2:main
-```
-
-本地备份、编辑器配置与 VSIX 安装包不参与发布。
+本地备份目录、编辑器配置和 VSIX 安装包不参与发布。
