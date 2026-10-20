@@ -1,27 +1,29 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="paper-editorial-root">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>EpiAgent Project Page</title>
-    <link rel="icon" href="../assets/figures/微信图片_20260824155001_1244_2.png" type="image/png">
-    <link rel="stylesheet" href="../assets/styles.css?v=branding-20261015">
+    <link rel="icon" href="../assets/figures/彩色校标.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/styles.css?v=bright-20260913">
+      <link rel="preload" href="../assets/figures/hanyi-xingkai.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="../assets/paper-editorial.css?v=20261019-11">
   </head>
-  <body class="paper-project-page">
+  <body class="paper-project-page paper-editorial paper-theme-restoration">
     <header class="topbar">
       <nav class="site-shell nav" aria-label="主导航" data-i18n-aria-label="navLabel">
-        <a class="brand" href="../index.html">
+        <a class="brand" href="../index.html" target="_blank" rel="noopener noreferrer">
+          <span class="seal image-seal"><img src="../assets/figures/彩色校标.svg" alt="东南大学校标"></span>
           <span class="seal image-seal cs-seal"><img src="../assets/figures/微信图片_20260824155001_1244_2.png" alt="东南大学计算机科学、软件工程、人工智能学院标志"></span>
-          <span class="museum-wordmark"><img src="../assets/figures/nanjing-university-museum.png" alt="南京大学博物馆"></span>
-          <span class="brand-text" data-i18n="brand">东南大学  计算机科学、软件工程、人工智能学院  文脉智算团队</span>
+          <span class="brand-text" data-i18n="brand">东南大学  计算机科学、软件工程、人工智能学院  文脉</span>
         </a>
         <div class="nav-links">
-          <a href="../research-rubbing-restoration.html">Research Details</a>
-          <a href="#demo">Demo</a>
-          <a href="#framework">Framework</a>
-          <a href="#tools">Tools</a>
-          <a href="#results">Results</a>
-          <a href="#analysis">Analysis</a>
+          <a href="../research1-rubbing-restoration.html" target="_blank" rel="noopener noreferrer">Research Details</a>
+          <a href="#demo" target="_blank" rel="noopener noreferrer">Demo</a>
+          <a href="#framework" target="_blank" rel="noopener noreferrer">Framework</a>
+          <a href="#tools" target="_blank" rel="noopener noreferrer">Tools</a>
+          <a href="#results" target="_blank" rel="noopener noreferrer">Results</a>
+          <a href="#analysis" target="_blank" rel="noopener noreferrer">Analysis</a>
         </div>
         <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English" title="Switch to English"><span class="language-option" data-language-option="zh">中</span><span class="language-option" data-language-option="en">EN</span></button>
       </nav>
@@ -30,8 +32,9 @@
     <main>
       <section class="page-hero epiagent-hero">
         <div class="site-shell">
+          <p class="paper-breadcrumb"><a href="../index.html" data-i18n="home" target="_blank" rel="noopener noreferrer">首页</a><span aria-hidden="true"> / </span><a href="../index.html#rubbing-restoration" data-i18n="navRestoration" target="_blank" rel="noopener noreferrer">残损古籍修复研究</a></p>
           <div class="eyebrow">CVPR 2026 | Agentic AI | Ancient Inscription Restoration</div>
-          <h1 class="title-line">EpiAgent: An Agent-Centric System for Ancient Inscription Restoration</h1>
+          <div class="paper-title-row"><h1 class="title-line">EpiAgent: An Agent-Centric System for Ancient Inscription Restoration</h1><a class="button paper-code-button" href="https://github.com/blackprotoss/EpiAgent" target="_blank" rel="noopener noreferrer">Code</a></div>
           <p class="authors">
             Shipeng Zhu, Ang Chen, Na Nie, Pengfei Fang, Min-Ling Zhang, Hui Xue
           </p>
@@ -39,14 +42,11 @@
             EpiAgent restores degraded ancient inscription images by coordinating multimodal analysis,
             experience-guided planning, specialized restoration tools, and iterative reevaluation.
           </p>
-          <div class="actions">
-            <a class="button" href="https://github.com/blackprotoss/EpiAgent">Code</a>
-            <a class="button secondary" href="../research-rubbing-restoration.html">Back to Research Details</a>
-          </div>
+
           <div class="project-visual restore-widget restore-widget-hero restore-widget-gallery-simple" id="demo">
             <div class="restore-gallery-title">
               <h2>Restoration Examples</h2>
-              <p class="restore-gallery-hint">Drag each slider from Damaged to Restored.</p>
+
             </div>
             <div class="restore-pair-grid" aria-label="EpiAgent corrupted and restored examples">
               <article class="restore-pair" data-restore-pair style="--restore-progress: 0%;">
@@ -78,6 +78,7 @@
                 <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="0" aria-label="Reveal restored EpiAgent example FS 2 120 1">
               </article>
             </div>
+<p class="restore-gallery-hint">Drag each slider from Damaged to Restored.</p>
           </div>
 
           <div class="metrics" aria-label="EpiAgent highlights">
@@ -101,7 +102,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section epiagent-overview">
         <div class="site-shell content-grid">
           <article class="panel">
             <h2>Abstract</h2>
@@ -179,8 +180,9 @@
 
           <div class="figure-card pdf-figure">
             <img src="../assets/rendered/epiagent-tools.png" alt="Specialized restoration tools and multi-perspective evaluation">
-            <p class="caption">Tool execution is paired with multi-perspective evaluation so that the planner can refine the restoration trajectory.</p>
+
           </div>
+<p class="caption tool-execution-caption">Tool execution is paired with multi-perspective evaluation so that the planner can refine the restoration trajectory.</p>
         </div>
       </section>
 
@@ -544,8 +546,10 @@
         </div>
       </section>
     </main>
+    <footer class="paper-footer"><div class="site-shell"><a href="../index.html" data-i18n="home" target="_blank" rel="noopener noreferrer">首页</a><span data-i18n="footer">© 东南大学 计算机科学、软件工程、人工智能学院 文脉</span></div></footer>
     <script src="../assets/js/restoration-demo.js?v=manual-restore"></script>
-    <script src="../assets/js/paper-i18n.js"></script>
-    <script src="../assets/js/i18n.js"></script>
-  </body>
+    <script src="../assets/js/paper-i18n.js?v=20261019-4"></script>
+    <script src="../assets/js/i18n.js?v=20261019-2"></script>
+  <script src="../assets/js/paper-layout.js?v=20261019-5"></script>
+</body>
 </html>

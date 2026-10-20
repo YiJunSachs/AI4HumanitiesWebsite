@@ -1,267 +1,297 @@
 <!doctype html>
 <html lang="zh-CN" class="home-redesign-root">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>文脉智算</title>
-    <link rel="icon" href="assets/figures/微信图片_20260824155001_1244_2.png" type="image/png">
-    <link rel="stylesheet" href="assets/styles.css?v=branding-20261015">
-    <link rel="stylesheet" href="assets/phonology.css">
-  </head>
-  <body class="home-redesign">
-    <header class="topbar">
-      <nav class="site-shell nav" aria-label="主导航" data-i18n-aria-label="navLabel">
-        <a class="brand" href="index.html">
-          <span class="seal image-seal cs-seal"><img src="assets/figures/微信图片_20260824155001_1244_2.png" alt="东南大学计算机科学、软件工程、人工智能学院标志"></span>
-          <span class="museum-wordmark"><img src="assets/figures/nanjing-university-museum.png" alt="南京大学博物馆"></span>
-          <span class="brand-text" data-i18n="brand">东南大学  计算机科学、软件工程、人工智能学院  文脉智算团队</span>
-        </a>
-        <div class="nav-links">
-          <a href="#rubbing-restoration" data-i18n="navRestoration">残损古籍修复</a>
-          <a href="#multi-carrier-reading" data-i18n="navTranscription">多载体古籍转录</a>
-          <a href="#historical-phonology" data-i18n="navPhonology">中国古代音韵</a>
-          <a href="#ancient-character-restoration" data-i18n="navStyleTransfer">字体风格迁移</a>
-          <a href="#team" data-i18n="teamTitle">团队成员</a>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>文脉</title>
+  <link rel="icon" href="assets/figures/彩色校标.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/figures/hanyi-xingkai.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/home-fixed-canvas.css?v=20261020-order">
+</head>
+
+<body class="home-redesign">
+  <button class="language-toggle home-language-toggle" type="button" data-language-toggle aria-label="Switch to English"
+    title="Switch to English"><span class="language-option" data-language-option="zh">中</span><span
+      class="language-option" data-language-option="en">EN</span></button>
+
+  <main>
+    <section class="hero research-hero team-intro" aria-label="团队介绍">
+      <div class="home-header-frame">
+        <img class="home-header-art" src="assets/figures/home-header-v4.png?v=20261018" width="2351" height="1382"
+          alt="文脉书法与古籍背景" fetchpriority="high">
+      </div>
+      <div class="site-shell hero-grid">
+        <div class="team-copy-group">
+          <h2 class="team-affiliation">东南大学 · 计算机科学、软件工程、人工智能学院 · 文脉</h2>
+          <p class="hero-copy" data-i18n="heroCopy">
+            文脉立足人工智能与人文研究的交汇前沿，致力于以智能技术重新激活文化材料、历史经验与知识传统之间的内在联系。团队关注跨时代、跨媒介的人文问题，推动算法能力与人文阐释相互支撑，使人工智能不仅成为处理复杂资料的工具，也成为拓展人文学术视野、重构文化知识表达与传承方式的重要桥梁。
+          </p>
         </div>
-        <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English" title="Switch to English">
-          <span class="language-option" data-language-option="zh">中</span>
-          <span class="language-option" data-language-option="en">EN</span>
-        </button>
-      </nav>
-    </header>
+        <nav class="research-directions" aria-label="研究方向">
+          <div class="directory-heading">
+            <h2 class="directory-title">目录</h2>
+          </div>
+          <div class="site-shell">
+            <div class="area-map" aria-label="研究方向概览">
+              <a class="area-chip" href="#rubbing-restoration" rel="noopener noreferrer">
+                <span>01</span>
+                <strong data-i18n="restorationTitle">残损古籍修复研究</strong>
+              </a>
+              <a class="area-chip" href="#multi-carrier-reading" rel="noopener noreferrer">
+                <span>02</span>
+                <strong data-i18n="transcriptionTitle">多载体古籍转录研究</strong>
+              </a>
+              <a class="area-chip" href="#historical-phonology" rel="noopener noreferrer">
+                <span>03</span>
+                <strong data-i18n="phonologyTitle">中国古代音韵研究</strong>
+              </a>
+              <a class="area-chip" href="#ancient-character-restoration" rel="noopener noreferrer">
+                <span>04</span>
+                <strong data-i18n="styleTransferTitle">字体风格迁移生成研究</strong>
+              </a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
 
-    <main>
-      <section class="hero research-hero">
-        <div class="site-shell hero-grid">
-          <div>
-            <div class="eyebrow" data-i18n="heroEyebrow">东南大学 · 计算机科学、软件工程、人工智能学院 · 文脉智算团队</div>
-            <h1 data-i18n="siteName">文脉智算</h1>
-            <p class="hero-copy" data-i18n="heroCopy">
-              文脉智算团队立足人工智能与人文研究的交汇前沿，致力于以智能技术重新激活文化材料、历史经验与知识传统之间的内在联系。团队关注跨时代、跨媒介的人文问题，推动算法能力与人文阐释相互支撑，使人工智能不仅成为处理复杂资料的工具，也成为拓展人文学术视野、重构文化知识表达与传承方式的重要桥梁。
-            </p>
-            <div class="hero-team" id="team" aria-label="团队成员，按姓名拼音排序" data-i18n-aria-label="teamRosterLabel">
-              <span class="hero-team-label" data-i18n="teamTitle">团队成员</span>
-              <span class="hero-team-names" data-i18n="teamNames">巴瑶涵 · 陈昂 · 刘海跃 · 聂娜 · 盛奕骏 · 薛晖 · 朱士鹏</span>
-            </div>
-            <div class="actions">
-              <a class="button" href="#rubbing-restoration" data-i18n="browseResearch">浏览研究方向</a>
-            </div>
+
+    <section class="section research-section research-section-rubbing restoration-editorial" id="rubbing-restoration">
+      <div class="restoration-shell">
+        <header class="restoration-heading">
+          <p class="restoration-kicker">研究方向 01</p>
+          <h2>残损古籍修复研究<img class="restoration-title-seal" src="assets/figures/yinzhang.png" alt="文脉印章"></h2>
+        </header>
+        <div class="restoration-editorial-grid">
+
+
+          <div class="restoration-introduction">
+            <h3 class="restoration-slogan"><span class="restoration-slogan-rule">让残缺</span>可读，让文脉延续</h3>
+            <p class="restoration-description">面向古籍、碑刻、拓片、摩崖等残损文献材料，研究如何在尊重原始书写结构与材料质感的前提下恢复缺失笔画、噪声区域与断裂字形。</p>
+            <ul class="restoration-keywords" aria-label="研究关键词">
+              <li>缺损修复</li>
+              <li>噪声去除</li>
+              <li>字形重建</li>
+            </ul>
+
           </div>
-          <div class="area-map" aria-label="研究方向概览">
-            <a class="area-chip" href="#rubbing-restoration">
-              <span>01</span>
-              <strong data-i18n="restorationTitle">残损古籍修复研究</strong>
-            </a>
-            <a class="area-chip" href="#multi-carrier-reading">
-              <span>02</span>
-              <strong data-i18n="transcriptionTitle">多载体古籍转录研究</strong>
-            </a>
-            <a class="area-chip" href="#historical-phonology">
-              <span>03</span>
-              <strong data-i18n="phonologyTitle">中国古代音韵研究</strong>
-            </a>
-            <a class="area-chip" href="#ancient-character-restoration">
-              <span>04</span>
-              <strong data-i18n="styleTransferTitle">字体风格迁移生成研究</strong>
-            </a>
+          <div class="restoration-showcase">
+            <div class="restoration-examples">
+              <article class="restore-pair" data-restore-pair data-autoplay="true" data-autoplay-loop="true"
+                data-autoplay-start="50" data-autoplay-end="100" data-autoplay-duration="2200" data-autoplay-delay="900"
+                style="--restore-progress: 50%;">
+
+
+                <div class="restore-pair-labels" aria-hidden="true"><span>残损</span><span>修复后</span></div>
+                <div class="restore-frame restore-frame-epiagent-grid">
+                  <img class="restore-layer restore-before"
+                    src="assets/rendered/epiagent%20example/新建文件夹/covered/2842.png" alt="残损古籍修复样例 2842">
+                  <div class="restore-layer restore-after-wrap" aria-hidden="true">
+                    <img src="assets/rendered/epiagent%20example/新建文件夹/restored/2842.jpg" alt="">
+                  </div>
+                  <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
+                </div>
+
+                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100"
+                  value="50" aria-label="显示首页残损古籍修复样例 2842">
+                <p class="restoration-caption"><span class="caption-index">样例 01</span><span
+                    class="caption-description">碑刻残损修复</span></p>
+              </article>
+              <article class="restore-pair" data-restore-pair data-autoplay="true" data-autoplay-loop="true"
+                data-autoplay-start="50" data-autoplay-end="100" data-autoplay-duration="2200" data-autoplay-delay="900"
+                style="--restore-progress: 50%;">
+                <div class="restore-pair-labels" aria-hidden="true"><span>残损</span><span>修复后</span></div>
+                <div class="restore-frame restore-frame-epiagent-grid">
+                  <img class="restore-layer restore-before"
+                    src="assets/rendered/epiagent%20example/新建文件夹/covered/FS_2_120_1.jpg" alt="残损古籍修复样例 FS 2 120 1">
+                  <div class="restore-layer restore-after-wrap" aria-hidden="true">
+                    <img src="assets/rendered/epiagent%20example/新建文件夹/restored/FS_2_120_1.jpg" alt="">
+                  </div>
+                  <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
+                </div>
+
+                <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100"
+                  value="50" aria-label="显示首页残损古籍修复样例 FS 2 120 1">
+                <p class="restoration-caption"><span class="caption-index">样例 02</span><span
+                    class="caption-description">拓片文字重建</span></p>
+              </article>
+            </div>
+            <p class="restoration-interaction-note">左右拖动，查看修复效果</p>
           </div>
+
+<div class="restoration-publications topic-preview"><h3 data-story-en="Research narrative" >研究脉络</h3><p data-story-en="From realistic damage benchmarks to glyph and semantic constraints, then iterative agentic restoration." >从真实残损的基准构建，到字形与语义约束，再到智能体的迭代修复。</p><a class="topic-more" href="research1-rubbing-restoration.html"><span data-story-en="More information" >更多信息</span> <span aria-hidden="true">→</span></a></div>
         </div>
-      </section>
+      </div>
+      <div class="restoration-landscape-overlap" aria-hidden="true"></div>
+    </section>
 
-      <section class="section research-section research-section-rubbing" id="rubbing-restoration">
-        <div class="site-shell research-stack home-summary-stack">
-          <div class="section-head research-head">
-            <div>
-              <div class="eyebrow" data-i18n="direction01">研究方向 01</div>
-              <h2 data-i18n="restorationTitleBreak">残损古籍<br>修复研究</h2>
-            </div>
-            <p data-i18n="restorationSummary">
-              面向古籍、碑刻、拓片、摩崖等残损文献材料，研究如何在尊重原始书写结构与材料质感的前提下恢复缺失笔画、噪声区域与断裂字形。
-            </p>
-            <div class="actions compact-actions">
-              <a class="more-link" href="research-rubbing-restoration.html" data-i18n="moreInfo">更多信息</a>
-            </div>
+    <section class="section research-section research-section-carriers restoration-editorial carrier-editorial"
+      id="multi-carrier-reading">
+      <div class="paper-torn-transition" aria-hidden="true"></div>
+      <div class="restoration-shell">
+        <header class="restoration-heading">
+          <p class="restoration-kicker">研究方向 02</p>
+          <h2>多载体古籍转录研究<img class="restoration-title-seal" src="assets/figures/yinzhang.png" alt="文脉印章"></h2>
+        </header>
+        <div class="restoration-editorial-grid">
+          <div class="restoration-introduction">
+            <h3 class="restoration-slogan"><span class="restoration-slogan-rule">跨越载体</span>边界，读懂千年文献</h3>
+            <p class="restoration-description">面向古籍、简牍、书法、碑刻、帛书、甲骨等多载体历史文献，<br>研究跨材料、跨时代、跨书写形态的视觉识别与文本校勘。</p>
+            <ul class="restoration-keywords" aria-label="研究关键词">
+              <li>多载体识别</li>
+              <li>字符识别</li>
+              <li>文本校勘</li>
+            </ul>
           </div>
 
-          <div class="research-layout">
-            <div class="research-demo restore-widget restore-widget-gallery-simple area-demo-widget">
-              <div class="restore-gallery-title">
-                <h3 data-i18n="examples">展示实例</h3>
-              </div>
-              <div class="restore-pair-grid home-restore-grid" aria-label="残损古籍修复展示实例">
-                <article class="restore-pair" data-restore-pair data-autoplay="true" data-autoplay-loop="true" data-autoplay-start="0" data-autoplay-end="100" data-autoplay-duration="2200" data-autoplay-delay="900" style="--restore-progress: 0%;">
-                  <div class="restore-frame restore-frame-epiagent-grid">
-                    <img class="restore-layer restore-before" src="assets/rendered/epiagent%20example/新建文件夹/covered/2842.png" alt="残损古籍修复样例 2842">
-                    <div class="restore-layer restore-after-wrap" aria-hidden="true">
-                      <img src="assets/rendered/epiagent%20example/新建文件夹/restored/2842.jpg" alt="">
-                    </div>
-                    <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
-                  </div>
-                  <div class="restore-pair-labels" aria-hidden="true">
-                    <span data-i18n="damaged">残损</span>
-                    <span data-i18n="restored">修复后</span>
-                  </div>
-                  <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="0" aria-label="显示首页残损古籍修复样例 2842">
-                </article>
-                <article class="restore-pair" data-restore-pair data-autoplay="true" data-autoplay-loop="true" data-autoplay-start="0" data-autoplay-end="100" data-autoplay-duration="2200" data-autoplay-delay="900" style="--restore-progress: 0%;">
-                  <div class="restore-frame restore-frame-epiagent-grid">
-                    <img class="restore-layer restore-before" src="assets/rendered/epiagent%20example/新建文件夹/covered/FS_2_120_1.jpg" alt="残损古籍修复样例 FS 2 120 1">
-                    <div class="restore-layer restore-after-wrap" aria-hidden="true">
-                      <img src="assets/rendered/epiagent%20example/新建文件夹/restored/FS_2_120_1.jpg" alt="">
-                    </div>
-                    <div class="restore-divider" data-restore-divider aria-hidden="true"></div>
-                  </div>
-                  <div class="restore-pair-labels" aria-hidden="true">
-                    <span data-i18n="damaged">残损</span>
-                    <span data-i18n="restored">修复后</span>
-                  </div>
-                  <input class="restore-slider restore-pair-slider" data-restore-slider type="range" min="0" max="100" value="0" aria-label="显示首页残损古籍修复样例 FS 2 120 1">
-                </article>
-              </div>
-            </div>
-          </div>
 
+          <div class="restoration-showcase carrier-editorial-showcase">
+            <div class="carrier-sample-grid">
+              <figure class="carrier-sample">
+                <div class="carrier-sample-media">
+                  <img src="assets/rendered/multi-carrier-homepage/ancientbook/ancient-book-1.jpg" alt="古籍样例一">
+                  <img src="assets/rendered/multi-carrier-homepage/ancientbook/ancient-book-2.jpg" alt="古籍样例二">
+                  <img src="assets/rendered/multi-carrier-homepage/ancientbook/ancient-book-3.jpg" alt="古籍样例三">
+                </div>
+                <figcaption data-i18n="carrierBook">古籍</figcaption>
+              </figure>
+              <figure class="carrier-sample">
+                <div class="carrier-sample-media">
+                  <img src="assets/rendered/multi-carrier-homepage/jiandu/jiandu-1.jpg" alt="简牍样例一">
+                  <img src="assets/rendered/multi-carrier-homepage/jiandu/jiandu-2.jpg" alt="简牍样例二">
+                  <img src="assets/rendered/multi-carrier-homepage/jiandu/jiandu-3.jpg" alt="简牍样例三">
+                </div>
+                <figcaption data-i18n="carrierBamboo">简牍</figcaption>
+              </figure>
+              <figure class="carrier-sample">
+                <div class="carrier-sample-media">
+                  <img src="assets/rendered/multi-carrier-homepage/calligraphy/calligraphy-1.jpg" alt="书法样例一">
+                  <img src="assets/rendered/multi-carrier-homepage/calligraphy/calligraphy-2.jpg" alt="书法样例二">
+                  <img src="assets/rendered/multi-carrier-homepage/calligraphy/calligraphy-3.jpg" alt="书法样例三">
+                </div>
+                <figcaption data-i18n="carrierCalligraphy">书法</figcaption>
+              </figure>
+              <figure class="carrier-sample">
+                <div class="carrier-sample-media">
+                  <img src="assets/rendered/multi-carrier-homepage/inscription/inscription-1.jpg" alt="碑刻样例一">
+                  <img src="assets/rendered/multi-carrier-homepage/inscription/inscription-2.jpg" alt="碑刻样例二">
+                  <img src="assets/rendered/multi-carrier-homepage/inscription/inscription-3.jpg" alt="碑刻样例三">
+                </div>
+                <figcaption data-i18n="carrierInscription">碑刻</figcaption>
+              </figure>
+              <figure class="carrier-sample">
+                <div class="carrier-sample-media">
+                  <img src="assets/rendered/multi-carrier-homepage/silk/1-102.png" alt="帛书样例一">
+                  <img src="assets/rendered/multi-carrier-homepage/silk/1-35.png" alt="帛书样例二">
+                  <img src="assets/rendered/multi-carrier-homepage/silk/1-61.png" alt="帛书样例三">
+                </div>
+                <figcaption data-i18n="carrierSilk">帛书</figcaption>
+              </figure>
+              <figure class="carrier-sample">
+                <div class="carrier-sample-media">
+                  <img src="assets/rendered/multi-carrier-homepage/oraclebone/oracle-1.jpg" alt="甲骨样例一">
+                  <img src="assets/rendered/multi-carrier-homepage/oraclebone/oracle-2.jpg" alt="甲骨样例二">
+                  <img src="assets/rendered/multi-carrier-homepage/oraclebone/oracle-3.jpg" alt="甲骨样例三">
+                </div>
+                <figcaption data-i18n="carrierOracle">甲骨</figcaption>
+              </figure>
+            </div>
+            <p class="restoration-interaction-note">六类载体，多维度阅读</p>
+          </div>
+<div class="restoration-publications topic-preview"><h3 data-story-en="Research narrative" >研究脉络</h3><p data-story-en="From six heterogeneous media to unified recognition benchmarks and the reliability of knowledge-assisted correction." >从六类历史载体的视觉差异，到统一识别评测，再到知识辅助校勘的可靠性。</p><a class="topic-more" href="research2-multi-carrier-reading.html"><span data-story-en="More information" >更多信息</span> <span aria-hidden="true">→</span></a></div>
         </div>
-      </section>
+      </div>
+      <div class="carrier-landscape-foreground" aria-hidden="true"></div>
+    </section>
 
-      <section class="section research-section research-section-carriers" id="multi-carrier-reading">
-        <div class="site-shell research-stack home-summary-stack">
-          <div class="section-head research-head">
-            <div>
-              <div class="eyebrow" data-i18n="direction02">研究方向 02</div>
-              <h2 data-i18n="transcriptionTitleBreak"><span class="carrier-title-line">多载体古籍转录</span><br>研究</h2>
-            </div>
-            <p data-i18n="transcriptionSummary">
-              面向古籍、简牍、书法、碑刻、帛书、甲骨等多载体历史文献，研究跨材料、跨时代、跨书写形态的视觉识别与文本校勘。
-            </p>
-            <div class="actions compact-actions">
-              <a class="more-link" href="research-multi-carrier-reading.html" data-i18n="moreInfo">更多信息</a>
-            </div>
+    <section class="section research-section research-section-phonology restoration-editorial phonology-editorial"
+      id="historical-phonology">
+      <div class="restoration-shell">
+        <header class="restoration-heading">
+          <p class="restoration-kicker">研究方向 03</p>
+          <h2>中国古代音韵研究<img class="restoration-title-seal" src="assets/figures/yinzhang.png" alt="文脉印章"></h2>
+        </header>
+        <div class="restoration-editorial-grid">
+          <div class="restoration-introduction">
+            <h3 class="restoration-slogan"><span class="restoration-slogan-rule">循反切之</span>脉，溯古音之源</h3>
+            <p class="restoration-description"><span
+                class="intro-line-primary">面向《广韵》中多音反切字引起的继承性歧义，结合宋代</span><br><span
+                class="intro-line-equal">多体裁语料与大语言模型语境释义推断，研究如何确定常读音</span><br>并构建可追踪的反切主路径。</p>
+            <ul class="restoration-keywords" aria-label="研究关键词">
+              <li>反切常读音</li>
+              <li>语境释义</li>
+              <li>主路径构建</li>
+            </ul>
           </div>
 
-          <div class="research-layout">
-            <div class="research-demo carrier-sample-demo">
-              <div class="restore-gallery-title">
-                <h3 data-i18n="examples">展示实例</h3>
-              </div>
-              <div class="carrier-sample-grid" aria-label="MCHDoc 多载体样例">
-                <figure class="carrier-sample">
-                  <div class="carrier-sample-media">
-                    <img src="assets/rendered/multi-carrier-homepage/ancientbook/ancient-book-1.jpg" alt="古籍样例一">
-                    <img src="assets/rendered/multi-carrier-homepage/ancientbook/ancient-book-2.jpg" alt="古籍样例二">
-                    <img src="assets/rendered/multi-carrier-homepage/ancientbook/ancient-book-3.jpg" alt="古籍样例三">
-                  </div>
-                  <figcaption data-i18n="carrierBook">古籍</figcaption>
-                </figure>
-                <figure class="carrier-sample">
-                  <div class="carrier-sample-media">
-                    <img src="assets/rendered/multi-carrier-homepage/jiandu/jiandu-1.jpg" alt="简牍样例一">
-                    <img src="assets/rendered/multi-carrier-homepage/jiandu/jiandu-2.jpg" alt="简牍样例二">
-                    <img src="assets/rendered/multi-carrier-homepage/jiandu/jiandu-3.jpg" alt="简牍样例三">
-                  </div>
-                  <figcaption data-i18n="carrierBamboo">简牍</figcaption>
-                </figure>
-                <figure class="carrier-sample">
-                  <div class="carrier-sample-media">
-                    <img src="assets/rendered/multi-carrier-homepage/calligraphy/calligraphy-1.jpg" alt="书法样例一">
-                    <img src="assets/rendered/multi-carrier-homepage/calligraphy/calligraphy-2.jpg" alt="书法样例二">
-                    <img src="assets/rendered/multi-carrier-homepage/calligraphy/calligraphy-3.jpg" alt="书法样例三">
-                  </div>
-                  <figcaption data-i18n="carrierCalligraphy">书法</figcaption>
-                </figure>
-                <figure class="carrier-sample">
-                  <div class="carrier-sample-media">
-                    <img src="assets/rendered/multi-carrier-homepage/inscription/inscription-1.jpg" alt="碑刻样例一">
-                    <img src="assets/rendered/multi-carrier-homepage/inscription/inscription-2.jpg" alt="碑刻样例二">
-                    <img src="assets/rendered/multi-carrier-homepage/inscription/inscription-3.jpg" alt="碑刻样例三">
-                  </div>
-                  <figcaption data-i18n="carrierInscription">碑刻</figcaption>
-                </figure>
-                <figure class="carrier-sample">
-                  <div class="carrier-sample-media">
-                    <img src="assets/rendered/multi-carrier-homepage/silk/1-102.png" alt="帛书样例一">
-                    <img src="assets/rendered/multi-carrier-homepage/silk/1-35.png" alt="帛书样例二">
-                    <img src="assets/rendered/multi-carrier-homepage/silk/1-61.png" alt="帛书样例三">
-                  </div>
-                  <figcaption data-i18n="carrierSilk">帛书</figcaption>
-                </figure>
-                <figure class="carrier-sample">
-                  <div class="carrier-sample-media">
-                    <img src="assets/rendered/multi-carrier-homepage/oraclebone/oracle-1.jpg" alt="甲骨样例一">
-                    <img src="assets/rendered/multi-carrier-homepage/oraclebone/oracle-2.jpg" alt="甲骨样例二">
-                    <img src="assets/rendered/multi-carrier-homepage/oraclebone/oracle-3.jpg" alt="甲骨样例三">
-                  </div>
-                  <figcaption data-i18n="carrierOracle">甲骨</figcaption>
-                </figure>
-              </div>
+
+          <div class="restoration-showcase">
+            <div class="ph-demo-grid">
+              <article class="ph-card">
+                <div class="ph-card-head">
+                  <h3 data-i18n="fangDemoTitle">反切上字常读音，以“房”为例</h3>
+                </div>
+                <div data-phonology-demo="fang-upper"><noscript>请启用 JavaScript</noscript></div>
+              </article>
+              <article class="ph-card">
+                <div class="ph-card-head">
+                  <h3 data-i18n="juDemoTitle">反切下字常读音，以“句”为例</h3>
+                </div>
+                <div data-phonology-demo="ju-lower"><noscript>请启用 JavaScript</noscript></div>
+              </article>
             </div>
           </div>
-
+<div class="restoration-publications topic-preview"><h3 data-story-en="Research narrative" >研究脉络</h3><p data-story-en="From inherited ambiguity in the Guangyun to Song-dynasty context, primary fanqie paths and their limits." >从《广韵》的继承性歧义，到宋代语境证据，再到反切主路径及其适用边界。</p><a class="topic-more" href="research4-historical-phonology.html"><span data-story-en="More information" >更多信息</span> <span aria-hidden="true">→</span></a></div>
         </div>
-      </section>
+      </div>
+      <div class="editorial-landscape-foreground" aria-hidden="true"></div>
+    </section>
 
-      <section class="section research-section research-section-phonology" id="historical-phonology">
-        <div class="site-shell research-stack home-summary-stack">
-          <div class="section-head research-head">
-            <div>
-              <div class="eyebrow" data-i18n="direction03">研究方向 03</div>
-              <h2 data-i18n="phonologyTitleBreak">中国古代音韵<br>研究</h2>
-            </div>
-            <p data-i18n="phonologySummary">
-              面向《广韵》中多音反切字引起的继承性歧义，结合宋代多体裁语料与大语言模型语境释义推断，研究如何确定常读音并构建可追踪的反切主路径。
-            </p>
-            <div class="actions compact-actions">
-              <a class="more-link" href="research-historical-phonology.html" data-i18n="moreInfo">更多信息</a>
-            </div>
+    <section class="section research-section research-section-characters restoration-editorial characters-editorial"
+      id="ancient-character-restoration">
+      <div class="restoration-shell">
+        <header class="restoration-heading">
+          <p class="restoration-kicker">研究方向 04</p>
+          <h2>字体风格迁移生成研究<img class="restoration-title-seal" src="assets/figures/yinzhang.png" alt="文脉印章"></h2>
+        </header>
+        <div class="restoration-editorial-grid">
+          <div class="restoration-introduction">
+            <h3 class="restoration-slogan"><span class="restoration-slogan-rule">迁移书写</span>风格，延续文字神韵</h3>
+            <p class="restoration-description"><span
+                class="intro-line-primary">聚焦历史文献与古文字材料中的字体风格迁移、字形规范化</span><br><span
+                class="intro-line-equal">与风格一致生成，探索在少样本和跨载体场景下保持结构可读性</span><br>与书写风格的方法。</p>
+            <ul class="restoration-keywords" aria-label="研究关键词">
+              <li>风格迁移</li>
+              <li>字形保持</li>
+              <li>少样本生成</li>
+            </ul>
           </div>
 
-          <div class="ph-demo-grid" aria-label="音韵研究互动展示">
-            <article class="ph-card">
-              <div class="ph-card-head"><h3 data-i18n="fangDemoTitle">反切上字常读音，以“房”为例</h3></div>
-              <div data-phonology-demo="fang-upper"><noscript>请启用 JavaScript</noscript></div>
-            </article>
-            <article class="ph-card">
-              <div class="ph-card-head"><h3 data-i18n="juDemoTitle">反切下字常读音，以“句”为例</h3></div>
-              <div data-phonology-demo="ju-lower"><noscript>请启用 JavaScript</noscript></div>
-            </article>
+
+          <div class="restoration-showcase">
+            <div class="editorial-coming-soon"><span>方向建设中</span>
+              <h3>字体风格迁移生成</h3>
+              <p>实例整理中</p>
+            </div>
           </div>
+<div class="restoration-publications topic-preview"><h3 data-story-en="Research narrative" >研究脉络</h3><p data-story-en="From structure and style in historical writing to few-shot generation constraints and interpretable evaluation." >从历史书写的结构与风格，到少样本生成约束，建立可解释的研究框架。</p><a class="topic-more" href="research3-ancient-character-restoration.html"><span data-story-en="More information" >更多信息</span> <span aria-hidden="true">→</span></a></div>
         </div>
-      </section>
+      </div>
+      <div class="editorial-landscape-foreground" aria-hidden="true"></div>
+    </section>
 
-      <section class="section research-section research-section-characters" id="ancient-character-restoration">
-        <div class="site-shell research-stack direction-only-stack home-summary-stack">
-          <div class="section-head research-head">
-            <div>
-              <div class="eyebrow" data-i18n="direction04">研究方向 04</div>
-              <h2 data-i18n="styleTransferTitleBreak">字体风格迁移<br>生成研究</h2>
-            </div>
-            <p data-i18n="styleTransferSummary">
-              聚焦历史文献与古文字材料中的字体风格迁移、字形规范化与风格一致生成，探索在少样本和跨载体场景下保持结构可读性与书写风格的方法。
-            </p>
-            <div class="actions compact-actions">
-              <a class="more-link" href="research-ancient-character-restoration.html" data-i18n="moreInfo">更多信息</a>
-            </div>
-          </div>
+  </main>
 
-          <div class="research-layout">
-            <div class="research-demo direction-placeholder" aria-label="字体风格迁移生成方向建设中">
-              <div class="direction-placeholder-inner">
-                <span class="direction-placeholder-label" data-i18n="comingSoon">方向建设中</span>
-                <strong data-i18n="styleTransferShort">字体风格迁移生成</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <footer class="footer">
+    <div class="site-shell" data-i18n="footer">© 东南大学 计算机科学、软件工程、人工智能学院 文脉</div>
+  </footer>
+  <script src="assets/js/restoration-demo.js"></script>
+  <script src="assets/js/phonology-demo.js"></script>
+  <script src="assets/js/home-i18n.js?v=20261020-order"></script>
+  <script src="assets/js/story-i18n.js?v=20261020"></script>
+  <script src="assets/js/i18n.js?v=20261020"></script>
+  <script src="assets/js/carrier-lightbox.js?v=20261019-1"></script>
+</body>
 
-
-    </main>
-
-    <footer class="footer">
-      <div class="site-shell" data-i18n="footer">© 东南大学 计算机科学、软件工程、人工智能学院 文脉智算团队</div>
-    </footer>
-    <script src="assets/js/restoration-demo.js"></script>
-    <script src="assets/js/phonology-demo.js"></script>
-    <script src="assets/js/i18n.js"></script>
-  </body>
 </html>

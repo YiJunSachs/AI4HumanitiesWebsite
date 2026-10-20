@@ -32,6 +32,8 @@
     const tags = card.querySelector("[data-paper-tags]");
 
     card.href = paper.href;
+    card.target = "_blank";
+    card.rel = "noopener noreferrer";
     card.dataset.paperArea = paper.area || "";
 
     if (image) {

@@ -1,28 +1,30 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="paper-editorial-root">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="面向《广韵》中多音反切字引起的继承性歧义，结合宋代多体裁语料与大语言模型语境释义推断，研究如何确定常读音并构建可追踪的反切主路径。">
     <title>QYSPD | Resolving Inherited Ambiguity in Chinese Historical Phonology with Song Dynasty Corpus Evidence</title>
-    <link rel="icon" href="../assets/figures/微信图片_20260824155001_1244_2.png" type="image/png">
-    <link rel="stylesheet" href="../assets/styles.css?v=branding-20261015">
+    <link rel="icon" href="../assets/figures/彩色校标.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/styles.css?v=bright-20260913">
     <link rel="stylesheet" href="../assets/qyspd-paper.css">
+      <link rel="preload" href="../assets/figures/hanyi-xingkai.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="stylesheet" href="../assets/paper-editorial.css?v=20261020-1">
   </head>
-  <body class="qyspd-paper paper-project-page">
+  <body class="qyspd-paper paper-project-page paper-editorial paper-theme-phonology">
     <header class="topbar">
       <nav class="site-shell nav" aria-label="主导航" data-i18n-aria-label="navLabel">
-        <a class="brand" href="../index.html">
+        <a class="brand" href="../index.html" target="_blank" rel="noopener noreferrer">
+          <span class="seal image-seal"><img src="../assets/figures/彩色校标.svg" alt="东南大学校标"></span>
           <span class="seal image-seal cs-seal"><img src="../assets/figures/微信图片_20260824155001_1244_2.png" alt="东南大学计算机科学、软件工程、人工智能学院标志"></span>
-          <span class="museum-wordmark"><img src="../assets/figures/nanjing-university-museum.png" alt="南京大学博物馆"></span>
-          <span class="brand-text" data-i18n="brand">东南大学  计算机科学、软件工程、人工智能学院  文脉智算团队</span>
+          <span class="brand-text" data-i18n="brand">东南大学  计算机科学、软件工程、人工智能学院  文脉</span>
         </a>
         <div class="nav-links">
-          <a href="../research-historical-phonology.html" data-i18n="paperResearchArea">研究方向</a>
-          <a href="#framework" data-i18n="paperMethods">研究方法</a>
-          <a href="#corpus" data-i18n="paperCorpus">语料</a>
-          <a href="#results" data-i18n="paperResults">结果</a>
-          <a href="#analysis" data-i18n="paperSensitivity">敏感性分析</a>
+          <a href="../research4-historical-phonology.html" data-i18n="paperResearchArea" target="_blank" rel="noopener noreferrer">研究方向</a>
+          <a href="#framework" data-i18n="paperMethods" target="_blank" rel="noopener noreferrer">研究方法</a>
+          <a href="#corpus" data-i18n="paperCorpus" target="_blank" rel="noopener noreferrer">语料</a>
+          <a href="#results" data-i18n="paperResults" target="_blank" rel="noopener noreferrer">结果</a>
+          <a href="#analysis" data-i18n="paperSensitivity" target="_blank" rel="noopener noreferrer">敏感性分析</a>
         </div>
         <button class="language-toggle" type="button" data-language-toggle aria-label="Switch to English" title="Switch to English"><span class="language-option" data-language-option="zh">中</span><span class="language-option" data-language-option="en">EN</span></button>
       </nav>
@@ -32,14 +34,12 @@
     <main>
       <section class="page-hero">
         <div class="site-shell">
+          <p class="paper-breadcrumb"><a href="../index.html" data-i18n="home" target="_blank" rel="noopener noreferrer">首页</a><span aria-hidden="true"> / </span><a href="../index.html#historical-phonology" data-i18n="navPhonology" target="_blank" rel="noopener noreferrer">中国古代音韵研究</a></p>
           <div class="eyebrow" data-i18n="qyspdEyebrow">QYSPD | 中国古代音韵研究</div>
-          <h1 class="title-line" lang="en" data-source="p. 1">Resolving Inherited Ambiguity in Chinese Historical Phonology with Song Dynasty Corpus Evidence</h1>
+          <div class="paper-title-row"><h1 class="title-line" data-i18n="qyspdPaperTitle" data-source="p. 1">利用宋代语料库证据解决汉语音韵学中遗留的歧义问题</h1><a class="button paper-code-button" href="https://github.com/HexagonForce6/QYSPD" data-i18n="codeAndData" target="_blank" rel="noopener noreferrer">代码与数据</a></div>
           <p class="authors" data-source="p. 1">Haiyue Liu, Hui Xue*, Na Nie, Shipeng Zhu</p>
           <p class="hero-copy" data-source="Abstract, p. 1" data-i18n="qyspdHero">结合《广韵》内部证据与宋代多体裁语境，为多音反切字选择主反切，并以主路径呈现继承性歧义的消解。</p>
-          <div class="actions">
-            <a class="button" href="https://github.com/HexagonForce6/QYSPD" data-i18n="codeAndData">代码与数据</a>
-            <a class="button secondary" href="../research-historical-phonology.html" data-i18n="backResearchArea">返回研究方向</a>
-          </div>
+
           <div class="metrics" aria-label="研究规模" data-source="Table 1, p. 4; Results, p. 10; Fig. 7, p. 11">
             <div class="metric"><strong>11</strong><span data-i18n="corpusGroups">语料分组</span></div>
             <div class="metric"><strong>371</strong><span data-i18n="corpusFiles">语料文件</span></div>
@@ -73,11 +73,11 @@
               <li data-i18n="qyspdStep1"><strong>异体过滤：</strong>根据《广韵》内部的异体标记筛选候选字形。</li>
               <li data-i18n="qyspdStep2"><strong>语句检索：</strong>检索包含目标多音字或其异体的句子，保留上下文。</li>
               <li data-i18n="qyspdStep3"><strong>语境释义：</strong>Qwen2.5-7B 在字书给定的候选释义中选择，也可选择“无合适释义”。</li>
-              <li data-i18n="qyspdStep4"><strong>主反切选择：</strong>排除“无合适释义”的结果后，在每个有效体裁内归一化释义频率，再对体裁等权平均；最高频释义所对应的反切成为主反切。</li>
+              <li data-i18n="qyspdStep4"><strong>主反切选择：</strong>排除“无合适释义”的结果后，在每个有效体裁内归一化释义频率，再对体裁等权平均；<br>最高频释义所对应的反切成为主反切。</li>
             </ol>
           </article>
           <figure class="figure-card pdf-figure">
-            <a href="../assets/rendered/qyspd/paper-pipeline.png" aria-label="查看完整流程图"><img src="../assets/rendered/qyspd/paper-pipeline.png" width="1035" height="760" alt="QYSPD 的异体过滤、语句检索与语境推断流程，以覺为例" loading="lazy"></a>
+            <a href="../assets/rendered/qyspd/paper-pipeline.png" aria-label="查看完整流程图" target="_blank" rel="noopener noreferrer"><img src="../assets/rendered/qyspd/paper-pipeline.png" width="1035" height="760" alt="QYSPD 的异体过滤、语句检索与语境推断流程，以覺为例" loading="lazy"></a>
             <figcaption class="caption" data-i18n="qyspdFigure4">图 4（论文第 7 页）：QYSPD 流程与字例。</figcaption>
           </figure>
         </div>
@@ -85,7 +85,7 @@
       <section class="section" id="corpus">
         <div class="site-shell single-stack">
           <div class="section-head"><div><div class="eyebrow">Corpus</div><h2 data-i18n="songCorpus">宋代多体裁语料</h2></div>
-            <p data-source="Corpus construction, pp. 4–5" data-i18n="songCorpusSummary">语料含综合史籍与十类经典文本，共 371 个文件。综合史籍包括《资治通鉴》《新五代史》《新唐书》《续资治通鉴长编》。</p>
+            <p data-source="Corpus construction, pp. 4–5" data-i18n="songCorpusSummary">语料含综合史籍与十类经典文本，共 371 个文件。综合史籍包括《资治通鉴》《新五代史》《新唐书》《续资治通鉴长编》。</p><p class="paper-corpus-detail" lang="en">Historical works include Zizhi Tongjian, New History of the Five Dynasties, New Book of Tang, and Xu Zizhi Tongjian Changbian.</p>
           </div>
           <article class="panel" data-source="Table 1, p. 4">
             <h3 id="corpus-table-title" data-i18n="corpusTableTitle">表 1 · 语料分组统计</h3>
@@ -114,18 +114,18 @@
       <section class="section" id="paths">
         <div class="site-shell content-grid">
           <figure class="figure-card pdf-figure">
-            <a href="../assets/rendered/qyspd/paper-primary-paths.png" aria-label="查看完整反切主路径图"><img src="../assets/rendered/qyspd/paper-primary-paths.png" width="949" height="1413" alt="论文图 6：反切下字与上字网络中的扩展主路径" loading="lazy"></a>
+            <a href="../assets/rendered/qyspd/paper-primary-paths.png" aria-label="查看完整反切主路径图" target="_blank" rel="noopener noreferrer"><img src="../assets/rendered/qyspd/paper-primary-paths.png" width="949" height="1413" alt="论文图 6：反切下字与上字网络中的扩展主路径" loading="lazy"></a>
             <figcaption class="caption" data-i18n="qyspdFigure6">图 6（论文第 9 页）：下字网络（a）与上字网络（b）的扩展主路径。</figcaption>
           </figure>
           <article class="panel" data-source="Figs. 5–6, pp. 8–9; Results, p. 10">
             <h2 data-i18n="pathMeaning">路径如何表达读音选择</h2>
-            <p data-i18n="pathMeaningSummary">论文分别构建上字与下字有向多重图：对于被注音字 A，反切上字 U 与下字 L 分别形成 U → A 和 L → A 的边。</p>
+            <p data-i18n="pathMeaningSummary"><span class="path-summary-line">论文分别构建上字与下字有向多重图：对于被注音字 A，</span><span class="path-summary-line">反切上字 U 与下字 L 分别形成 U → A 和 L → A 的边。</span></p>
             <ul class="compact-list">
               <li data-i18n="pathLegend1">单圈为单音字，双圈为多音字。</li>
-              <li data-i18n="pathLegend2">红色标记表示选定的主反切，黑色虚线表示非主反切。</li>
+              <li data-i18n="pathLegend2"><span class="path-legend-nowrap">红色标记表示选定的主反切，黑色虚线表示非主反切。</span></li>
               <li data-i18n="pathLegend3">菱形箭头标记来自注文的反切。</li>
             </ul>
-            <div class="actions"><a class="button secondary" href="../index.html#historical-phonology" data-i18n="viewHomepageAnimation">查看首页动画</a></div>
+            <div class="actions"><a class="button secondary" href="../index.html#historical-phonology" data-i18n="viewHomepageAnimation" target="_blank" rel="noopener noreferrer">查看首页动画</a></div>
           </article>
         </div>
       </section>
@@ -149,8 +149,8 @@
             <p data-i18n="dominanceSummary1">论文基于各体裁的释义计数建立 Dirichlet 后验，并进行 5,000 次采样。208 个字呈强优势（82.2%），4 个呈优势（1.6%），36 个为边界优势（14.2%），5 个无优势（2.0%）。</p>
             <p data-i18n="dominanceSummary2">“强优势”要求所选释义的跨体裁平均概率超过 0.5 的后验概率至少为 0.95；其余情况根据所选释义与最强竞争释义之差的 95% 最高后验密度区间分类。这是对模型释义计数的优势诊断，不是与人工真值比较的准确率。</p>
           </article>
-          <figure class="figure-card pdf-figure">
-            <a href="../assets/rendered/qyspd/paper-dominance.png" aria-label="查看完整后验优势分析图"><img src="../assets/rendered/qyspd/paper-dominance.png" width="1144" height="1227" alt="论文图 7：优势类别分布、强优势比例与后验区间宽度" loading="lazy"></a>
+          <figure class="figure-card pdf-figure qyspd-dominance-figure">
+            <a href="../assets/rendered/qyspd/paper-dominance.png" aria-label="查看完整后验优势分析图" target="_blank" rel="noopener noreferrer"><img src="../assets/rendered/qyspd/paper-dominance.png" width="1144" height="1227" alt="论文图 7：优势类别分布、强优势比例与后验区间宽度" loading="lazy"></a>
             <figcaption class="caption" data-i18n="qyspdFigure7">图 7（论文第 11 页）：优势类别分布（a）、强优势比例（b）及区间宽度（c）。</figcaption>
           </figure>
         </div>
@@ -180,14 +180,14 @@
           <article class="panel" data-source="Discussion, pp. 16–17">
             <h3 data-i18n="scopeOpenQuestions">适用范围与未决问题</h3>
             <p data-i18n="scopeSummary1">结果以《广韵》体系与本研究抽取的宋代书面语料为范围。模型执行语境释义选择，主反切通过字书的释义—反切配对关系推断。</p>
-            <p data-i18n="scopeSummary2">C4 类的 30 个字存在释义碰撞，需要其他字书或音韵证据补充；C5 类的 12 个稀见字在所选语料中各不足 20 次，需要扩大文献覆盖。</p>
+            <p data-i18n="scopeSummary2">C4 类的 30 个字存在释义碰撞，需要其他字书或音韵证据补充；<br>C5 类的 12 个稀见字在所选语料中各不足 20 次，需要扩大文献覆盖。</p>
           </article>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <div class="site-shell" data-i18n="footer">© 东南大学 计算机科学、软件工程、人工智能学院 文脉智算团队</div>
-    </footer>
-    <script src="../assets/js/i18n.js"></script>
-  </body>
+    <footer class="paper-footer"><div class="site-shell"><a href="../index.html" data-i18n="home" target="_blank" rel="noopener noreferrer">首页</a><span data-i18n="footer">© 东南大学 计算机科学、软件工程、人工智能学院 文脉</span></div></footer>
+
+    <script src="../assets/js/i18n.js?v=20261019-2"></script>
+  <script src="../assets/js/paper-layout.js?v=20261019-6"></script>
+</body>
 </html>
