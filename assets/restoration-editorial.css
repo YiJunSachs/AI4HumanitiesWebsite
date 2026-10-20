@@ -1,0 +1,134 @@
+/* Research 01 editorial layout. */
+.home-redesign .restoration-editorial { display: block; min-height: auto; padding: clamp(56px, 5vw, 100px) 0 96px; }
+.restoration-shell {
+  --editorial-gutter: max(24px, calc((100vw - min(92vw, 2200px)) / 2 + 16px - clamp(24px, 1.6vw, 38px)));
+  margin-left: var(--editorial-gutter); margin-right: var(--editorial-gutter);
+}
+.restoration-heading { padding: 0 0 28px; margin-bottom: 38px; border-bottom: 1px solid #aab2a7; }
+.restoration-kicker { color: #a13d2d; letter-spacing: .15em; font: 18px/1.5 "Hanyi Xingkai", serif; margin: 0 0 12px; }
+.restoration-heading h2 { margin: 0; color: #273026; font: 400 clamp(38px, 3.5vw, 76px)/1.25 "Hanyi Xingkai", serif; }
+.restoration-editorial-grid { display: grid; grid-template-columns: minmax(0,.85fr) minmax(0,1.35fr) minmax(0,1.3fr); gap: clamp(24px, 2.5vw, 56px); align-items: start; }
+.restoration-slogan { margin: 16px 0 36px; color: #273026; font: 400 clamp(23px,1.65vw,36px)/1.6 "Hanyi Xingkai", serif; }
+.restoration-slogan-rule { position: relative; }
+.restoration-slogan-rule::after { content: ""; position: absolute; left: 0; bottom: -16px; width: 100%; height: 3px; background: #a13d2d; }
+.restoration-description { margin: 0; font-size: clamp(15px,1.05vw,21px); color: #57604f; line-height: 2; }
+.restoration-keywords { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; margin: 28px 0 0; padding: 0; }
+.restoration-keywords li { border: 1px solid #aab2a7; padding: 7px 12px; color: #57604f; font-size: 14px; }
+.restoration-examples { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+.home-redesign .restoration-editorial .restore-pair { margin: 0; padding: 0; border: 0; background: transparent; box-shadow: none; filter: none; min-width: 0; }
+.home-redesign .restoration-editorial .restore-frame-epiagent-grid { width: 100%; max-width: none; aspect-ratio: 3/4; height: auto; border-radius: 0; box-shadow: none; }
+.home-redesign .restoration-editorial .restore-frame img { object-fit: cover; }
+.home-redesign .restoration-editorial .restore-pair-slider { position: absolute; width: 1px; height: 1px; opacity: 0; overflow: hidden; clip-path: inset(50%); }
+.home-redesign .restoration-editorial .restore-pair:focus-within .restore-frame { outline: 2px solid #a13d2d; outline-offset: 3px; }
+.restoration-caption { color: #57604f; text-align: center; font-size: 13px; margin: 12px 0 0; }
+.restoration-interaction-note { color: #8a8b7e; text-align: center; font-size: 13px; margin: 18px 0 0; }
+.restoration-context { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 22px; }
+.restoration-context article { border-top: 1px solid #cbd2c7; padding-top: 14px; }
+.restoration-context h3, .restoration-publications>h3 { font-size: 18px; font-weight: 400; color: #28392e; margin: 0 0 10px; }
+.restoration-context p, .restoration-context li { font-size: 14px; line-height: 1.9; color: #626857; margin: 0; }
+.restoration-context ul { padding-left: 17px; margin: 0; }
+.restoration-context li+li { margin-top: 8px; }
+.restoration-publications { margin-top: 30px; }
+.restoration-publications>h3 { color: #a13d2d; }
+.restoration-paper { display: block; position: relative; padding: 15px 24px 15px 0; border-top: 1px solid #cbd2c7; }
+.restoration-paper:last-child { border-bottom: 1px solid #cbd2c7; }
+.restoration-paper-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.restoration-paper-tags span { border: 1px solid #dbc4b9; color: #8c4433; font-size: 11px; padding: 3px 7px; }
+.restoration-paper h4 { font-size: 17px; font-weight: 400; line-height: 1.5; color: #293d31; margin: 9px 0 5px; }
+.restoration-paper p { font-size: 13px; line-height: 1.8; color: #626857; margin: 0; }
+.restoration-paper-arrow { position: absolute; right: 0; top: 45%; color: #a13d2d; font-size: 28px; }
+.restoration-paper:hover h4 { color: #a13d2d; }
+@media(max-width: 1180px) {
+ .restoration-editorial-grid { grid-template-columns: minmax(0,.7fr) minmax(0,1fr); }
+ .restoration-information { grid-column: 1/-1; display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+ .restoration-publications { margin-top: 0; }
+}
+@media(max-width: 700px) {
+ .restoration-editorial-grid, .restoration-information { display: grid; grid-template-columns: 1fr; }
+ .restoration-information { grid-column: auto; }
+ .restoration-slogan { margin-top: 0; }
+ .restoration-heading { margin-bottom: 24px; }
+ .restoration-context { gap: 18px; }
+ .restoration-keywords { margin-top: 20px; }
+ .restoration-examples { gap: 12px; }
+}
+
+/* Unified calligraphy, left background / right challenges and publications. */
+.home-redesign .restoration-editorial {
+  --restoration-body-size: clamp(18px, 1.15vw, 24px);
+  --restoration-subtitle-size: calc(clamp(23px, 1.65vw, 36px) + 4px);
+  padding-bottom: 160px;
+  background-image: url("figures/restoration-landscape.png");
+  background-position: center bottom;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  font-family: "Hanyi Xingkai", "Songti SC", "STSong", serif;
+}
+.home-redesign .restoration-editorial *,
+.home-redesign .restoration-editorial input { font-family: inherit; font-synthesis: none; }
+.home-redesign .restoration-editorial .restoration-shell { position: relative; z-index: 1; }
+.restoration-heading h2 { display: flex; align-items: center; gap: .3em; }
+.restoration-title-seal { width: .5em; height: .5em; object-fit: contain; flex: 0 0 auto; }
+.home-redesign .restoration-kicker { font-size: 26px; }
+.home-redesign .restoration-slogan,
+.home-redesign .restoration-background>h3,
+.home-redesign .restoration-context h3,
+.home-redesign .restoration-publications>h3 {
+  font-size: var(--restoration-subtitle-size);
+  font-weight: 400;
+  line-height: 1.5;
+  color: #28392e;
+}
+.home-redesign .restoration-description,
+.home-redesign .restoration-background p,
+.home-redesign .restoration-context li {
+  font-size: var(--restoration-body-size);
+  line-height: 1.9;
+}
+.home-redesign .restoration-keywords { gap: 16px; margin-top: 30px; }
+.home-redesign .restoration-keywords li { font-size: var(--restoration-body-size); padding: 11px 17px; }
+.restoration-background { margin-top: 34px; }
+.home-redesign .restoration-context { display: block; }
+.home-redesign .restoration-context article { border-top: 0; padding-top: 0; }
+.home-redesign .restoration-background>h3,
+.home-redesign .restoration-context h3,
+.home-redesign .restoration-publications>h3 { position: relative; margin: 0 0 32px; }
+.restoration-background>h3::after,
+.restoration-context h3::after,
+.restoration-publications>h3::after {
+  content: ""; position: absolute; left: 0; bottom: -12px; width: 2em; height: 3px; background: #a13d2d;
+}
+.restoration-background p { color: #626857; margin: 0; }
+.home-redesign .restoration-context ul { padding-left: 1.1em; }
+.home-redesign .restoration-context li::marker { font-size: 1em; color: #626857; }
+.home-redesign .restoration-publications { margin-top: 34px; }
+.home-redesign .restoration-editorial .restore-pair-labels {
+  display: flex; justify-content: space-between;
+  position: static; margin: 0 0 10px; padding: 0;
+  color: #57604f; font-size: 17px; line-height: 1.5;
+}
+.home-redesign .restoration-editorial .restore-pair-labels span { font-size: inherit; }
+.home-redesign .restoration-caption { font-size: 19px; line-height: 1.6; }
+.home-redesign .restoration-interaction-note {
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+  font-size: 19px; line-height: 1.6; margin-top: 24px;
+}
+.restoration-interaction-note::before,
+.restoration-interaction-note::after { content: ""; height: 1px; width: 52px; background: #c4c6ba; flex: 0 1 52px; }
+.home-redesign .restoration-paper h4 { font-size: calc(var(--restoration-body-size) + 1px); }
+.home-redesign .restoration-paper p { font-size: calc(var(--restoration-body-size) - 2px); }
+.home-redesign .restoration-paper-tags span { font-size: 14px; }
+@media(max-width: 1180px) {
+ .home-redesign .restoration-information { display: block; grid-column: 1/-1; }
+ .home-redesign .restoration-editorial-grid { align-items: start; }
+}
+@media(max-width: 700px) {
+ .home-redesign .restoration-editorial { padding-bottom: 110px; }
+ .home-redesign .restoration-keywords { gap: 12px; }
+ .home-redesign .restoration-keywords li { padding: 9px 12px; }
+ .home-redesign .restoration-caption { font-size: 16px; }
+ .home-redesign .restoration-interaction-note { font-size: 16px; }
+}
+
+/* Keep the landscape below the last publication instead of behind its text. */
+@media(min-width: 701px) { .home-redesign .restoration-editorial { padding-bottom: 300px; } }

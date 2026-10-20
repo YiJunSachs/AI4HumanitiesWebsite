@@ -1,0 +1,247 @@
+/* Shared scholarly reading layout, matching the homepage palette and type. */
+@font-face { font-family: "Hanyi Xingkai"; src: url("figures/hanyi-xingkai.ttf") format("truetype"); font-display: swap; font-weight: 400; }
+html.paper-editorial-root { scroll-snap-type: none; scroll-padding-top: 110px; }
+body.paper-editorial {
+ --paper-bg: #f8f7f1; --paper-line: #d1d5c9; --paper-ink: #28392e; --paper-muted: #626857; --paper-accent: #a13d2d;
+ --paper-landscape: url("figures/restoration-landscape.png");
+ margin: 0; min-width: 0; color: var(--paper-ink); background: var(--paper-bg);
+ font-family: "Hanyi Xingkai", "Songti SC", "STSong", serif; font-size: 24px; line-height: 1.85;
+}
+body.paper-theme-carriers { --paper-bg: #eef6f4; --paper-line: #c8d8d1; --paper-landscape: url("figures/carrier-landscape-pale.png"); }
+body.paper-theme-phonology { --paper-bg: #f3eef8; --paper-line: #d7cddd; --paper-landscape: url("figures/phonology-landscape-palelavender.png"); }
+.paper-editorial .site-shell { width: min(1440px, calc(100% - 96px)); margin-inline: auto; }
+.paper-editorial .topbar { position: sticky; top: 0; z-index: 30; background: var(--paper-bg); border: 0; border-bottom: 1px solid var(--paper-line); box-shadow: none; backdrop-filter: none; }
+.paper-editorial .nav { min-height: 86px; padding: 12px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }
+.paper-editorial .brand { flex: 0 1 auto; gap: 10px; }
+.paper-editorial .brand-text { max-width: 340px; font-size: 17px; font-weight: 400; line-height: 1.5; }
+.paper-editorial .seal { box-shadow: none; border-color: var(--paper-line); background: transparent; width: 38px; height: 38px; }
+.paper-editorial .nav-links { flex: 1 1 450px; display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px 22px; font-size: 17px; letter-spacing: 0; line-height: 1.6; color: var(--paper-muted); overflow: visible; }
+.paper-editorial .nav-links a { padding: 3px 0; white-space: nowrap; }
+.paper-editorial .nav-links a:hover { color: var(--paper-accent); }
+.paper-editorial .language-toggle { position: static; flex: 0 0 auto; width: 88px; height: 40px; font-size: 13px; }
+.paper-editorial .page-hero { padding: 58px 0 62px; border-bottom: 1px solid var(--paper-line); background: transparent; }
+.paper-breadcrumb { margin: 0 0 32px; color: var(--paper-muted); font-size: 18px; }
+.paper-breadcrumb span { padding: 0 10px; opacity: .5; }
+.paper-editorial .eyebrow { color: var(--paper-accent); font: 400 18px/1.6 "Hanyi Xingkai", serif; letter-spacing: .08em; margin-bottom: 16px; }
+.paper-editorial .title-line { max-width: 1300px; margin: 0 0 20px; color: var(--paper-ink); font: 400 clamp(40px, 4.5vw, 68px)/1.28 "Hanyi Xingkai", serif; letter-spacing: 0; text-wrap: balance; }
+.paper-editorial .authors { max-width: 1200px; margin: 0 0 24px; color: var(--paper-muted); font: 21px/1.75 Georgia, "Hanyi Xingkai", serif; }
+.paper-editorial .hero-copy { max-width: 1120px; font-size: 26px; line-height: 1.9; margin: 20px 0 26px; color: var(--paper-muted); }
+.paper-editorial .actions { gap: 14px; margin: 24px 0 34px; flex-wrap: wrap; }
+.paper-editorial .button { border: 1px solid #c8ab9c; background: transparent; color: var(--paper-accent); border-radius: 0; padding: 10px 22px; font-family: inherit; font-size: 20px; box-shadow: none; }
+.paper-editorial .button:hover { background: #a13d2d; color: #fffaf2; }
+.paper-editorial .section { padding: 60px 0; background: transparent; border-bottom: 1px solid var(--paper-line); }
+.paper-editorial .section-head { align-items: start; gap: 40px; margin-bottom: 28px; }
+.paper-editorial .section-head>p { max-width: 700px; font-size: 23px; color: var(--paper-muted); }
+.paper-editorial h2 { margin: 0 0 22px; font-size: 44px; font-weight: 400; line-height: 1.4; color: var(--paper-ink); text-wrap: balance; }
+.paper-editorial h3 { margin: 24px 0 16px; font-size: 32px; font-weight: 400; line-height: 1.5; color: var(--paper-ink); }
+.paper-editorial h4 { font-size: 26px; font-weight: 400; }
+.paper-editorial p, .paper-editorial li { line-height: 1.9; }
+.paper-editorial .content-grid { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.paper-editorial .panel { min-width: 0; padding: 26px 0; border: 0; border-top: 1px solid var(--paper-line); border-radius: 0; background: transparent; box-shadow: none; }
+.paper-editorial .panel+.panel { margin-top: 0; }
+.paper-editorial .compact-list { padding-left: 1.1em; color: var(--paper-muted); }
+.paper-editorial .compact-list li+li { margin-top: 12px; }
+.paper-editorial .metrics { gap: 0; padding: 28px 0; margin-top: 40px; border-block: 1px solid var(--paper-line); }
+.paper-editorial .metric { padding: 12px 26px; border: 0; border-right: 1px solid var(--paper-line); background: transparent; box-shadow: none; border-radius: 0; }
+.paper-editorial .metric:last-child { border-right: 0; }
+.paper-editorial .metric strong { font: 400 42px/1.3 Georgia, serif; color: var(--paper-accent); }
+.paper-editorial .metric span { display: block; margin-top: 8px; color: var(--paper-muted); font-size: 20px; line-height: 1.6; }
+.paper-editorial .project-visual, .paper-editorial .figure-card { margin: 32px auto; padding: 20px; border: 1px solid var(--paper-line); border-radius: 0; background: rgba(255,255,255,.28); box-shadow: none; }
+.paper-editorial .project-visual>img, .paper-editorial .figure-card img { max-width: 100%; height: auto; object-fit: contain; }
+.paper-editorial .caption, .paper-editorial figcaption { color: var(--paper-muted); font: 21px/1.8 "Hanyi Xingkai", serif; margin: 16px 0 0; }
+.paper-editorial .restore-widget-gallery-simple { width: 100%; display: block; }
+.paper-editorial .restore-gallery-title { margin: 0 0 20px; display: flex; justify-content: space-between; gap: 24px; align-items: baseline; }
+.paper-editorial .restore-gallery-title h2 { font-size: 32px; margin: 0; }
+.paper-editorial .restore-gallery-hint { font-size: 19px; color: var(--paper-muted); margin: 0; }
+.paper-editorial .restore-pair-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 28px; max-width: 1000px; margin-inline: auto; }
+.paper-editorial .restore-pair { padding: 0; border: 0; background: transparent; box-shadow: none; }
+.paper-editorial .restore-frame { border-radius: 0; }
+.paper-editorial .restore-pair-labels { font: 400 19px/1.5 "Hanyi Xingkai", serif; color: var(--paper-muted); }
+.paper-editorial .restore-slider { accent-color: var(--paper-accent); }
+.paper-editorial .table-wrap { width: 100%; overflow-x: auto; border-block: 1px solid var(--paper-line); margin: 20px 0 30px; }
+.paper-editorial .metric-table { width: 100%; border-collapse: collapse; font: 19px/1.65 Georgia, "Hanyi Xingkai", serif; background: transparent; }
+.paper-editorial .metric-table th, .paper-editorial .metric-table td { padding: 13px 16px; border: 0; border-bottom: 1px solid var(--paper-line); white-space: normal; color: var(--paper-ink); }
+.paper-editorial .metric-table th { background: rgba(255,255,255,.28); font-weight: 600; }
+.paper-editorial .metric-table tbody tr:last-child>* { border-bottom: 0; }
+.paper-editorial .stage-grid, .paper-editorial .result-grid { gap: 22px; }
+.paper-editorial .stage-card, .paper-editorial .result-card { background: transparent; border: 1px solid var(--paper-line); box-shadow: none; border-radius: 0; padding: 22px; }
+.paper-editorial .carrier-card { border-radius: 0; border-color: var(--paper-line); background: rgba(255,255,255,.2); box-shadow: none; }
+.paper-editorial .carrier-card h3 { font-size: 30px; }
+.paper-editorial .carrier-card p { font-size: 21px; }
+.paper-editorial .paper-footer { position: relative; padding: 280px 0 30px; background: var(--paper-bg); color: var(--paper-muted); overflow: hidden; }
+.paper-editorial .paper-footer::before { content: ""; position: absolute; inset: 0; background: var(--paper-landscape) center bottom / 100% auto no-repeat; opacity: .8; pointer-events: none; }
+.paper-editorial .paper-footer .site-shell { position: relative; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; font-size: 18px; }
+.paper-editorial .paper-footer a { color: var(--paper-accent); }
+html[data-language="en"] .paper-editorial { font-family: Georgia, "Times New Roman", serif; font-size: 20px; }
+html[data-language="en"] .paper-editorial .title-line { font-family: Georgia, serif; font-size: clamp(36px,4.1vw,60px); }
+html[data-language="en"] .paper-editorial .hero-copy { font-size: 23px; }
+html[data-language="en"] .paper-editorial h2 { font-size: 36px; }
+html[data-language="en"] .paper-editorial h3 { font-size: 28px; }
+html[data-language="en"] .paper-editorial .caption { font-family: Georgia, serif; font-size: 18px; }
+@media(max-width: 1100px) {
+ .paper-editorial .nav-links { justify-content: flex-start; order: 3; flex-basis: 100%; }
+ .paper-editorial .brand { flex: 1; }
+ .paper-editorial .content-grid { grid-template-columns: 1fr; }
+ .paper-editorial .stage-grid, .paper-editorial .result-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .paper-editorial .carrier-hall { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media(max-width: 650px) {
+ html.paper-editorial-root { scroll-padding-top: 150px; }
+ .paper-editorial .site-shell { width: calc(100% - 36px); }
+ .paper-editorial .brand-text { display: none; }
+ .paper-editorial .page-hero { padding: 32px 0 36px; }
+ .paper-editorial .paper-breadcrumb { margin-bottom: 20px; font-size: 16px; }
+ .paper-editorial .title-line { font-size: 38px; }
+ .paper-editorial .hero-copy { font-size: 23px; }
+ .paper-editorial .section { padding: 38px 0; }
+ .paper-editorial .section-head { display: block; }
+ .paper-editorial h2 { font-size: 34px; }
+ .paper-editorial h3 { font-size: 28px; }
+ .paper-editorial .metrics { grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .paper-editorial .metric { padding: 14px; }
+ .paper-editorial .metric:nth-child(2) { border-right: 0; }
+ .paper-editorial .metric strong { font-size: 30px; }
+ .paper-editorial .restore-gallery-title { display: block; }
+ .paper-editorial .restore-gallery-hint { margin-top: 10px; }
+ .paper-editorial .restore-pair-grid { gap: 12px; }
+ .paper-editorial .stage-grid, .paper-editorial .result-grid, .paper-editorial .carrier-hall { grid-template-columns: 1fr; }
+ .paper-editorial .metric-table { font-size: 16px; min-width: 620px; }
+ .paper-editorial .project-visual, .paper-editorial .figure-card { padding: 10px; }
+}
+
+/* Keep Chinese title phrases intact and the institutional name on one line. */
+.paper-editorial .brand-text { max-width: none; white-space: nowrap; font-size: 16px; }
+.paper-editorial .title-line { white-space: pre-line; text-wrap: pretty; }
+.paper-editorial .title-line[lang="en"] { font-family: Georgia, serif; }
+html[data-language="en"] .paper-editorial .title-line { white-space: normal; text-wrap: balance; }
+
+/* Shared homepage typography and reading hierarchy. */
+.paper-editorial .nav { padding-block: 18px; gap: 14px 28px; }
+.paper-editorial .brand { min-width: 0; }
+.paper-editorial .brand-text { font: 400 36.4928px/1.5 "Hanyi Xingkai", serif; white-space: normal; }
+html[data-language="en"] .paper-editorial .brand-text { font-size: 22.4px; }
+.paper-editorial .nav-links { font: 400 26px/1.6 "Hanyi Xingkai", serif; }
+.paper-editorial .paper-breadcrumb { font-size: 25px; }
+.paper-editorial .eyebrow { font: 400 24px/1.6 "Hanyi Xingkai", serif; }
+.paper-editorial .page-hero>.site-shell>.eyebrow { font-size: 27px; }
+.paper-editorial .button { font-size: 27px; padding: 11px 25px; }
+.paper-editorial .panel { border-top: 0; padding-top: 12px; }
+.paper-editorial .section-head { display: block; }
+.paper-editorial .section-head>p { max-width: none; width: 100%; margin: 16px 0 0; font-size: 26px; }
+.paper-editorial .section-head h2,
+.paper-editorial .panel>h2,
+.paper-editorial .panel>h3 { position: relative; padding-bottom: 18px; border: 0; }
+.paper-editorial .section-head h2::after,
+.paper-editorial .panel>h2::after,
+.paper-editorial .panel>h3::after { content: ""; display: block; width: 2.6em; height: 2px; background: var(--paper-accent); position: absolute; left: 0; bottom: 0; }
+.paper-editorial .table-note,
+.paper-editorial .table-wrap+.caption,
+.paper-editorial .table-wrap+p { font: 400 30.0928px/1.9 "Hanyi Xingkai", serif; color: var(--paper-muted); }
+html[data-language="en"] .paper-editorial .table-note,
+html[data-language="en"] .paper-editorial .table-wrap+.caption,
+html[data-language="en"] .paper-editorial .table-wrap+p { font: 400 24px/1.9 Georgia, serif; }
+.paper-editorial .restore-gallery-title { display: block; text-align: center; margin-bottom: 28px; }
+.paper-editorial .restore-gallery-title h2 { font: 400 42px/1.5 "Hanyi Xingkai", serif; }
+.paper-editorial .restore-pair-grid { max-width: 1240px; gap: 40px; }
+.paper-editorial .restore-gallery-hint { text-align: center; font-size: 25px; margin: 22px auto 0; }
+.paper-editorial .restore-pair-labels { font-size: 23px; }
+.paper-editorial .epiagent-hero .hero-copy { max-width: none; }
+@media(min-width:1101px) {
+ .paper-editorial .paper-single-line { white-space: nowrap; }
+}
+@media(max-width:1100px) {
+ .paper-editorial .brand-text { font-size: 30px; }
+ .paper-editorial .section-head>p { font-size: 24px; }
+}
+@media(max-width:650px) {
+ .paper-editorial .paper-breadcrumb { font-size: 21px; }
+ .paper-editorial .nav-links { font-size: 22px; }
+ .paper-editorial .button { font-size: 23px; }
+ .paper-editorial .restore-gallery-title h2 { font-size: 32px; }
+ .paper-editorial .restore-gallery-hint { font-size: 22px; }
+ .paper-editorial .restore-pair-grid { gap: 20px; grid-template-columns: 1fr; }
+ .paper-editorial .table-note, .paper-editorial .table-wrap+p { font-size: 25px; }
+ html[data-language="en"] .paper-editorial .table-note, html[data-language="en"] .paper-editorial .table-wrap+p { font-size: 21px; }
+}
+
+/* Override the original navigation link and narrow gallery rules directly. */
+.paper-editorial .nav-links a { font: 400 26px/1.6 "Hanyi Xingkai", serif; }
+.paper-editorial .restore-pair-grid { width: 100%; }
+@media(max-width:650px) { .paper-editorial .nav-links a { font-size:22px; } }
+
+.paper-editorial .section-head>.paper-corpus-detail { display:none; }
+html[data-language="en"] .paper-editorial .section-head>.paper-corpus-detail { display:block; font-size:20px; white-space:normal; }
+html.paper-editorial-root { scroll-padding-top:200px; }
+
+/* Institutional name sits just below the navigation in typographic scale. */
+.paper-editorial .brand-text,
+html[data-language="en"] .paper-editorial .brand-text { font-size:24px; }
+
+/* Keep the complete EpiAgent title together on desktop. */
+@media(min-width:1101px) {
+ html:not([data-language="en"]) .paper-editorial .epiagent-hero .title-line { white-space:nowrap; max-width:none; font-size:clamp(38px,4.3vw,64px); }
+}
+
+/* Match prose hierarchy across the complete paper collection. */
+.paper-editorial .hero-copy { font-size:27px; font-weight:400; }
+.paper-editorial .actions .button { font-size:26px; font-weight:400; }
+html[data-language="en"] .paper-editorial .hero-copy { font-size:27px; }
+html[data-language="en"] .paper-editorial .actions .button { font-size:23px; }
+.paper-editorial .restore-gallery-hint { font-weight:400; }
+.paper-editorial .panel p,
+.paper-editorial .panel li,
+.paper-editorial .compact-list,
+.paper-editorial .compact-list li { font-family:"Hanyi Xingkai",serif; font-size:24px; }
+html[data-language="en"] .paper-editorial .panel p,
+html[data-language="en"] .paper-editorial .panel li,
+html[data-language="en"] .paper-editorial .compact-list { font-family:Georgia,serif; font-size:20px; }
+.paper-editorial .table-wrap table { font:19px/1.65 Georgia,"Hanyi Xingkai",serif; }
+.paper-editorial .table-wrap table th,
+.paper-editorial .table-wrap table td { font-size:19px; font-family:Georgia,"Hanyi Xingkai",serif; }
+.paper-editorial .table-wrap+.caption,
+.paper-editorial .panel .table-note { font-size:30.0928px; }
+html[data-language="en"] .paper-editorial .table-wrap+.caption,
+html[data-language="en"] .paper-editorial .panel .table-note { font-size:24px; }
+@media(min-width:1101px) {
+ html:not([data-language="en"]) .paper-theme-carriers .title-line { white-space:nowrap; max-width:none; }
+ .paper-editorial .tool-execution-caption { white-space:nowrap; }
+}
+@media(max-width:650px) {
+ .paper-editorial .table-wrap table th,.paper-editorial .table-wrap table td { font-size:16px; }
+}
+
+.paper-editorial .tool-execution-caption { grid-column:1 / -1; min-width:0; margin-top:0; }
+.paper-editorial .content-grid>.figure-card { min-width:0; max-width:100%; box-sizing:border-box; }
+
+/* Narrow the abstract and bring the contribution column closer. */
+@media(min-width:1101px) {
+ .paper-editorial .epiagent-overview .content-grid { grid-template-columns:minmax(0,.78fr) minmax(0,1fr); gap:48px; }
+ .paper-editorial .epiagent-overview aside li { white-space:nowrap; }
+}
+
+/* Code belongs to the paper title, separated by one title-sized character. */
+.paper-editorial .paper-title-row { display:flex; align-items:center; column-gap:1em; margin-bottom:20px; font-size:clamp(40px,4.5vw,68px); }
+.paper-editorial .paper-title-row .title-line { flex:0 1 auto; min-width:0; margin:0; }
+.paper-editorial .paper-title-row .paper-code-button { flex:0 0 auto; white-space:nowrap; background:#a13d2d; border-color:#a13d2d; color:#fff; font:400 26px/1.5 "Hanyi Xingkai",serif; }
+.paper-editorial .paper-title-row .paper-code-button:hover { background:#843025; border-color:#843025; color:#fff; }
+@media(max-width:650px) {
+ .paper-editorial .paper-title-row { flex-wrap:wrap; gap:18px; }
+ .paper-editorial .paper-title-row .title-line { flex-basis:100%; }
+ .paper-editorial .paper-title-row .paper-code-button { font-size:23px; }
+}
+
+.paper-editorial .paper-title-row .paper-code-button { border-radius:10px; }
+
+/* Keep the final fanqie term on the second line rather than leaving a lone glyph. */
+html:not([data-language="en"]) .paper-editorial [data-i18n="qyspdQuestion2"] { letter-spacing:-.035em; text-wrap:pretty; }
+
+.paper-editorial .path-summary-line { display:block; }
+.paper-editorial .path-legend-nowrap { display:block; }
+@media(min-width:1101px) {
+ .paper-editorial .path-summary-line,.paper-editorial .path-legend-nowrap { white-space:nowrap; }
+}
+
+/* Blend the scientific figure's white paper into the page without altering its data. */
+.paper-editorial .qyspd-dominance-figure { background:transparent; }
+.paper-editorial .qyspd-dominance-figure img { mix-blend-mode:multiply; }
+.paper-editorial .qyspd-dominance-figure figcaption { text-align:center; }

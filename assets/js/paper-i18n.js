@@ -72,7 +72,7 @@
   "Dataset": "数据集",
   "Pipeline": "方法流程",
   "MM 2024 | CIRI Dataset | Inscription Restoration": "MM 2024 | CIRI 数据集 | 碑刻修复",
-  "Reproducing the Past: A Dataset for Benchmarking Inscription Restoration": "重现历史：用于碑刻修复评测的数据集",
+  "Reproducing the Past: A Dataset for Benchmarking Inscription Restoration": "重现历史：\n用于碑刻修复评测的数据集",
   "CIRI establishes a benchmark for restoring ancient Chinese inscription rubbings, pairing real degraded rubbing collections with synthetic intact-degraded data and a diffusion-based global-local restoration pipeline.": "CIRI 为中国古代碑刻拓片修复建立评测基准，结合真实残损拓片、合成的完整—残损配对数据，以及基于扩散模型的全局—局部修复流程。",
   "Code & Dataset": "代码与数据集",
   "Restoration Examples": "修复示例",
