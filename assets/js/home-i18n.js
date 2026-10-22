@@ -59,6 +59,7 @@
     const header = document.querySelector(".team-intro"), group = header.querySelector(".team-copy-group");
     group.style.transform = "";
     if (document.documentElement.lang !== "en") return;
+    const scale = parseFloat(getComputedStyle(document.body).zoom || 1);
     if (chineseHeaderTitleTop === null) {
       const probe = chineseHeaderTemplate.cloneNode(true);
       probe.setAttribute("aria-hidden", "true");
@@ -66,12 +67,12 @@
       const language = document.documentElement.dataset.language;
       document.documentElement.dataset.language = "zh";
       document.body.append(probe);
-      chineseHeaderTitleTop = probe.querySelector(".team-affiliation").getBoundingClientRect().top - probe.getBoundingClientRect().top;
+      chineseHeaderTitleTop = (probe.querySelector(".team-affiliation").getBoundingClientRect().top - probe.getBoundingClientRect().top) / scale;
       probe.remove();
       document.documentElement.dataset.language = language;
     }
-    const top = header.querySelector(".team-affiliation").getBoundingClientRect().top - header.getBoundingClientRect().top;
-    group.style.transform = `translateY(${(chineseHeaderTitleTop - top) / parseFloat(getComputedStyle(document.body).zoom || 1)}px)`;
+    const top = (header.querySelector(".team-affiliation").getBoundingClientRect().top - header.getBoundingClientRect().top) / scale;
+    group.style.transform = `translateY(${chineseHeaderTitleTop - top}px)`;
   };
   const refineEnglish = () => {
     balanceEnglish(document.querySelector(".research-section-rubbing .restoration-description"),3);
