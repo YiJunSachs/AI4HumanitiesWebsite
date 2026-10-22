@@ -5454,7 +5454,7 @@ body.home-redesign {
   min-width: 0;
 }
 .wenmai-college-emblem { flex: 0 0 82px; width: 82px; height: 82px; object-fit: contain; }
-.wenmai-museum-wordmark { flex: 0 0 210px; width: 210px; height: 82px; object-fit: contain; filter: brightness(.35); }
+.wenmai-museum-wordmark { flex: 0 0 210px; width: 210px; height: 82px; object-fit: contain; filter: brightness(.6) contrast(6); mix-blend-mode: multiply; }
 .wenmai-brand-copy { display: grid; gap: 6px; max-width: 660px; }
 .wenmai-brand-copy strong { font-size: 32px; line-height: 1.2; letter-spacing: .1em; }
 .wenmai-brand-copy > span { font-size: 23px; line-height: 1.5; }
