@@ -5450,17 +5450,17 @@ body.home-redesign {
 .wenmai-brand {
   display: flex;
   flex: 1;
-  align-items: center;
-  gap: 24px;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
   min-width: 0;
 }
-.wenmai-institution-marks { display: flex; flex-direction: column; align-items: center; gap: 8px; flex: 0 0 210px; }
-.wenmai-college-emblem { flex: none; width: 82px; height: 82px; object-fit: contain; }
-.wenmai-museum-wordmark { flex: none; width: 210px; height: auto; object-fit: contain; filter: brightness(.6) contrast(6); mix-blend-mode: multiply; }
-.wenmai-brand-copy { display: flex; align-items: center; gap: 18px; min-width: 0; }
-.wenmai-brand-copy strong { flex: 0 0 auto; white-space: nowrap; font-size: 32px; line-height: 1.2; letter-spacing: .1em; }
-.wenmai-brand-copy > span { font-size: 23px; line-height: 1.5; white-space: nowrap; }
-html[data-language="en"] .wenmai-brand-copy > span { white-space: normal; }
+.wenmai-institution-row { display: grid; grid-template-columns: 210px minmax(0, 1fr); align-items: center; gap: 24px; }
+.wenmai-institution-mark { display: flex; align-items: center; justify-content: center; }
+.wenmai-college-emblem { width: 82px; height: 82px; object-fit: contain; }
+.wenmai-museum-wordmark { width: 210px; height: auto; object-fit: contain; filter: brightness(.6) contrast(6); mix-blend-mode: multiply; }
+.wenmai-institution-name { font-size: 23px; line-height: 1.5; white-space: nowrap; }
+html[data-language="en"] .wenmai-institution-name { white-space: normal; }
 .wenmai-nav-links { display: flex; align-items: center; gap: 30px; font-size: 25px; }
 .wenmai-nav-links a { white-space: nowrap; padding: 12px 0; border-bottom: 2px solid transparent; }
 .wenmai-nav-links a:hover { color: #913e2e; border-color: currentColor; }
@@ -5476,7 +5476,7 @@ html[data-language="en"] .wenmai-brand-copy > span { white-space: normal; }
 }
 html[data-language="en"] .wenmai-nav-links { font-size: 23px; gap: 26px; }
 html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "Times New Roman", serif; }
-.home-redesign .research-section { scroll-margin-top: 160px; }
+.home-redesign .research-section { scroll-margin-top: 184px; }
 
 /* Advisory page is planned; keep its navigation label non-interactive. */
 .wenmai-nav-links .nav-pending { white-space: nowrap; padding: 12px 0; border-bottom: 2px solid transparent; color: #758074; cursor: default; }
