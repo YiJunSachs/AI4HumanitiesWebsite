@@ -156,6 +156,7 @@
 
   const titleEnglish = {
     "智缮": "Zhishan",
+    "研究团队 | 智缮": "Research Team | Zhishan",
     "残损古籍修复研究 | 研究详情": "Damaged Document Restoration | Research",
     "多载体古籍转录研究 | 研究详情": "Multi-Carrier Document Transcription | Research",
     "字体风格迁移生成研究 | 研究详情": "Font Style Transfer and Generation | Research",
