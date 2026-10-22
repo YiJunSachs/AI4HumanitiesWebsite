@@ -13,7 +13,7 @@
     });
     if (document.body.classList.contains("research-story")) {
       document.title = english
-        ? `${document.querySelector("h1").textContent} | Wenmai`
+        ? `${document.querySelector("h1").textContent} | Zhishan`
         : chineseTitle;
       document.querySelector(".story-contents").setAttribute("aria-label", english ? "Topic contents" : "专题目录");
     }
