@@ -5437,7 +5437,8 @@ body.home-redesign {
   background: #f7f0df;
   border-bottom: 2px solid #d9c39f;
   box-shadow: 0 3px 16px rgba(36, 27, 21, .08);
-  font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+  font-family: "Hanyi Xingkai", "Songti SC", "STSong", serif;
+  font-synthesis: none;
 }
 .wenmai-nav {
   display: flex;
@@ -5463,6 +5464,7 @@ body.home-redesign {
 .wenmai-nav-links a:hover { color: #913e2e; border-color: currentColor; }
 .wenmai-nav a:focus-visible { outline: 3px solid #913e2e; outline-offset: 8px; }
 .home-redesign .wenmai-topbar .home-language-toggle {
+  font-family: inherit;
   position: static;
   flex: 0 0 120px;
   margin: 0;
@@ -5471,4 +5473,5 @@ body.home-redesign {
   border: 1px solid #b9ad93;
 }
 html[data-language="en"] .wenmai-nav-links { font-size: 23px; gap: 26px; }
+html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "Times New Roman", serif; }
 .home-redesign .research-section { scroll-margin-top: 160px; }
