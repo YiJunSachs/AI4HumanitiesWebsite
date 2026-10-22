@@ -5358,7 +5358,12 @@ html[data-language="en"] .home-redesign .research-section-rubbing .restoration-l
 .home-redesign .phonology-editorial { padding-top: 173.3512px; }
 
 /* The previous 80% view is the new default design size. */
-body.home-redesign { zoom: .8; }
+body.home-redesign {
+  zoom: var(--home-canvas-scale, .8);
+  left: auto;
+  margin-inline: auto;
+  transform: none;
+}
 
 /* Let the full transparent torn edge sit above the overlapping first section. */
 .home-redesign .team-intro { z-index:6; }
