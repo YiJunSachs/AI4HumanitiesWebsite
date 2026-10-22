@@ -5477,3 +5477,6 @@ html[data-language="en"] .wenmai-brand-copy > span { white-space: normal; }
 html[data-language="en"] .wenmai-nav-links { font-size: 23px; gap: 26px; }
 html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "Times New Roman", serif; }
 .home-redesign .research-section { scroll-margin-top: 160px; }
+
+/* Advisory page is planned; keep its navigation label non-interactive. */
+.wenmai-nav-links .nav-pending { white-space: nowrap; padding: 12px 0; border-bottom: 2px solid transparent; color: #758074; cursor: default; }
