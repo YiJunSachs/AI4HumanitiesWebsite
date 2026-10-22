@@ -4,15 +4,15 @@
   const storageKey = "wenmai-language";
   const english = {
     navLabel: "Primary navigation",
-    brand: "Southeast University  School of Computer Science, Software Engineering and Artificial Intelligence  Wenmai",
+    brand: "Southeast University  School of Computer Science, Software Engineering and Artificial Intelligence  Zhishan",
     home: "Home",
     navRestoration: "Damaged Document Restoration",
     navTranscription: "Multi-Carrier Historical Document Transcription",
     navStyleTransfer: "Font Style Transfer and Generation",
     navPhonology: "Chinese Historical Phonology",
-    heroEyebrow: "Southeast University · School of Computer Science, Software Engineering and Artificial Intelligence · Wenmai",
-    siteName: "Wenmai AI",
-    heroCopy: "At the intersection of artificial intelligence and the humanities, Wenmai explores new ways to reconnect cultural materials, historical experience, and traditions of knowledge. Across periods and media, we bring computational methods and humanistic interpretation into dialogue, making AI not only a tool for complex sources, but also a bridge to broader scholarship and new forms of cultural knowledge.",
+    heroEyebrow: "Southeast University · School of Computer Science, Software Engineering and Artificial Intelligence · Zhishan",
+    siteName: "Zhishan AI",
+    heroCopy: "At the intersection of artificial intelligence and the humanities, Zhishan explores new ways to reconnect cultural materials, historical experience, and traditions of knowledge. Across periods and media, we bring computational methods and humanistic interpretation into dialogue, making AI not only a tool for complex sources, but also a bridge to broader scholarship and new forms of cultural knowledge.",
     browseResearch: "Explore our research",
     restorationTitle: "Damaged Document Restoration",
     transcriptionTitle: "Multi-Carrier Historical Document Transcription",
@@ -151,11 +151,11 @@
     scopeOpenQuestions: "Scope and Open Questions",
     scopeSummary1: "The findings are scoped to the Guangyun system and the Song-dynasty written corpus collected in this study. Models perform contextual sense selection, while primary fanqie are inferred through dictionary sense–fanqie pairings.",
     scopeSummary2: "Thirty C4 characters exhibit sense collisions and require evidence from additional dictionaries or phonological sources. Twelve rare C5 characters occur fewer than 20 times each in the selected corpus and require broader textual coverage.",
-    footer: "© Southeast University · School of Computer Science, Software Engineering and Artificial Intelligence · Wenmai"
+    footer: "© Southeast University · School of Computer Science, Software Engineering and Artificial Intelligence · Zhishan"
   };
 
   const titleEnglish = {
-    "文脉": "Wenmai",
+    "智缮": "Zhishan",
     "残损古籍修复研究 | 研究详情": "Damaged Document Restoration | Research",
     "多载体古籍转录研究 | 研究详情": "Multi-Carrier Document Transcription | Research",
     "字体风格迁移生成研究 | 研究详情": "Font Style Transfer and Generation | Research",
