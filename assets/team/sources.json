@@ -1,0 +1,32 @@
+{
+  "retrieved": "2026-10-22",
+  "members": [
+    {
+      "name": "薛晖",
+      "homepage": "https://palm.seu.edu.cn/hxue/",
+      "photo": "https://palm.seu.edu.cn/hxue/me.jpg",
+      "biography_sources": [
+        "https://palm.seu.edu.cn/hxue/",
+        "https://cs.seu.edu.cn/2019/0103/c23024a257231/page.htm"
+      ]
+    },
+    {
+      "name": "张敏灵",
+      "homepage": "https://palm.seu.edu.cn/zhangml/",
+      "photo": "https://palm.seu.edu.cn/zhangml/images/main.h2.jpg",
+      "biography_sources": [
+        "https://palm.seu.edu.cn/zhangml/main.htm",
+        "https://seu.teacher.360eol.com/teacherBasic/preview?teacherId=9263"
+      ]
+    },
+    {
+      "name": "朱士鹏",
+      "homepage": "https://shipengzhubp.github.io/",
+      "photo": "https://shipengzhubp.github.io/files/photo.jpg",
+      "biography_sources": [
+        "https://shipengzhubp.github.io/",
+        "https://cse.seu.edu.cn/2025/0811/c48203a536229/page.htm"
+      ]
+    }
+  ]
+}
