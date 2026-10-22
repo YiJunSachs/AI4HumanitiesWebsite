@@ -5425,3 +5425,50 @@ body.home-redesign {
 /* Maintain artwork stacking in the revised reading order. */
 .home-redesign .phonology-editorial { z-index: 3; }
 .home-redesign .characters-editorial { z-index: 2; }
+
+/* Restore the institutional navigation above the v2 artwork. All dimensions
+   follow the same canvas scale as the homepage, including on laptop screens. */
+.home-redesign .wenmai-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 110;
+  width: 100%;
+  color: #293d31;
+  background: #f7f0df;
+  border-bottom: 2px solid #d9c39f;
+  box-shadow: 0 3px 16px rgba(36, 27, 21, .08);
+  font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+}
+.wenmai-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  min-height: 136px;
+  padding: 22px 75px;
+}
+.wenmai-brand {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+}
+.wenmai-college-emblem { flex: 0 0 82px; width: 82px; height: 82px; object-fit: contain; }
+.wenmai-museum-wordmark { flex: 0 0 210px; width: 210px; height: 82px; object-fit: contain; filter: brightness(.35); }
+.wenmai-brand-copy { display: grid; gap: 6px; max-width: 660px; }
+.wenmai-brand-copy strong { font-size: 32px; line-height: 1.2; letter-spacing: .1em; }
+.wenmai-brand-copy > span { font-size: 23px; line-height: 1.5; }
+.wenmai-nav-links { display: flex; align-items: center; gap: 30px; font-size: 25px; }
+.wenmai-nav-links a { white-space: nowrap; padding: 12px 0; border-bottom: 2px solid transparent; }
+.wenmai-nav-links a:hover { color: #913e2e; border-color: currentColor; }
+.wenmai-nav a:focus-visible { outline: 3px solid #913e2e; outline-offset: 8px; }
+.home-redesign .wenmai-topbar .home-language-toggle {
+  position: static;
+  flex: 0 0 120px;
+  margin: 0;
+  color: #293d31;
+  background: #ebe2cf;
+  border: 1px solid #b9ad93;
+}
+html[data-language="en"] .wenmai-nav-links { font-size: 23px; gap: 26px; }
+.home-redesign .research-section { scroll-margin-top: 160px; }
