@@ -4,13 +4,13 @@
   const storageKey = "wenmai-language";
   const english = {
     navLabel: "Primary navigation",
-    brand: "Southeast University  School of Computer Science, Software Engineering and Artificial Intelligence  Zhishan",
+    brand: "Southeast University, School of Computer Science and Technology, School of Software, and School of Artificial Intelligence  Zhishan",
     home: "Home",
     navRestoration: "Damaged Document Restoration",
     navTranscription: "Multi-Carrier Historical Document Transcription",
     navStyleTransfer: "Font Style Transfer and Generation",
     navPhonology: "Chinese Historical Phonology",
-    heroEyebrow: "Southeast University · School of Computer Science, Software Engineering and Artificial Intelligence · Zhishan",
+    heroEyebrow: "Southeast University, School of Computer Science and Technology, School of Software, and School of Artificial Intelligence  Zhishan",
     siteName: "Zhishan AI",
     heroCopy: "At the intersection of artificial intelligence and the humanities, Zhishan explores new ways to reconnect cultural materials, historical experience, and traditions of knowledge. Across periods and media, we bring computational methods and humanistic interpretation into dialogue, making AI not only a tool for complex sources, but also a bridge to broader scholarship and new forms of cultural knowledge.",
     browseResearch: "Explore our research",
@@ -151,7 +151,7 @@
     scopeOpenQuestions: "Scope and Open Questions",
     scopeSummary1: "The findings are scoped to the Guangyun system and the Song-dynasty written corpus collected in this study. Models perform contextual sense selection, while primary fanqie are inferred through dictionary sense–fanqie pairings.",
     scopeSummary2: "Thirty C4 characters exhibit sense collisions and require evidence from additional dictionaries or phonological sources. Twelve rare C5 characters occur fewer than 20 times each in the selected corpus and require broader textual coverage.",
-    footer: "© Southeast University · School of Computer Science, Software Engineering and Artificial Intelligence · Zhishan"
+    footer: "© Southeast University, School of Computer Science and Technology, School of Software, and School of Artificial Intelligence  Zhishan"
   };
 
   const titleEnglish = {
