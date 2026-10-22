@@ -8,13 +8,32 @@
   <link rel="icon" href="assets/figures/彩色校标.svg" type="image/svg+xml">
   <link rel="preload" href="assets/figures/hanyi-xingkai.ttf" as="font" type="font/ttf" crossorigin>
   <script src="assets/js/home-viewport.js?v=20261022"></script>
-  <link rel="stylesheet" href="assets/home-fixed-canvas.css?v=20261022-viewport">
+  <link rel="stylesheet" href="assets/home-fixed-canvas.css?v=20261022-topbar">
 </head>
 
 <body class="home-redesign">
-  <button class="language-toggle home-language-toggle" type="button" data-language-toggle aria-label="Switch to English"
-    title="Switch to English"><span class="language-option" data-language-option="zh">中</span><span
-      class="language-option" data-language-option="en">EN</span></button>
+  <header class="wenmai-topbar">
+    <nav class="wenmai-nav" aria-label="主导航" data-i18n-aria-label="navLabel">
+      <a class="wenmai-brand" href="index.html">
+        <img class="wenmai-college-emblem" src="assets/figures/微信图片_20260824155001_1244_2.png"
+          alt="东南大学计算机科学、软件工程、人工智能学院院徽">
+        <img class="wenmai-museum-wordmark" src="assets/figures/nanjing-university-museum.png" alt="南京大学博物馆">
+        <span class="wenmai-brand-copy">
+          <strong data-story-en="Wenmai">文脉</strong>
+          <span data-story-en="Southeast University · School of Computer Science, Software Engineering and Artificial Intelligence">东南大学 · 计算机科学、软件工程、人工智能学院</span>
+        </span>
+      </a>
+      <div class="wenmai-nav-links">
+        <a href="#rubbing-restoration" data-story-en="Restoration">残损古籍修复</a>
+        <a href="#multi-carrier-reading" data-story-en="Transcription">多载体古籍转录</a>
+        <a href="#historical-phonology" data-story-en="Historical Phonology">中国古代音韵</a>
+        <a href="#ancient-character-restoration" data-story-en="Font Generation">字体风格迁移</a>
+      </div>
+      <button class="language-toggle home-language-toggle" type="button" data-language-toggle aria-label="Switch to English"
+        title="Switch to English"><span class="language-option" data-language-option="zh">中</span><span
+          class="language-option" data-language-option="en">EN</span></button>
+    </nav>
+  </header>
 
   <main>
     <section class="hero research-hero team-intro" aria-label="团队介绍">
