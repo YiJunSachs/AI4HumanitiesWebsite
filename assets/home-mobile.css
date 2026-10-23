@@ -79,4 +79,6 @@
   .home-redesign .carrier-lightbox-images { grid-template-columns: minmax(0,1fr); height: auto; gap: 20px; }
   .home-redesign .carrier-lightbox-images img { height: auto; max-height: 65vh; }
 
+  .wenmai-center-emblem { width: 40px; height: 44px; }
+
 }

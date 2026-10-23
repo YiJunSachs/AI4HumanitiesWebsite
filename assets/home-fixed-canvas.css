@@ -5483,7 +5483,7 @@ html[data-language="en"] .wenmai-institution-name { font-size: 23px; line-height
 }
 html[data-language="en"] .wenmai-nav-links { font-size: 23px; gap: 26px; }
 html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "Times New Roman", serif; }
-.home-redesign .research-section { scroll-margin-top: 184px; }
+.home-redesign .research-section { scroll-margin-top: 304px; }
 
 /* Advisory page is planned; keep its navigation label non-interactive. */
 .wenmai-nav-links .nav-pending { white-space: nowrap; padding: 12px 0; border-bottom: 2px solid transparent; color: #758074; cursor: default; }
@@ -5493,3 +5493,5 @@ html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "
 .home-redesign .team-intro .team-copy-group { left: 0; width: 1800px; max-width: 100%; margin: 0 auto; }
 .home-redesign .team-intro .team-affiliation,
 .home-redesign .team-intro .team-copy-group .hero-copy { left: 0; }
+
+.wenmai-center-emblem { display: block; width: 72px; height: 72px; object-fit: contain; mix-blend-mode: multiply; }
