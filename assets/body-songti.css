@@ -1,0 +1,15 @@
+/* Body copy and controls use the platform's Songti font; heading styles stay intact. */
+:root {
+  --body-songti: "Songti SC", "SimSun", "STSong", "Noto Serif CJK SC", "Source Han Serif SC", "BabelStone Han", "SimSun-ExtB", serif;
+}
+html body :is(
+  p, li, figcaption, td, th, dt, dd, label, button, input, select, textarea,
+  small, time, blockquote, .footer, .wenmai-institution-name, .wenmai-nav-links,
+  .restore-pair-labels, .carrier-lightbox-header, .ph-legend, .ph-node text,
+  .ph-edge-label, .metric strong, .metric span, .editorial-coming-soon > span,
+  .brand-text, .chapter-number, .dataset-facts, .sample-pair > div > span
+),
+html body a:not(.story-brand):not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
+  /* Override legacy font shorthands without changing their size or layout. */
+  font-family: var(--body-songti) !important;
+}
