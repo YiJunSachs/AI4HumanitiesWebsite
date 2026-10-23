@@ -8,7 +8,7 @@
   .home-redesign .wenmai-topbar { position: relative; }
   .wenmai-nav { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 12px; padding: 14px 18px; min-height: 0; }
   .wenmai-brand { grid-column: 1 / -1; gap: 8px; }
-  .wenmai-institution-row { grid-template-columns: 52px minmax(0,1fr); gap: 12px; min-height: 40px; }
+  .wenmai-institution-row { grid-template-columns: minmax(0,1fr) 52px; gap: 12px; min-height: 40px; }
   .wenmai-institution-row:first-child { min-height: 44px; }
   .wenmai-college-emblem { width: 40px; height: 40px; }
   .wenmai-museum-wordmark { width: 52px; height: 37px; }
@@ -83,7 +83,14 @@
 
   .wenmai-partner-row { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: start; gap: 12px; }
   .wenmai-partner-row .wenmai-institution-row,
-  .wenmai-partner-row .wenmai-institution-row:last-child { grid-template-columns: minmax(0,1fr); align-content: start; gap: 8px; }
-  .wenmai-partner-row .wenmai-institution-mark { justify-content: flex-start; height: 44px; }
+  .wenmai-partner-row .wenmai-institution-row:last-child { grid-template-columns: minmax(0,1fr) 52px; align-content: start; gap: 8px; }
+  .wenmai-partner-row .wenmai-institution-row:last-child { grid-template-columns: minmax(0,1fr) 40px; }
+  .wenmai-partner-row .wenmai-institution-mark { justify-content: center; height: 44px; }
 
+}
+
+@media (max-width: 520px) {
+  /* Keep each institution name beside its logo with enough room for English. */
+  .wenmai-partner-row { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .wenmai-partner-row .wenmai-institution-row:last-child { grid-template-columns: minmax(0, 1fr) 52px; }
 }
