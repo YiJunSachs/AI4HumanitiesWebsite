@@ -5502,3 +5502,8 @@ html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "
 .wenmai-partner-row .wenmai-institution-row:last-child { grid-template-columns: 72px minmax(0, 1fr); }
 .wenmai-partner-row .wenmai-institution-name { white-space: normal; }
 .home-redesign .wenmai-topbar .home-language-toggle { font-size: 21px; }
+
+/* The homepage restoration preview plays once, without drag controls. */
+.home-redesign [data-restore-interactive="false"] .restore-frame { cursor: default; touch-action: auto; }
+.home-redesign [data-restore-interactive="false"] .restore-divider::before { display: none; }
+.home-redesign [data-restore-interactive="false"].is-complete .restore-divider { opacity: 0; }
