@@ -166,7 +166,10 @@
     });
 
     if (interactive) {
+      frame?.addEventListener("dragstart", event => event.preventDefault());
       frame?.addEventListener("pointerdown", (event) => {
+        if (!event.isPrimary || event.button !== 0) return;
+        event.preventDefault();
         stopAnimation();
         frame.setPointerCapture(event.pointerId);
         updateFromPointer(event);
