@@ -5466,9 +5466,9 @@ body.home-redesign {
 .wenmai-institution-mark { display: flex; align-items: center; justify-content: center; }
 .wenmai-college-emblem { width: 72px; height: 72px; object-fit: contain; }
 .wenmai-museum-wordmark { display: block; width: 120px; height: 85px; object-fit: contain; }
-.wenmai-institution-name { font-size: 32px; line-height: 1.5; white-space: nowrap; }
+.wenmai-institution-name { font-size: 32px; line-height: 1.5; white-space: normal; }
 html[data-language="en"] .wenmai-institution-name { font-size: 27px; line-height: 1.45; white-space: normal; text-wrap: pretty; }
-.wenmai-nav-links { display: grid; grid-template-columns: repeat(3, max-content); align-items: center; gap: 8px 30px; font-size: 30px; }
+.wenmai-nav-links { display: flex; flex-wrap: nowrap; align-items: center; gap: 16px; font-size: 30px; }
 .wenmai-nav-links a { white-space: nowrap; padding: 12px 0; border-bottom: 2px solid transparent; }
 .wenmai-nav-links a:hover { color: #913e2e; border-color: currentColor; }
 .wenmai-nav a:focus-visible { outline: 3px solid #913e2e; outline-offset: 8px; }
@@ -5481,7 +5481,7 @@ html[data-language="en"] .wenmai-institution-name { font-size: 27px; line-height
   background: #ebe2cf;
   border: 1px solid #b9ad93;
 }
-html[data-language="en"] .wenmai-nav-links { font-size: 27px; gap: 8px 26px; }
+html[data-language="en"] .wenmai-nav-links { font-size: 27px; gap: 14px; }
 html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "Times New Roman", serif; }
 .home-redesign .research-section { scroll-margin-top: 304px; }
 
