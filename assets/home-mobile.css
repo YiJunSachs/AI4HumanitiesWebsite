@@ -25,7 +25,7 @@
   .home-redesign .home-header-frame .home-header-art { width: 100%; height: auto; }
   .home-redesign .team-intro .hero-grid { position: static; width: 100%; max-width: 720px; margin: 0 auto; padding: 28px 22px 36px; transform: none; display: block; }
   .home-redesign .team-intro .team-copy-group { position: static; width: 100%; transform: none !important; }
-  .home-redesign .team-intro .team-affiliation, html[data-language="en"] .home-redesign .team-affiliation { position: static; margin: 0 0 18px; font-size: 25px; line-height: 1.5; }
+  .home-redesign .team-intro .team-affiliation, html[data-language="en"] .home-redesign .team-affiliation { position: static; margin: 0 0 18px; font-size: 34px; line-height: 1.35; }
   .home-redesign .team-intro .team-copy-group .hero-copy, html[data-language="en"] .home-redesign .team-intro .hero-copy { position: static; font-size: 18px; line-height: 1.9; width: 100%; max-width: none; text-align: left; text-wrap: pretty; margin: 0; }
   .home-redesign .restoration-editorial { padding: 40px 0; margin: 0; min-height: 0; background-image: none; --restoration-body-size: 17px; --restoration-subtitle-size: 24px; scroll-margin-top: 16px; }
   .home-redesign .research-section-rubbing.restoration-editorial { margin-top: 0; }
