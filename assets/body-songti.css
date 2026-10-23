@@ -13,3 +13,24 @@ html body a:not(.story-brand):not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
   /* Override legacy font shorthands without changing their size or layout. */
   font-family: var(--body-songti) !important;
 }
+
+/* Separate Songti reading text from calligraphic headings on the homepage. */
+@media (min-width: 901px) {
+  html:not([data-language="en"]) body.home-redesign { --team-copy-size: 33px; }
+  html:not([data-language="en"]) .home-redesign .restoration-editorial { --restoration-subtitle-size: 44px; }
+  html:not([data-language="en"]) .home-redesign .restoration-heading h2 { font-size: 88px; }
+  html:not([data-language="en"]) .home-redesign .team-intro .team-affiliation { font-size: 96px; }
+  html:not([data-language="en"]) .home-redesign .wenmai-institution-name { font-size: 28px; }
+  html:not([data-language="en"]) .home-redesign .wenmai-nav-links { font-size: 28px; }
+}
+@media (max-width: 900px) {
+  html:not([data-language="en"]) .home-redesign .team-intro .team-copy-group .hero-copy,
+  html:not([data-language="en"]) .home-redesign .restoration-editorial .restoration-description,
+  html:not([data-language="en"]) .home-redesign .topic-preview > p { font-size: 16px; }
+  html:not([data-language="en"]) .home-redesign .restoration-heading h2 { font-size: 34px; }
+  html:not([data-language="en"]) .home-redesign .team-intro .team-affiliation { font-size: 48px; }
+  html:not([data-language="en"]) .home-redesign .restoration-slogan { font-size: 26px; }
+  html:not([data-language="en"]) .home-redesign .topic-preview h3 { font-size: 24px; }
+  html:not([data-language="en"]) .home-redesign .wenmai-institution-name { font-size: 15px; }
+  html:not([data-language="en"]) .home-redesign .wenmai-nav-links { font-size: 17px; }
+}
