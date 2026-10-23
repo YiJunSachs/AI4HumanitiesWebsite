@@ -1,32 +1,35 @@
-/* Team profiles share the paper, ink and calligraphic headings of the research pages. */
+/* Three profile cards per row; each card pairs a portrait with its biography. */
+.team-page .story-shell { width: min(1600px, calc(100% - 64px)); }
 .team-hero { padding: 48px 0 36px; border-bottom: 1px solid var(--line); }
 .team-hero h1 { font-family: "Zhishan Calligraphy", "Songti SC", serif; font-synthesis: none; margin: 16px 0; }
 .team-lead { color: var(--muted); font-size: 18px; line-height: 1.8; margin: 0; }
-.team-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 28px; margin: 36px 0; }
-.team-member { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 40px; align-items: start; padding: 32px; background: #fffdf6; border: 1px solid #d9ddcf; }
-.member-portrait { display: block; width: 180px; max-width: 100%; height: 240px; object-fit: cover; object-position: center top; margin: 0; }
-.member-details { display: flex; flex-direction: column; align-items: flex-start; min-width: 0; min-height: 240px; }
+.team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 36px 0; }
+.team-member { display: grid; grid-template-columns: clamp(92px, 8vw, 120px) minmax(0, 1fr); gap: 20px; align-items: start; padding: 24px; background: #fffdf6; border: 1px solid #d9ddcf; }
+.member-portrait { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; margin: 0; }
+.member-details { display: flex; flex-direction: column; align-items: flex-start; align-self: stretch; min-width: 0; overflow-wrap: anywhere; }
 .portrait-placeholder { background: #f2f0e7; border: 1px solid #e5e3d8; }
-.team-member h2 { margin: 0; font: 36px/1.3 "Zhishan Calligraphy", "Songti SC", serif; font-synthesis: none; }
-.member-name-en { margin: 5px 0 0; font: 15px/1.5 Georgia, serif; color: var(--muted); }
-.member-role { color: var(--accent); font-size: 15px; line-height: 1.7; margin: 18px 0 12px; }
-.member-bio { margin: 0 0 24px; font-size: 17px; line-height: 1.85; color: #505d52; }
-.member-homepage { display: inline-flex; gap: 24px; align-items: center; margin-top: auto; padding: 10px 0; color: var(--accent); font-size: 16px; }
+.team-member h2 { margin: 0; font: 30px/1.3 "Zhishan Calligraphy", "Songti SC", serif; font-synthesis: none; }
+.member-name-en { margin: 5px 0 0; font: 14px/1.5 Georgia, serif; color: var(--muted); }
+.member-role { color: var(--accent); font-size: 14px; line-height: 1.7; margin: 16px 0 12px; }
+.member-bio { margin: 0 0 20px; font-size: 16px; line-height: 1.85; color: #505d52; }
+.member-homepage { display: inline-flex; align-items: center; margin-top: auto; padding: 10px 0; color: var(--accent); font-size: 15px; }
 .member-homepage:hover { color: var(--ink); }
 .team-source-note { color: var(--muted); font-size: 13px; line-height: 1.8; margin: 0 0 38px; }
 html[lang="en"] .team-hero h1, html[lang="en"] .team-member h2 { font-family: Georgia, serif; }
-html[lang="en"] .team-member h2 { font-size: 28px; }
+html[lang="en"] .team-member h2 { font-size: 24px; }
 html[lang="en"] .member-name-en { display: none; }
-@media (max-width: 1000px) {
-  .team-grid { gap: 16px; }
-  .team-member { grid-template-columns: 150px minmax(0, 1fr); gap: 28px; padding: 24px; }
-  .member-details { min-height: 200px; }
-  .member-portrait { width: 150px; height: 200px; }
+@media (max-width: 1199px) {
+  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+  .team-member { grid-template-columns: 92px minmax(0, 1fr); gap: 18px; padding: 20px; }
 }
-@media (max-width: 600px) {
+@media (max-width: 759px) {
+  .team-page .story-shell { width: calc(100% - 40px); }
   .team-hero { padding: 34px 0 28px; }
-  .team-grid { grid-template-columns: 1fr; gap: 24px; }
-  .team-member { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 24px; }
-  .member-details { min-height: 0; }
-  .member-portrait { width: 180px; height: 240px; }
+  .team-grid { grid-template-columns: minmax(0, 1fr); }
+  .team-member { grid-template-columns: 110px minmax(0, 1fr); }
+}
+@media (max-width: 480px) {
+  .team-member { grid-template-columns: 80px minmax(0, 1fr); gap: 16px; padding: 18px; }
+  .team-member h2 { font-size: 28px; }
+  html[lang="en"] .team-member h2 { font-size: 22px; }
 }
