@@ -9,6 +9,7 @@
     const beforeImage = frame?.querySelector(".restore-before");
     const afterImage = frame?.querySelector(".restore-after-wrap img");
     const exampleButtons = widget.querySelectorAll("[data-restore-example]");
+    const interactive = widget.dataset.restoreInteractive !== "false";
     const forceAutoplay = widget.dataset.autoplayForce === "true";
     const loopAutoplay = widget.dataset.autoplayLoop === "true";
     const autoplayStart = Number(widget.dataset.autoplayStart ?? 8);
@@ -52,6 +53,8 @@
 
     const playRepair = (startValue = 0, endValue = 100, duration = 1700, onComplete, options = {}) => {
       stopAnimation({ keepAutoplay: options.keepAutoplay === true });
+      setProgress(startValue);
+      widget.classList.remove("is-complete");
       widget.classList.add("is-playing");
 
       const startedAt = performance.now();
@@ -67,6 +70,7 @@
 
         animationFrame = 0;
         widget.classList.remove("is-playing");
+        widget.classList.add("is-complete");
 
         if (playButton) {
           playButton.textContent = "Replay Repair";
@@ -115,7 +119,7 @@
       setProgress(progress);
     };
 
-    setProgress(slider ? slider.value : 55);
+    setProgress(widget.dataset.autoplay === "true" ? autoplayStart : (slider ? slider.value : 55));
     widget.restorePlayRepair = playRepair;
     widget.restoreSetProgress = setProgress;
 
@@ -161,29 +165,45 @@
       });
     });
 
-    frame?.addEventListener("pointerdown", (event) => {
-      stopAnimation();
-      frame.setPointerCapture(event.pointerId);
-      updateFromPointer(event);
-    });
-
-    frame?.addEventListener("pointermove", (event) => {
-      if (frame.hasPointerCapture(event.pointerId)) {
+    if (interactive) {
+      frame?.addEventListener("pointerdown", (event) => {
+        stopAnimation();
+        frame.setPointerCapture(event.pointerId);
         updateFromPointer(event);
-      }
-    });
+      });
 
-    frame?.addEventListener("pointerup", (event) => {
-      if (frame.hasPointerCapture(event.pointerId)) {
-        frame.releasePointerCapture(event.pointerId);
-      }
+      frame?.addEventListener("pointermove", (event) => {
+        if (frame.hasPointerCapture(event.pointerId)) {
+          updateFromPointer(event);
+        }
+      });
 
-      scheduleAutoplayLoop(autoplayResumeDelay);
-    });
+      frame?.addEventListener("pointerup", (event) => {
+        if (frame.hasPointerCapture(event.pointerId)) {
+          frame.releasePointerCapture(event.pointerId);
+        }
+
+        scheduleAutoplayLoop(autoplayResumeDelay);
+      });
+
+    }
 
     if (widget.dataset.autoplay !== "true") {
       return;
     }
+
+    if (reduceMotion) {
+      setProgress(autoplayEnd);
+      widget.classList.add("is-complete");
+      return;
+    }
+
+    const playOnce = () => {
+      const images = [...(frame?.querySelectorAll("img") || [])];
+      Promise.all(images.map(image => image.decode().catch(() => {}))).then(() => {
+        window.setTimeout(() => playRepair(autoplayStart, autoplayEnd, autoplayDuration), 220);
+      });
+    };
 
     if (forceAutoplay) {
       hasAutoplayed = true;
@@ -192,12 +212,8 @@
       if (loopAutoplay) {
         scheduleAutoplayLoop(180);
       } else {
-        window.setTimeout(() => playRepair(autoplayStart, autoplayEnd, autoplayDuration), 180);
+        playOnce();
       }
-      return;
-    }
-
-    if (reduceMotion) {
       return;
     }
 
@@ -224,7 +240,7 @@
             }
 
             hasAutoplayed = true;
-            window.setTimeout(() => playRepair(autoplayStart, autoplayEnd, autoplayDuration), 220);
+            playOnce();
             observer.disconnect();
           });
         },
@@ -237,7 +253,7 @@
       if (loopAutoplay) {
         scheduleAutoplayLoop(420);
       } else {
-        window.setTimeout(() => playRepair(autoplayStart, autoplayEnd, autoplayDuration), 420);
+        playOnce();
       }
     }
   });
