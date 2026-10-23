@@ -5457,18 +5457,18 @@ body.home-redesign {
 }
 .wenmai-institution-row {
   display: grid;
-  grid-template-columns: 164px minmax(0, 1fr);
+  grid-template-columns: 96px minmax(0, 1fr);
   align-items: center;
-  gap: 24px;
+  gap: 18px;
   min-height: 44px;
 }
 .wenmai-institution-row:first-child { min-height: 72px; }
 .wenmai-institution-mark { display: flex; align-items: center; justify-content: center; }
 .wenmai-college-emblem { width: 72px; height: 72px; object-fit: contain; }
 .wenmai-museum-wordmark { display: block; width: 120px; height: 85px; object-fit: contain; }
-.wenmai-institution-name { font-size: 26px; line-height: 1.5; white-space: nowrap; }
-html[data-language="en"] .wenmai-institution-name { font-size: 23px; line-height: 1.45; white-space: normal; text-wrap: pretty; }
-.wenmai-nav-links { display: flex; align-items: center; gap: 30px; font-size: 25px; }
+.wenmai-institution-name { font-size: 32px; line-height: 1.5; white-space: nowrap; }
+html[data-language="en"] .wenmai-institution-name { font-size: 27px; line-height: 1.45; white-space: normal; text-wrap: pretty; }
+.wenmai-nav-links { display: grid; grid-template-columns: repeat(3, max-content); align-items: center; gap: 8px 30px; font-size: 30px; }
 .wenmai-nav-links a { white-space: nowrap; padding: 12px 0; border-bottom: 2px solid transparent; }
 .wenmai-nav-links a:hover { color: #913e2e; border-color: currentColor; }
 .wenmai-nav a:focus-visible { outline: 3px solid #913e2e; outline-offset: 8px; }
@@ -5481,7 +5481,7 @@ html[data-language="en"] .wenmai-institution-name { font-size: 23px; line-height
   background: #ebe2cf;
   border: 1px solid #b9ad93;
 }
-html[data-language="en"] .wenmai-nav-links { font-size: 23px; gap: 26px; }
+html[data-language="en"] .wenmai-nav-links { font-size: 27px; gap: 8px 26px; }
 html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "Times New Roman", serif; }
 .home-redesign .research-section { scroll-margin-top: 304px; }
 
@@ -5495,3 +5495,10 @@ html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "
 .home-redesign .team-intro .team-copy-group .hero-copy { left: 0; }
 
 .wenmai-center-emblem { display: block; width: 72px; height: 72px; object-fit: contain; mix-blend-mode: multiply; }
+
+/* Place the two Nanjing University institutions on the same line. */
+.wenmai-partner-row { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; gap: 28px; }
+.wenmai-partner-row .wenmai-institution-row { min-width: 0; }
+.wenmai-partner-row .wenmai-institution-row:last-child { grid-template-columns: 72px minmax(0, 1fr); }
+.wenmai-partner-row .wenmai-institution-name { white-space: normal; }
+.home-redesign .wenmai-topbar .home-language-toggle { font-size: 21px; }
