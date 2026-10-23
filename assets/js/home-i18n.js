@@ -87,6 +87,13 @@
     });
   };
   const fitChineseLines = () => {
+    if (matchMedia('(max-width: 900px)').matches) {
+      document.querySelector('.team-copy-group').style.transform = '';
+      new Set([...document.querySelectorAll('.balanced-copy-line')].map(line => line.parentElement)).forEach(parent => {
+        if (parent.dataset.englishLayoutText) parent.textContent = parent.dataset.englishLayoutText;
+      });
+      return;
+    }
     alignTeamHeader();
     if (document.documentElement.lang === "en") {
       refineEnglish();
@@ -113,5 +120,6 @@
     records.forEach(({element, zh, en}) => { element.innerHTML = language === "en" ? en : zh; });
     document.fonts.ready.then(() => requestAnimationFrame(fitChineseLines));
   });
+  matchMedia('(max-width: 900px)').addEventListener('change', () => requestAnimationFrame(fitChineseLines));
   document.fonts.ready.then(() => requestAnimationFrame(fitChineseLines));
 })();

@@ -1,0 +1,82 @@
+/* Mobile uses normal document flow instead of scaling the desktop artboard. */
+.mobile-menu-toggle { display: none; }
+@media (max-width: 900px) {
+  html.home-redesign-root { overflow-x: visible; scroll-padding-top: 16px; }
+  body.home-redesign { width: 100%; min-width: 0; max-width: 100%; zoom: 1; margin: 0; left: 0; --team-copy-size: 17px; }
+  .home-redesign *, .home-redesign *::before, .home-redesign *::after { box-sizing: border-box; }
+  .home-redesign main { overflow: visible; }
+  .home-redesign .wenmai-topbar { position: relative; }
+  .wenmai-nav { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 12px; padding: 14px 18px; min-height: 0; }
+  .wenmai-brand { grid-column: 1 / -1; gap: 8px; }
+  .wenmai-institution-row { grid-template-columns: 52px minmax(0,1fr); gap: 12px; min-height: 40px; }
+  .wenmai-institution-row:first-child { min-height: 44px; }
+  .wenmai-college-emblem { width: 40px; height: 40px; }
+  .wenmai-museum-wordmark { width: 52px; height: 37px; }
+  .wenmai-institution-name, html[data-language="en"] .wenmai-institution-name { font-size: 14px; line-height: 1.55; white-space: normal; }
+  .mobile-menu-toggle { display: inline-flex; align-items: center; justify-content: space-between; gap: 20px; width: max-content; min-height: 44px; padding: 8px 14px; border: 1px solid #b9ad93; border-radius: 4px; color: #293d31; background: transparent; font: inherit; font-size: 16px; cursor: pointer; }
+  .mobile-menu-toggle::after { content: '+'; font-family: sans-serif; }
+  .mobile-menu-toggle[aria-expanded="true"]::after { content: '−'; }
+  .home-redesign .wenmai-topbar .home-language-toggle { grid-column: 2; grid-row: 2; width: 90px; min-height: 44px; height: auto; font-size: 14px; }
+  .wenmai-nav-links, html[data-language="en"] .wenmai-nav-links { display: none; grid-column: 1 / -1; gap: 4px 16px; font-size: 16px; }
+  .wenmai-nav-links.is-open { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); border-top: 1px solid #d9c39f; padding-top: 8px; }
+  .wenmai-nav-links a, .wenmai-nav-links .nav-pending { white-space: normal; min-height: 44px; padding: 10px 0; line-height: 1.5; }
+  .home-redesign .team-intro { width: 100%; container-type: normal; background: #303328; }
+  .home-redesign .home-header-frame { aspect-ratio: 2351 / 800; }
+  .home-redesign .home-header-frame .home-header-art { width: 100%; height: auto; }
+  .home-redesign .team-intro .hero-grid { position: static; width: 100%; max-width: 720px; margin: 0 auto; padding: 28px 22px 36px; transform: none; display: block; }
+  .home-redesign .team-intro .team-copy-group { position: static; width: 100%; transform: none !important; }
+  .home-redesign .team-intro .team-affiliation, html[data-language="en"] .home-redesign .team-affiliation { position: static; margin: 0 0 18px; font-size: 25px; line-height: 1.5; }
+  .home-redesign .team-intro .team-copy-group .hero-copy, html[data-language="en"] .home-redesign .team-intro .hero-copy { position: static; font-size: 18px; line-height: 1.9; width: 100%; max-width: none; text-align: left; text-wrap: pretty; margin: 0; }
+  .home-redesign .restoration-editorial { padding: 40px 0; margin: 0; min-height: 0; background-image: none; --restoration-body-size: 17px; --restoration-subtitle-size: 24px; scroll-margin-top: 16px; }
+  .home-redesign .research-section-rubbing.restoration-editorial { margin-top: 0; }
+  .home-redesign .restoration-editorial::after, .home-redesign .restoration-heading::after { content: none; }
+  .home-redesign .restoration-landscape-overlap, .home-redesign .carrier-landscape-foreground, .home-redesign .editorial-landscape-foreground, .home-redesign .paper-torn-transition { display: none; }
+  .home-redesign .restoration-shell { width: calc(100% - 40px); max-width: 720px; margin: 0 auto; }
+  .home-redesign .restoration-heading { padding: 0 0 20px; margin-bottom: 24px; }
+  .home-redesign .restoration-kicker { font-size: 14px; margin-bottom: 14px; }
+  .home-redesign .restoration-heading h2, html[data-language="en"] .home-redesign .restoration-heading h2 { font-size: 30px; line-height: 1.4; display: block; overflow-wrap: anywhere; }
+  .home-redesign .restoration-title-seal { display: inline-block; width: .8em; height: .8em; margin-left: .3em; transform: none; }
+  .home-redesign .restoration-editorial-grid, .home-redesign .phonology-editorial .restoration-editorial-grid { display: grid; grid-template-columns: minmax(0,1fr); grid-template-areas: 'introduction' 'showcase' 'publications'; gap: 28px; }
+  .home-redesign .restoration-editorial-grid > * { min-width: 0; }
+  .home-redesign .restoration-slogan, html[data-language="en"] .home-redesign .restoration-slogan { margin: 0 0 22px; font-size: 24px; line-height: 1.65; }
+  .home-redesign .restoration-slogan-rule::after { bottom: -6px; height: 2px; }
+  .home-redesign .restoration-description, html[data-language="en"] .home-redesign .characters-editorial .restoration-description { font-size: 17px; line-height: 1.9; width: 100%; max-width: none; text-wrap: pretty; }
+  .home-redesign .restoration-description br { display: none; }
+  .home-redesign .intro-line-primary, .home-redesign .intro-line-equal, .home-redesign .balanced-copy-line, .home-redesign .en-line-primary, .home-redesign .en-line-equal { display: inline; white-space: normal; width: auto; letter-spacing: normal !important; word-spacing: normal !important; }
+  .home-redesign .restoration-keywords { gap: 8px; margin-top: 18px; }
+  .home-redesign .restoration-keywords li, html[data-language="en"] .home-redesign .restoration-keywords li { font-size: 14px; padding: 6px 10px; }
+  .home-redesign .restoration-showcase { max-width: none; width: 100%; }
+  .home-redesign .restoration-examples { gap: 14px; }
+  .home-redesign .restoration-editorial .restore-pair-labels, .home-redesign .restoration-editorial .restore-pair-labels span { font-size: 13px; }
+  .home-redesign .restoration-caption, .home-redesign .restoration-interaction-note { font-size: 14px; line-height: 1.6; }
+  .home-redesign .restore-slider { min-height: 44px; }
+  .home-redesign .carrier-editorial-showcase .carrier-sample-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px 14px; }
+  .home-redesign .carrier-editorial-showcase .carrier-sample-media, .home-redesign .carrier-editorial-showcase .carrier-sample-media img { height: 140px; }
+  .home-redesign .carrier-editorial-showcase figcaption { font-size: 17px; margin-top: 8px; }
+  .home-redesign .restoration-editorial .topic-preview { padding: 24px 0 0; margin: 0; transform: none; width: 100%; }
+  .home-redesign .topic-preview h3 { font-size: 22px; margin: 0 0 14px; }
+  .home-redesign .topic-preview > p { font-size: 17px; line-height: 1.9; margin-bottom: 14px; }
+  .home-redesign .topic-more { font-size: 17px; min-height: 44px; gap: 24px; padding: 8px 0; }
+  .home-redesign .phonology-editorial .ph-demo-grid { grid-template-columns: minmax(0,1fr); gap: 20px; }
+  .home-redesign .phonology-editorial .ph-card { padding: 14px; }
+  .home-redesign .phonology-editorial .ph-card-head h3 { font-size: 18px; }
+  .home-redesign .phonology-editorial .ph-legend { font-size: 12px; gap: 10px; flex-wrap: wrap; }
+  .home-redesign .ph-graph-tools button, .home-redesign .ph-controls button { min-width: 44px; min-height: 44px; }
+  .home-redesign .editorial-coming-soon { min-height: 180px; padding: 24px; }
+  .home-redesign .editorial-coming-soon span { font-size: 24px; }
+  .home-redesign .editorial-coming-soon p { font-size: 17px; line-height: 1.8; }
+  .home-redesign .footer { padding: 26px 20px; font-size: 13px; line-height: 1.8; }
+  .home-redesign .footer .site-shell { width: 100%; max-width: 720px; margin: auto; }
+  html[data-language] .home-redesign .restoration-editorial { padding-top: 40px; padding-bottom: 40px; }
+  html[data-language] .home-redesign .restoration-editorial .restoration-description { width: 100%; max-width: none; font-size: 17px; }
+  html[data-language] .home-redesign .restoration-caption,
+  html[data-language] .home-redesign .restoration-interaction-note { font-size: 14px; }
+  .home-redesign .ph-graph-scroll { height: 340px; }
+  .home-redesign .editorial-coming-soon h3 { font-size: 26px; line-height: 1.5; margin: 18px 0; }
+  .home-redesign .carrier-lightbox { width: calc(100% - 24px); max-width: 600px; height: 88vh; height: 88dvh; padding: 14px; }
+  .home-redesign .carrier-lightbox-header { position: sticky; top: 0; background: #f8f7f1; font-size: 22px; }
+  .home-redesign .carrier-lightbox-close { min-width: 44px; min-height: 44px; }
+  .home-redesign .carrier-lightbox-images { grid-template-columns: minmax(0,1fr); height: auto; gap: 20px; }
+  .home-redesign .carrier-lightbox-images img { height: auto; max-height: 65vh; }
+
+}
