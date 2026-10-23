@@ -9,7 +9,7 @@
     navRestoration: "Damaged Document Restoration",
     navTranscription: "Multi-Carrier Historical Document Transcription",
     navStyleTransfer: "Font Style Transfer and Generation",
-    navPhonology: "Chinese Historical Phonology",
+    navPhonology: "Phonology Research",
     heroEyebrow: "Southeast University, School of Computer Science and Technology, School of Software, and School of Artificial Intelligence  Zhishan",
     siteName: "Zhishan AI",
     heroCopy: "At the intersection of artificial intelligence and the humanities, Zhishan explores new ways to reconnect cultural materials, historical experience, and traditions of knowledge. Across periods and media, we bring computational methods and humanistic interpretation into dialogue, making AI not only a tool for complex sources, but also a bridge to broader scholarship and new forms of cultural knowledge.",
@@ -17,7 +17,7 @@
     restorationTitle: "Damaged Document Restoration",
     transcriptionTitle: "Multi-Carrier Historical Document Transcription",
     styleTransferTitle: "Font Style Transfer and Generation",
-    phonologyTitle: "Chinese Historical Phonology",
+    phonologyTitle: "Phonology Research",
     direction01: "Research Area 01",
     direction02: "Research Area 02",
     direction03: "Research Area 03",
@@ -74,7 +74,7 @@
     paperResults: "Results",
     paperSensitivity: "Sensitivity",
     qyspdPaperTitle: "Resolving Inherited Ambiguity in Chinese Historical Phonology with Song Dynasty Corpus Evidence",
-    qyspdEyebrow: "QYSPD | Chinese Historical Phonology",
+    qyspdEyebrow: "QYSPD | Phonology Research",
     qyspdHero: "Combining internal evidence from the Guangyun with multi-genre Song-dynasty contexts, this study selects primary fanqie for polyphonic spellers and represents the resolution of inherited ambiguity through primary paths.",
     codeAndData: "Code & Data",
     backResearchArea: "Back to Research Area",
@@ -160,7 +160,7 @@
     "残损古籍修复研究 | 研究详情": "Damaged Document Restoration | Research",
     "多载体古籍转录研究 | 研究详情": "Multi-Carrier Document Transcription | Research",
     "字体风格迁移生成研究 | 研究详情": "Font Style Transfer and Generation | Research",
-    "中国古代音韵研究 | 研究详情": "Chinese Historical Phonology | Research"
+    "音韵学研究 | 研究详情": "Phonology Research | Research"
   };
   const originalTitle = document.title;
 
