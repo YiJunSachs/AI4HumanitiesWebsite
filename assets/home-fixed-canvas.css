@@ -5509,3 +5509,7 @@ html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "
   content: "↔"; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
   color: #fff8ec; font: 28px/1 Arial, sans-serif;
 }
+
+/* Emphasize the team heading above the Songti introduction. */
+.home-redesign .team-intro .team-affiliation { font-size: 64px; top: -56px; line-height: 1.35; }
+html[data-language="en"] .home-redesign .team-intro .team-affiliation { font-size: 48px; line-height: 1.35; }
