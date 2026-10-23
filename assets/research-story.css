@@ -120,3 +120,12 @@ html[lang="en"] .story-brand { font-family: Georgia, serif; font-size: 28px; }
   .dataset-facts span { font-size: 12px; }
   .method-stages li { padding-left: 36px; }
 }
+
+/* Keep touch targets and long publication titles readable on phones. */
+@media (max-width: 700px) {
+  .language-toggle, .back-home, .paper-direct { min-height: 44px; }
+  .back-home { display: inline-flex; align-items: center; }
+  .story-chapter > *, .story-publication { min-width: 0; }
+  .story-publication h3 { overflow-wrap: anywhere; }
+  .story-contents a { min-height: 44px; }
+}

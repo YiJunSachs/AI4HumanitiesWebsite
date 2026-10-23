@@ -12,7 +12,7 @@
 .member-name-en { margin: 5px 0 0; font: 14px/1.5 Georgia, serif; color: var(--muted); }
 .member-role { color: var(--accent); font-size: 14px; line-height: 1.7; margin: 16px 0 12px; }
 .member-bio { margin: 0 0 20px; font-size: 16px; line-height: 1.85; color: #505d52; }
-.member-homepage { display: inline-flex; align-items: center; margin-top: auto; padding: 10px 0; color: var(--accent); font-size: 15px; }
+.member-homepage { min-height: 44px; display: inline-flex; align-items: center; margin-top: auto; padding: 10px 0; color: var(--accent); font-size: 15px; }
 .member-homepage:hover { color: var(--ink); }
 .team-source-note { color: var(--muted); font-size: 13px; line-height: 1.8; margin: 0 0 38px; }
 html[lang="en"] .team-hero h1, html[lang="en"] .team-member h2 { font-family: Georgia, serif; }

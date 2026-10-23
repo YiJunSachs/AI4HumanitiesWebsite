@@ -9,6 +9,7 @@
   <link rel="preload" href="assets/figures/hanyi-xingkai.ttf" as="font" type="font/ttf" crossorigin>
   <script src="assets/js/home-viewport.js?v=20261022"></script>
   <link rel="stylesheet" href="assets/home-fixed-canvas.css?v=20261023-museum-logo">
+  <link rel="stylesheet" href="assets/home-mobile.css?v=20261023">
 </head>
 
 <body class="home-redesign">
@@ -25,7 +26,8 @@
           <span class="wenmai-institution-name" data-story-en="Nanjing University Museum">南京大学博物馆</span>
         </span>
       </a>
-      <div class="wenmai-nav-links">
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="home-navigation"><span data-story-en="Menu">导航</span></button>
+      <div class="wenmai-nav-links" id="home-navigation">
         <a href="#rubbing-restoration" data-story-en="Restoration">残损古籍修复</a>
         <a href="#multi-carrier-reading" data-story-en="Transcription">多载体古籍转录</a>
         <a href="#historical-phonology" data-story-en="Historical Phonology">中国古代音韵</a>
@@ -287,10 +289,11 @@
   </footer>
   <script src="assets/js/restoration-demo.js"></script>
   <script src="assets/js/phonology-demo.js"></script>
-  <script src="assets/js/home-i18n.js?v=20261022-team-name"></script>
+  <script src="assets/js/home-i18n.js?v=20261023-mobile"></script>
   <script src="assets/js/story-i18n.js?v=20261022-zhishan"></script>
   <script src="assets/js/i18n.js?v=20261022-school-name"></script>
   <script src="assets/js/carrier-lightbox.js?v=20261019-1"></script>
+  <script src="assets/js/home-mobile.js?v=20261023"></script>
 </body>
 
 </html>
