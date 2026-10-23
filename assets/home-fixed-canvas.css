@@ -5487,3 +5487,9 @@ html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "
 
 /* Advisory page is planned; keep its navigation label non-interactive. */
 .wenmai-nav-links .nav-pending { white-space: nowrap; padding: 12px 0; border-bottom: 2px solid transparent; color: #758074; cursor: default; }
+
+/* Give the introduction the space previously occupied by the directory. */
+.home-redesign .team-intro .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
+.home-redesign .team-intro .team-copy-group { left: 0; width: 1800px; max-width: 100%; margin: 0 auto; }
+.home-redesign .team-intro .team-affiliation,
+.home-redesign .team-intro .team-copy-group .hero-copy { left: 0; }
