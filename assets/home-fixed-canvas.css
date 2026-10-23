@@ -5497,7 +5497,7 @@ html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "
 .wenmai-center-emblem { display: block; width: 72px; height: 72px; object-fit: contain; mix-blend-mode: multiply; }
 
 /* Place the two Nanjing University institutions on the same line. */
-.wenmai-partner-row { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); align-items: center; gap: 28px; }
+.wenmai-partner-row { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: center; gap: 20px; }
 .wenmai-partner-row .wenmai-institution-row { min-width: 0; }
 .wenmai-partner-row .wenmai-institution-row:last-child { grid-template-columns: 72px minmax(0, 1fr); }
 .wenmai-partner-row .wenmai-institution-name { white-space: normal; }
