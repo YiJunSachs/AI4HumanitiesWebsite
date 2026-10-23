@@ -5457,7 +5457,7 @@ body.home-redesign {
 }
 .wenmai-institution-row {
   display: grid;
-  grid-template-columns: 96px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 96px;
   align-items: center;
   gap: 18px;
   min-height: 44px;
@@ -5498,8 +5498,8 @@ html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "
 
 /* Place the two Nanjing University institutions on the same line. */
 .wenmai-partner-row { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: center; gap: 20px; }
-.wenmai-partner-row .wenmai-institution-row { min-width: 0; }
-.wenmai-partner-row .wenmai-institution-row:last-child { grid-template-columns: 72px minmax(0, 1fr); }
+.wenmai-partner-row .wenmai-institution-row { min-width: 0; grid-template-columns: minmax(0, 1fr) 120px; }
+.wenmai-partner-row .wenmai-institution-row:last-child { grid-template-columns: minmax(0, 1fr) 72px; }
 .wenmai-partner-row .wenmai-institution-name { white-space: normal; }
 .home-redesign .wenmai-topbar .home-language-toggle { font-size: 21px; }
 
