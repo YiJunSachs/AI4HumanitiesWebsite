@@ -5465,7 +5465,7 @@ body.home-redesign {
 .wenmai-institution-row:first-child { min-height: 72px; }
 .wenmai-institution-mark { display: flex; align-items: center; justify-content: center; }
 .wenmai-college-emblem { width: 72px; height: 72px; object-fit: contain; }
-.wenmai-museum-wordmark { width: 164px; height: auto; object-fit: contain; filter: brightness(.6) contrast(6); mix-blend-mode: multiply; }
+.wenmai-museum-wordmark { display: block; width: 120px; height: 85px; object-fit: contain; }
 .wenmai-institution-name { font-size: 26px; line-height: 1.5; white-space: nowrap; }
 html[data-language="en"] .wenmai-institution-name { font-size: 23px; line-height: 1.45; white-space: normal; text-wrap: pretty; }
 .wenmai-nav-links { display: flex; align-items: center; gap: 30px; font-size: 25px; }
