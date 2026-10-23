@@ -5496,7 +5496,7 @@ html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "
 .wenmai-center-emblem { display: block; width: 72px; height: 72px; object-fit: contain; mix-blend-mode: multiply; }
 
 /* Place the two Nanjing University institutions on the same line. */
-.wenmai-partner-row { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: center; gap: 20px; }
+.wenmai-partner-row { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: center; gap: 36px; }
 .wenmai-partner-row .wenmai-institution-row { min-width: 0; }
 .wenmai-partner-row .wenmai-institution-name { white-space: normal; }
 .home-redesign .wenmai-topbar .home-language-toggle { font-size: 21px; }
@@ -5511,5 +5511,5 @@ html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "
 }
 
 /* Emphasize the team heading above the Songti introduction. */
-.home-redesign .team-intro .team-affiliation { font-size: 64px; top: -56px; line-height: 1.35; }
+.home-redesign .team-intro .team-affiliation { font-size: 88px; top: -56px; line-height: 1.35; }
 html[data-language="en"] .home-redesign .team-intro .team-affiliation { font-size: 48px; line-height: 1.35; }
