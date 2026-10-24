@@ -12,18 +12,7 @@
   display: block; width: 100%; height: 100%; min-height: 0; object-fit: contain;
   mix-blend-mode: multiply; user-select: none; -webkit-user-drag: none;
 }
-.home-header-frame .signature-credit {
-  position: absolute; left: 90%; bottom: 9%; writing-mode: vertical-rl;
-  text-orientation: upright; white-space: nowrap; color: #733729;
-  font: 400 22px/1.15 "Songti SC", SimSun, serif;
-}
-html[data-language="en"] .home-header-frame .signature-credit {
-  writing-mode: horizontal-tb; left: 100%; width: 8em; white-space: normal;
-  font-size: 18px; line-height: 1.3; letter-spacing: .03em;
-}
 @media (max-width: 900px) {
   /* The mobile masthead crops the original artboard to 2351 × 800. */
   .signature-widget { height: 75.3%; }
-  .home-header-frame .signature-credit { font-size: 11px; bottom: 5%; }
-  html[data-language="en"] .home-header-frame .signature-credit { font-size: 9px; }
 }
