@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="assets/home-fixed-canvas.css?v=20261023-partner-gap-wide">
   <link rel="stylesheet" href="assets/home-mobile.css?v=20261023-partner-gap-wide">
   <link rel="stylesheet" href="assets/body-songti.css?v=20261023-hierarchy">
-  <link rel="stylesheet" href="assets/zhishan-calligraphy.css?v=20261023-4">
+  <link rel="stylesheet" href="assets/zhishan-calligraphy.css?v=20261024-wang-xizhi">
 </head>
 
 <body class="home-redesign">
@@ -54,10 +54,12 @@
       <div class="home-header-frame">
         <img class="home-header-art" src="assets/figures/zhishan-lanting-header.svg?v=20261023-4" width="2351" height="1382"
           alt="智缮与王羲之《兰亭集序》神龙本书法背景" fetchpriority="high">
-        <div class="signature-widget" data-calligraphy>
-          <button class="signature-toggle" type="button" aria-label="切换智缮的书法家与书体" aria-haspopup="dialog" aria-controls="calligraphy-dialog"><canvas width="420" height="760" aria-hidden="true"></canvas></button>
-          <button class="signature-credit" type="button" data-calligraphy-credit aria-label="切换到下一种书体" aria-live="polite"></button>
-          <span class="signature-hint">切换书体 ↗</span>
+        <div class="signature-widget">
+          <div class="signature-glyphs">
+            <img src="assets/figures/智.jpg" alt="智" width="256" height="256" fetchpriority="high" draggable="false">
+            <img src="assets/figures/缮.jpg" alt="缮" width="256" height="256" fetchpriority="high" draggable="false">
+          </div>
+          <span class="signature-credit" data-story-en="Wang Xizhi · Regular script">王羲之楷体</span>
         </div>
       </div>
       <div class="site-shell hero-grid">
@@ -301,17 +303,6 @@
   <script src="assets/js/i18n.js?v=20261024-research-labels"></script>
   <script src="assets/js/carrier-lightbox.js?v=20261019-1"></script>
   <script src="assets/js/home-mobile.js?v=20261023"></script>
-  <dialog class="calligraphy-dialog" id="calligraphy-dialog" aria-labelledby="calligraphy-title" aria-describedby="calligraphy-note">
-    <header><h2 id="calligraphy-title">智缮书法工坊</h2><button class="calligraphy-close" type="button" aria-label="关闭">×</button></header>
-    <p data-calligraphy-intro>选择书法家，为智缮生成不同的题字。</p>
-    <label for="calligraphy-style">书法家与书体<select id="calligraphy-style"><option value="mashanzheng">马善政 · 楷书</option><option value="zhimangxing">魏志莽 · 行书</option><option value="liujianmaocao">刘正江 · 草书</option></select></label>
-    <canvas class="calligraphy-preview" width="420" height="760" role="img" aria-label="智缮书法题字预览"></canvas>
-    <p class="calligraphy-attribution" data-calligraphy-author></p>
-    <p class="calligraphy-status" data-calligraphy-status role="status" aria-live="polite"></p>
-    <div class="calligraphy-actions"><button type="button" data-calligraphy-apply disabled>生成并应用</button><button type="button" data-calligraphy-download disabled>下载透明 PNG</button></div>
-    <p class="calligraphy-source" id="calligraphy-note"><span data-calligraphy-note>由授权字体在浏览器本地生成，非书法家亲笔原作或在线模型推理。</span> <a data-calligraphy-source href="https://github.com/googlefonts/mashanzheng" target="_blank" rel="noopener noreferrer">字体来源与授权</a></p>
-  </dialog>
-  <script src="assets/js/zhishan-calligraphy.js?v=20261023-4"></script>
 </body>
 
 </html>
