@@ -1,10 +1,10 @@
-/* Three profile cards per row; each card pairs a portrait with its biography. */
-.team-page .story-shell { width: min(1600px, calc(100% - 64px)); }
+/* One profile card per row, with portrait and biography side by side. */
+.team-page .story-shell { width: min(1120px, calc(100% - 64px)); }
 .team-hero { padding: 48px 0 36px; border-bottom: 1px solid var(--line); }
 .team-hero h1 { font-family: "Zhishan Calligraphy", "Songti SC", serif; font-synthesis: none; margin: 16px 0; }
 .team-lead { color: var(--muted); font-size: 18px; line-height: 1.8; margin: 0; }
-.team-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 36px 0; }
-.team-member { display: grid; grid-template-columns: clamp(92px, 8vw, 120px) minmax(0, 1fr); gap: 20px; align-items: start; padding: 24px; background: #fffdf6; border: 1px solid #d9ddcf; }
+.team-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; margin: 36px 0; }
+.team-member { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 32px; align-items: start; padding: 32px; background: #fffdf6; border: 1px solid #d9ddcf; }
 .member-portrait { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; margin: 0; }
 .member-details { display: flex; flex-direction: column; align-items: flex-start; align-self: stretch; min-width: 0; overflow-wrap: anywhere; }
 .portrait-placeholder { background: #f2f0e7; border: 1px solid #e5e3d8; }
@@ -19,8 +19,8 @@ html[lang="en"] .team-hero h1, html[lang="en"] .team-member h2 { font-family: Ge
 html[lang="en"] .team-member h2 { font-size: 24px; }
 html[lang="en"] .member-name-en { display: none; }
 @media (max-width: 1199px) {
-  .team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-  .team-member { grid-template-columns: 92px minmax(0, 1fr); gap: 18px; padding: 20px; }
+  .team-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .team-member { grid-template-columns: 140px minmax(0, 1fr); gap: 24px; padding: 24px; }
 }
 @media (max-width: 759px) {
   .team-page .story-shell { width: calc(100% - 40px); }

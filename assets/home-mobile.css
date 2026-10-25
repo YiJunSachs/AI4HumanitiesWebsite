@@ -93,3 +93,8 @@
   .wenmai-partner-row { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .wenmai-partner-row .wenmai-institution-row:last-child { grid-template-columns: minmax(0, 1fr) 52px; }
 }
+
+@media (max-width: 900px) {
+  html[data-language="en"] .wenmai-partner-row { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  html[data-language="en"] .wenmai-institution-name { text-wrap: balance; }
+}

@@ -5513,3 +5513,16 @@ html[data-language="en"] .home-redesign .wenmai-topbar { font-family: Georgia, "
 /* Emphasize the team heading above the Songti introduction. */
 .home-redesign .team-intro .team-affiliation { font-size: 88px; top: -56px; line-height: 1.35; }
 html[data-language="en"] .home-redesign .team-intro .team-affiliation { font-size: 48px; line-height: 1.35; }
+
+/* Give full English institution names their own rows above navigation. */
+@media (min-width: 901px) {
+  html[data-language="en"] .wenmai-nav {
+    display: grid; grid-template-columns: minmax(0, 1fr) 120px; gap: 12px 32px;
+  }
+  html[data-language="en"] .wenmai-brand { grid-column: 1 / -1; }
+  html[data-language="en"] .wenmai-institution-name { white-space: nowrap; }
+  html[data-language="en"] .wenmai-partner-row { grid-template-columns: max-content max-content; }
+  html[data-language="en"] .wenmai-nav-links { grid-column: 1; grid-row: 2; gap: 30px; }
+  html[data-language="en"] .home-redesign .wenmai-topbar .home-language-toggle { grid-column: 2; grid-row: 2; }
+  html[data-language="en"] .home-redesign .research-section { scroll-margin-top: 340px; }
+}
