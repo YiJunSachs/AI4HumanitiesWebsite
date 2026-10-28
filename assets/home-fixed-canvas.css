@@ -5522,3 +5522,7 @@ html[data-language="en"] .home-redesign .team-intro .team-affiliation { font-siz
   html[data-language="en"] .wenmai-nav-links { font-size: 20px; gap: 16px; }
   html[data-language="en"] .home-redesign .wenmai-topbar .home-language-toggle { flex-basis: 100px; font-size: 18px; }
 }
+
+/* Preserve the two-paragraph structure of the team introduction. */
+.home-redesign .team-intro .hero-copy > p { margin: 0; font-size: inherit; line-height: inherit; }
+.home-redesign .team-intro .hero-copy > p + p { margin-top: .75em; }
