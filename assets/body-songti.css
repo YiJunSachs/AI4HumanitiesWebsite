@@ -117,7 +117,7 @@ html[lang="en"][data-language="en"] body
  html[data-language] body.home-redesign .restoration-heading h2{font-size:88px}
  html[data-language="en"] body.home-redesign .restoration-heading h2{font-size:62px}
  html[data-language] body.home-redesign :is(.restoration-slogan,.topic-preview>h3){font-size:44px;font-weight:400;line-height:1.5}
- html[data-language] body.home-redesign :is(.restoration-description,.topic-preview>p,.topic-more,.restoration-keywords li){font-size:33px;line-height:1.9}
+ html[data-language] body.home-redesign .restoration-editorial :is(.restoration-description,.topic-preview>p,.topic-more,.restoration-keywords li){font-size:33px;line-height:1.9}
  html:not([data-language="en"]) body.home-redesign :is(.restoration-description,.topic-preview>p){width:100%;max-width:none;text-wrap:pretty}
  html:not([data-language="en"]) body.home-redesign .restoration-description br{display:none}
  html:not([data-language="en"]) body.home-redesign .restoration-description :is(.intro-line-primary,.intro-line-equal){display:inline!important;width:auto!important;white-space:normal!important;letter-spacing:normal!important}
@@ -126,6 +126,6 @@ html[lang="en"][data-language="en"] body
 @media(max-width:900px){
  html[data-language] body.home-redesign .restoration-heading h2{font-size:34px}
  html[data-language] body.home-redesign :is(.restoration-slogan,.topic-preview>h3){font-size:26px;line-height:1.5}
- html[data-language] body.home-redesign :is(.restoration-description,.topic-preview>p,.topic-more,.restoration-keywords li){font-size:16px;line-height:1.9}
+ html[data-language] body.home-redesign .restoration-editorial :is(.restoration-description,.topic-preview>p,.topic-more,.restoration-keywords li){font-size:16px;line-height:1.9}
  html:not([data-language="en"]) body.home-redesign :is(.restoration-description,.topic-preview>p){text-wrap:pretty}
 }@media(min-width:901px){html:not([data-language="en"]) body.home-redesign .carrier-editorial .topic-preview>p{width:calc(100% + 4em);max-width:none}}
