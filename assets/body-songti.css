@@ -100,3 +100,15 @@ html[data-language="en"] body.home-redesign .team-intro .hero-copy * {
     mask-repeat: no-repeat;
   }
 }
+/* English reading text uses Oblata; navigation and headings keep their own type. */
+@font-face {
+  font-family: "Oblata Reading";
+  src: url("fonts/navigation/oblata-display.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+html[lang="en"][data-language="en"] body
+  *:not(.unified-header, .unified-header *, nav, nav *, h1, h1 *, h2, h2 *, h3, h3 *, h4, h4 *, h5, h5 *, h6, h6 *, [role="heading"], [role="heading"] *):not([data-preserve-font]):not(:has(h1, h2, h3, h4, h5, h6, [role="heading"])) {
+  font-family: "Oblata Reading", Georgia, serif !important;
+}
