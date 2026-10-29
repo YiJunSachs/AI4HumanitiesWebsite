@@ -129,3 +129,8 @@ html[lang="en"][data-language="en"] body
  html[data-language] body.home-redesign .restoration-editorial :is(.restoration-description,.topic-preview>p,.topic-more,.restoration-keywords li){font-size:16px;line-height:1.9}
  html:not([data-language="en"]) body.home-redesign :is(.restoration-description,.topic-preview>p){text-wrap:pretty}
 }@media(min-width:901px){html:not([data-language="en"]) body.home-redesign .carrier-editorial .topic-preview>p{width:calc(100% + 4em);max-width:none}}
+/* Keep every decorative area number fully above the heading rule. */
+@media(min-width:901px){
+ .home-redesign .restoration-heading{min-height:320px;padding-top:80px;display:flex;flex-direction:column;justify-content:flex-end}
+ .home-redesign .restoration-heading::after{bottom:24px}
+}
