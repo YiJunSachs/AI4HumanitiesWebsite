@@ -1,5 +1,5 @@
 @font-face{font-family:"Unified Hanyi";src:url("figures/hanyi-xingkai.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
-@font-face{font-family:"Unified English Script";src:url("fonts/team/emotional-rescue.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Unified English Script";src:url("fonts/navigation/oblata-display.otf") format("opentype");font-style:normal;font-weight:400;font-display:swap}
 @font-face{font-family:"Unified English Navigation";src:url("fonts/navigation/helvetica-rounded-bold.otf") format("opentype");font-style:normal;font-weight:700;font-display:swap}
 html body .unified-header{--nav-green:#852f25;position:sticky;top:0;z-index:200;display:block;width:100%;max-width:none;margin:0;padding:0;border:0;border-top:6px solid var(--nav-green);background:#f7f0df;color:#243c34;box-sizing:border-box;box-shadow:none}
 .unified-header *{box-sizing:border-box}
