@@ -34,3 +34,16 @@ html body a:not(.story-brand):not(h1 a, h2 a, h3 a, h4 a, h5 a, h6 a) {
   html:not([data-language="en"]) .home-redesign .wenmai-institution-name { font-size: 15px; }
   html:not([data-language="en"]) .home-redesign .wenmai-nav-links { font-size: 17px; }
 }
+/* Supplied rounded font is confined to the English homepage navigation. */
+@font-face {
+  font-family: "Helvetica Rounded Navigation";
+  src: url("fonts/navigation/helvetica-rounded-bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+html[data-language="en"] body.home-redesign .wenmai-topbar,
+html[data-language="en"] body.home-redesign .wenmai-topbar :is(a, span, button) {
+  font-family: "Helvetica Rounded Navigation", Arial, sans-serif !important;
+  font-weight: 700;
+}
