@@ -4,13 +4,13 @@
   const storageKey = "wenmai-language";
   const english = {
     navLabel: "Primary navigation",
-    brand: "Southeast University, School of Computer Science and Technology, School of Software, and School of Artificial Intelligence  Zhishan",
+    brand: "School of Artificial Intelligence, Southeast University  Zhishan",
     home: "Home",
     navRestoration: "Intelligent Rubbing Restoration",
     navTranscription: "Multi-Source Collation of Ancient Texts",
     navStyleTransfer: "Calligraphic Style Imitation",
     navPhonology: "Digital and Intelligent Phonology",
-    heroEyebrow: "Southeast University, School of Computer Science and Technology, School of Software, and School of Artificial Intelligence  Zhishan",
+    heroEyebrow: "School of Artificial Intelligence, Southeast University  Zhishan",
     siteName: "Zhishan AI",
     heroCopy: "The Zhishan team advances interdisciplinary innovation between artificial intelligence and the humanities. Working with traditional cultural materials such as inscription rubbings, ancient texts, historical phonology, and calligraphy, we study intelligent recognition, restoration, organization, analysis, and reconstruction. Beginning with AI-assisted restoration of inscription rubbings, we explore how multimodal large models, self-evolving agents, and other AI methods can support humanities research.",
     heroCopySecond: "We integrate intelligent technologies with humanistic methods, grounding our work in authentic historical contexts. Our research connects multimodal document analysis, critical inquiry into historical knowledge, and humanistic and aesthetic interpretation to deepen our understanding of history and culture and advance cultural heritage preservation and innovative approaches to its transmission.",
@@ -152,7 +152,7 @@
     scopeOpenQuestions: "Scope and Open Questions",
     scopeSummary1: "The findings are scoped to the Guangyun system and the Song-dynasty written corpus collected in this study. Models perform contextual sense selection, while primary fanqie are inferred through dictionary sense–fanqie pairings.",
     scopeSummary2: "Thirty C4 characters exhibit sense collisions and require evidence from additional dictionaries or phonological sources. Twelve rare C5 characters occur fewer than 20 times each in the selected corpus and require broader textual coverage.",
-    footer: "© Southeast University, School of Computer Science and Technology, School of Software, and School of Artificial Intelligence  Zhishan"
+    footer: "© School of Artificial Intelligence, Southeast University  Zhishan"
   };
 
   const titleEnglish = {
