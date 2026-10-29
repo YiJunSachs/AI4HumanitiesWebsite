@@ -47,3 +47,56 @@ html[data-language="en"] body.home-redesign .wenmai-topbar :is(a, span, button) 
   font-family: "Helvetica Rounded Navigation", Arial, sans-serif !important;
   font-weight: 700;
 }
+/* Team introduction: wider Chinese measure and the selected English pairing. */
+@font-face {
+  font-family: "Zhishan Emotional Rescue";
+  src: url("fonts/team/emotional-rescue.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+html[data-language="en"] body.home-redesign .team-intro .team-affiliation {
+  font-family: "Zhishan Emotional Rescue", cursive !important;
+  font-weight: 400;
+  font-synthesis: none;
+  font-size: 64px;
+  letter-spacing: .025em;
+}
+html[data-language="en"] body.home-redesign .team-intro .hero-copy,
+html[data-language="en"] body.home-redesign .team-intro .hero-copy * {
+  font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+  font-weight: 400;
+}
+@media (min-width: 901px) {
+  html:not([data-language="en"]) body.home-redesign .team-intro .team-copy-group {
+    left: calc(var(--team-copy-size) * -3);
+  }
+  html:not([data-language="en"]) body.home-redesign .team-intro .team-copy-group .hero-copy {
+    width: 1900px;
+    max-width: none;
+    text-align: justify;
+    text-wrap: wrap;
+  }
+  html:not([data-language="en"]) body.home-redesign .team-intro .hero-copy > p:first-child {
+    text-wrap: balance;
+  }
+}
+@media (max-width: 900px) {
+  html[data-language="en"] body.home-redesign .team-intro .team-affiliation {
+    font-size: 44px;
+  }
+}
+/* Reveal the source artwork's transparent, uneven lower edge over the next section. */
+@media (min-width: 901px) {
+  .home-redesign .phonology-editorial {
+    margin-bottom: -90px;
+    -webkit-mask-image: linear-gradient(#000, #000), url("figures/phonology-landscape-palelavender.png");
+    mask-image: linear-gradient(#000, #000), url("figures/phonology-landscape-palelavender.png");
+    -webkit-mask-size: 100% calc(100% - 84px), 100% auto;
+    mask-size: 100% calc(100% - 84px), 100% auto;
+    -webkit-mask-position: center top, center bottom;
+    mask-position: center top, center bottom;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+  }
+}
