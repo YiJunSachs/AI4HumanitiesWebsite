@@ -1,0 +1,27 @@
+@font-face{font-family:"Unified Hanyi";src:url("figures/hanyi-xingkai.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Unified English Script";src:url("fonts/team/emotional-rescue.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Unified English Navigation";src:url("fonts/navigation/helvetica-rounded-bold.otf") format("opentype");font-style:normal;font-weight:700;font-display:swap}
+html body .unified-header{--nav-green:#052228;position:sticky;top:0;z-index:200;display:block;width:100%;max-width:none;margin:0;padding:0;border:0;border-top:3px solid var(--nav-green);background:#f7f0df;color:#243c34;box-sizing:border-box;box-shadow:none}
+.unified-header *{box-sizing:border-box}
+.unified-identities{display:flex;align-items:center;justify-content:space-between;gap:30px;min-height:130px;padding:24px 48px;overflow-x:auto;scrollbar-width:thin}
+.unified-identity{display:flex;align-items:center;flex:0 0 auto;gap:14px;text-decoration:none;color:inherit}
+.unified-identity img{display:block;flex:none;object-fit:contain;width:64px;height:64px;max-width:none}
+.unified-identity .unified-museum{width:108px;height:68px}
+html body .unified-header .unified-unit-name{white-space:nowrap;font-family:"Unified Hanyi",serif!important;font-size:clamp(19px,1.55vw,30px);font-weight:400;line-height:1.4;letter-spacing:0}
+html[data-language="en"] body .unified-header .unified-unit-name{font-family:"Unified English Script",cursive!important;font-size:clamp(24px,1.9vw,38px);font-weight:400;letter-spacing:.015em}
+.unified-nav-bar{display:flex;align-items:center;gap:28px;min-height:72px;padding:0 48px;background:var(--nav-green);color:#fff7e7}
+.unified-links{display:flex;align-items:center;justify-content:space-between;flex:1;min-width:0;gap:24px;overflow-x:auto;scrollbar-width:thin}
+html body .unified-header .unified-nav-link{display:block;position:relative;flex:0 0 auto;white-space:nowrap;margin:0;padding:24px 0 21px;border:0;text-decoration:none;color:#fff7e7;font-family:var(--body-songti,SimSun,serif)!important;font-size:clamp(15px,1.25vw,25px);font-weight:400;line-height:1.4}
+.unified-nav-link::after{content:"";position:absolute;bottom:10px;left:25%;right:25%;height:2px;background:currentColor;transform:scaleX(0);transition:transform .15s}
+.unified-nav-link:hover::after,.unified-nav-link[aria-current]::after{transform:scaleX(1)}
+.unified-nav-link[aria-disabled="true"]{opacity:.65;cursor:default}
+html[data-language="en"] body .unified-header .unified-nav-link{font-family:"Unified English Navigation",Arial,sans-serif!important;font-weight:700;font-size:clamp(14px,1.05vw,22px)}
+html body .unified-header .unified-language{position:static;display:flex;align-items:center;justify-content:center;flex:none;gap:0;width:auto;min-width:90px;height:auto;margin:0;padding:4px;border:1px solid #fff7e755;border-radius:3px;background:transparent;color:#fff7e7;box-shadow:none;transform:none;font-size:16px;cursor:pointer}
+.unified-language span{display:block;min-width:36px;padding:8px 9px;line-height:1.2;color:inherit}
+.unified-language [data-language-option].is-active,
+html:not([data-language="en"]) .unified-language [data-language-option="zh"],
+html[data-language="en"] .unified-language [data-language-option="en"]{background:#f7f0df;color:#052228;border-radius:2px}
+.unified-header a:focus-visible,.unified-header button:focus-visible{outline:2px solid #c3a568;outline-offset:4px}
+@media(min-width:901px){body.home-redesign .unified-unit-name{font-size:32px!important}html[data-language="en"] body.home-redesign .unified-unit-name{font-size:38px!important}body.home-redesign .unified-nav-link{font-size:27px!important}html[data-language="en"] body.home-redesign .unified-nav-link{font-size:24px!important}body.home-redesign .unified-nav-bar{min-height:88px}body.home-redesign .unified-identities{min-height:150px}}
+@media(max-width:1100px){.unified-identities{gap:24px;padding:18px 24px;min-height:108px}.unified-identity img{width:48px;height:48px}.unified-identity .unified-museum{width:80px;height:54px}.unified-nav-bar{padding:0 24px;gap:20px}.unified-links{gap:24px}.unified-identity{gap:10px}}
+@media(max-width:900px){html body .unified-header{position:relative}.unified-identities{padding:16px 20px;min-height:100px;justify-content:flex-start;gap:28px}.unified-nav-bar{padding:0 16px;gap:16px;min-height:66px}.unified-links{justify-content:flex-start;gap:24px}html body .unified-header .unified-unit-name{font-size:22px}html[data-language="en"] body .unified-header .unified-unit-name{font-size:28px}html body .unified-header .unified-nav-link{font-size:16px;padding:22px 0}html body .unified-header .unified-language{font-size:13px;min-width:70px}.unified-language span{min-width:28px;padding:7px}.unified-identity img{width:48px;height:48px}}
