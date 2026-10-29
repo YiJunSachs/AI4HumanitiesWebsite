@@ -1,0 +1,26 @@
+/* One desktop artboard contains both the shared navigation and page content. */
+@media(min-width:901px){
+ html:has(body.site-canvas){overflow-x:clip}
+ body.site-canvas:not(.home-redesign){width:2351px;min-width:0;max-width:none;position:relative;left:50%;margin:0 0 0 -1175.5px;padding:0;transform:none;zoom:var(--home-canvas-scale,.8)}
+ body.site-canvas:not(.home-redesign) .story-shell,
+ body.site-canvas.paper-editorial .site-shell{width:calc(100% - 160px);max-width:none;margin-inline:auto}
+ body.site-canvas .story-hero{max-width:none}
+ body.site-canvas .story-lead{max-width:1800px;font-size:30px}
+ body.site-canvas .story-chapter{grid-template-columns:160px minmax(0,1fr);gap:56px}
+ body.site-canvas .story-chapter p{max-width:none;font-size:28px}
+ body.site-canvas .story-chapter h2{font-size:48px}
+ body.site-canvas .story-hero h1{font-size:76px}
+ body.site-canvas .story-contents a{font-size:24px}
+ body.site-canvas .story-contents a>span:first-child{font-size:20px}
+ body.site-canvas .story-challenges li{font-size:26px}
+ body.site-canvas .method-stages p{font-size:26px}
+ body.site-canvas .team-hero h1{font-size:76px}
+ body.site-canvas .team-lead{font-size:30px;max-width:none}
+ body.site-canvas .team-member{grid-template-columns:240px minmax(0,1fr);padding:42px;gap:40px}
+ body.site-canvas .member-portrait{width:240px;height:320px}
+ body.site-canvas .team-member h2,html[lang="en"] body.site-canvas .team-member h2{font-size:44px}
+ body.site-canvas .member-bio{font-size:27px;max-width:none}
+ body.site-canvas .member-role,body.site-canvas .member-homepage{font-size:24px}
+ body.site-canvas .member-name-en{font-size:23px}
+ body.site-canvas .story-eyebrow{font-size:21px}
+}
