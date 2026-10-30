@@ -1,8 +1,8 @@
 /* Quiet warm-gray editorial palette, contour dividers and restrained English type. */
-:root{--quiet-gray-1:#f0efeb;--quiet-gray-2:#e7e6e2;--quiet-gray-3:#dedbd5;--quiet-gray-4:#d4d0c9;--quiet-ink:#353b34;--quiet-accent:#867b6c;--quiet-stroke:2px}
+:root{--quiet-gray-1:#f0efeb;--quiet-gray-2:#e7e6e2;--quiet-gray-3:#dedbd5;--quiet-gray-4:#e8e5df;--quiet-ink:#353b34;--quiet-accent:#867b6c;--quiet-stroke:2px}
 @font-face{font-family:"Zhishan Formal Hand";src:url("fonts/team/kalam-regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 body{background-color:var(--quiet-gray-1)}
-html body.home-redesign .team-intro{background:#676459;isolation:isolate}
+html body.home-redesign .team-intro{background:#716254;isolation:isolate}
 html body.home-redesign .team-intro .home-header-frame{height:800px;aspect-ratio:auto;overflow:hidden}
 html body.home-redesign .team-intro .home-header-art{width:100%;height:auto;transform:none}
 html body.home-redesign .team-intro .signature-widget{height:75.3%;background:#d0d0c7}
@@ -34,7 +34,7 @@ html body.home-redesign .ph-controls{border-color:#c5c0b6}
 html body.home-redesign .editorial-coming-soon{border-color:#aaa69b;color:#5d6258;background:rgba(255,255,255,.16)}
 html body main :is(h3,h4){text-decoration:none}
 html body main :is(h3,h4)::after,html body .restoration-slogan-rule::after{content:none!important;display:none!important}
-html body main :is(h3,h4)::before,html body .story-chapter h2::before,html body.paper-editorial main h2::before{content:"";display:inline-block;position:static;width:.13em;height:.82em;margin-right:.38em;background:#8b7c69;vertical-align:-.06em;flex:0 0 auto}
+html body main :is(h3,h4)::before,html body .story-chapter h2::before,html body.paper-editorial main h2::before{content:"";display:inline-block;position:static;width:.26em;height:.82em;margin-right:.38em;background:#8b7c69;vertical-align:text-bottom;flex:0 0 auto}
 html body.home-redesign .restoration-slogan-rule{position:static;border:0;text-decoration:none}
 html[lang="en"][data-language="en"] body.home-redesign :is(.restore-pair-labels,.restore-pair-labels span,.restoration-caption,.caption-index,.caption-description,.restoration-interaction-note,.carrier-editorial-showcase figcaption){font-family:Georgia,"Times New Roman",serif!important;font-size:33px;font-weight:400;line-height:1.6}
 html[lang="en"][data-language="en"] body.home-redesign .restoration-interaction-note{white-space:normal;text-wrap:pretty;text-align:center}
@@ -62,3 +62,8 @@ html[data-language="en"] body.site-canvas .unified-header .unified-nav-link{font
 html body.home-redesign :is(.research-section-rubbing,.phonology-editorial)::before{content:"";display:block;position:absolute;top:auto;left:40%;bottom:165px;width:72px;height:72px;border-radius:50%;background:linear-gradient(to bottom,#bb6248 0%,#c87c57 45%,rgba(200,124,87,0) 100%);opacity:.7;pointer-events:none;z-index:2;transform:none;clip-path:none;mask:none}
 html body.home-redesign .phonology-editorial::before{left:57%}
 @media(max-width:900px){html body.home-redesign :is(.research-section-rubbing,.phonology-editorial)::before{width:34px;height:34px;bottom:82px}}
+/* Compact left-side area numerals replace both the old label and right watermark. */
+html body.home-redesign .restoration-heading::after{content:none!important;display:none!important}
+html[data-language] body.home-redesign .restoration-heading{min-height:240px;padding-top:20px}
+html[data-language] body.home-redesign .restoration-kicker{font-family:Georgia,"Times New Roman",serif!important;font-size:104px!important;font-style:italic;font-weight:900;line-height:.92;letter-spacing:0;color:rgba(93,87,77,.32);padding:0;margin:0 0 16px}
+@media(max-width:900px){html[data-language] body.home-redesign .restoration-heading{min-height:0;padding-top:0}html[data-language] body.home-redesign .restoration-kicker{font-size:54px!important;margin-bottom:12px}}
