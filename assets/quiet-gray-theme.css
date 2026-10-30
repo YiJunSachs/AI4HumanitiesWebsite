@@ -102,3 +102,10 @@ html body.home-redesign .research-section.restoration-editorial{z-index:auto}
 @keyframes research-plant-drift{from{transform:rotate(-.65deg) scale(1.025)}to{transform:rotate(.75deg) scale(1.025)}}
 @media(max-width:900px){.research-corner-plant{width:190px;max-width:44%;right:-6px;opacity:.3}}
 @media(prefers-reduced-motion:reduce){.research-corner-plant img{animation:none}}
+/* Three lines of breathing room; slightly wider botanical silhouettes. */
+html body.home-redesign .research-section.restoration-editorial{padding-top:168px}
+html body.home-redesign .research-corner-plant{width:680px;max-width:38%}
+@media(max-width:900px){
+ html body.home-redesign .research-section.restoration-editorial{padding-top:91px}
+ html body.home-redesign .research-corner-plant{width:220px;max-width:52%}
+}
