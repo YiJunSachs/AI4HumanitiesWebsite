@@ -3,10 +3,13 @@
  const labels=[...root.querySelectorAll('[data-nav-en]')].map(el=>({el,zh:el.textContent,en:el.dataset.navEn}));
  function fitUnits(){
   const row=root.querySelector('.unified-identities'),names=[...root.querySelectorAll('.unified-unit-name')];
-  names.forEach(el=>el.style.removeProperty('font-size'));if(innerWidth<=900)return;
-  const style=getComputedStyle(row);let available=row.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight)-parseFloat(style.columnGap)*(names.length-1),total=0;
-  for(const name of names){const unit=name.parentElement;available-=unit.querySelector('img').offsetWidth+parseFloat(getComputedStyle(unit).columnGap);total+=name.scrollWidth;}
-  if(total>available){const size=parseFloat(getComputedStyle(names[0]).fontSize)*available/total*.98;names.forEach(el=>el.style.setProperty('font-size',size+'px','important'));}
+  names.forEach(el=>el.style.removeProperty('font-size'));
+  if(innerWidth>900){
+   const style=getComputedStyle(row);let available=row.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight)-parseFloat(style.columnGap)*(names.length-1),total=0;
+   for(const name of names){const unit=name.parentElement;available-=unit.querySelector('img').offsetWidth+parseFloat(getComputedStyle(unit).columnGap);total+=name.scrollWidth;}
+   if(total>available){const size=parseFloat(getComputedStyle(names[0]).fontSize)*available/total*.98;names.forEach(el=>el.style.setProperty('font-size',size+'px','important'));}
+  }
+  root.style.setProperty('--institution-font-size',getComputedStyle(names[0]).fontSize);
  }
  function update(){
   const en=document.documentElement.dataset.language==='en';labels.forEach(x=>x.el.textContent=en?x.en:x.zh);root.querySelector('nav').setAttribute('aria-label',en?'Main navigation':'主导航');

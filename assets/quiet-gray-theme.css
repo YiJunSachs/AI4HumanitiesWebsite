@@ -2,14 +2,14 @@
 :root{--quiet-gray-1:#f0efeb;--quiet-gray-2:#e7e6e2;--quiet-gray-3:#dedbd5;--quiet-gray-4:#d4d0c9;--quiet-ink:#353b34;--quiet-accent:#867b6c;--quiet-stroke:2px}
 @font-face{font-family:"Zhishan Formal Hand";src:url("fonts/team/kalam-regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 body{background-color:var(--quiet-gray-1)}
-html body.home-redesign .team-intro{background:#bec1b7;isolation:isolate}
+html body.home-redesign .team-intro{background:#676459;isolation:isolate}
 html body.home-redesign .team-intro .home-header-frame{height:800px;aspect-ratio:auto;overflow:hidden}
 html body.home-redesign .team-intro .home-header-art{width:100%;height:auto;transform:none}
 html body.home-redesign .team-intro .signature-widget{height:75.3%;background:#d0d0c7}
 html body.home-redesign .team-intro .hero-grid{position:relative!important;top:auto!important;left:auto!important;transform:none!important;width:2000px;max-width:calc(100% - 100px);margin:0 auto;padding:20px 0 150px;display:block!important}
 html[data-language] body.home-redesign .team-intro .team-copy-group{position:static!important;left:auto!important;transform:none!important;width:100%;max-width:none;margin:0}
-html[data-language] body.home-redesign .team-intro .team-affiliation{position:static!important;top:auto;left:auto;transform:none;width:auto;max-width:none;margin:0 0 36px;color:#344136}
-html[data-language] body.home-redesign .team-intro .team-copy-group .hero-copy{position:static!important;left:auto;top:auto;transform:none;width:100%;max-width:none;margin:0;color:#354238;font-size:33px;line-height:1.9;text-align:left}
+html[data-language] body.home-redesign .team-intro .team-affiliation{position:static!important;top:auto;left:auto;transform:none;width:auto;max-width:none;margin:0 0 36px;color:#d7c19a}
+html[data-language] body.home-redesign .team-intro .team-copy-group .hero-copy{position:static!important;left:auto;top:auto;transform:none;width:100%;max-width:none;margin:0;color:#f0e5cf;font-size:33px;line-height:1.9;text-align:left}
 html[data-language="en"] body.home-redesign .team-intro .team-affiliation{font-family:"Zhishan Formal Hand",cursive!important;font-weight:400;font-size:64px;letter-spacing:.015em;line-height:1.4}
 html[data-language="en"] body.home-redesign .team-intro .hero-copy>p{font-size:33px}
 html body.home-redesign .team-intro::after{content:"";display:block;position:absolute;left:0;right:0;bottom:-1px;top:auto;width:100%;height:140px;background:url("figures/team-flow-boundary.svg") center/100% 100% no-repeat;pointer-events:none;z-index:1}
@@ -56,3 +56,9 @@ html body.home-redesign>.footer{background:var(--quiet-gray-4)}
  html[lang="en"][data-language="en"] body.home-redesign :is(.restore-pair-labels,.restore-pair-labels span,.restoration-caption,.caption-index,.caption-description,.restoration-interaction-note,.carrier-editorial-showcase figcaption){font-size:16px}
 }
 html body.paper-editorial main h2::after{content:none!important;display:none!important}
+
+/* October 30: gold on warm ash, matching navigation sizes and selective sunsets. */
+html[data-language="en"] body.site-canvas .unified-header .unified-nav-link{font-size:var(--institution-font-size,28px)!important}
+html body.home-redesign :is(.research-section-rubbing,.phonology-editorial)::before{content:"";display:block;position:absolute;top:auto;left:40%;bottom:165px;width:72px;height:72px;border-radius:50%;background:linear-gradient(to bottom,#bb6248 0%,#c87c57 45%,rgba(200,124,87,0) 100%);opacity:.7;pointer-events:none;z-index:2;transform:none;clip-path:none;mask:none}
+html body.home-redesign .phonology-editorial::before{left:57%}
+@media(max-width:900px){html body.home-redesign :is(.research-section-rubbing,.phonology-editorial)::before{width:34px;height:34px;bottom:82px}}
