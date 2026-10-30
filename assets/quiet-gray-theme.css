@@ -1,5 +1,5 @@
 /* Quiet warm-gray editorial palette, contour dividers and restrained English type. */
-:root{--quiet-gray-1:#e4dfd7;--quiet-gray-2:#ece4dc;--quiet-gray-3:#e7dfdb;--quiet-gray-4:#eae2da;--quiet-ink:#353b34;--quiet-accent:#867b6c;--quiet-stroke:2px}
+:root{--quiet-gray-1:#e5dbd2;--quiet-gray-2:#cac0b7;--quiet-gray-3:#ddd5d5;--quiet-gray-4:#b4a190;--quiet-ink:#353b34;--quiet-accent:#867b6c;--quiet-stroke:2px}
 @font-face{font-family:"Zhishan Formal Hand";src:url("fonts/team/kalam-regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 body{background-color:var(--quiet-gray-1)}
 html body.home-redesign .team-intro{background:#716254;isolation:isolate}
@@ -109,3 +109,21 @@ html body.home-redesign .research-corner-plant{width:680px;max-width:38%}
  html body.home-redesign .research-section.restoration-editorial{padding-top:91px}
  html body.home-redesign .research-corner-plant{width:220px;max-width:52%}
 }
+
+/* Supplied Lanting and layered mountains, with two lines between research areas. */
+html body.home-redesign .team-intro{background:var(--quiet-gray-1)}
+html body.home-redesign .team-intro .home-header-frame{height:760px;background:#bfad9e}
+html body.home-redesign .team-intro .home-header-art{height:100%;object-fit:cover;object-position:center;mask-image:linear-gradient(to right,transparent 15%,#000 65%)}
+html body.home-redesign .team-intro .signature-widget{background:#bfad9e;height:75%;z-index:3}
+html body.home-redesign .team-intro .hero-grid{width:100%;max-width:none;margin:-190px 0 0;padding:220px 150px 100px;background:url("figures/team-mountains-layout.svg") center/100% 100% no-repeat;z-index:2;box-sizing:border-box}
+html body.home-redesign .team-intro::after{display:none}
+html body.home-redesign .research-section.restoration-editorial{padding-top:105px}
+html body.home-redesign .research-corner-plant{width:740px;max-width:41%}
+@media(max-width:900px){
+ html body.home-redesign .team-intro .home-header-frame{height:auto;aspect-ratio:2351/760}
+ html body.home-redesign .team-intro .hero-grid{margin-top:-35px;padding:80px 20px 50px}
+ html body.home-redesign .team-intro .team-affiliation{font-size:36px;margin-bottom:20px}
+ html body.home-redesign .research-section.restoration-editorial{padding-top:61px}
+ html body.home-redesign .research-corner-plant{width:240px;max-width:57%}
+}
+html body.home-redesign .research-section.restoration-editorial{margin-top:0!important}
