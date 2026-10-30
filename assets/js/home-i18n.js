@@ -14,6 +14,7 @@
         const text = values[index], end = text.indexOf(" ", 7);
         en = '<span class="restoration-slogan-rule">' + text.slice(0, end) + '</span>' + text.slice(end);
       }
+      if (selector === ".restoration-kicker") en = '<span class="research-area-label">Research Area</span><span class="research-area-number">' + values[index] + '</span>';
       records.push({element, zh: original, en});
     });
   });

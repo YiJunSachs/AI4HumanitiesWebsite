@@ -67,3 +67,15 @@ html body.home-redesign .restoration-heading::after{content:none!important;displ
 html[data-language] body.home-redesign .restoration-heading{min-height:240px;padding-top:20px}
 html[data-language] body.home-redesign .restoration-kicker{font-family:Georgia,"Times New Roman",serif!important;font-size:104px!important;font-style:italic;font-weight:900;line-height:.92;letter-spacing:0;color:rgba(93,87,77,.32);padding:0;margin:0 0 16px}
 @media(max-width:900px){html[data-language] body.home-redesign .restoration-heading{min-height:0;padding-top:0}html[data-language] body.home-redesign .restoration-kicker{font-size:54px!important;margin-bottom:12px}}
+/* Keep the research-area label beside its quieter large numeral. */
+html[data-language] body.home-redesign .restoration-kicker{display:flex;align-items:baseline;gap:20px}
+html[data-language] body.home-redesign .restoration-kicker .research-area-label{font-size:26px!important;font-weight:400;font-style:normal;line-height:1.3;letter-spacing:.1em;color:#a13d2d}
+html[data-language] body.home-redesign .restoration-kicker .research-area-number{font-size:104px;line-height:.92}
+@media(max-width:900px){html[data-language] body.home-redesign .restoration-kicker{gap:12px}html[data-language] body.home-redesign .restoration-kicker .research-area-label{font-size:14px!important}html[data-language] body.home-redesign .restoration-kicker .research-area-number{font-size:54px}}
+/* Four landscape suns follow one left-to-right rise-and-set trajectory. */
+html body.home-redesign .research-section.restoration-editorial::before{content:"";display:block;position:absolute;top:auto;left:var(--sun-left);bottom:var(--sun-bottom);width:72px;height:72px;border-radius:50%;background:linear-gradient(to bottom,var(--sun-color) 0%,var(--sun-color) 44%,transparent 100%);opacity:.7;pointer-events:none;z-index:2;transform:none;clip-path:none;mask:none}
+html body.home-redesign .research-section-rubbing{--sun-left:14%;--sun-bottom:112px;--sun-color:#c49a68}
+html body.home-redesign .carrier-editorial{--sun-left:36%;--sun-bottom:184px;--sun-color:#c18e5d}
+html body.home-redesign .phonology-editorial{--sun-left:62%;--sun-bottom:184px;--sun-color:#bf7955}
+html body.home-redesign .characters-editorial{--sun-left:84%;--sun-bottom:112px;--sun-color:#b96149}
+@media(max-width:900px){html body.home-redesign .research-section.restoration-editorial::before{width:34px;height:34px;bottom:calc(var(--sun-bottom) * .5)}}
