@@ -1,5 +1,5 @@
 /* Quiet warm-gray editorial palette, contour dividers and restrained English type. */
-:root{--quiet-gray-1:#f0efeb;--quiet-gray-2:#e7e6e2;--quiet-gray-3:#dedbd5;--quiet-gray-4:#e8e5df;--quiet-ink:#353b34;--quiet-accent:#867b6c;--quiet-stroke:2px}
+:root{--quiet-gray-1:#e4dfd7;--quiet-gray-2:#d4c4b7;--quiet-gray-3:#beb1aa;--quiet-gray-4:#c1b2a3;--quiet-ink:#353b34;--quiet-accent:#867b6c;--quiet-stroke:2px}
 @font-face{font-family:"Zhishan Formal Hand";src:url("fonts/team/kalam-regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 body{background-color:var(--quiet-gray-1)}
 html body.home-redesign .team-intro{background:#716254;isolation:isolate}
@@ -74,8 +74,21 @@ html[data-language] body.home-redesign .restoration-kicker .research-area-number
 @media(max-width:900px){html[data-language] body.home-redesign .restoration-kicker{gap:12px}html[data-language] body.home-redesign .restoration-kicker .research-area-label{font-size:14px!important}html[data-language] body.home-redesign .restoration-kicker .research-area-number{font-size:54px}}
 /* Four landscape suns follow one left-to-right rise-and-set trajectory. */
 html body.home-redesign .research-section.restoration-editorial::before{content:"";display:block;position:absolute;top:auto;left:var(--sun-left);bottom:var(--sun-bottom);width:72px;height:72px;border-radius:50%;background:linear-gradient(to bottom,var(--sun-color) 0%,var(--sun-color) 44%,transparent 100%);opacity:.7;pointer-events:none;z-index:2;transform:none;clip-path:none;mask:none}
-html body.home-redesign .research-section-rubbing{--sun-left:14%;--sun-bottom:112px;--sun-color:#c49a68}
-html body.home-redesign .carrier-editorial{--sun-left:36%;--sun-bottom:184px;--sun-color:#c18e5d}
-html body.home-redesign .phonology-editorial{--sun-left:62%;--sun-bottom:184px;--sun-color:#bf7955}
-html body.home-redesign .characters-editorial{--sun-left:84%;--sun-bottom:112px;--sun-color:#b96149}
+html body.home-redesign .research-section-rubbing{--sun-left:14%;--sun-bottom:220px;--sun-color:#c49a68}
+html body.home-redesign .carrier-editorial{--sun-left:36%;--sun-bottom:180px;--sun-color:#c18e5d}
+html body.home-redesign .phonology-editorial{--sun-left:62%;--sun-bottom:140px;--sun-color:#bf7955}
+html body.home-redesign .characters-editorial{--sun-left:84%;--sun-bottom:100px;--sun-color:#b96149}
 @media(max-width:900px){html body.home-redesign .research-section.restoration-editorial::before{width:34px;height:34px;bottom:calc(var(--sun-bottom) * .5)}}
+/* Original ink-bamboo branches, with gentle independent sways. */
+.section-bamboo{position:absolute;right:-12px;top:-34px;width:430px;max-width:28%;height:auto;opacity:.23;z-index:0;overflow:visible;pointer-events:none;user-select:none}
+.section-bamboo .bamboo-stem{fill:none;stroke:#50554a;stroke-width:1.8;stroke-linecap:round}
+.section-bamboo .bamboo-main{stroke-width:3.5}
+.section-bamboo .bamboo-whole{transform-origin:540px 0;animation:bamboo-main-sway 8.6s ease-in-out infinite alternate}
+.section-bamboo .bamboo-twig-a{transform-origin:447px 64px;animation:bamboo-twig-sway 5.8s ease-in-out -1.4s infinite alternate}
+.section-bamboo .bamboo-twig-b{transform-origin:399px 106px;animation:bamboo-twig-sway 6.7s ease-in-out -3s infinite alternate-reverse}
+.section-bamboo .bamboo-twig-c{transform-origin:342px 148px;animation:bamboo-twig-sway 6.2s ease-in-out -2.2s infinite alternate}
+.section-bamboo .bamboo-twig-d{transform-origin:232px 209px;animation:bamboo-twig-sway 7.1s ease-in-out -.7s infinite alternate-reverse}
+@keyframes bamboo-main-sway{0%{transform:rotate(-1.8deg)}45%{transform:rotate(.4deg)}100%{transform:rotate(1.9deg)}}
+@keyframes bamboo-twig-sway{from{transform:rotate(-2.4deg)}to{transform:rotate(2.5deg)}}
+@media(max-width:900px){.section-bamboo{width:150px;max-width:42%;right:-8px;top:-16px;opacity:.16}}
+@media(prefers-reduced-motion:reduce){.section-bamboo .bamboo-whole,.section-bamboo [class^="bamboo-twig"]{animation:none!important}}
