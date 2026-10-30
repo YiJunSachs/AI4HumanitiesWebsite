@@ -1,5 +1,5 @@
 /* Quiet warm-gray editorial palette, contour dividers and restrained English type. */
-:root{--quiet-gray-1:#e4dfd7;--quiet-gray-2:#d4c4b7;--quiet-gray-3:#beb1aa;--quiet-gray-4:#c1b2a3;--quiet-ink:#353b34;--quiet-accent:#867b6c;--quiet-stroke:2px}
+:root{--quiet-gray-1:#e4dfd7;--quiet-gray-2:#ece4dc;--quiet-gray-3:#e7dfdb;--quiet-gray-4:#eae2da;--quiet-ink:#353b34;--quiet-accent:#867b6c;--quiet-stroke:2px}
 @font-face{font-family:"Zhishan Formal Hand";src:url("fonts/team/kalam-regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 body{background-color:var(--quiet-gray-1)}
 html body.home-redesign .team-intro{background:#716254;isolation:isolate}
