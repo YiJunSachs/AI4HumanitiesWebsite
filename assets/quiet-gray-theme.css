@@ -189,3 +189,8 @@ html body.home-redesign .signature-glyphs{transform:translateX(144px)}
  html body.home-redesign .research-section.restoration-editorial .research-corner-plant{right:-6px}
  html body.home-redesign .signature-glyphs{transform:translateX(26px)}
 }
+
+/* Move the introduction down one text line, keeping clearance above the fade. */
+html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(220.5px)!important}
+html body.home-redesign .team-intro .hero-grid{padding-bottom:415px}
+@media(max-width:900px){html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(105px)!important}html body.home-redesign .team-intro .hero-grid{padding-bottom:200px}}
