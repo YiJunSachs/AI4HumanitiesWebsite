@@ -131,3 +131,11 @@ html body.home-redesign .research-section.restoration-editorial{margin-top:0!imp
 /* Use the supplied mountain artwork directly; no generated mask or recoloring. */
 html body.home-redesign .team-intro .hero-grid{background-image:url("figures/team-mountains-original.jpg");background-size:100% auto;background-position:center -590px;background-repeat:no-repeat}
 @media(max-width:900px){html body.home-redesign .team-intro .hero-grid{background-size:auto 260%;background-position:center 45%}}
+
+/* Render only the original mountain foreground and fade it into area 01. */
+html body.home-redesign .team-intro .hero-grid{background:none;isolation:isolate}
+.team-mountain-layer{position:absolute;left:0;top:-590px;width:100%;height:auto;aspect-ratio:2880/2677;pointer-events:none;z-index:-1}
+html body.home-redesign .team-intro .hero-grid::after{content:"";position:absolute;inset:auto 0 0;height:160px;background:linear-gradient(to bottom,transparent,var(--quiet-gray-1));z-index:-1;pointer-events:none}
+html body.home-redesign .research-section-rubbing.restoration-editorial{position:relative;z-index:3}
+html body.home-redesign .research-section-rubbing .research-corner-plant{z-index:5}
+@media(max-width:900px){.team-mountain-layer{top:-72%;height:260%;width:100%;aspect-ratio:auto}html body.home-redesign .team-intro .hero-grid::after{height:65px}}
