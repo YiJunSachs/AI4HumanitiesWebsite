@@ -194,3 +194,14 @@ html body.home-redesign .signature-glyphs{transform:translateX(144px)}
 html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(220.5px)!important}
 html body.home-redesign .team-intro .hero-grid{padding-bottom:415px}
 @media(max-width:900px){html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(105px)!important}html body.home-redesign .team-intro .hero-grid{padding-bottom:200px}}
+
+/* Exact shared-color landing after the mountain fade. */
+html[data-language] body.home-redesign .team-intro .team-copy-group{position:relative!important;z-index:1;transform:translateY(189px)!important}
+html body.home-redesign .signature-glyphs{transform:translateX(80px)}
+html body.home-redesign .team-intro{background:var(--quiet-gray-1)!important;border-bottom:0;box-shadow:none}
+html body.home-redesign .team-intro .hero-grid::after{bottom:-2px;height:260px;z-index:0;background:linear-gradient(to bottom,rgba(229,219,210,0) 0%,rgba(229,219,210,.08) 18%,rgba(229,219,210,.28) 40%,rgba(229,219,210,.6) 64%,rgba(229,219,210,.9) 82%,var(--quiet-gray-1) 94%,var(--quiet-gray-1) 100%)}
+@media(max-width:900px){
+ html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(90px)!important}
+ html body.home-redesign .signature-glyphs{transform:translateX(15px)}
+ html body.home-redesign .team-intro .hero-grid::after{height:130px}
+}
