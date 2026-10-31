@@ -57,6 +57,7 @@
     });
   };
   const alignTeamHeader = () => {
+    if (!document.querySelector(".team-intro .team-affiliation")) return;
     const header = document.querySelector(".team-intro"), group = header.querySelector(".team-copy-group");
     group.style.transform = "";
     if (document.documentElement.lang !== "en") return;

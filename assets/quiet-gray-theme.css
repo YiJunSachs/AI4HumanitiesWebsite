@@ -139,3 +139,18 @@ html body.home-redesign .team-intro .hero-grid::after{content:"";position:absolu
 html body.home-redesign .research-section-rubbing.restoration-editorial{position:relative;z-index:3}
 html body.home-redesign .research-section-rubbing .research-corner-plant{z-index:5}
 @media(max-width:900px){.team-mountain-layer{top:-72%;height:260%;width:100%;aspect-ratio:auto}html body.home-redesign .team-intro .hero-grid::after{height:65px}}
+
+/* One balanced Chinese paragraph; gently lifted copy and ink-only lettering shadow. */
+html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(-63px)!important}
+html[data-language] body.home-redesign .team-intro .hero-copy>p{max-width:none;width:100%;text-wrap:balance}
+html[data-language="zh"] body.home-redesign .team-copy-line{display:block;white-space:nowrap}
+html body.home-redesign .signature-glyphs{transform:translateX(16px)}
+@media(max-width:900px){
+ html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(-30px)!important}
+ html[data-language="zh"] body.home-redesign .team-copy-line{display:inline;white-space:normal}
+ html body.home-redesign .signature-glyphs{transform:translateX(4px)}
+}
+
+.signature-glyphs .signature-ink-glyph{display:block;width:100%;height:100%;min-height:0;overflow:visible;pointer-events:none}
+
+.signature-glyphs .signature-ink-glyph{filter:drop-shadow(4px 6px 3px rgba(38,29,22,.3))}
