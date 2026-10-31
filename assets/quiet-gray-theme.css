@@ -212,3 +212,7 @@ html body.home-redesign .team-intro .hero-grid::after{bottom:-2px;height:260px;z
 /* Match the visible plum and bamboo spans to the chrysanthemum artwork. */
 html body.home-redesign :is(.research-section-rubbing,.phonology-editorial) .research-corner-plant{width:580px;max-width:32.1%}
 @media(max-width:900px){html body.home-redesign :is(.research-section-rubbing,.phonology-editorial) .research-corner-plant{width:188px;max-width:44.6%}}
+
+/* Research-area labels match research-narrative body copy. */
+html[data-language] body.home-redesign .restoration-kicker .research-area-label{font-size:33px!important}
+@media(max-width:900px){html[data-language] body.home-redesign .restoration-kicker .research-area-label{font-size:16px!important}}
