@@ -154,3 +154,11 @@ html body.home-redesign .signature-glyphs{transform:translateX(16px)}
 .signature-glyphs .signature-ink-glyph{display:block;width:100%;height:100%;min-height:0;overflow:visible;pointer-events:none}
 
 .signature-glyphs .signature-ink-glyph{filter:drop-shadow(4px 6px 3px rgba(38,29,22,.3))}
+
+/* Four lines lower, with room for the translated copy and a white lettering echo. */
+html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(189px)!important}
+html body.home-redesign .team-intro .hero-grid{padding-bottom:352px}
+@media(max-width:900px){
+ html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(90px)!important}
+ html body.home-redesign .team-intro .hero-grid{padding-bottom:170px}
+}
