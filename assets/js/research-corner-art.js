@@ -5,7 +5,7 @@
   const overlap=innerWidth<=900?28:90;
   sections.forEach(section=>{
    const heading=section.querySelector('.restoration-heading');
-   if(heading)heading.style.setProperty('--corner-rise',`${parseFloat(getComputedStyle(section).paddingTop)+(section.matches('.phonology-editorial')?0:section.matches('.characters-editorial')?(innerWidth<=900?12:40):overlap)}px`);
+   if(heading)heading.style.setProperty('--corner-rise',`${parseFloat(getComputedStyle(section).paddingTop)+(section.matches('.phonology-editorial')?0:section.matches('.characters-editorial')?(innerWidth<=900?12:40):(innerWidth<=900?16:55))}px`);
   });
  };
  window.addEventListener('resize',fit,{passive:true});

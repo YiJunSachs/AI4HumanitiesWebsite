@@ -179,3 +179,13 @@ html body.home-redesign .team-intro .hero-grid::after{height:240px;background:li
  html body.home-redesign .characters-editorial .research-corner-plant{right:-20px}
  html body.home-redesign .team-intro .hero-grid::after{height:110px}
 }
+
+/* Match all corner right edges to area 03, retaining the title-rule cutoff. */
+html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(157.5px)!important}
+html body.home-redesign .research-section.restoration-editorial .research-corner-plant{right:-12px;bottom:1px;overflow:hidden}
+html body.home-redesign .signature-glyphs{transform:translateX(144px)}
+@media(max-width:900px){
+ html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(75px)!important}
+ html body.home-redesign .research-section.restoration-editorial .research-corner-plant{right:-6px}
+ html body.home-redesign .signature-glyphs{transform:translateX(26px)}
+}
