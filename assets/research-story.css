@@ -34,10 +34,8 @@ h1 { font-size: clamp(34px, 4.1vw, 58px); line-height: 1.35; font-weight: 500; m
 .story-contents a { padding: 22px 20px; font-size: 14px; line-height: 1.75; text-decoration: none; border-right: 1px solid var(--line); }
 .story-contents a:first-child { padding-left: 0; }
 .story-contents a:last-child { border-right: none; }
-.story-contents a > span:first-child { display: block; font-size: 12px; letter-spacing: .16em; color: var(--accent); margin-bottom: 8px; }
 .story-contents a:hover { background: #eaf0e6; }
-.story-chapter { display: grid; grid-template-columns: 120px minmax(0,1fr); gap: 40px; padding: 70px 0; border-bottom: 1px solid var(--line); }
-.chapter-number { color: #98a18f; font-size: 52px; font-style: italic; line-height: 1.2; }
+.story-chapter { display: grid; grid-template-columns: minmax(0,1fr); padding: 70px 0; border-bottom: 1px solid var(--line); }
 .story-chapter h2 { margin: 0 0 26px; font-size: clamp(25px,2.5vw,33px); line-height: 1.5; font-weight: 500; }
 .story-chapter p { max-width: 840px; font-size: 18px; line-height: 2; color: #505d52; margin: 0 0 22px; }
 .story-chapter p:last-child { margin-bottom: 0; }
@@ -64,9 +62,7 @@ html[lang="en"] .story-brand { font-family: Georgia, serif; font-size: 28px; }
   .story-lead { font-size: 17px; }
   .story-contents { grid-template-columns: 1fr; }
   .story-contents a, .story-contents a:first-child { display: flex; gap: 16px; padding: 13px 0; border: none; border-bottom: 1px solid #e3e5dc; }
-  .story-contents a > span:first-child { margin: 0; }
   .story-chapter { grid-template-columns: minmax(0,1fr); gap: 10px; padding: 40px 0; }
-  .chapter-number { font-size: 32px; }
   .story-chapter p { font-size: 17px; line-height: 1.9; }
   figure { padding: 12px; }
 }
@@ -107,9 +103,8 @@ html[lang="en"] .story-brand { font-family: Georgia, serif; font-size: 28px; }
 .sample-pair span { display: block; font-size: 13px; color: var(--muted); margin-bottom: 12px; }
 .sample-pair img { width: 100%; height: auto; }
 .ciri-sample figcaption { margin-top: 14px; }
-.method-stages { margin: 32px 0; padding: 0; list-style: none; counter-reset: stage; }
-.method-stages li { counter-increment: stage; position: relative; padding: 24px 0 24px 54px; border-top: 1px solid var(--line); }
-.method-stages li::before { content: counter(stage, decimal-leading-zero); position: absolute; left: 0; top: 28px; color: var(--accent); font-size: 15px; }
+.method-stages { margin: 32px 0; padding: 0; list-style: none; }
+.method-stages li { position: relative; padding: 24px 0; border-top: 1px solid var(--line); }
 .method-stages h3 { margin: 0 0 12px; font-size: 21px; font-weight: 500; line-height: 1.6; }
 .method-stages p { font-size: 17px; margin: 0; }
 @media(max-width:700px) {
@@ -118,7 +113,6 @@ html[lang="en"] .story-brand { font-family: Georgia, serif; font-size: 28px; }
   .dataset-facts { gap: 12px; }
   .dataset-facts strong { font-size: 25px; }
   .dataset-facts span { font-size: 12px; }
-  .method-stages li { padding-left: 36px; }
 }
 
 /* Keep touch targets and long publication titles readable on phones. */
