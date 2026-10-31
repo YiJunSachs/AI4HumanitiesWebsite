@@ -1,5 +1,5 @@
 /* Quiet warm-gray editorial palette, contour dividers and restrained English type. */
-:root{--quiet-gray-1:#e5dbd2;--quiet-gray-2:#ded6ce;--quiet-gray-3:#ddd5d5;--quiet-gray-4:#d6c9bc;--quiet-ink:#353b34;--quiet-accent:#867b6c;--quiet-stroke:2px}
+:root{--quiet-gray-1:#e5dbd2;--quiet-gray-2:#ded6ce;--quiet-gray-3:#ddd5d5;--quiet-gray-4:#e2d8ce;--quiet-ink:#353b34;--quiet-accent:#867b6c;--quiet-stroke:2px}
 @font-face{font-family:"Zhishan Formal Hand";src:url("fonts/team/kalam-regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
 body{background-color:var(--quiet-gray-1)}
 html body.home-redesign .team-intro{background:#716254;isolation:isolate}
@@ -161,4 +161,21 @@ html body.home-redesign .team-intro .hero-grid{padding-bottom:352px}
 @media(max-width:900px){
  html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(90px)!important}
  html body.home-redesign .team-intro .hero-grid{padding-bottom:170px}
+}
+
+/* Softer transition and clear botanical overlaps between adjacent sections. */
+html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(126px)!important}
+html body.home-redesign .team-intro{z-index:0}
+html body.home-redesign .research-section-rubbing.restoration-editorial{z-index:1!important}
+html body.home-redesign .carrier-editorial.restoration-editorial{z-index:2!important}
+html body.home-redesign .phonology-editorial.restoration-editorial{z-index:3!important}
+html body.home-redesign .characters-editorial.restoration-editorial{z-index:4!important}
+html body.home-redesign :is(.research-section-rubbing,.carrier-editorial) .research-corner-plant{right:-48px;z-index:5}
+html body.home-redesign .characters-editorial .research-corner-plant{right:-56px}
+html body.home-redesign .team-intro .hero-grid::after{height:240px;background:linear-gradient(to bottom,rgba(229,219,210,0) 0%,rgba(229,219,210,.06) 18%,rgba(229,219,210,.22) 40%,rgba(229,219,210,.5) 64%,rgba(229,219,210,.82) 84%,var(--quiet-gray-1) 100%)}
+@media(max-width:900px){
+ html[data-language] body.home-redesign .team-intro .team-copy-group{transform:translateY(60px)!important}
+ html body.home-redesign :is(.research-section-rubbing,.carrier-editorial) .research-corner-plant{right:-16px}
+ html body.home-redesign .characters-editorial .research-corner-plant{right:-20px}
+ html body.home-redesign .team-intro .hero-grid::after{height:110px}
 }
