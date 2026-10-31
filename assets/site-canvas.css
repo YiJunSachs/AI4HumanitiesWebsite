@@ -6,12 +6,11 @@
  body.site-canvas.paper-editorial .site-shell{width:calc(100% - 160px);max-width:none;margin-inline:auto}
  body.site-canvas .story-hero{max-width:none}
  body.site-canvas .story-lead{max-width:1800px;font-size:30px}
- body.site-canvas .story-chapter{grid-template-columns:160px minmax(0,1fr);gap:56px}
+ body.site-canvas .story-chapter{grid-template-columns:minmax(0,1fr)}
  body.site-canvas .story-chapter p{max-width:none;font-size:28px}
  body.site-canvas .story-chapter h2{font-size:48px}
  body.site-canvas .story-hero h1{font-size:76px}
  body.site-canvas .story-contents a{font-size:24px}
- body.site-canvas .story-contents a>span:first-child{font-size:20px}
  body.site-canvas .story-challenges li{font-size:26px}
  body.site-canvas .method-stages p{font-size:26px}
  body.site-canvas .team-hero h1{font-size:76px}
