@@ -208,3 +208,7 @@ html body.home-redesign .team-intro .hero-grid::after{bottom:-2px;height:260px;z
 
 /* Restrained dark ink with a soft warm-gray shadow, matching the reference. */
 .signature-glyphs .signature-ink-glyph{filter:drop-shadow(3px 6px 5px rgba(44,35,28,.35))}
+
+/* Match the visible plum and bamboo spans to the chrysanthemum artwork. */
+html body.home-redesign :is(.research-section-rubbing,.phonology-editorial) .research-corner-plant{width:580px;max-width:32.1%}
+@media(max-width:900px){html body.home-redesign :is(.research-section-rubbing,.phonology-editorial) .research-corner-plant{width:188px;max-width:44.6%}}

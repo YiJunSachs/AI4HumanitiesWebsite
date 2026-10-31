@@ -2,10 +2,11 @@
  const sections=[...document.querySelectorAll('.restoration-editorial')];
  if(!sections.length)return;
  const fit=()=>{
-  const overlap=innerWidth<=900?28:90;
-  sections.forEach(section=>{
+  const mobile=innerWidth<=900;
+  sections.forEach((section,index)=>{
    const heading=section.querySelector('.restoration-heading');
-   if(heading)heading.style.setProperty('--corner-rise',`${parseFloat(getComputedStyle(section).paddingTop)+(section.matches('.phonology-editorial')?0:section.matches('.characters-editorial')?(innerWidth<=900?12:40):(innerWidth<=900?16:55))}px`);
+   const overlap=(mobile?[6,16,0,12]:[25,55,0,40])[index];
+   if(heading)heading.style.setProperty('--corner-rise',`${parseFloat(getComputedStyle(section).paddingTop)+overlap}px`);
   });
  };
  window.addEventListener('resize',fit,{passive:true});
