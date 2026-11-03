@@ -123,3 +123,15 @@ html[lang="en"] .story-brand { font-family: Georgia, serif; font-size: 28px; }
   .story-publication h3 { overflow-wrap: anywhere; }
   .story-contents a { min-height: 44px; }
 }
+
+/* Give Chinese topic links space according to their text length. */
+html:not([lang="en"]) .story-contents a { white-space: nowrap; }
+@media (min-width: 901px) {
+  html:not([lang="en"]) .story-contents { display: flex; }
+  html:not([lang="en"]) .story-contents a { flex: 1 0 auto; }
+}
+@media (max-width: 900px) {
+  html:not([lang="en"]) .story-contents { grid-template-columns: minmax(0, 1fr); }
+  html:not([lang="en"]) .story-contents a,
+  html:not([lang="en"]) .story-contents a:first-child { padding: 13px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+}
