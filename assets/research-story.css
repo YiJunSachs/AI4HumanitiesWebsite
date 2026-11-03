@@ -135,3 +135,9 @@ html:not([lang="en"]) .story-contents a { white-space: nowrap; }
   html:not([lang="en"]) .story-contents a,
   html:not([lang="en"]) .story-contents a:first-child { padding: 13px 0; border-right: 0; border-bottom: 1px solid var(--line); }
 }
+
+/* Use more of the narrow screen before reducing short-line text. */
+@media (max-width: 700px) {
+  .story-challenges { padding-inline: 16px; }
+  .story-footer { padding-inline: 16px; }
+}
