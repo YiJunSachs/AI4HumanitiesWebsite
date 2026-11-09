@@ -4,7 +4,7 @@
     "titleEn": "MCHDoc: A Comprehensive Benchmark for Multi-Carrier Chinese Historical Document Reading",
     "href": "https://openaccess.thecvf.com/content/CVPR2026/papers/Sheng_MCHDoc_A_Comprehensive_Benchmark_for_Reading_Multi-Carrier_Chinese_Historical_Documents_CVPR_2026_paper.pdf",
     "area": "multi-carrier-reading",
-    "thumbnail": "assets/rendered/process_v7.png",
+    "thumbnail": "assets/rendered/process_v7-transparent.png?v=20261106-counters",
     "thumbnailAlt": "MCHDoc 多载体历史文献阅读流程",
     "tags": [
       "CVPR 2026",
@@ -24,7 +24,7 @@
     "titleEn": "EpiAgent: An Agentic System for Ancient Inscription Restoration",
     "href": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhu_EpiAgent_An_Agent-Centric_System_for_Ancient_Inscription_Restoration_CVPR_2026_paper.pdf",
     "area": "rubbing-restoration",
-    "thumbnail": "assets/rendered/epiagent-teaser.png",
+    "thumbnail": "assets/rendered/epiagent-teaser-transparent.png?v=20261106-counters",
     "thumbnailAlt": "EpiAgent 古代碑刻修复效果对比",
     "tags": [
       "CVPR 2026",
@@ -63,7 +63,7 @@
     "title": "Resolving Inherited Ambiguity in Chinese Historical Phonology with Song Dynasty Corpus Evidence",
     "href": "https://www.nature.com/articles/s40494-026-02919-4",
     "area": "historical-phonology",
-    "thumbnail": "assets/rendered/qyspd/paper-primary-paths.png",
+    "thumbnail": "assets/rendered/qyspd/paper-primary-paths-transparent.png?v=20261106-counters",
     "thumbnailAlt": "QYSPD 论文图 6：扩展反切主路径",
     "tags": [
       "npj Heritage Science 2026",

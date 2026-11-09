@@ -1,0 +1,54 @@
+/* The PNGs carry real alpha. Their wrappers should show the page paper too. */
+html body .story-shell figure,
+html body .carrier-story-card,
+html body .carrier-story-images img,
+html body .project-visual,
+html body .figure-card,
+html body .framed-visual img,
+html body .carrier-sample,
+html body .carrier-sample img,
+html body .carrier-lightbox-images img,
+html body .team-member {
+  background: transparent;
+}
+
+html body img[src*="-transparent.png"] {
+  background: transparent;
+  mix-blend-mode: normal;
+}
+
+/* Large restoration figures remain uncropped, with full-size source links. */
+.restoration-story .research-figure {
+  width: 100%;
+  max-width: 1480px;
+  margin-inline: auto;
+}
+.restoration-story .research-figure img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 900px;
+  margin-inline: auto;
+  object-fit: contain;
+}
+.restoration-story .ciri-sample-grid {
+  max-width: 1300px;
+  margin-inline: auto;
+}
+
+@media (min-width: 901px) {
+  .restoration-story .research-figure figcaption,
+  .restoration-story .ciri-sample figcaption { font-size: 21px; }
+  .restoration-story .research-figure .figure-source { font-size: 19px; }
+}
+
+@media (max-width: 900px) {
+  .restoration-story .research-figure img { max-height: 65svh; }
+}
+
+/* Keep the homepage's two draggable examples compact without changing ratios. */
+html body.home-redesign .research-section-rubbing .restoration-examples {
+  width: 100%;
+  max-width: 700px;
+  margin-inline: auto;
+}
