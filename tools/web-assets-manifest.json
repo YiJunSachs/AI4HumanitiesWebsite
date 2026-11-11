@@ -1,0 +1,496 @@
+{
+  "images": {
+    "assets/figures/carrier-landscape-pale.png": {
+      "file": "assets/optimized/carrier-landscape-pale-7e08e787f4.webp",
+      "before": 932065,
+      "after": 166574,
+      "original_dimensions": [
+        2172,
+        724
+      ],
+      "dimensions": [
+        2172,
+        724
+      ],
+      "lossless": false
+    },
+    "assets/figures/cclass-emblem-cutout.png": {
+      "file": "assets/optimized/cclass-emblem-cutout-08faa8b285.webp",
+      "before": 992550,
+      "after": 43958,
+      "original_dimensions": [
+        1125,
+        1398
+      ],
+      "dimensions": [
+        258,
+        320
+      ],
+      "lossless": true
+    },
+    "assets/figures/characters-landscape-paleblue.png": {
+      "file": "assets/optimized/characters-landscape-paleblue-4e91752d82.webp",
+      "before": 1247198,
+      "after": 223982,
+      "original_dimensions": [
+        2172,
+        724
+      ],
+      "dimensions": [
+        2172,
+        724
+      ],
+      "lossless": false
+    },
+    "assets/figures/contour-divider-a.png": {
+      "file": "assets/optimized/contour-divider-a-4bcf0857a3.webp",
+      "before": 474371,
+      "after": 178000,
+      "original_dimensions": [
+        2172,
+        724
+      ],
+      "dimensions": [
+        2172,
+        724
+      ],
+      "lossless": false
+    },
+    "assets/figures/contour-divider-b.png": {
+      "file": "assets/optimized/contour-divider-b-a8a84895c2.webp",
+      "before": 576192,
+      "after": 228742,
+      "original_dimensions": [
+        2172,
+        724
+      ],
+      "dimensions": [
+        2172,
+        724
+      ],
+      "lossless": false
+    },
+    "assets/figures/lanting-gradient.png": {
+      "file": "assets/optimized/lanting-gradient-041e9cd76c.webp",
+      "before": 26801769,
+      "after": 803980,
+      "original_dimensions": [
+        9685,
+        3108
+      ],
+      "dimensions": [
+        3200,
+        1027
+      ],
+      "lossless": false,
+      "variants": [
+        [
+          "assets/optimized/lanting-gradient-041e9cd76c-1280.webp",
+          1280
+        ],
+        [
+          "assets/optimized/lanting-gradient-041e9cd76c-2560.webp",
+          2560
+        ]
+      ]
+    },
+    "assets/figures/phonology-landscape-palelavender.png": {
+      "file": "assets/optimized/phonology-landscape-palelavender-33d7a59cd1.webp",
+      "before": 885095,
+      "after": 138444,
+      "original_dimensions": [
+        2172,
+        724
+      ],
+      "dimensions": [
+        2172,
+        724
+      ],
+      "lossless": false
+    },
+    "assets/figures/restoration-landscape.png": {
+      "file": "assets/optimized/restoration-landscape-e21fa625d8.webp",
+      "before": 991770,
+      "after": 155832,
+      "original_dimensions": [
+        2172,
+        724
+      ],
+      "dimensions": [
+        2172,
+        724
+      ],
+      "lossless": false
+    },
+    "assets/figures/team-mountains-original.jpg": {
+      "file": "assets/optimized/team-mountains-original-b8fc6cb8de.webp",
+      "before": 138476,
+      "after": 25002,
+      "original_dimensions": [
+        2880,
+        2677
+      ],
+      "dimensions": [
+        2560,
+        2380
+      ],
+      "lossless": false
+    },
+    "assets/figures/zhishan-seal-v3.png": {
+      "file": "assets/optimized/zhishan-seal-v3-ebdcef2965.webp",
+      "before": 136274,
+      "after": 35608,
+      "original_dimensions": [
+        1025,
+        1085
+      ],
+      "dimensions": [
+        302,
+        320
+      ],
+      "lossless": true
+    },
+    "assets/figures/南大博物馆logo+馆名-web.png": {
+      "file": "assets/optimized/南大博物馆logo+馆名-web-d4a1e720a7.webp",
+      "before": 86043,
+      "after": 40732,
+      "original_dimensions": [
+        800,
+        565
+      ],
+      "dimensions": [
+        640,
+        452
+      ],
+      "lossless": false
+    },
+    "assets/figures/微信图片_20260824155001_1244_2.png": {
+      "file": "assets/optimized/微信图片_20260824155001_1244_2-acc4434ab2.webp",
+      "before": 1204816,
+      "after": 84960,
+      "original_dimensions": [
+        5000,
+        5000
+      ],
+      "dimensions": [
+        320,
+        320
+      ],
+      "lossless": true
+    },
+    "assets/figures/聂娜-transparent.png": {
+      "file": "assets/optimized/聂娜-transparent-3262035692.webp",
+      "before": 4497374,
+      "after": 121146,
+      "original_dimensions": [
+        1868,
+        2615
+      ],
+      "dimensions": [
+        714,
+        1000
+      ],
+      "lossless": false
+    },
+    "assets/figures/葛燕红.jpg": {
+      "file": "assets/optimized/葛燕红-846dc24bcc.webp",
+      "before": 280860,
+      "after": 22860,
+      "original_dimensions": [
+        1280,
+        1920
+      ],
+      "dimensions": [
+        667,
+        1000
+      ],
+      "lossless": false
+    },
+    "assets/rendered/calligraphy_hero.png": {
+      "file": "assets/optimized/calligraphy_hero-565b884fee.webp",
+      "before": 2156202,
+      "after": 214444,
+      "original_dimensions": [
+        1586,
+        992
+      ],
+      "dimensions": [
+        1586,
+        992
+      ],
+      "lossless": false
+    },
+    "assets/rendered/ciri-dataset-examples-transparent.png": {
+      "file": "assets/optimized/ciri-dataset-examples-transparent-54a001c471.webp",
+      "before": 5192846,
+      "after": 904646,
+      "original_dimensions": [
+        2400,
+        1985
+      ],
+      "dimensions": [
+        2400,
+        1985
+      ],
+      "lossless": false
+    },
+    "assets/rendered/epiagent example/新建文件夹/covered/FS_2_120_1.jpg": {
+      "file": "assets/optimized/FS_2_120_1-7d01505b32.webp",
+      "before": 1573097,
+      "after": 924270,
+      "original_dimensions": [
+        1177,
+        2682
+      ],
+      "dimensions": [
+        790,
+        1800
+      ],
+      "lossless": true
+    },
+    "assets/rendered/epiagent example/新建文件夹/restored/2842.jpg": {
+      "file": "assets/optimized/2842-aab6b862be.webp",
+      "before": 2032708,
+      "after": 476592,
+      "original_dimensions": [
+        1550,
+        4134
+      ],
+      "dimensions": [
+        675,
+        1800
+      ],
+      "lossless": true
+    },
+    "assets/rendered/epiagent example/新建文件夹/restored/FS_2_120_1.jpg": {
+      "file": "assets/optimized/FS_2_120_1-5970786bf8.webp",
+      "before": 1688363,
+      "after": 746700,
+      "original_dimensions": [
+        1177,
+        2682
+      ],
+      "dimensions": [
+        790,
+        1800
+      ],
+      "lossless": true
+    },
+    "assets/rendered/epiagent-framework.png": {
+      "file": "assets/optimized/epiagent-framework-5af94f3118.webp",
+      "before": 1438693,
+      "after": 1283542,
+      "original_dimensions": [
+        4366,
+        2344
+      ],
+      "dimensions": [
+        3200,
+        1718
+      ],
+      "lossless": true
+    },
+    "assets/rendered/epiagent-tools.png": {
+      "file": "assets/optimized/epiagent-tools-6347d2ebc7.webp",
+      "before": 417024,
+      "after": 144716,
+      "original_dimensions": [
+        2071,
+        1717
+      ],
+      "dimensions": [
+        2071,
+        1717
+      ],
+      "lossless": true
+    },
+    "assets/rendered/mm24-pipeline-transparent.png": {
+      "file": "assets/optimized/mm24-pipeline-transparent-20e444fb0c.webp",
+      "before": 404195,
+      "after": 156000,
+      "original_dimensions": [
+        2800,
+        1293
+      ],
+      "dimensions": [
+        2800,
+        1293
+      ],
+      "lossless": true
+    },
+    "assets/rendered/multi-carrier-homepage/jiandu/jiandu-1-transparent.png": {
+      "file": "assets/optimized/jiandu-1-transparent-4cc0d739bc.webp",
+      "before": 165653,
+      "after": 39926,
+      "original_dimensions": [
+        273,
+        720
+      ],
+      "dimensions": [
+        273,
+        720
+      ],
+      "lossless": false
+    },
+    "assets/rendered/multi-carrier-homepage/jiandu/jiandu-2-transparent.png": {
+      "file": "assets/optimized/jiandu-2-transparent-85897ca304.webp",
+      "before": 72700,
+      "after": 16914,
+      "original_dimensions": [
+        131,
+        720
+      ],
+      "dimensions": [
+        131,
+        720
+      ],
+      "lossless": false
+    },
+    "assets/rendered/multi-carrier-homepage/oraclebone/oracle-1-transparent.png": {
+      "file": "assets/optimized/oracle-1-transparent-7d2250b75e.webp",
+      "before": 73820,
+      "after": 19632,
+      "original_dimensions": [
+        144,
+        516
+      ],
+      "dimensions": [
+        144,
+        516
+      ],
+      "lossless": false
+    },
+    "assets/rendered/multi-carrier-homepage/oraclebone/oracle-2-transparent.png": {
+      "file": "assets/optimized/oracle-2-transparent-01540df106.webp",
+      "before": 116842,
+      "after": 33002,
+      "original_dimensions": [
+        153,
+        720
+      ],
+      "dimensions": [
+        153,
+        720
+      ],
+      "lossless": false
+    },
+    "assets/rendered/multi-carrier-homepage/oraclebone/oracle-3-transparent.png": {
+      "file": "assets/optimized/oracle-3-transparent-bb6ef204e4.webp",
+      "before": 400768,
+      "after": 101450,
+      "original_dimensions": [
+        684,
+        720
+      ],
+      "dimensions": [
+        684,
+        720
+      ],
+      "lossless": false
+    },
+    "assets/rendered/multi-carrier-homepage/silk/1-102-transparent.png": {
+      "file": "assets/optimized/1-102-transparent-87ac00eda4.webp",
+      "before": 1163844,
+      "after": 221952,
+      "original_dimensions": [
+        579,
+        872
+      ],
+      "dimensions": [
+        579,
+        872
+      ],
+      "lossless": false
+    },
+    "assets/rendered/multi-carrier-homepage/silk/1-35-transparent.png": {
+      "file": "assets/optimized/1-35-transparent-dfa71fc384.webp",
+      "before": 853713,
+      "after": 150642,
+      "original_dimensions": [
+        528,
+        874
+      ],
+      "dimensions": [
+        528,
+        874
+      ],
+      "lossless": false
+    },
+    "assets/rendered/multi-carrier-homepage/silk/1-61-transparent.png": {
+      "file": "assets/optimized/1-61-transparent-94b215c69c.webp",
+      "before": 780526,
+      "after": 142546,
+      "original_dimensions": [
+        446,
+        856
+      ],
+      "dimensions": [
+        446,
+        856
+      ],
+      "lossless": false
+    },
+    "assets/rendered/process_v7-transparent.png": {
+      "file": "assets/optimized/process_v7-transparent-8470c4f2aa.webp",
+      "before": 16908721,
+      "after": 1870638,
+      "original_dimensions": [
+        10200,
+        8750
+      ],
+      "dimensions": [
+        3200,
+        2745
+      ],
+      "lossless": true
+    },
+    "assets/rendered/qyspd/paper-pipeline-transparent.png": {
+      "file": "assets/optimized/paper-pipeline-transparent-69b4adf14a.webp",
+      "before": 485130,
+      "after": 253050,
+      "original_dimensions": [
+        1035,
+        760
+      ],
+      "dimensions": [
+        1035,
+        760
+      ],
+      "lossless": true
+    },
+    "assets/team/xue-hui.jpg": {
+      "file": "assets/optimized/xue-hui-e6dbdc9437.webp",
+      "before": 610631,
+      "after": 44924,
+      "original_dimensions": [
+        2389,
+        3279
+      ],
+      "dimensions": [
+        729,
+        1000
+      ],
+      "lossless": false
+    },
+    "assets/team/zhu-shipeng-transparent.png": {
+      "file": "assets/optimized/zhu-shipeng-transparent-76cd34867a.webp",
+      "before": 2558632,
+      "after": 59350,
+      "original_dimensions": [
+        2271,
+        2784
+      ],
+      "dimensions": [
+        816,
+        1000
+      ],
+      "lossless": false
+    }
+  },
+  "font": {
+    "file": "assets/optimized/hanyi-xingkai-8ef60a1651.woff2",
+    "before": 8883168,
+    "after": 608756,
+    "codepoints": 995
+  }
+}

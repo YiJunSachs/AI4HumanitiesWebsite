@@ -7,7 +7,7 @@
   color: #fff1d6;
 }
 .home-redesign .team-intro::before {
-  background: url("rendered/calligraphy_hero.png") center 48% / cover no-repeat;
+  background: url("optimized/calligraphy_hero-565b884fee.webp") center 48% / cover no-repeat;
   filter: grayscale(1);
   opacity: .12;
 }
@@ -301,7 +301,7 @@ html.home-redesign-root, body.home-redesign { margin: 0; padding: 0; width: 100%
 /* User-supplied Chill ChunQiu ChenFeng font for the introduction and directory. */
 @font-face {
   font-family: "Hanyi Xingkai";
-  src: url("figures/hanyi-xingkai.ttf") format("truetype");
+  src: url("optimized/hanyi-xingkai-8ef60a1651.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;

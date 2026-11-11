@@ -1,14 +1,14 @@
 /* Shared scholarly reading layout, matching the homepage palette and type. */
-@font-face { font-family: "Hanyi Xingkai"; src: url("figures/hanyi-xingkai.ttf") format("truetype"); font-display: swap; font-weight: 400; }
+@font-face { font-family: "Hanyi Xingkai"; src: url("optimized/hanyi-xingkai-8ef60a1651.woff2") format("woff2"); font-display: swap; font-weight: 400; }
 html.paper-editorial-root { scroll-snap-type: none; scroll-padding-top: 110px; }
 body.paper-editorial {
  --paper-bg: #f8f7f1; --paper-line: #d1d5c9; --paper-ink: #28392e; --paper-muted: #626857; --paper-accent: #a13d2d;
- --paper-landscape: url("figures/restoration-landscape.png");
+ --paper-landscape: url("optimized/restoration-landscape-e21fa625d8.webp");
  margin: 0; min-width: 0; color: var(--paper-ink); background: var(--paper-bg);
  font-family: "Hanyi Xingkai", "Songti SC", "STSong", serif; font-size: 24px; line-height: 1.85;
 }
-body.paper-theme-carriers { --paper-bg: #eef6f4; --paper-line: #c8d8d1; --paper-landscape: url("figures/carrier-landscape-pale.png"); }
-body.paper-theme-phonology { --paper-bg: #f3eef8; --paper-line: #d7cddd; --paper-landscape: url("figures/phonology-landscape-palelavender.png"); }
+body.paper-theme-carriers { --paper-bg: #eef6f4; --paper-line: #c8d8d1; --paper-landscape: url("optimized/carrier-landscape-pale-7e08e787f4.webp"); }
+body.paper-theme-phonology { --paper-bg: #f3eef8; --paper-line: #d7cddd; --paper-landscape: url("optimized/phonology-landscape-palelavender-33d7a59cd1.webp"); }
 .paper-editorial .site-shell { width: min(1440px, calc(100% - 96px)); margin-inline: auto; }
 .paper-editorial .topbar { position: sticky; top: 0; z-index: 30; background: var(--paper-bg); border: 0; border-bottom: 1px solid var(--paper-line); box-shadow: none; backdrop-filter: none; }
 .paper-editorial .nav { min-height: 86px; padding: 12px 0; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; }

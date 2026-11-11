@@ -90,8 +90,8 @@ html[data-language="en"] body.home-redesign .team-intro .hero-copy * {
 @media (min-width: 901px) {
   .home-redesign .phonology-editorial {
     margin-bottom: -90px;
-    -webkit-mask-image: linear-gradient(#000, #000), url("figures/phonology-landscape-palelavender.png");
-    mask-image: linear-gradient(#000, #000), url("figures/phonology-landscape-palelavender.png");
+    -webkit-mask-image: linear-gradient(#000, #000), url("optimized/phonology-landscape-palelavender-33d7a59cd1.webp");
+    mask-image: linear-gradient(#000, #000), url("optimized/phonology-landscape-palelavender-33d7a59cd1.webp");
     -webkit-mask-size: 100% calc(100% - 84px), 100% auto;
     mask-size: 100% calc(100% - 84px), 100% auto;
     -webkit-mask-position: center top, center bottom;

@@ -58,7 +58,7 @@
   --restoration-body-size: clamp(18px, 1.15vw, 24px);
   --restoration-subtitle-size: calc(clamp(23px, 1.65vw, 36px) + 4px);
   padding-bottom: 160px;
-  background-image: url("figures/restoration-landscape.png");
+  background-image: url("optimized/restoration-landscape-e21fa625d8.webp");
   background-position: center bottom;
   background-size: 100% auto;
   background-repeat: no-repeat;

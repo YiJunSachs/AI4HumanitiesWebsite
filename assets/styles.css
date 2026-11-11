@@ -2000,7 +2000,7 @@ html[data-language="en"] .paper-project-page .nav-links {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("rendered/calligraphy_hero.png") center / cover no-repeat;
+  background: url("optimized/calligraphy_hero-565b884fee.webp") center / cover no-repeat;
   filter: saturate(0.52) contrast(1.08);
   transform: scale(1.02);
 }
@@ -2706,7 +2706,7 @@ html[data-language="en"] .paper-project-page .nav-links {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("rendered/calligraphy_hero.png") center / cover no-repeat;
+  background: url("optimized/calligraphy_hero-565b884fee.webp") center / cover no-repeat;
   filter: saturate(0.52) contrast(1.08);
   transform: scale(1.02);
 }

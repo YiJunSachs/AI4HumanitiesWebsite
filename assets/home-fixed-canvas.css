@@ -2001,7 +2001,7 @@ html[data-language="en"] .paper-project-page .nav-links {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("rendered/calligraphy_hero.png") center / cover no-repeat;
+  background: url("optimized/calligraphy_hero-565b884fee.webp") center / cover no-repeat;
   filter: saturate(0.52) contrast(1.08);
   transform: scale(1.02);
 }
@@ -2707,7 +2707,7 @@ html[data-language="en"] .paper-project-page .nav-links {
   position: absolute;
   inset: 0;
   z-index: -2;
-  background: url("rendered/calligraphy_hero.png") center / cover no-repeat;
+  background: url("optimized/calligraphy_hero-565b884fee.webp") center / cover no-repeat;
   filter: saturate(0.52) contrast(1.08);
   transform: scale(1.02);
 }
@@ -4413,7 +4413,7 @@ html.ph-page-root {
   color: #fff1d6;
 }
 .home-redesign .team-intro::before {
-  background: url("rendered/calligraphy_hero.png") center 48% / cover no-repeat;
+  background: url("optimized/calligraphy_hero-565b884fee.webp") center 48% / cover no-repeat;
   filter: grayscale(1);
   opacity: .12;
 }
@@ -4707,7 +4707,7 @@ html.home-redesign-root, body.home-redesign { margin: 0; padding: 0; width: 100%
 /* User-supplied Chill ChunQiu ChenFeng font for the introduction and directory. */
 @font-face {
   font-family: "Hanyi Xingkai";
-  src: url("figures/hanyi-xingkai.ttf") format("truetype");
+  src: url("optimized/hanyi-xingkai-8ef60a1651.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -4905,7 +4905,7 @@ html.home-redesign-root, body.home-redesign { margin: 0; padding: 0; width: 100%
   --restoration-body-size: clamp(18px, 27.03650px, 24px);
   --restoration-subtitle-size: calc(clamp(23px, 38.79150px, 36px) + 4px);
   padding-bottom: 160px;
-  background-image: url("figures/restoration-landscape.png");
+  background-image: url("optimized/restoration-landscape-e21fa625d8.webp");
   background-position: center bottom;
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -5154,7 +5154,7 @@ body.home-redesign { --team-copy-size: 37.616px; }
 }
 .restoration-landscape-overlap {
   position: absolute; left: 0; bottom: -54px; width: 100%; height: 784px;
-  background: url("figures/restoration-landscape.png") center bottom / 100% auto no-repeat;
+  background: url("optimized/restoration-landscape-e21fa625d8.webp") center bottom / 100% auto no-repeat;
   z-index: 4; pointer-events: none;
 }
 .home-redesign .research-section-rubbing .restoration-context {
@@ -5240,7 +5240,7 @@ body.home-redesign { --team-copy-size: 37.616px; }
 
 /* One-line lower placement of 02 includes its absolute-positioned footer artwork. */
 .home-redesign .carrier-editorial { padding-top: 173.3512px; }
-.home-redesign .carrier-landscape-foreground { background-image: url("figures/carrier-landscape-pale.png"); }
+.home-redesign .carrier-landscape-foreground { background-image: url("optimized/carrier-landscape-pale-7e08e787f4.webp"); }
 /* Optical left alignment of the smaller calligraphic kicker with the title. */
 .home-redesign .restoration-kicker { padding-left: 12px; }
 /* Flat torn-paper edges replace scenery in research 03 and 04. */
@@ -5276,11 +5276,11 @@ body.home-redesign { --team-copy-size: 37.616px; }
   background-repeat: no-repeat;
 }
 .home-redesign .characters-editorial>.editorial-landscape-foreground {
-  background-image: url("figures/characters-landscape-paleblue.png");
+  background-image: url("optimized/characters-landscape-paleblue-4e91752d82.webp");
   bottom: -54px;
 }
 .home-redesign .phonology-editorial>.editorial-landscape-foreground {
-  background-image: url("figures/phonology-landscape-palelavender.png");
+  background-image: url("optimized/phonology-landscape-palelavender-33d7a59cd1.webp");
   bottom: 0;
 }
 

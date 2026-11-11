@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Zhishan Calligraphy";
-  src: url("figures/hanyi-xingkai.ttf") format("truetype");
+  src: url("optimized/hanyi-xingkai-8ef60a1651.woff2") format("woff2");
   font-display: swap;
 }
 :root {
