@@ -231,3 +231,12 @@ html body.home-redesign .signature-widget .signature-seal{left:calc(50% + 80px);
 /* Raise the English introduction by one line above the mountain fade. */
 html[data-language="en"] body.home-redesign .team-intro .team-copy-group{transform:translateY(126px)!important}
 @media(max-width:900px){html[data-language="en"] body.home-redesign .team-intro .team-copy-group{transform:translateY(60px)!important}}
+
+/* Mobile introduction: neutral white stays legible over the mountain artwork. */
+@media(max-width:900px){
+ html[data-language] body.home-redesign .team-intro .team-affiliation,
+ html[data-language] body.home-redesign .team-intro .team-copy-group .hero-copy{
+  color:#fff;
+  text-shadow:0 1px 2px rgba(30,25,20,.65);
+ }
+}
