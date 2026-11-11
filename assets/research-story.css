@@ -137,6 +137,15 @@ html:not([lang="en"]) .story-contents a { white-space: nowrap; }
 }
 
 /* Use more of the narrow screen before reducing short-line text. */
+/* These Chinese paragraphs almost fit the fixed desktop artboard at 28px.
+   Reserve a little space before web fonts and images finish loading. */
+@media (min-width: 901px) {
+  html:not([lang="en"]) body.restoration-story .story-chapter p.restoration-single-line {
+    font-size: 26px;
+    white-space: nowrap;
+  }
+}
+
 @media (max-width: 700px) {
   .story-challenges { padding-inline: 16px; }
   .story-footer { padding-inline: 16px; }

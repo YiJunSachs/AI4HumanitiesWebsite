@@ -72,6 +72,10 @@
   window.addEventListener('resize', schedule);
   window.addEventListener('site:languagechange', schedule);
   window.addEventListener('load', schedule);
+  // Fit parsed text immediately; large images must not delay text layout.
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', fit, { once: true });
+  } else fit();
   document.fonts.ready.then(schedule);
   document.fonts.addEventListener('loadingdone', schedule);
 })();
