@@ -6,6 +6,9 @@
 .team-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; margin: 36px 0; }
 .team-member { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 32px; align-items: start; padding: 32px; background: #fffdf6; border: 1px solid #d9ddcf; }
 .member-portrait { display: block; width: 100%; height: auto; aspect-ratio: 3 / 4; object-fit: cover; object-position: center top; margin: 0; }
+/* Crop the original photo to (275, 425, 600, 800), preserving her real features and autumn setting. */
+.member-portrait-xue { position: relative; overflow: hidden; }
+.member-portrait-xue img { position: absolute; width: 167.166667%; max-width: none; height: auto; left: -45.833333%; top: -53.125%; }
 .member-details { display: flex; flex-direction: column; align-items: flex-start; align-self: stretch; min-width: 0; overflow-wrap: anywhere; }
 .portrait-placeholder { background: #f2f0e7; border: 1px solid #e5e3d8; }
 .team-member h2 { margin: 0; font: 30px/1.3 "Zhishan Calligraphy", "Songti SC", serif; font-synthesis: none; }
