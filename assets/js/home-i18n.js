@@ -86,7 +86,7 @@
     });
   };
   const fitChineseLines = () => {
-    if (matchMedia('(max-width: 900px)').matches) {
+    if (matchMedia('(max-width: 1200px)').matches) {
       document.querySelector('.team-copy-group').style.transform = '';
       new Set([...document.querySelectorAll('.balanced-copy-line')].map(line => line.parentElement)).forEach(parent => {
         if (parent.dataset.englishLayoutText) parent.textContent = parent.dataset.englishLayoutText;
@@ -119,6 +119,6 @@
     records.forEach(({element, zh, en}) => { element.innerHTML = language === "en" ? en : zh; });
     document.fonts.ready.then(() => requestAnimationFrame(fitChineseLines));
   });
-  matchMedia('(max-width: 900px)').addEventListener('change', () => requestAnimationFrame(fitChineseLines));
+  matchMedia('(max-width: 1200px)').addEventListener('change', () => requestAnimationFrame(fitChineseLines));
   document.fonts.ready.then(() => requestAnimationFrame(fitChineseLines));
 })();

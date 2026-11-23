@@ -1,8 +1,8 @@
-/* Dedicated small-screen layout. Desktop artwork remains above the 900px breakpoint. */
+/* Dedicated small-screen layout. Desktop artwork remains above the 1200px breakpoint. */
 .unified-menu-toggle,.team-mobile-mountains{display:none}
-@media(max-width:900px){
- html:has(body.site-canvas){scroll-padding-top:20px}
- html body.site-canvas{width:100%;min-width:0;max-width:100%;margin:0;left:0;zoom:1;transform:none}
+@media(max-width:1200px){
+ html:has(body.site-canvas){scroll-padding-top:20px;scroll-snap-type:none;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+ html body.site-canvas,html body.site-canvas:not(.home-redesign){width:100%;min-width:0;max-width:100%;margin:0;left:0;zoom:1;transform:none}
  html body.site-canvas *{box-sizing:border-box}
  html body .unified-header{position:relative;border-top-width:4px}
  html body .unified-identities{display:grid;grid-template-columns:minmax(0,1fr);width:100%;min-height:0;gap:12px;padding:16px 18px;overflow:visible}
@@ -18,30 +18,37 @@
  html body .unified-links{order:2;flex:1 0 100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px;overflow:visible;min-width:0}
  html body .unified-header.has-mobile-menu .unified-links{display:none}
  html body .unified-header.has-mobile-menu.menu-open .unified-links{display:grid;margin-top:8px;padding-top:8px;border-top:1px solid #ffffff40}
- html[data-language] body .unified-header .unified-nav-link{flex:none;min-width:0;min-height:44px;padding:12px 8px;text-align:left;white-space:normal;font-size:16px;line-height:1.5;overflow-wrap:break-word}
- html[data-language="en"] body .unified-header .unified-nav-link{font-size:14px}
+ html[data-language] body .unified-header .unified-nav-link{flex:none;min-width:0;min-height:44px;padding:12px 8px;text-align:left;white-space:normal;font-size:16px!important;line-height:1.5;overflow-wrap:break-word}
+ html[data-language="en"] body .unified-header .unified-nav-link{font-size:14px!important}
  .unified-nav-link::after{display:none}
  .unified-nav-link[aria-current]{background:#ffffff18;border-radius:3px}
  html body.home-redesign .restoration-shell,html body.site-canvas .story-shell{width:calc(100% - 36px);max-width:720px;margin-inline:auto}
+ html body.home-redesign .team-intro{left:auto;transform:none;container-type:normal;width:100%}
+ html body.home-redesign .team-intro .signature-widget{height:calc(100% - 80px);width:clamp(56px,14.7%,130px)}
+ html body.home-redesign .signature-glyphs{transform:translateX(8px)}
+ html body.home-redesign .signature-widget .signature-seal{left:calc(50% + 8px)}
+ html[data-language] body.home-redesign .team-intro .team-copy-group{transform:none!important}
+ html[data-language] body.home-redesign .team-copy-line{display:inline;white-space:normal}
  html body.home-redesign .team-intro .hero-grid{margin-top:-80px;padding:110px 24px 72px;background:linear-gradient(to bottom,transparent 0 80px,#50463c 80px)}
  html body.home-redesign .team-intro .team-mountain-layer{display:none}
  html body.home-redesign .team-intro .team-mobile-mountains{display:block;position:absolute;inset:0;width:100%;height:180px;z-index:-1;pointer-events:none;mask-image:linear-gradient(#000 55%,transparent);-webkit-mask-image:linear-gradient(#000 55%,transparent)}
  html body.home-redesign .team-intro .hero-grid::after{height:64px}
- html body.home-redesign .team-intro .home-header-frame{aspect-ratio:2351/950}
+ html body.home-redesign .team-intro .home-header-frame{height:clamp(210px,42vw,340px);aspect-ratio:auto}
  html body.home-redesign .team-intro .home-header-art{transform:none;height:calc(100% + 20px);object-position:center top}
  html body.home-redesign .restoration-interaction-note{max-width:100%;white-space:normal;overflow-wrap:break-word}
  html body.home-redesign .restoration-caption span{white-space:normal}
+ html[data-language] body.home-redesign .restore-pair-labels span{font-size:12px!important;min-width:0;white-space:normal}
  html body.home-redesign .restoration-slogan span{white-space:normal}
- html body.site-canvas .unified-identities{grid-template-columns:1.1fr 1.3fr;gap:12px 16px}
+ html body.site-canvas .unified-identities{grid-template-columns:1.1fr 1.3fr;gap:12px 16px;min-height:0}
  html body.site-canvas .unified-identity:first-child{grid-column:1 / -1}
  html body.site-canvas .unified-identity{grid-template-columns:32px minmax(0,1fr);gap:8px}
  html body.site-canvas .unified-identity img{width:32px;height:38px}
  html[data-language] body.site-canvas .unified-header .unified-unit-name{font-size:15px!important}
- html[data-language="en"] body.site-canvas .unified-header .unified-unit-name{font-size:12px!important}
+ html[data-language="en"] body.site-canvas .unified-header .unified-unit-name{font-size:14px!important}
  html[data-language="zh"] body.site-canvas .unified-identity:not(:first-child) .unified-unit-name{font-size:13px!important}
  html body.site-canvas .unified-menu-toggle{border:0;padding-left:0}
 
- html[data-language] body.home-redesign .team-intro .hero-copy,html[data-language] body.home-redesign .team-intro .hero-copy>p{font-size:16px;line-height:1.85}
+ html[data-language] body.home-redesign .team-intro .team-copy-group .hero-copy,html[data-language] body.home-redesign .team-intro .hero-copy>p{font-size:16px;line-height:1.85}
  html body.home-redesign .restoration-editorial{padding:56px 0 160px!important;min-height:0}
  html body.home-redesign .restoration-heading{min-height:0;padding:0 0 18px;margin-bottom:20px}
  html[data-language] body.home-redesign .restoration-heading h2{font-size:32px;line-height:1.4;white-space:normal;overflow-wrap:break-word}
@@ -85,3 +92,59 @@
  html body.site-canvas .story-footer{font-size:13px;padding:24px 18px;overflow-wrap:break-word}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+
+/* Safe areas also apply in landscape and to foldable cover screens. */
+@media(max-width:1200px){
+ html body.site-canvas{--edge-left:max(18px,env(safe-area-inset-left,0px));--edge-right:max(18px,env(safe-area-inset-right,0px));padding-bottom:env(safe-area-inset-bottom,0px)}
+ html body.site-canvas .unified-nav-bar{min-height:60px;padding-block:8px}
+ html body.site-canvas .unified-identities,html body.site-canvas .unified-nav-bar{padding-left:var(--edge-left);padding-right:var(--edge-right)}
+ html body.home-redesign .restoration-shell,html body.site-canvas:not(.home-redesign) .story-shell{width:auto;max-width:960px;margin-left:max(var(--edge-left),calc((100% - 960px)/2));margin-right:max(var(--edge-right),calc((100% - 960px)/2))}
+ html body.home-redesign .team-intro .hero-grid{padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+ html body.site-canvas .team-hero{padding:32px 0 26px}
+ html body.site-canvas .story-eyebrow{font-size:13px;line-height:1.7;overflow-wrap:anywhere}
+ html body.site-canvas .story-chapter h3{font-size:21px;line-height:1.6;overflow-wrap:anywhere}
+ html body.site-canvas .story-lead,html body.site-canvas .story-chapter p,html body.site-canvas .member-bio{white-space:normal!important}
+ html body.home-redesign .ph-controls{flex-wrap:wrap;gap:10px}
+ html body.home-redesign .ph-controls input{min-width:80px;flex:1}
+ html body.home-redesign .carrier-lightbox{max-height:calc(100dvh - 24px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));overflow:auto;overscroll-behavior:contain}
+ html body.site-canvas :is(a,button,input[type="range"]){-webkit-tap-highlight-color:rgba(133,47,37,.15)}
+}
+/* Narrow foldable covers and compact phones: never shrink names into tiny type. */
+@media(max-width:359px){
+ html body.site-canvas .unified-identities{grid-template-columns:minmax(0,1fr);gap:10px}
+ html body.site-canvas .unified-identity:first-child{grid-column:auto}
+ html[data-language] body.site-canvas .unified-header .unified-unit-name{font-size:14px!important}
+ html body.home-redesign .restoration-heading h2{font-size:28px}
+ html body.home-redesign .restoration-slogan{font-size:20px}
+ html body.site-canvas .story-hero h1,html body.site-canvas .team-hero h1{font-size:28px}
+ html body.site-canvas .team-member{grid-template-columns:80px minmax(0,1fr);padding:16px;gap:6px 12px}
+ html body.site-canvas .member-portrait{width:80px;height:107px}
+ html[data-language="en"] body.site-canvas .team-member h2{font-size:23px}
+ html body.site-canvas .dataset-facts{gap:8px}
+ html body.site-canvas .dataset-facts strong{font-size:23px}
+}
+/* Expanded foldables and phone landscape: use the added space at readable sizes. */
+@media(min-width:600px) and (max-width:1200px){
+ html body.site-canvas .unified-identities{gap:16px 28px;padding-block:20px;max-width:1040px;margin-inline:auto}
+ html body.site-canvas .unified-identity{grid-template-columns:44px minmax(0,1fr);gap:12px}
+ html body.site-canvas .unified-identity img,html body.site-canvas .unified-identity .unified-museum{width:44px;height:48px}
+ html[data-language] body.site-canvas .unified-header .unified-unit-name{font-size:19px!important}
+ html[data-language="en"] body.site-canvas .unified-header .unified-unit-name{font-size:17px!important}
+ html body.site-canvas .unified-links{grid-template-columns:repeat(3,minmax(0,1fr))}
+ html body.home-redesign .team-intro .hero-copy>p{max-width:72ch;margin-inline:auto}
+ html[data-language] body.home-redesign .team-intro .team-copy-group .hero-copy,html[data-language] body.home-redesign .team-intro .hero-copy>p{font-size:18px;line-height:1.9;color:#fff}
+ html body.home-redesign .restoration-heading h2{font-size:40px}
+ html body.home-redesign .restoration-showcase{max-width:680px;margin-inline:auto}
+ html body.home-redesign .carrier-editorial-showcase .carrier-sample-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ html body.site-canvas .story-hero h1,html body.site-canvas .team-hero h1{font-size:40px}
+ html body.site-canvas .story-chapter h2{font-size:30px}
+ html body.site-canvas .story-lead,html body.site-canvas .story-chapter p{font-size:18px}
+ html body.site-canvas .story-contents{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 24px}
+ html body.site-canvas .ciri-sample-grid,html body.site-canvas .carrier-story-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ html body.site-canvas .carrier-story-images img{height:180px}
+ html body.site-canvas .team-member{grid-template-columns:140px minmax(0,1fr);gap:24px;padding:28px}
+ html body.site-canvas .member-portrait{grid-row:auto;width:140px;height:187px}
+ html body.site-canvas .member-details{display:block}
+ html body.site-canvas .member-bio{font-size:17px;margin-top:14px}
+ html body.site-canvas .team-member h2{margin-top:0}
+}

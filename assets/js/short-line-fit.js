@@ -32,7 +32,9 @@
   function fit() {
     fitted.forEach((previous, element) => restore(element, previous));
     fitted.clear();
-    const mobile = matchMedia('(max-width: 900px)').matches;
+    const mobile = matchMedia('(max-width: 1200px)').matches;
+    // Mobile text reflows at its readable font size, including when a fold opens.
+    if (mobile) return;
     document.querySelectorAll(selector).forEach(element => {
       if (!element.getClientRects().length || element.querySelector('br,h1,h2,h3,h4,p,li,a,figcaption,button')) return;
       if (element.matches('a') && element.closest('p,li')) return;
