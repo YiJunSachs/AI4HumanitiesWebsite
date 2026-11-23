@@ -28,7 +28,7 @@
  html body.home-redesign .team-intro .team-mobile-mountains{display:block;position:absolute;inset:0;width:100%;height:180px;z-index:-1;pointer-events:none;mask-image:linear-gradient(#000 55%,transparent);-webkit-mask-image:linear-gradient(#000 55%,transparent)}
  html body.home-redesign .team-intro .hero-grid::after{height:64px}
  html body.home-redesign .team-intro .home-header-frame{aspect-ratio:2351/950}
- html body.home-redesign .team-intro .home-header-art{transform:translateY(20px)}
+ html body.home-redesign .team-intro .home-header-art{transform:none;height:calc(100% + 20px);object-position:center top}
  html body.home-redesign .restoration-interaction-note{max-width:100%;white-space:normal;overflow-wrap:break-word}
  html body.home-redesign .restoration-caption span{white-space:normal}
  html body.home-redesign .restoration-slogan span{white-space:normal}
