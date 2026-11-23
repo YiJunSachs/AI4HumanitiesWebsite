@@ -31,14 +31,14 @@
  html body.home-redesign .restoration-interaction-note{max-width:100%;white-space:normal;overflow-wrap:break-word}
  html body.home-redesign .restoration-caption span{white-space:normal}
  html body.home-redesign .restoration-slogan span{white-space:normal}
- html body.home-redesign .unified-identities{grid-template-columns:1.1fr 1.3fr;gap:12px 16px}
- html body.home-redesign .unified-identity:first-child{grid-column:1 / -1}
- html body.home-redesign .unified-identity{grid-template-columns:32px minmax(0,1fr);gap:8px}
- html body.home-redesign .unified-identity img{width:32px;height:38px}
- html[data-language] body.home-redesign .unified-header .unified-unit-name{font-size:15px!important}
- html[data-language="en"] body.home-redesign .unified-header .unified-unit-name{font-size:12px!important}
- html[data-language="zh"] body.home-redesign .unified-identity:not(:first-child) .unified-unit-name{font-size:13px!important}
- html body.home-redesign .unified-menu-toggle{border:0;padding-left:0}
+ html body.site-canvas .unified-identities{grid-template-columns:1.1fr 1.3fr;gap:12px 16px}
+ html body.site-canvas .unified-identity:first-child{grid-column:1 / -1}
+ html body.site-canvas .unified-identity{grid-template-columns:32px minmax(0,1fr);gap:8px}
+ html body.site-canvas .unified-identity img{width:32px;height:38px}
+ html[data-language] body.site-canvas .unified-header .unified-unit-name{font-size:15px!important}
+ html[data-language="en"] body.site-canvas .unified-header .unified-unit-name{font-size:12px!important}
+ html[data-language="zh"] body.site-canvas .unified-identity:not(:first-child) .unified-unit-name{font-size:13px!important}
+ html body.site-canvas .unified-menu-toggle{border:0;padding-left:0}
 
  html[data-language] body.home-redesign .team-intro .hero-copy,html[data-language] body.home-redesign .team-intro .hero-copy>p{font-size:16px;line-height:1.85}
  html body.home-redesign .restoration-editorial{padding:56px 0 160px!important;min-height:0}
