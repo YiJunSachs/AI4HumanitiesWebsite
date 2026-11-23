@@ -1,5 +1,15 @@
 (()=>{
  const root=document.querySelector('.unified-header');if(!root)return;
+ const nav=root.querySelector('.unified-nav-bar'),menu=root.querySelector('.unified-links');
+ const toggle=document.createElement('button');
+ toggle.type='button';toggle.className='unified-menu-toggle';
+ menu.id='mobile-navigation';toggle.setAttribute('aria-controls',menu.id);toggle.setAttribute('aria-expanded','false');
+ nav.prepend(toggle);root.classList.add('has-mobile-menu');
+ function setMenu(open){root.classList.toggle('menu-open',open);toggle.setAttribute('aria-expanded',String(open));}
+ toggle.addEventListener('click',()=>setMenu(toggle.getAttribute('aria-expanded')!=='true'));
+ menu.addEventListener('click',event=>{if(event.target.closest('a'))setMenu(false);});
+ root.addEventListener('keydown',event=>{if(event.key==='Escape'&&toggle.getAttribute('aria-expanded')==='true'){setMenu(false);toggle.focus();}});
+ matchMedia('(max-width:900px)').addEventListener('change',()=>setMenu(false));
  const labels=[...root.querySelectorAll('[data-nav-en]')].map(el=>({el,zh:el.textContent,en:el.dataset.navEn}));
  function fitUnits(){
   const row=root.querySelector('.unified-identities'),names=[...root.querySelectorAll('.unified-unit-name')];
@@ -13,6 +23,7 @@
  }
  function update(){
   const en=document.documentElement.dataset.language==='en';labels.forEach(x=>x.el.textContent=en?x.en:x.zh);root.querySelector('nav').setAttribute('aria-label',en?'Main navigation':'主导航');
+  toggle.textContent=en?'Menu':'栏目导航';
   const links=root.querySelectorAll('.unified-nav-link[href]');let active=null;
   for(const link of links){link.removeAttribute('aria-current');const url=new URL(link.href);if(url.pathname===location.pathname&&(!url.hash||url.hash===location.hash))active=link;}
   if(!active&&location.pathname.endsWith('/index.html')&&!location.hash)active=links[0];if(active)active.setAttribute('aria-current','page');

@@ -1,0 +1,86 @@
+/* Dedicated small-screen layout. Desktop artwork remains above the 900px breakpoint. */
+.unified-menu-toggle,.team-mobile-mountains{display:none}
+@media(max-width:900px){
+ html:has(body.site-canvas){scroll-padding-top:20px}
+ html body.site-canvas{width:100%;min-width:0;max-width:100%;margin:0;left:0;zoom:1;transform:none}
+ html body.site-canvas *{box-sizing:border-box}
+ html body .unified-header{position:relative;border-top-width:4px}
+ html body .unified-identities{display:grid;grid-template-columns:minmax(0,1fr);width:100%;min-height:0;gap:12px;padding:16px 18px;overflow:visible}
+ html body .unified-identity{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;min-width:0;align-items:center}
+ html body .unified-identity img,html body .unified-identity .unified-museum{width:44px;height:44px;max-width:100%;object-fit:contain}
+ html[data-language] body .unified-header .unified-unit-name{white-space:normal;font-size:18px!important;line-height:1.5;letter-spacing:0;overflow-wrap:break-word}
+ html[data-language="en"] body .unified-header .unified-unit-name{font-family:Georgia,serif!important;font-size:15px!important}
+ html body .unified-nav-bar{display:flex;flex-wrap:wrap;justify-content:space-between;gap:0;padding:8px 16px;min-height:60px}
+ html body .unified-menu-toggle{display:inline-flex;align-items:center;gap:16px;min-height:44px;padding:8px 12px;border:1px solid #ffffff70;border-radius:4px;background:transparent;color:inherit;font:inherit;font-size:17px;cursor:pointer}
+ .unified-menu-toggle::after{content:'☰';font-family:Arial,sans-serif}
+ .unified-menu-toggle[aria-expanded="true"]::after{content:'×';font-size:24px;line-height:1}
+ html body .unified-header .unified-language{min-height:44px;order:1;margin-left:auto}
+ html body .unified-links{order:2;flex:1 0 100%;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 12px;overflow:visible;min-width:0}
+ html body .unified-header.has-mobile-menu .unified-links{display:none}
+ html body .unified-header.has-mobile-menu.menu-open .unified-links{display:grid;margin-top:8px;padding-top:8px;border-top:1px solid #ffffff40}
+ html[data-language] body .unified-header .unified-nav-link{flex:none;min-width:0;min-height:44px;padding:12px 8px;text-align:left;white-space:normal;font-size:16px;line-height:1.5;overflow-wrap:break-word}
+ html[data-language="en"] body .unified-header .unified-nav-link{font-size:14px}
+ .unified-nav-link::after{display:none}
+ .unified-nav-link[aria-current]{background:#ffffff18;border-radius:3px}
+ html body.home-redesign .restoration-shell,html body.site-canvas .story-shell{width:calc(100% - 36px);max-width:720px;margin-inline:auto}
+ html body.home-redesign .team-intro .hero-grid{padding:110px 24px 72px;background:linear-gradient(to bottom,transparent 0 80px,#50463c 80px)}
+ html body.home-redesign .team-intro .team-mountain-layer{display:none}
+ html body.home-redesign .team-intro .team-mobile-mountains{display:block;position:absolute;inset:0;width:100%;height:180px;z-index:-1;pointer-events:none;mask-image:linear-gradient(#000 55%,transparent);-webkit-mask-image:linear-gradient(#000 55%,transparent)}
+ html body.home-redesign .team-intro .hero-grid::after{height:64px}
+ html body.home-redesign .team-intro .home-header-frame{aspect-ratio:2351/950}
+ html body.home-redesign .restoration-interaction-note{max-width:100%;white-space:normal;overflow-wrap:break-word}
+ html body.home-redesign .restoration-caption span{white-space:normal}
+ html body.home-redesign .restoration-slogan span{white-space:normal}
+ html body.home-redesign .unified-identities{grid-template-columns:1.1fr 1.3fr;gap:12px 16px}
+ html body.home-redesign .unified-identity:first-child{grid-column:1 / -1}
+ html body.home-redesign .unified-identity{grid-template-columns:32px minmax(0,1fr);gap:8px}
+ html body.home-redesign .unified-identity img{width:32px;height:38px}
+ html[data-language] body.home-redesign .unified-header .unified-unit-name{font-size:15px!important}
+ html[data-language="en"] body.home-redesign .unified-header .unified-unit-name{font-size:12px!important}
+ html[data-language="zh"] body.home-redesign .unified-identity:not(:first-child) .unified-unit-name{font-size:13px!important}
+ html body.home-redesign .unified-menu-toggle{border:0;padding-left:0}
+
+ html[data-language] body.home-redesign .team-intro .hero-copy,html[data-language] body.home-redesign .team-intro .hero-copy>p{font-size:16px;line-height:1.85}
+ html body.home-redesign .restoration-editorial{padding:56px 0 160px!important;min-height:0}
+ html body.home-redesign .restoration-heading{min-height:0;padding:0 0 18px;margin-bottom:20px}
+ html[data-language] body.home-redesign .restoration-heading h2{font-size:32px;line-height:1.4;white-space:normal;overflow-wrap:break-word}
+ html[data-language="en"] body.home-redesign .restoration-heading h2{font-size:27px}
+ html[data-language] body.home-redesign .restoration-slogan{font-size:22px;line-height:1.65;white-space:normal}
+ html body.home-redesign .restoration-editorial-grid{gap:20px}
+ html body.home-redesign .restoration-examples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+ html body.home-redesign .restoration-showcase{min-width:0}
+ html body.home-redesign .restore-pair{min-width:0;width:100%;margin:0}
+ html body.home-redesign .carrier-sample-grid{gap:16px 12px}
+ html body.home-redesign .research-corner-plant{max-width:30%;opacity:.65;pointer-events:none}
+ html body.home-redesign .topic-more{display:inline-flex;align-items:center;min-height:48px;padding:8px 0;border:0;border-bottom:1px solid currentColor;border-radius:0;font-size:16px}
+ html body.home-redesign .ph-card{min-width:0}
+ html body.home-redesign .ph-card-head{flex-wrap:wrap;gap:8px}
+ html body.home-redesign .ph-graph-scroll{height:300px;max-width:100%}
+ html body.site-canvas .story-hero{padding:32px 0 26px;max-width:100%}
+ html body.site-canvas .story-hero h1,html body.site-canvas .team-hero h1{font-size:32px;line-height:1.5;margin:14px 0 20px;text-wrap:wrap}
+ html body.site-canvas .story-lead,html body.site-canvas .story-chapter p{font-size:16px;line-height:1.9;max-width:none;white-space:normal;overflow-wrap:break-word}
+ html body.site-canvas .story-chapter{padding:32px 0;min-width:0}
+ html body.site-canvas .story-chapter h2{font-size:25px;line-height:1.5;white-space:normal;overflow-wrap:break-word}
+ html body.site-canvas .story-contents{display:grid;grid-template-columns:minmax(0,1fr)}
+ html body.site-canvas .story-contents a{white-space:normal;min-height:44px;padding:12px 0;border-right:0;font-size:15px}
+ html body.site-canvas .story-challenges{padding:18px 16px}
+ html body.site-canvas .story-challenges li{font-size:16px}
+ html body.site-canvas figure{max-width:100%;padding:10px;margin-inline:0}
+ html body.site-canvas figure img{max-width:100%;height:auto;object-fit:contain}
+ html body.site-canvas .research-figure{width:100%;max-width:100%}
+ html body.site-canvas .research-figure img{max-height:none}
+ html body.site-canvas .ciri-sample-grid,html body.site-canvas .carrier-story-grid{grid-template-columns:minmax(0,1fr);gap:16px}
+ html body.site-canvas .carrier-story-images img{height:150px}
+ html body.site-canvas .story-publication h3{font-size:19px;overflow-wrap:break-word}
+ html body.site-canvas .paper-direct{min-height:44px;align-items:center}
+ html body.site-canvas .team-grid{gap:18px;margin:24px 0}
+ html body.site-canvas .team-member{grid-template-columns:96px minmax(0,1fr);gap:6px 18px;padding:20px;align-items:start}
+ html body.site-canvas .member-portrait{grid-column:1;grid-row:1 / span 3;width:96px;height:128px;aspect-ratio:3/4}
+ html body.site-canvas .member-details{display:contents}
+ html body.site-canvas .team-member h2{grid-column:2;font-size:28px;margin:12px 0 0}
+ html body.site-canvas .member-name-en{grid-column:2;font-size:14px;margin:0}
+ html body.site-canvas .member-bio{grid-column:1 / -1;font-size:16px;line-height:1.9;white-space:normal;margin:16px 0 0;overflow-wrap:break-word}
+ html body.site-canvas .member-homepage{grid-column:1 / -1;min-height:44px;margin:4px 0 0;padding:8px 0;font-size:15px}
+ html body.site-canvas .story-footer{font-size:13px;padding:24px 18px;overflow-wrap:break-word}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
