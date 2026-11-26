@@ -1,6 +1,7 @@
 /* Fit a short second-line remainder without changing the wording or long paragraphs. */
 (() => {
   'use strict';
+  const mobileLayout = matchMedia('(max-width: 900px), (max-width: 1200px) and (hover: none) and (pointer: coarse)');
   const selector = 'h1,h2,h3,h4,p,li,a,figcaption,button,.unified-unit-name';
   const fitted = new Map();
   let timer;
@@ -32,7 +33,7 @@
   function fit() {
     fitted.forEach((previous, element) => restore(element, previous));
     fitted.clear();
-    const mobile = matchMedia('(max-width: 1200px)').matches;
+    const mobile = mobileLayout.matches;
     // Mobile text reflows at its readable font size, including when a fold opens.
     if (mobile) return;
     document.querySelectorAll(selector).forEach(element => {
@@ -72,6 +73,7 @@
     timer = setTimeout(() => requestAnimationFrame(fit), 100);
   }
   window.addEventListener('resize', schedule);
+  mobileLayout.addEventListener('change', schedule);
   window.addEventListener('site:languagechange', schedule);
   window.addEventListener('load', schedule);
   // Fit parsed text immediately; large images must not delay text layout.

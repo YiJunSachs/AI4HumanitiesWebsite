@@ -1,6 +1,6 @@
 /* Mobile uses normal document flow instead of scaling the desktop artboard. */
 .mobile-menu-toggle { display: none; }
-@media (max-width: 1200px) {
+@media (max-width: 900px), (max-width: 1200px) and (hover: none) and (pointer: coarse) {
   html.home-redesign-root { overflow-x: visible; scroll-padding-top: 16px; }
   body.home-redesign { width: 100%; min-width: 0; max-width: 100%; zoom: 1; margin: 0; left: 0; --team-copy-size: 17px; }
   .home-redesign *, .home-redesign *::before, .home-redesign *::after { box-sizing: border-box; }
@@ -94,7 +94,7 @@
   .wenmai-partner-row .wenmai-institution-row:last-child { grid-template-columns: minmax(0, 1fr) 52px; }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px), (max-width: 1200px) and (hover: none) and (pointer: coarse) {
   html[data-language="en"] .wenmai-partner-row { grid-template-columns: minmax(0, 1fr); gap: 12px; }
   html[data-language="en"] .wenmai-institution-name { text-wrap: balance; }
 }

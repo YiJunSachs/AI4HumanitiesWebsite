@@ -1,4 +1,5 @@
 (()=>{
+ const mobileLayout = matchMedia('(max-width: 900px), (max-width: 1200px) and (hover: none) and (pointer: coarse)');
  const root=document.querySelector('.unified-header');if(!root)return;
  const nav=root.querySelector('.unified-nav-bar'),menu=root.querySelector('.unified-links');
  const toggle=document.createElement('button');
@@ -9,12 +10,12 @@
  toggle.addEventListener('click',()=>setMenu(toggle.getAttribute('aria-expanded')!=='true'));
  menu.addEventListener('click',event=>{if(event.target.closest('a'))setMenu(false);});
  root.addEventListener('keydown',event=>{if(event.key==='Escape'&&toggle.getAttribute('aria-expanded')==='true'){setMenu(false);toggle.focus();}});
- matchMedia('(max-width:1200px)').addEventListener('change',()=>setMenu(false));
+ mobileLayout.addEventListener('change',()=>{setMenu(false);fitUnits();});
  const labels=[...root.querySelectorAll('[data-nav-en]')].map(el=>({el,zh:el.textContent,en:el.dataset.navEn}));
  function fitUnits(){
   const row=root.querySelector('.unified-identities'),names=[...root.querySelectorAll('.unified-unit-name')];
   names.forEach(el=>el.style.removeProperty('font-size'));
-  if(innerWidth>1200){
+  if(!mobileLayout.matches){
    const style=getComputedStyle(row);let available=row.clientWidth-parseFloat(style.paddingLeft)-parseFloat(style.paddingRight)-parseFloat(style.columnGap)*(names.length-1),total=0;
    for(const name of names){const unit=name.parentElement;available-=unit.querySelector('img').offsetWidth+parseFloat(getComputedStyle(unit).columnGap);total+=name.scrollWidth;}
    if(total>available){const size=parseFloat(getComputedStyle(names[0]).fontSize)*available/total*.98;names.forEach(el=>el.style.setProperty('font-size',size+'px','important'));}

@@ -1,6 +1,6 @@
-/* Dedicated small-screen layout. Desktop artwork remains above the 1200px breakpoint. */
+/* Compact windows use document flow; only touch devices extend it to 1200px. */
 .unified-menu-toggle,.team-mobile-mountains{display:none}
-@media(max-width:1200px){
+@media(max-width:900px), (max-width:1200px) and (hover:none) and (pointer:coarse){
  html:has(body.site-canvas){scroll-padding-top:20px;scroll-snap-type:none;-webkit-text-size-adjust:100%;text-size-adjust:100%}
  html body.site-canvas,html body.site-canvas:not(.home-redesign){width:100%;min-width:0;max-width:100%;margin:0;left:0;zoom:1;transform:none}
  html body.site-canvas *{box-sizing:border-box}
@@ -94,7 +94,7 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
 
 /* Safe areas also apply in landscape and to foldable cover screens. */
-@media(max-width:1200px){
+@media(max-width:900px), (max-width:1200px) and (hover:none) and (pointer:coarse){
  html body.site-canvas{--edge-left:max(18px,env(safe-area-inset-left,0px));--edge-right:max(18px,env(safe-area-inset-right,0px));padding-bottom:env(safe-area-inset-bottom,0px)}
  html body.site-canvas .unified-nav-bar{min-height:60px;padding-block:8px}
  html body.site-canvas .unified-identities,html body.site-canvas .unified-nav-bar{padding-left:var(--edge-left);padding-right:var(--edge-right)}
@@ -124,7 +124,7 @@
  html body.site-canvas .dataset-facts strong{font-size:23px}
 }
 /* Expanded foldables and phone landscape: use the added space at readable sizes. */
-@media(min-width:600px) and (max-width:1200px){
+@media(min-width:600px) and (max-width:900px), (min-width:901px) and (max-width:1200px) and (hover:none) and (pointer:coarse){
  html body.site-canvas .unified-identities{gap:16px 28px;padding-block:20px;max-width:1040px;margin-inline:auto}
  html body.site-canvas .unified-identity{grid-template-columns:44px minmax(0,1fr);gap:12px}
  html body.site-canvas .unified-identity img,html body.site-canvas .unified-identity .unified-museum{width:44px;height:48px}
